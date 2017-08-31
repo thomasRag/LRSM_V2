@@ -17,12 +17,24 @@
     <!-- Custom styles -->
     <!--  <link href="css/main.css" rel="stylesheet"> -->
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet">
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
 
   </head>
 
   <body>
+
+    <div class="container-fluid">
+       <div id="map">
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
 
     <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,15 +81,54 @@
     </nav>
 
 
-    <footer class="footer">
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+          <div class="col"><a class="navbar-brand" href="#">Explorateur</a></div>
+          <ul class="nav nav-pills flex-column">
+
+
+
+            <div class="col">
+            <li class="nav-item">
+              <a class="nav-link " href="#">Auteurs <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Genres</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Projets d'attache</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mots-clés</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Localisation</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Date</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <footer class="footer bg-inverse">
           <div class="container">
-            <span class="text-muted">Place sticky footer content here.</span>
+            <span class="text-muted">Légende dynamique ici</span>
           </div>
         </footer>
-
-
-
-
 
 
 
@@ -85,9 +136,10 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
   </body>
 </html>

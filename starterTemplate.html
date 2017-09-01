@@ -19,11 +19,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet">
-
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
 
   </head>
 
@@ -40,6 +39,8 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+
       <a class="navbar-brand" href="#">LRSM</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
@@ -73,55 +74,61 @@
           </li>
 
         </ul>
+        <!--
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="text" placeholder="...">
           <button class="btn btn-outline-warning my-0 my-sm-0" type="submit">Recherche</button>
-        </form>
+        </form>-->
       </div>
     </nav>
 
 
 
-    <div class="container-fluid">
-      <div class="row">
-        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
-          <div class="col"><a class="navbar-brand" href="#">Explorateur</a></div>
-          <ul class="nav nav-pills flex-column">
+    <div class="wrapper">
 
+            <!-- Sidebar Holder -->
+            <nav id="sidebar" class="active">
+                <div class="sidebar-header" id="sidebarCollapse" >
+                    <h3>Explorateur</h3>
+                    <strong>LRSM</strong>
+                </div>
 
+                <ul class="list-unstyled components">
 
-            <div class="col">
-            <li class="nav-item">
-              <a class="nav-link " href="#">Auteurs <span class="sr-only">(current)</span></a>
-            </li>
+                    <li class="active">
+                        <a href="#homeSubmenu">
+                            <i class="fa fa-filter"></i>
+                            Genres
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#pageSubmenu">
+                            <i class="fa fa-user"></i>
+                            Auteurs
+                        </a>
+                      </li>
+                    <li>
+                        <a href="#">
+                          <i class="fa fa-hashtag"></i>
+                          Mots-Clés
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-map-marker"></i>
+                            Localisation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-clock-o"></i>
+                            Temporalité
+                        </a>
+                    </li>
+                </ul>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#">Genres</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">Projets d'attache</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">Mots-clés</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">Localisation</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">Date</a>
-            </li>
-
-          </ul>
-        </nav>
-
-        </div>
-      </div>
-    </div>
-
+            </nav>
+</div>
 
 
     <footer class="footer bg-inverse">
@@ -130,16 +137,24 @@
           </div>
         </footer>
 
-
+        <script type="text/javascript">
+                    $(document).ready(function () {
+                        $('#sidebarCollapse').on('click', function () {
+                            $('#sidebar').toggleClass('active');
+                        });
+                    });
+                </script>
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
+
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 
   </body>
 </html>

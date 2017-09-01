@@ -7,20 +7,15 @@ body {
   margin-bottom: 60px;
 }
 #map{
+
   position: absolute;
-  top: 51px;
-  min-height: 800px;
+  top:50px;
+  bottom: 50px;
+  min-height: 88%;
   min-width: 83%;
-  z-index: 999;
+  z-index: 10;
   left:17%;
 }
-
-
-
-
-
-
-
 
 
 

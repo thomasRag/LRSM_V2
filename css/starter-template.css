@@ -6,6 +6,14 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
+
+#navbarBrandLogo{
+height: 50px !important;
+width: 70px !important;
+}
+
+
 #map{
 
   position: absolute;

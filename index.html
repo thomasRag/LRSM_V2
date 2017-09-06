@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Site web pour le LRSM">
+    <meta name="author" content="Anagraph">
+    <link rel="icon" href="img/favicon.ico">
+
+    <title>Laboratoire des récits du soi mobile</title>
+
+    <!-- Modal SideBar -->
+    <link href="css/modal_sidebar.css" rel="stylesheet" />
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/starter-template.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <!--  <link href="css/main.css" rel="stylesheet"> -->
+    <link href="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <!-- Modal SideBar -->
+    <link href="css/modal_sidebar.css" rel="stylesheet" />
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.js"></script>
+
+
+
+
+    <script type="text/javascript">
+
+    var featuresCollection = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{"id":1,"title":"","media":"","date":"","description":"","story":{"id":510,"author":{"id":486,"label":"Erwan Geffroy"},"collaborators":[{"id":487,"label":"Mathieu Li-Goyette"}],"text":"<p>Capsule audiovisuelle int\u00e9gr\u00e9e \u00e0 une installation de vid\u00e9oprojection <em>in situ<\/em> utilisant un mur de la Caserne 23 de la place St-Henri, \u00e0 Montr\u00e9al.<\/p>\n<p>R\u00e9alis\u00e9e \u00e0 partir d\u2019une prise de vues et de sons de St-Henri et d\u2019une mise en lecture d\u2019extraits de <em>Bonheur d\u2019occasion<\/em> de Gabrielle Roy.<\/p>\n<p>Projet r\u00e9alis\u00e9 dans le cadre d\u2019un partenariat entre le LRSM et MTL ville en mouvement pour le projet d\u2019Incubateur urbain.<\/p>\n","media_links":[{"link":"https:\/\/vimeo.com\/231569075","media_type":"vid\u00e9o"}],"date_type":"single","date":"01\/10\/2015","main_tag":{"id":138,"label":"Saint-Henri"},"main_location":{"id":131,"label":"Saint-Henri"},"main_language":{"id":76,"label":"Fran\u00e7ais"},"languages":false,"genres":[{"id":137,"label":"St-Henri"}],"tags":[{"id":140,"label":"Bonheur d\u2019occasion"},{"id":93,"label":"Gabrielle Roy"},{"id":143,"label":"Incubateur Urbain"},{"id":141,"label":"Installation"},{"id":139,"label":"St-Henri"},{"id":142,"label":"Vid\u00e9oprojection"}],"projects":[{"id":109,"label":"Cr\u00e9ation LRSM"}]}},"geometry":{"type":"Point","coordinates":[-73.58419418334962,45.47848828865276]}},{"type":"Feature","properties":{"id":1,"title":"","media":"","date":"","description":"","story":{"id":506,"author":{"id":485,"label":"Cynthia Noury"},"collaborators":[],"text":"<p>Sous vos pieds se trouvent \u00e0 la fois un site, un chantier, qui porter la m\u00e9moire d&rsquo;un pass\u00e9 ferroviaire, puis qui pr\u00e9figure une vocation universitaire, un lieu de savoir, un lieu de connaissances\u2026 Ces trois moments constituent la trame d&rsquo;un r\u00e9cit, le r\u00e9cit du lieu. Marchez le lieu, arpentez l&rsquo;espace et laissez-vous accompagner&#8230; &#8230; Le marcheur qui s\u2019aventure dans le quartier Outremont, dans ses rues pour se rendre devant le 400 avenue Atlantic trouvera, sous ses yeux, un terrain en chantier, un terrain en changement, mais un terrain qui, malgr\u00e9 tout, n\u2019est pas vacant. Des histoires y habitent, des histoires y circulent, des r\u00e9cits s\u2019y construisent. Comment est-ce que le marcheur qui s\u2019aventure sur ce chantier peut, en quelques minutes, arpenter le lieu, se laisser porter par l\u2019imaginaire de son histoire pass\u00e9e et pr\u00e9sente, voir et entendre ce qui s\u2019y trame, les r\u00e9cits qui s\u2019y racontent, saisir les changements qui s\u2019y op\u00e8rent\u2009? Pourquoi pas en faisant l\u2019exp\u00e9rience du d\u00e9ambulatoire-al\u00e9atoire Racines\u2009? Pendant une dizaine de minutes, le temps qu\u2019il faut pour traverser l\u2019espace, s\u2019y arr\u00eater un moment, le marcheur sera ainsi convi\u00e9 \u00e0 un paysage sonore et narratif dans lequel des r\u00e9cits lui seront racont\u00e9s, dans lequel l\u2019imaginaire du site Outremont, pass\u00e9 et futur, se fera entendre.<\/p>\n","media_links":[{"link":"https:\/\/soundcloud.com\/lrsm\/racines-deambulatoire-aleatoire","media_type":"son"}],"date_type":"single","date":"01\/10\/2016","main_tag":{"id":90,"label":"campus MIL"},"main_location":{"id":124,"label":"campus MIL"},"main_language":{"id":76,"label":"Fran\u00e7ais"},"languages":[{"id":76,"label":"Fran\u00e7ais"}],"genres":[{"id":124,"label":"campus MIL"},{"id":134,"label":"Virage"}],"tags":[{"id":89,"label":"catalyseur d'imaginaires urbains"},{"id":85,"label":"cr\u00e9ation"},{"id":79,"label":"espace"},{"id":83,"label":"lieu"},{"id":81,"label":"r\u00e9cit"}],"projects":[{"id":108,"label":"Catalyseur d'imaginaires urbains et Virage"},{"id":109,"label":"Cr\u00e9ation LRSM"}]}},"geometry":{"type":"Point","coordinates":[-73.61674010753633,45.526422932043474]}},{"type":"Feature","properties":{"main":true,"story":{"id":114,"author":{"id":90,"label":"Cl\u00e9ment"},"collaborators":[{"id":92,"label":"Thomas"}],"text":"<p>&laquo;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&nbsp;&raquo;<\/p>\n","media_links":[{"link":"https:\/\/www.youtube.com\/watch?v=hWLc0J52b2I","media_type":"vid\u00e9o"}],"date_type":"single","date":"09\/05\/2017","main_tag":{"id":79,"label":"espace"},"main_location":{"id":127,"label":"Montr\u00e9al"},"main_language":{"id":76,"label":"Fran\u00e7ais"},"languages":[{"id":76,"label":"Fran\u00e7ais"}],"genres":[{"id":146,"label":"Crescent"}],"tags":[{"id":144,"label":"Chanson"}],"projects":[{"id":145,"label":"Test WPAdmin"}]}},"geometry":{"type":"Point","coordinates":[-73.5675832629204,45.496392621941084]}},{"type":"Feature","properties":{"id":"2","title":"Acte 1","media":"https:\/\/www.youtube.com\/watch?v=hWLc0J52b2I","date":"01\/09\/2017","description":"<p>\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"<\/p>","story":{"id":114,"author":{"id":90,"label":"Cl\u00e9ment"},"collaborators":[{"id":92,"label":"Thomas"}],"text":"<p>&laquo;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&nbsp;&raquo;<\/p>\n","media_links":[{"link":"https:\/\/www.youtube.com\/watch?v=hWLc0J52b2I","media_type":"vid\u00e9o"}],"date_type":"single","date":"09\/05\/2017","main_tag":{"id":79,"label":"espace"},"main_location":{"id":127,"label":"Montr\u00e9al"},"main_language":{"id":76,"label":"Fran\u00e7ais"},"languages":[{"id":76,"label":"Fran\u00e7ais"}],"genres":[{"id":146,"label":"Crescent"}],"tags":[{"id":144,"label":"Chanson"}],"projects":[{"id":145,"label":"Test WPAdmin"}]}},"geometry":{"type":"Point","coordinates":[-73.57479304075243,45.50078437733517]}},{"type":"Feature","properties":{"id":"3","title":"Acte 2","media":"https:\/\/flic.kr\/p\/pK9J6U","date":"15\/09\/2017","description":"","story":{"id":114,"author":{"id":90,"label":"Cl\u00e9ment"},"collaborators":[{"id":92,"label":"Thomas"}],"text":"<p>&laquo;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&nbsp;&raquo;<\/p>\n","media_links":[{"link":"https:\/\/www.youtube.com\/watch?v=hWLc0J52b2I","media_type":"vid\u00e9o"}],"date_type":"single","date":"09\/05\/2017","main_tag":{"id":79,"label":"espace"},"main_location":{"id":127,"label":"Montr\u00e9al"},"main_language":{"id":76,"label":"Fran\u00e7ais"},"languages":[{"id":76,"label":"Fran\u00e7ais"}],"genres":[{"id":146,"label":"Crescent"}],"tags":[{"id":144,"label":"Chanson"}],"projects":[{"id":145,"label":"Test WPAdmin"}]}},"geometry":{"type":"Point","coordinates":[-73.57299059629442,45.49979175025594]}},{"type":"Feature","properties":{"main":true,"story":{"id":94,"author":{"id":90,"label":"Cl\u00e9ment"},"collaborators":[{"id":92,"label":"Thomas"}],"text":"<p>&laquo;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&nbsp;&raquo;<\/p>\n","media_links":[{"link":"http:\/\/dailymontreal.tumblr.com\/image\/160924919750","media_type":"photo"}],"date_type":"single","date":"17\/05\/2017","main_tag":{"id":81,"label":"r\u00e9cit"},"main_location":{"id":135,"label":"Ext\u00e9rieur de Montr\u00e9al"},"main_language":{"id":76,"label":"Fran\u00e7ais"},"languages":[{"id":76,"label":"Fran\u00e7ais"}],"genres":[{"id":124,"label":"campus MIL"}],"tags":[{"id":89,"label":"catalyseur d'imaginaires urbains"}],"projects":[{"id":109,"label":"Cr\u00e9ation LRSM"}]}},"geometry":{"type":"Point","coordinates":[-73.58908116817476,45.502921850094474]}},{"type":"Feature","properties":{"id":"2","title":"Promenade verte","media":"https:\/\/flic.kr\/p\/3qwMFg","date":"01\/09\/2017","description":"<p>\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"<\/p>","story":{"id":94,"author":{"id":90,"label":"Cl\u00e9ment"},"collaborators":[{"id":92,"label":"Thomas"}],"text":"<p>&laquo;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&nbsp;&raquo;<\/p>\n","media_links":[{"link":"http:\/\/dailymontreal.tumblr.com\/image\/160924919750","media_type":"photo"}],"date_type":"single","date":"17\/05\/2017","main_tag":{"id":81,"label":"r\u00e9cit"},"main_location":{"id":135,"label":"Ext\u00e9rieur de Montr\u00e9al"},"main_language":{"id":76,"label":"Fran\u00e7ais"},"languages":[{"id":76,"label":"Fran\u00e7ais"}],"genres":[{"id":124,"label":"campus MIL"}],"tags":[{"id":89,"label":"catalyseur d'imaginaires urbains"}],"projects":[{"id":109,"label":"Cr\u00e9ation LRSM"}]}},"geometry":{"type":"LineString","coordinates":[[-73.57719630002977,45.50541640565172],[-73.57444971799852,45.50541640565172],[-73.57110232114793,45.50391254213513],[-73.56775492429735,45.502107852885516],[-73.56457918882371,45.50012262789342],[-73.55736941099168,45.50788265485025],[-73.55565279722215,45.50986760620917],[-73.55453699827196,45.51167204670165],[-73.55350703001024,45.51185248756915],[-73.55041712522508,45.51131116323119],[-73.54912966489793,45.51076983368672],[-73.54912966489793,45.50986760620917],[-73.54672640562059,45.51004805286169],[-73.54621142148973,45.51245395294932]]}}]};
+
+
+
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <div class="">
+       <div id="map">
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+
+    <div class="modal left fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    		<div class="modal-dialog" role="document">
+    			<div class="modal-content">
+
+    				<div class="modal-header">
+    					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    					<h4 class="modal-title" id="myModalLabel">L’île étrange</h4>
+    				</div>
+
+    					<div class="modal-body">
+    				<br>
+    				<span> <b>Auteur</b> : Marc </span>
+    				<br>
+    				<span> <b>Affiliation </b> : Université de Montréal - Département de Littérature </span>
+    				<br>
+    				<span> <b>Genre </b> : Nouvelle surréaliste </span>
+    				<br>
+    				<span> <b>Projet d'attache</b>  : Concours de la nouvelle surréaliste 2017 </span>
+    				<br>
+    				<span> <b>Date </b> : 09/05/2017 </span>
+    				<br>
+    				<hr>
+    				<span> <b>Tags primaires</b> : Marche à pied,Ipsum,Lorem </span>
+    				<br>
+    				<span> <b>Tags secondaires</b> : Brouillard, Brume, nuit,  </span>
+
+    				<hr>
+
+    				<iframe id="modalframe" src="https://player.vimeo.com/video/207430994" width="550" height="280" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <p><a href="https://vimeo.com/207430994">Anne-Marie Lee-Loy, &quot;One Love? The Chinese Migrant as National Foil in Early 20th Century Jamaica&quot;</a> from <a href="https://vimeo.com/user40549646">Simon Harel</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+    				<hr>
+    				<span> <b>L'île étrange récit dans la brume</b>
+              <b>Récapitulatif / Introduction</b>
+    					<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    					</p>
+              <b>Chapitre 1</b>
+              <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    					</p>
+              <b>Chapitre 2</b>
+              <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    					</p>
+              <b>Chapitre 3</b>
+              <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    					</p>
+              <b>Chapitre 4</b>
+              <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    					</p>
+    				</div>
+
+    			</div>
+    		</div>
+    	</div>
+
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+       <a href="#" class="pull-left"><img id ="navbarBrandLogo" class="img-responsive" src="img/4.png"></a>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav  ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Activités</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projets</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Revue de presse</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Partenaires</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Liens</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <!--
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="...">
+          <button class="btn btn-outline-warning my-0 my-sm-0" type="submit">Recherche</button>
+        </form>-->
+      </div>
+    </nav>
+
+
+
+    <div class="wrapper">
+
+            <!-- Sidebar Holder -->
+            <nav id="sidebar" class="active">
+                <div class="sidebar-header" id="sidebarCollapse" >
+                    <h3>Explorateur</h3>
+                    <strong>LRSM</strong>
+                </div>
+
+                <ul class="list-unstyled components">
+
+                    <li class="active">
+                        <a href="#homeSubmenu">
+                            <i class="fa fa-filter"></i>
+                            Genres
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#pageSubmenu">
+                            <i class="fa fa-user"></i>
+                            Auteurs
+                        </a>
+                      </li>
+                    <li>
+                        <a href="#">
+                          <i class="fa fa-hashtag"></i>
+                          Mots-Clés
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-map-marker"></i>
+                            Localisation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-clock-o"></i>
+                            Temporalité
+                        </a>
+                    </li>
+
+                    <li>
+                        <a id="resetButton" href="javascript:void(0);" onclick="getMainMarkers()">
+                            <i class="fa fa-undo"></i>
+                            Reset
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+</div>
+
+
+    <footer class="footer bg-inverse">
+          <div class="container">
+            <span class="text-muted">Légende dynamique ici</span>
+          </div>
+        </footer>
+
+        <script type="text/javascript">
+                    $(document).ready(function () {
+                        $('#sidebarCollapse').on('click', function () {
+                            $('#sidebar').toggleClass('active');
+                        });
+                    });
+                </script>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>

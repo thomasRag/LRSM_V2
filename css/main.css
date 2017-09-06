@@ -2,7 +2,7 @@ body {
     background-color: black;
 }
 
-	#input 
+	#input
 	{
   position: relative;
   top: 10px;
@@ -11,10 +11,10 @@ body {
   color: white;
   border: 3px solid #b7b7b7;
   border-radius: 1px;
-  	
+
   }
 
-	input 
+	input
 	{
   position: relative;
   top: 10px;
@@ -23,36 +23,36 @@ body {
   color: white;
   border: 3px solid #b7b7b7;
   border-radius: 1px;
-  	
+
   }
-  
+
   autocomplete_genre{
   position: relative;
   top:10px;
   left:10px;
-  z-index:1; 
-  padding: 0.5px;
-  border: 0.5px solid #b7b7b7;
-  border-radius: 0.5px;
-  }
-  
-    autocomplete_autor{
-	position: relative;
-  top:20px;
-  left:20px;
-  z-index:1; 
+  z-index:1;
   padding: 0.5px;
   border: 0.5px solid #b7b7b7;
   border-radius: 0.5px;
   }
 
-  
+    autocomplete_autor{
+	position: relative;
+  top:20px;
+  left:20px;
+  z-index:1;
+  padding: 0.5px;
+  border: 0.5px solid #b7b7b7;
+  border-radius: 0.5px;
+  }
+
+
 
    autocomplete_lucky{
    position: relative;
   top:40px;
   left:10px;
-  z-index:1; 
+  z-index:1;
   padding: 0.5px;
   border: 0.5px solid #b7b7b7;
   border-radius: 0.5px;
@@ -60,9 +60,9 @@ body {
 
 
     #mapid{
- z-index:1; 
+ z-index:1;
  top: 5%;
- right:2%; 
+ right:2%;
  position:absolute;
  width:95%;
  height:90%;
@@ -71,9 +71,9 @@ body {
  border-radius: 1px;
  background: white;
 	}
-			
 
-	
+
+
 
 .legend {
 	line-height: 18px;

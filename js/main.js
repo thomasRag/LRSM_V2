@@ -69,20 +69,6 @@ function getFilterMarkers (j){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  function getMainMarkers(){
 
  	 introMarker = L.geoJSON(featuresCollection,{

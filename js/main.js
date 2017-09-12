@@ -42,17 +42,14 @@ function get_random_color() {
 /********** GET FILTERED MARKERS OVER THE SPECIFIC STORY ID ******/
 
 function getFilterMarkers (i){
-
   filteredGroup.clearLayers();
-
      filterMarkers = L.geoJSON(featuresCollection,{
-
          filter:
          function(feature, layer) {
-                    //for (var j = 0 ; j < i.length ; j++){
+          for (var j = 0 ; j < i.length ; j++){
            if (feature.properties.story.author.label === String(i)){
-                    return true}
-        },
+            return true}
+        }},
 
           pointToLayer: function(feature, latlng) {
            return L.circleMarker(latlng, setColor) //, style(feature)); //,styled(feature));
@@ -62,7 +59,11 @@ function getFilterMarkers (i){
            //layer.bindPopup('<h1>'+marker.properties.title+'</h1><p>'+marker.properties.auteurs+'</p>'+'</h1><p>'+marker.properties.id+'</p><a href=www.google.com>Explorer le récit</a>');
            //console.log(feature.properties.media)
            layer.bindPopup('<div><a href="#" class="speciallink"><h2>'
-            +feature.properties.story.author.label +'</h2></div>')}
+            +feature.properties.story.author.label +'</h2></div>')
+
+
+
+          }
 
     }).addTo(map)
 

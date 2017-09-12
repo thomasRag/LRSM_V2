@@ -155,8 +155,8 @@
 /////////////////////////////////////////////////////////////////////////
 
   $("#authorSearchBox").val(selectedItems).change(function() {
-    console.log($("#authorSearchBox").val())
-  getFilterMarkers ($("#authorSearchBox").val());
+    //console.log($("#authorSearchBox").val())
+      getFilterMarkers ($("#authorSearchBox").val());
 });
 
 /////////////////////////////////////////////////////////////////////////

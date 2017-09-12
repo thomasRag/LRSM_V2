@@ -11,6 +11,7 @@ var baseLayer1 = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net
 console.log(featuresCollection)
 
 var group = L.layerGroup();
+var filteredGroup = L.layerGroup();
 
 
 
@@ -40,31 +41,35 @@ function get_random_color() {
 
 /********** GET FILTERED MARKERS OVER THE SPECIFIC STORY ID ******/
 
-function getFilterMarkers (j){
+function getFilterMarkers (i){
 
-   filterMarkers = L.geoJSON(featuresCollection,{
+  filteredGroup.clearLayers();
 
-     filter: function(feature, layer) {
-      return feature.properties.story.id === j},
+     filterMarkers = L.geoJSON(featuresCollection,{
 
-      pointToLayer: function(feature, latlng) {
-       return L.circleMarker(latlng, setColor) //, style(feature)); //,styled(feature));
-      },
+         filter:
+         function(feature, layer) {
+                    //for (var j = 0 ; j < i.length ; j++){
+           if (feature.properties.story.author.label === String(i)){
+                    return true}
+        },
 
-      onEachFeature: function(feature, layer) {
-       //layer.bindPopup('<h1>'+marker.properties.title+'</h1><p>'+marker.properties.auteurs+'</p>'+'</h1><p>'+marker.properties.id+'</p><a href=www.google.com>Explorer le récit</a>');
-       console.log(feature.properties.media)
-       layer.bindPopup('<div><a href="#" class="speciallink"><h2>'
-        +feature.properties.title +'<a data-flickr-embed="true"  href="https://www.flickr.com/photos/thexplorer/1590316457/" title="Untitled"><img src="https://farm3.staticflickr.com/2214/1590316457_6e1aa70c12_q.jpg" width="150" height="150" alt="Untitled"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>')}
+          pointToLayer: function(feature, latlng) {
+           return L.circleMarker(latlng, setColor) //, style(feature)); //,styled(feature));
+          },
 
-
-
+          onEachFeature: function(feature, layer) {
+           //layer.bindPopup('<h1>'+marker.properties.title+'</h1><p>'+marker.properties.auteurs+'</p>'+'</h1><p>'+marker.properties.id+'</p><a href=www.google.com>Explorer le récit</a>');
+           //console.log(feature.properties.media)
+           layer.bindPopup('<div><a href="#" class="speciallink"><h2>'
+            +feature.properties.story.author.label +'</h2></div>')}
 
     }).addTo(map)
 
 
-    removeLayers(group)
-    map.fitBounds(filterMarkers.getBounds())
+    group.clearLayers();
+    filteredGroup.addLayer(filterMarkers).addTo(map)
+   //map.fitBounds(filterMarkers.getBounds())
 
 }
 
@@ -73,8 +78,7 @@ function getFilterMarkers (j){
 
  	 introMarker = L.geoJSON(featuresCollection,{
 
-     filter: function(feature, layer) {
-      return feature.properties.main === true},
+    /* filter: masterFilter,*/
 
       pointToLayer: function(feature, latlng) {
        return L.circleMarker(latlng, setColor) //, style(feature)); //,styled(feature));
@@ -89,18 +93,13 @@ function getFilterMarkers (j){
 
         function() {
 
-          getFilterMarkers(feature.properties.story.id),
-          removeLayers(getFilterMarkers),
+//          getFilterMarkers(feature.properties.story.id),
+  //        removeLayers(getFilterMarkers),
           $("#myModal").modal()
 
        })[0]);
-
-
       }
-
     })
-
-
 
 
  group.addLayer(introMarker).addTo(map)

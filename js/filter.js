@@ -1,6 +1,9 @@
 /**** LOOP THROUGHT EVERY CATEGORY TO FILTER THE DATA *****/
 /*******************************************/
 
+
+
+
     /* initialize arrays */
 
 
@@ -15,8 +18,6 @@
                   var   getKD = ""
                   var   getLD = ""
 
-
-
                   function getData(i,k){
 
                   getGD = featuresCollection.features[j].properties.story.genres[0].label
@@ -28,14 +29,11 @@
                         return i.push(k)
                       };
 
-                  /*getData(genre_Data,getGD)
+                  getData(genre_Data,getGD)
                   getData(author_Data,getAD)
                   getData(keyword_Data,getKD)
                   getData(location_Data,getLD)
 */
-
-
-
 
                   function getGenre(i){
                       for (var j = 0; j < featuresCollection.features.length; j++)
@@ -73,7 +71,7 @@
 
 /**** Always capitalize the first letter *****/
 /*******************************************/
-
+/*
   for(var i = 0 ; i < genre_Data.length ; i++){
     genre_Data[i] = genre_Data[i].charAt(0).toUpperCase()+ genre_Data[i].substr(1);;
 
@@ -93,7 +91,7 @@
 
   };
 
-
+*/
 
 /***** initialize select2 *******/
 /*******************************************/
@@ -137,18 +135,31 @@
    $('#authorSearchBox').select2(
 
     {
+      placeholder: "Auteur",
+      multiple: true,
+      allowClear: true,
      data:   author_Data.unique()
     }
    )
  };
   searchBoxAuthor()
-
+/*
   var authorOptions = $("#authorSearchBox option");
   authorOptions.each(function() {
       selectedItems.push( $(this).val() );
   });
 
   $("#authorSearchBox").val(selectedItems).trigger("change");
+*/
+
+/////////////////////////////////////////////////////////////////////////
+
+  $("#authorSearchBox").val(selectedItems).change(function() {
+    console.log($("#authorSearchBox").val())
+  getFilterMarkers ($("#authorSearchBox").val());
+});
+
+/////////////////////////////////////////////////////////////////////////
 
   function searchBoxKeyword() {
    $('#keywordSearchBox').select2(
@@ -187,22 +198,26 @@
 /*** retrieve searchbox selected data(s) ***/
 /*******************************************/
 
+
 $("#genreSearchBox").on("select2:select", function(e) {
-select_valgenreSearchBox = $(e.currentTarget).val();
-   console.log(select_valgenreSearchBox)
+select_valGenreSearchBox = $(e.currentTarget).val();
+  // console.log(select_valGenreSearchBox)
 });
 
+function test(){
 $("#authorSearchBox").on("select2:select", function(e) {
-select_valgenreSearchBox = $(e.currentTarget).val();
-   console.log(select_valgenreSearchBox)
+select_valAuthorSearchBox = $(e.currentTarget).val();
+  // console.log(select_valAuthorSearchBox)
 });
+}; test();
+
 
 $("#keywordSearchBox").on("select2:select", function(e) {
-select_valgenreSearchBox = $(e.currentTarget).val();
-   console.log(select_valgenreSearchBox)
+select_valKeywordSearchBox = $(e.currentTarget).val();
+  // console.log(select_valKeywordSearchBox)
 });
 
 $("#locationSearchBox").on("select2:select", function(e) {
-select_valgenreSearchBox = $(e.currentTarget).val();
-   console.log(select_valgenreSearchBox)
+select_valLocationSearchBox = $(e.currentTarget).val();
+//   console.log(select_valLocationSearchBox)
 });

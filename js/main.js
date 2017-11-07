@@ -41,15 +41,24 @@ function get_random_color() {
 
 /********** GET FILTERED MARKERS OVER THE SPECIFIC STORY ID ******/
 
-function getFilterMarkers (i){
+
+var authors = $("#authorSearchBox").val();
+
+
+
+
+function getFilterMarkers (authors){
+
   filteredGroup.clearLayers();
      filterMarkers = L.geoJSON(featuresCollection,{
          filter:
-         function(feature, layer) {
-          for (var j = 0 ; j < i.length ; j++){
-           if (feature.properties.story.author.label === String(i)){
+         function(feature) {
+           console.log(authors)
+          //for (var j = 0 ; j < authors.length ; j++){
+           if (feature.properties.story.author.label === authors){
             return true}
-        }},
+
+        },
 
           pointToLayer: function(feature, latlng) {
            return L.circleMarker(latlng, setColor) //, style(feature)); //,styled(feature));
@@ -60,8 +69,6 @@ function getFilterMarkers (i){
            //console.log(feature.properties.media)
            layer.bindPopup('<div><a href="#" class="speciallink"><h2>'
             +feature.properties.story.author.label +'</h2></div>')
-
-
 
           }
 

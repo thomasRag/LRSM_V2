@@ -1,258 +1,253 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Site web pour le LRSM">
-    <meta name="author" content="Anagraph">
-    <link rel="icon" href="img/favicon.ico">
+<html>
 
-    <title>Laboratoire des récits du soi mobile</title>
+<head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg"/>
+    <title>Immigration 2016 - Lieu de naissance</title>
 
-    <!-- Modal SideBar -->
-    <link href="css/modal_sidebar.css" rel="stylesheet" />
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
-    <!-- Custom styles for this template -->
-    <link href="css/main.css" rel="stylesheet">
-    <!-- Custom styles -->
-    <!--  <link href="css/main.css" rel="stylesheet"> -->
-    <link href="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.css" rel="stylesheet">
-
+     <!-- Latest Jquery -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css">
+     <!-- Latest Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- Latest mapboxgl -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- Latest mapbox geodcoder -->
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.0/mapbox-gl-geocoder.css' type='text/css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-
-    <!-- Modal SideBar -->
-    <link href="css/modal_sidebar.css" rel="stylesheet" />
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+</head>
+
+
+<body>
+
+
+  <!-- sidebar -->
+
+          <nav id="sideBar" class="col-sm-3 col-md-2 d-none d-sm-block sidebar">
+
+            <div  id="navbarbrand">
+                <a class="navbar-brand" href="#"><img  id="logo" src="img/4.png"></a>
+            </div>
+
+            <div id="sideMenu">
+              <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Carte</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Liste</a>
+                </li>
+              </ul>
 
 
 
-    <script type="text/javascript">
+                  <!-- Sous menu -->
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
+                  <div id="accordion" role="tablist">
 
-    var featuresCollection = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{"id":1,"title":"","media":"","date":"","description":"","story":{"id":529,"author":{"id":492,"label":"Marie-Eve Bradette"},"collaborators":[{"id":493,"label":"Laurence Sylvain"}],"text":"<p>Dans <em>D\u00e9calages<sup>2<\/sup><\/em> nous avons voulu travailler les disjonctions pr\u00e9sentes dans le Quartier des spectacles, notamment entre l\u2019aspect spectaculaire de la Place des festivals la nuit et le caract\u00e8re iconoclaste et sonore de la Place \u00c9milie-Gamelin en journ\u00e9e et du m\u00e9tro Berri-UQAM qui y est adjacent. En tournant des images de soir et en captant des voix humaines le jour est mis de l\u2019avant cette id\u00e9e d\u2019une disjonction caract\u00e9ristique du quartier explor\u00e9 et ce \u00e0 plusieurs niveaux, tant sur le plan du contenu de la captation que de l\u2019esth\u00e9tique choisie. Les insertions de bandes filmiques du film <em>Trait\u00e9 de bave et d\u2019\u00e9ternit\u00e9<\/em> d\u2019Isidore Isou viennent accentuer, dans le montage et par le sens m\u00eame qu\u2019appelle ces images, les d\u00e9calages auxquels est confront\u00e9 le marcheur qui arpente le kilom\u00e8tre carr\u00e9 qui compose le Quartier des spectacles.<\/p>\n","media_links":[{"link":"https:\/\/vimeo.com\/231568403","media_type":"vid\u00e9o"}],"date_type":"single","date":"01\/12\/2015","main_tag":{"id":86,"label":"s\u00e9minaire"},"main_location":{"id":125,"label":"Quartier des spectacles"},"main_language":{"id":76,"label":"Fran\u00e7ais"},"languages":false,"genres":[{"id":152,"label":"video"}],"tags":[{"id":166,"label":"Hyperfestivit\u00e9"},{"id":165,"label":"Isidore Isou"},{"id":167,"label":"itin\u00e9rance"},{"id":164,"label":"montage discr\u00e9pant"},{"id":163,"label":"Place \u00c9milie-Gamelin"},{"id":148,"label":"quartier des spectacles"}],"locations":[{"id":170,"label":"m\u00e9tro Berri-UQAM"},{"id":169,"label":"Place des festivals"},{"id":168,"label":"Place \u00c9milie Gamelin"},{"id":125,"label":"Quartier des spectacles"}],"projects":[{"id":120,"label":"S\u00e9minaire LRSM -A2015"}]}},"geometry":{"type":"Point","coordinates":[-73.56747865676881,45.50748202208494]}},{"type":"Feature","properties":{"id":2,"title":"","media":"","date":"","description":"","story":{"id":529,"author":{"id":492,"label":"Marie-Eve Bradette"},"collaborators":[{"id":493,"label":"Laurence Sylvain"}],"text":"<p>Dans <em>D\u00e9calages<sup>2<\/sup><\/em> nous avons voulu travailler les disjonctions pr\u00e9sentes dans le Quartier des spectacles, notamment entre l\u2019aspect spectaculaire de la Place des festivals la nuit et le caract\u00e8re iconoclaste et sonore de la Place \u00c9milie-Gamelin en journ\u00e9e et du m\u00e9tro Berri-UQAM qui y est adjacent. En tournant des images de soir et en captant des voix humaines le jour est mis de l\u2019avant cette id\u00e9e d\u2019une disjonction caract\u00e9ristique du quartier explor\u00e9 et ce \u00e0 plusieurs niveaux, tant sur le plan du contenu de la captation que de l\u2019esth\u00e9tique choisie. Les insertions de bandes filmiques du film <em>Trait\u00e9 de bave et d\u2019\u00e9ternit\u00e9<\/em> d\u2019Isidore Isou viennent accentuer, dans le montage et par le sens m\u00eame qu\u2019appelle ces images, les d\u00e9calages auxquels est confront\u00e9 le marcheur qui arpente le kilom\u00e8tre carr\u00e9 qui compose le Quartier des spectacles.<\/p>\n","media_links":[{"link":"https:\/\/vimeo.com\/231568403","media_type":"vid\u00e9o"}],"date_type":"single","date":"01\/12\/2015","main_tag":{"id":86,"label":"s\u00e9minaire"},"main_location":{"id":125,"label":"Quartier des spectacles"},"main_language":{"id":76,"label":"Fran\u00e7ais"},"languages":false,"genres":[{"id":152,"label":"video"}],"tags":[{"id":166,"label":"Hyperfestivit\u00e9"},{"id":165,"label":"Isidore Isou"},{"id":167,"label":"itin\u00e9rance"},{"id":164,"label":"montage discr\u00e9pant"},{"id":163,"label":"Place \u00c9milie-Gamelin"},{"id":148,"label":"quartier des spectacles"}],"locations":[{"id":170,"label":"m\u00e9tro Berri-UQAM"},{"id":169,"label":"Place des festivals"},{"id":168,"label":"Place \u00c9milie Gamelin"},{"id":125,"label":"Quartier des spectacles"}],"projects":[{"id":120,"label":"S\u00e9minaire LRSM -A2015"}]}},"geometry":{"type":"Point","coordinates":[-73.56001138687135,45.515481732319245]}},{"type":"Feature","properties":{"id":3,"title":"","media":"","date":"","description":"","story":{"id":529,"author":{"id":492,"label":"Marie-Eve Bradette"},"collaborators":[{"id":493,"label":"Laurence Sylvain"}],"text":"<p>Dans <em>D\u00e9calages<sup>2<\/sup><\/em> nous avons voulu travailler les disjonctions pr\u00e9sentes dans le Quartier des spectacles, notamment entre l\u2019aspect spectaculaire de la Place des festivals la nuit et le caract\u00e8re iconoclaste et sonore de la Place \u00c9milie-Gamelin en journ\u00e9e et du m\u00e9tro Berri-UQAM qui y est adjacent. En tournant des images de soir et en captant des voix humaines le jour est mis de l\u2019avant cette id\u00e9e d\u2019une disjonction caract\u00e9ristique du quartier explor\u00e9 et ce \u00e0 plusieurs niveaux, tant sur le plan du contenu de la captation que de l\u2019esth\u00e9tique choisie. Les insertions de bandes filmiques du film <em>Trait\u00e9 de bave et d\u2019\u00e9ternit\u00e9<\/em> d\u2019Isidore Isou viennent accentuer, dans le montage et par le sens m\u00eame qu\u2019appelle ces images, les d\u00e9calages auxquels est confront\u00e9 le marcheur qui arpente le kilom\u00e8tre carr\u00e9 qui compose le Quartier des spectacles.<\/p>\n","media_links":[{"link":"https:\/\/vimeo.com\/231568403","media_type":"vid\u00e9o"}],"date_type":"single","date":"01\/12\/2015","main_tag":{"id":86,"label":"s\u00e9minaire"},"main_location":{"id":125,"label":"Quartier des spectacles"},"main_language":{"id":76,"label":"Fran\u00e7ais"},"languages":false,"genres":[{"id":152,"label":"video"}],"tags":[{"id":166,"label":"Hyperfestivit\u00e9"},{"id":165,"label":"Isidore Isou"},{"id":167,"label":"itin\u00e9rance"},{"id":164,"label":"montage discr\u00e9pant"},{"id":163,"label":"Place \u00c9milie-Gamelin"},{"id":148,"label":"quartier des spectacles"}],"locations":[{"id":170,"label":"m\u00e9tro Berri-UQAM"},{"id":169,"label":"Place des festivals"},{"id":168,"label":"Place \u00c9milie Gamelin"},{"id":125,"label":"Quartier des spectacles"}],"projects":[{"id":120,"label":"S\u00e9minaire LRSM -A2015"}]}},"geometry":{"type":"Point","coordinates":[-73.55970025062562,45.51483895048397]}},{"type":"Feature","properties":{"id":1,"title":"","media":"","date":"","description":"","story":{"id":526,"author":{"id":527,"label":"Carlos Calle-Archila"},"collaborators":[],"text":"<p>Cette proposition audiovisuelle est con\u00e7ue du point de vue fictionnel, pour reprendre l&rsquo;id\u00e9e de Michel de Certeau \u00e0 propos la construction d&rsquo;un r\u00e9cit de la ville, mais aussi en int\u00e9grant certaines caract\u00e9ristiques du documentaire, pr\u00e9sentes au niveau audiovisuel (le son r\u00e9aliste, la voix off, l&rsquo;\u00e9clairage naturel, etc.) : deux \u00e9trangers vont se rencontrer au milieu du Boulevard Saint-Laurent (entre les rues Sherbrooke et Ren\u00e9 L\u00e9vesque), apr\u00e8s avoir r\u00e9alis\u00e9 une exploration personnelle de la place; les deux rep\u00e9rages des personnages vont inviter le spectateur \u00e0 suivre les sites le plus visibles de cette partie du Boulevard Saint-Laurent, mais aussi ceux qui n&rsquo;attirent pas l&rsquo;attention au premier regard, ou ceux qui sont de certaines mani\u00e8res cach\u00e9s aux marcheurs et pi\u00e9tons.<\/p>\n<p>&nbsp;<\/p>\n<p>Remerciements : Simon Harel, Mathieu Li-Goyette, Erwan Geoffroy.<\/p>\n","media_links":[{"link":"https:\/\/vimeo.com\/232576401","media_type":"vid\u00e9o"}],"date_type":"single","date":"01\/12\/2015","main_tag":{"id":86,"label":"s\u00e9minaire"},"main_location":{"id":125,"label":"Quartier des spectacles"},"main_language":{"id":76,"label":"Fran\u00e7ais"},"languages":false,"genres":[{"id":152,"label":"video"}],"tags":[{"id":160,"label":"Boulevard Saint Laurent"},{"id":161,"label":"\u00c9trangers"},{"id":159,"label":"R\u00e9cit de la ville"}],"locations":[{"id":162,"label":"boulevard Saint-Laurent"},{"id":125,"label":"Quartier des spectacles"}],"projects":[{"id":120,"label":"S\u00e9minaire LRSM -A2015"}]}},"geometry":{"type":"Point","coordinates":[-73.56460332870485,45.5101960438694]}},{"type":"Feature","properties":{"id":1,"title":"","media":"","date":"","description":"","story":{"id":509,"author":{"id":486,"label":"Erwan Geffroy"},"collaborators":[{"id":487,"label":"Mathieu Li-Goyette"}],"text":"<p>Capsule audiovisuelle int\u00e9gr\u00e9e \u00e0 une installation de vid\u00e9oprojection <em>in situ<\/em> utilisant un mur de la place St-Henri, Montr\u00e9al.<\/p>\n<p>R\u00e9alis\u00e9e \u00e0 partir d\u2019une prise de vues et de sons de St-Henri et d\u2019un enregistrement sonores d\u2019Oscar Peterson et d\u2019un enregistrement d\u2019une de ses compositions\u00a0: <em>Place St-Henri<\/em>.<\/p>\n<p>Projet r\u00e9alis\u00e9 dans le cadre d\u2019un partenariat entre le LRSM et MTL ville en mouvement pour le projet d\u2019Incabuteur urbain.<\/p>\n<p>&nbsp;<\/p>\n<p>Liens vers les vid\u00e9os en lignes dont sont extraits les bandes sonores\u00a0:<\/p>\n<p><a href=\"https:\/\/www.youtube.com\/watch?v=z-EpLRuta58\">https:\/\/www.youtube.com\/watch?v=z-EpLRuta58<\/a><\/p>\n<p><a href=\"https:\/\/www.youtube.com\/watch?v=8e8CoY7aKf0\">https:\/\/www.youtube.com\/watch?v=8e8CoY7aKf0<\/a><\/p>\n","media_links":[{"link":"https:\/\/vimeo.com\/231562710","media_type":"vid\u00e9o"}],"date_type":"single","date":"01\/10\/2015","main_tag":{"id":139,"label":"St-Henri"},"main_location":{"id":137,"label":"St-Henri"},"main_language":{"id":123,"label":"Anglais"},"languages":false,"genres":[{"id":152,"label":"video"}],"tags":[{"id":157,"label":"Oscar Peterson"},{"id":158,"label":"Place St-Henri"},{"id":139,"label":"St-Henri"}],"locations":[{"id":137,"label":"St-Henri"}],"projects":[{"id":109,"label":"Cr\u00e9ation LRSM"}]}},"geometry":{"type":"Point","coordinates":[-73.58479499816896,45.47824655531707]}},{"type":"Feature","properties":{"id":3,"title":"","media":"","date":"","description":"","story":{"id":525,"author":{"id":483,"label":"Khalil Khalsi"},"collaborators":[{"id":484,"label":"Simone Truemner-Caron"}],"text":"<p>Vid\u00e9o de recherche-cr\u00e9ation ayant pour th\u00e8me l\u2019(auto-)aveuglement dans le Quartier des Spectacles\u00a0; une premi\u00e8re partie sonore, sur fond noir, pr\u00e9sente un encha\u00eenement de bruits capt\u00e9s dans les rues et certains espaces publics du QdS et autour\u00a0; tandis que la seconde pr\u00e9sente une performance de danse, effectu\u00e9e par Simone, place des Arts, dont le fond sonore est une captation audio de l\u2019\u00e9change de deux clientes au restaurant <em>O noir<\/em>.<\/p>\n","media_links":[{"link":"https:\/\/vimeo.com\/231570178","media_type":"vid\u00e9o"}],"date_type":"single","date":"01\/04\/2015","main_tag":{"id":86,"label":"s\u00e9minaire"},"main_location":{"id":125,"label":"Quartier des spectacles"},"main_language":{"id":76,"label":"Fran\u00e7ais"},"languages":false,"genres":[{"id":153,"label":"danse"},{"id":152,"label":"video"}],"tags":[{"id":147,"label":"Aveuglement"},{"id":149,"label":"danse"},{"id":150,"label":"performance"},{"id":148,"label":"quartier des spectacles"},{"id":151,"label":"restauration \u00e0 l\u2019aveugle"}],"locations":[{"id":154,"label":"O.Noir restaurant"},{"id":155,"label":"Place des arts"},{"id":125,"label":"Quartier des spectacles"}],"projects":[{"id":121,"label":"S\u00e9minaire LRSM -H2015"}]}},"geometry":{"type":"Point","coordinates":[-73.56605172157289,45.507880524445156]}},{"type":"Feature","properties":{"id":1,"title":"","media":"","date":"","description":"","story":{"id":510,"author":{"id":486,"label":"Erwan Geffroy"},"collaborators":[{"id":487,"label":"Mathieu Li-Goyette"}],"text":"<p>Capsule audiovisuelle int\u00e9gr\u00e9e \u00e0 une installation de vid\u00e9oprojection <em>in situ<\/em> utilisant un mur de la Caserne 23 de la place St-Henri, \u00e0 Montr\u00e9al.<\/p>\n<p>R\u00e9alis\u00e9e \u00e0 partir d\u2019une prise de vues et de sons de St-Henri et d\u2019une mise en lecture d\u2019extraits de <em>Bonheur d\u2019occasion<\/em> de Gabrielle Roy.<\/p>\n<p>Projet r\u00e9alis\u00e9 dans le cadre d\u2019un partenariat entre le LRSM et MTL ville en mouvement pour le projet d\u2019Incubateur urbain.<\/p>\n","media_links":[{"link":"https:\/\/vimeo.com\/231569075","media_type":"vid\u00e9o"}],"date_type":"single","date":"01\/10\/2015","main_tag":{"id":138,"label":"Saint-Henri"},"main_location":{"id":131,"label":"Saint-Henri"},"main_language":{"id":76,"label":"Fran\u00e7ais"},"languages":false,"genres":[{"id":156,"label":"lecture"},{"id":152,"label":"video"}],"tags":[{"id":140,"label":"Bonheur d\u2019occasion"},{"id":93,"label":"Gabrielle Roy"},{"id":143,"label":"Incubateur Urbain"},{"id":141,"label":"Installation"},{"id":139,"label":"St-Henri"},{"id":142,"label":"Vid\u00e9oprojection"}],"locations":[{"id":137,"label":"St-Henri"}],"projects":[{"id":109,"label":"Cr\u00e9ation LRSM"}]}},"geometry":{"type":"Point","coordinates":[-73.58419418334962,45.47848828865276]}},{"type":"Feature","properties":{"id":1,"title":"","media":"","date":"","description":"","story":{"id":506,"author":{"id":485,"label":"Cynthia Noury"},"collaborators":[],"text":"<p>Sous vos pieds se trouvent \u00e0 la fois un site, un chantier, qui porter la m\u00e9moire d&rsquo;un pass\u00e9 ferroviaire, puis qui pr\u00e9figure une vocation universitaire, un lieu de savoir, un lieu de connaissances\u2026 Ces trois moments constituent la trame d&rsquo;un r\u00e9cit, le r\u00e9cit du lieu. Marchez le lieu, arpentez l&rsquo;espace et laissez-vous accompagner&#8230; &#8230; Le marcheur qui s\u2019aventure dans le quartier Outremont, dans ses rues pour se rendre devant le 400 avenue Atlantic trouvera, sous ses yeux, un terrain en chantier, un terrain en changement, mais un terrain qui, malgr\u00e9 tout, n\u2019est pas vacant. Des histoires y habitent, des histoires y circulent, des r\u00e9cits s\u2019y construisent. Comment est-ce que le marcheur qui s\u2019aventure sur ce chantier peut, en quelques minutes, arpenter le lieu, se laisser porter par l\u2019imaginaire de son histoire pass\u00e9e et pr\u00e9sente, voir et entendre ce qui s\u2019y trame, les r\u00e9cits qui s\u2019y racontent, saisir les changements qui s\u2019y op\u00e8rent\u2009? Pourquoi pas en faisant l\u2019exp\u00e9rience du d\u00e9ambulatoire-al\u00e9atoire Racines\u2009? Pendant une dizaine de minutes, le temps qu\u2019il faut pour traverser l\u2019espace, s\u2019y arr\u00eater un moment, le marcheur sera ainsi convi\u00e9 \u00e0 un paysage sonore et narratif dans lequel des r\u00e9cits lui seront racont\u00e9s, dans lequel l\u2019imaginaire du site Outremont, pass\u00e9 et futur, se fera entendre.<\/p>\n","media_links":[{"link":"https:\/\/soundcloud.com\/lrsm\/racines-deambulatoire-aleatoire","media_type":"son"}],"date_type":"single","date":"01\/10\/2016","main_tag":{"id":90,"label":"campus MIL"},"main_location":{"id":124,"label":"campus MIL"},"main_language":{"id":76,"label":"Fran\u00e7ais"},"languages":[{"id":76,"label":"Fran\u00e7ais"}],"genres":[{"id":136,"label":"fiction"}],"tags":[{"id":89,"label":"catalyseur d'imaginaires urbains"},{"id":85,"label":"cr\u00e9ation"},{"id":79,"label":"espace"},{"id":83,"label":"lieu"},{"id":81,"label":"r\u00e9cit"}],"locations":[{"id":124,"label":"campus MIL"},{"id":134,"label":"Virage"}],"projects":[{"id":108,"label":"Catalyseur d'imaginaires urbains et Virage"},{"id":109,"label":"Cr\u00e9ation LRSM"}]}},"geometry":{"type":"Point","coordinates":[-73.61674010753633,45.526422932043474]}},{"type":"Feature","properties":{"main":true,"story":{"id":114,"author":{"id":90,"label":"Cl\u00e9ment"},"collaborators":[{"id":92,"label":"Thomas"}],"text":"<p>&laquo;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&nbsp;&raquo;<\/p>\n","media_links":[{"link":"https:\/\/www.youtube.com\/watch?v=hWLc0J52b2I","media_type":"vid\u00e9o"}],"date_type":"single","date":"09\/05\/2017","main_tag":{"id":79,"label":"espace"},"main_location":{"id":127,"label":"Montr\u00e9al"},"main_language":{"id":76,"label":"Fran\u00e7ais"},"languages":[{"id":76,"label":"Fran\u00e7ais"}],"genres":[{"id":32,"label":"Chanson"}],"tags":[{"id":144,"label":"Chanson"}],"locations":[{"id":146,"label":"Crescent"}],"projects":[{"id":145,"label":"Test WPAdmin"}]}},"geometry":{"type":"Point","coordinates":[-73.5675832629204,45.496392621941084]}},{"type":"Feature","properties":{"id":"2","title":"Acte 1","media":"https:\/\/www.youtube.com\/watch?v=hWLc0J52b2I","date":"01\/09\/2017","description":"<p>\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"<\/p>","story":{"id":114,"author":{"id":90,"label":"Cl\u00e9ment"},"collaborators":[{"id":92,"label":"Thomas"}],"text":"<p>&laquo;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&nbsp;&raquo;<\/p>\n","media_links":[{"link":"https:\/\/www.youtube.com\/watch?v=hWLc0J52b2I","media_type":"vid\u00e9o"}],"date_type":"single","date":"09\/05\/2017","main_tag":{"id":79,"label":"espace"},"main_location":{"id":127,"label":"Montr\u00e9al"},"main_language":{"id":76,"label":"Fran\u00e7ais"},"languages":[{"id":76,"label":"Fran\u00e7ais"}],"genres":[{"id":32,"label":"Chanson"}],"tags":[{"id":144,"label":"Chanson"}],"locations":[{"id":146,"label":"Crescent"}],"projects":[{"id":145,"label":"Test WPAdmin"}]}},"geometry":{"type":"Point","coordinates":[-73.57479304075243,45.50078437733517]}},{"type":"Feature","properties":{"id":"3","title":"Acte 2","media":"https:\/\/flic.kr\/p\/pK9J6U","date":"15\/09\/2017","description":"","story":{"id":114,"author":{"id":90,"label":"Cl\u00e9ment"},"collaborators":[{"id":92,"label":"Thomas"}],"text":"<p>&laquo;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&nbsp;&raquo;<\/p>\n","media_links":[{"link":"https:\/\/www.youtube.com\/watch?v=hWLc0J52b2I","media_type":"vid\u00e9o"}],"date_type":"single","date":"09\/05\/2017","main_tag":{"id":79,"label":"espace"},"main_location":{"id":127,"label":"Montr\u00e9al"},"main_language":{"id":76,"label":"Fran\u00e7ais"},"languages":[{"id":76,"label":"Fran\u00e7ais"}],"genres":[{"id":32,"label":"Chanson"}],"tags":[{"id":144,"label":"Chanson"}],"locations":[{"id":146,"label":"Crescent"}],"projects":[{"id":145,"label":"Test WPAdmin"}]}},"geometry":{"type":"Point","coordinates":[-73.57299059629442,45.49979175025594]}},{"type":"Feature","properties":{"main":true,"story":{"id":94,"author":{"id":90,"label":"Cl\u00e9ment"},"collaborators":[{"id":92,"label":"Thomas"}],"text":"<p>&laquo;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&nbsp;&raquo;<\/p>\n","media_links":[{"link":"http:\/\/dailymontreal.tumblr.com\/image\/160924919750","media_type":"photo"}],"date_type":"single","date":"17\/05\/2017","main_tag":{"id":81,"label":"r\u00e9cit"},"main_location":{"id":135,"label":"Ext\u00e9rieur de Montr\u00e9al"},"main_language":{"id":76,"label":"Fran\u00e7ais"},"languages":[{"id":76,"label":"Fran\u00e7ais"}],"genres":[{"id":22,"label":"Documentaire"}],"tags":[{"id":89,"label":"catalyseur d'imaginaires urbains"}],"locations":[{"id":124,"label":"campus MIL"}],"projects":[{"id":109,"label":"Cr\u00e9ation LRSM"}]}},"geometry":{"type":"Point","coordinates":[-73.58908116817476,45.502921850094474]}},{"type":"Feature","properties":{"id":"2","title":"Promenade verte","media":"https:\/\/flic.kr\/p\/3qwMFg","date":"01\/09\/2017","description":"<p>\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"<\/p>","story":{"id":94,"author":{"id":90,"label":"Cl\u00e9ment"},"collaborators":[{"id":92,"label":"Thomas"}],"text":"<p>&laquo;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&nbsp;&raquo;<\/p>\n","media_links":[{"link":"http:\/\/dailymontreal.tumblr.com\/image\/160924919750","media_type":"photo"}],"date_type":"single","date":"17\/05\/2017","main_tag":{"id":81,"label":"r\u00e9cit"},"main_location":{"id":135,"label":"Ext\u00e9rieur de Montr\u00e9al"},"main_language":{"id":76,"label":"Fran\u00e7ais"},"languages":[{"id":76,"label":"Fran\u00e7ais"}],"genres":[{"id":22,"label":"Documentaire"}],"tags":[{"id":89,"label":"catalyseur d'imaginaires urbains"}],"locations":[{"id":124,"label":"campus MIL"}],"projects":[{"id":109,"label":"Cr\u00e9ation LRSM"}]}},"geometry":{"type":"LineString","coordinates":[[-73.57719630002977,45.50541640565172],[-73.57444971799852,45.50541640565172],[-73.57110232114793,45.50391254213513],[-73.56775492429735,45.502107852885516],[-73.56457918882371,45.50012262789342],[-73.55736941099168,45.50788265485025],[-73.55565279722215,45.50986760620917],[-73.55453699827196,45.51167204670165],[-73.55350703001024,45.51185248756915],[-73.55041712522508,45.51131116323119],[-73.54912966489793,45.51076983368672],[-73.54912966489793,45.50986760620917],[-73.54672640562059,45.51004805286169],[-73.54621142148973,45.51245395294932]]}}]};
+                    <div class="card">
+                      <div class="card-header" role="tab" id="headingOne">
+                        <h5 class="mb-0">
+                          <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Titre
+                          </a>
+                        </h5>
+                      </div>
 
-
-
-
-
-    </script>
-
-  </head>
-
-  <body>
-
-    <div class="">
-       <div id="map">
-        </div>
-    </div>
-
-    <script src="js/main.js"></script>
-
-    <div class="modal left fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    		<div class="modal-dialog" role="document">
-    			<div class="modal-content">
-
-    				<div class="modal-header">
-    					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    					<h4 class="modal-title" id="myModalLabel">L’île étrange</h4>
-    				</div>
-
-    					<div class="modal-body">
-    				<br>
-    				<span> <b>Auteur</b> : Marc </span>
-    				<br>
-    				<span> <b>Affiliation </b> : Université de Montréal - Département de Littérature </span>
-    				<br>
-    				<span> <b>Genre </b> : Nouvelle surréaliste </span>
-    				<br>
-    				<span> <b>Projet d'attache</b>  : Concours de la nouvelle surréaliste 2017 </span>
-    				<br>
-    				<span> <b>Date </b> : 09/05/2017 </span>
-    				<br>
-    				<hr>
-    				<span> <b>Tags primaires</b> : Marche à pied,Ipsum,Lorem </span>
-    				<br>
-    				<span> <b>Tags secondaires</b> : Brouillard, Brume, nuit,  </span>
-
-    				<hr>
-
-    				<iframe id="modalframe" src="https://player.vimeo.com/video/207430994" width="550" height="280" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    <p><a href="https://vimeo.com/207430994">Anne-Marie Lee-Loy, &quot;One Love? The Chinese Migrant as National Foil in Early 20th Century Jamaica&quot;</a> from <a href="https://vimeo.com/user40549646">Simon Harel</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
-    				<hr>
-    				<span> <b>L'île étrange récit dans la brume</b>
-              <b>Récapitulatif / Introduction</b>
-    					<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-    					</p>
-              <b>Chapitre 1</b>
-              <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-    					</p>
-              <b>Chapitre 2</b>
-              <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-    					</p>
-              <b>Chapitre 3</b>
-              <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-    					</p>
-              <b>Chapitre 4</b>
-              <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-    					</p>
-    				</div>
-
-    			</div>
-    		</div>
-    	</div>
-
-    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-
-       <a href="#" class="pull-left"><img id ="navbarBrandLogo" class="img-responsive" src="img/4.png"></a>
-
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav  ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Activités</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Projets</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Revue de presse</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Partenaires</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Liens</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-        <!--
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="...">
-          <button class="btn btn-outline-warning my-0 my-sm-0" type="submit">Recherche</button>
-        </form>-->
-      </div>
-    </nav>
-
-
-
-    <div class="wrapper">
-
-            <!-- Sidebar Holder -->
-            <nav id="sidebar" class="inactive">
-                <div class="sidebar-header" id="sidebarCollapse" >
-                    <h3>Explorateur</h3>
-                    <strong>LRSM</strong>
-                </div>
-
-                <ul class="list-unstyled components">
-
-
-
-                    <li class="active">
-
-                        <a href="#homeSubmenu">
-                          <i class="fa fa-filter"></i>
-                            Genres
-                        </a>
+                      <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
 
                         <select id="genreSearchBox" class="form-control select2-multiple" multiple="multiple"></select>
 
-                        </li>
+                        </div>
+                      </div>
+                    </div>
 
-                        <li>
-                        <a href="#pageSubmenu">
-                            <i class="fa fa-user"></i>
-                            Auteurs
-                        </a>
-                           <select id="authorSearchBox" class="form-control select2-allow-clear" multiple="multiple"></select>
+                    <div class="card">
+                      <div class="card-header" role="tab" id="headingTwo">
+                        <h5 class="mb-0">
+                          <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Auteur
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
 
-                      </li>
-                    <li>
-                        <a href="#">
-                          <i class="fa fa-hashtag"></i>
-                          Mots-Clés
-                        </a>
-                        <select id="keywordSearchBox" class="form-control select2-multiple" multiple="multiple"></select>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-map-marker"></i>
-                            Localisation
-                        </a>
-                        <select id="locationSearchBox" class="form-control select2-multiple" multiple="multiple"></select>
+                          <select id="genreSearchBox" class="form-control select2-multiple" multiple="multiple"></select>
 
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-clock-o"></i>
-                            Temporalité
-                        </a>
-                    </li>
+                        </div>
+                      </div>
+                    </div>
 
-                    <li>
-                        <a id="resetButton" href="javascript:void(0);" onclick="getMainMarkers()">
-                            <i class="fa fa-undo"></i>
-                            Reset
-                        </a>
+                    <div class="card">
+                      <div class="card-header" role="tab" id="headingThree">
+                        <h5 class="mb-0">
+                          <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Projets d'attache
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
 
-                    </li>
-                </ul>
+                        <select id="genreSearchBox" class="form-control select2-multiple" multiple="multiple"></select>
 
-            </nav>
-</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="card-header" role="tab" id="headingFour">
+                        <h5 class="mb-0">
+                          <a class="collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                            Mots-Clés
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+
+                        <select id="genreSearchBox" class="form-control select2-multiple" multiple="multiple"></select>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="card-header" role="tab" id="headingFive">
+                        <h5 class="mb-0">
+                          <a class="collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                            Ctest3
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion">
+                        <div class="card-body">
+
+                        <select id="genreSearchBox" class="form-control select2-multiple" multiple="multiple"></select>
+
+                        </div>
+                      </div>
+                    </div>
 
 
-    <footer class="footer bg-inverse">
-          <div class="container">
-            <span class="text-muted">Légende dynamique ici</span>
+                    <div class="card" style="border-radius: 0;!important;">
+                      <div class="card-header" role="tab" id="headingSix">
+                        <h5 class="mb-0">
+                          <a class="collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+                            Emplacements
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion">
+                        <div class="card-body">
+
+                        <select id="genreSearchBox" class="form-control select2-multiple" multiple="multiple"></select>
+
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+
+
+
+
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+
+
+                  test
+
+                    <!-- ICI VIENT LA LISTE DYNAMIQUE DE TOUS LES RÉCITS CLASSÉS PAR "NOUVEAUTÉ" -->
+
+
+
+
+                </div>
+              </div>
+              <!-- Fin Sous menu -->
+            </div>
           </div>
-        </footer>
+        </nav>
+
+
+  <!-- end sidebar -->
+
+<!-- top navbar -->
+      <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse " id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Cartographies <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Ses projets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Ses corpus</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Le LRSM</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+<!-- end top navbar -->
 
 
 
 
+        <main role="main" class="container">
+
+          <div class="starter-template">
+            <div class="">
+               <div id="map">
+                </div>
+            </div>
+          </div>
+
+        </main><!-- /.container -->
 
 
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+  <script src=js/featuresCollection.js type="text/javascript"></script>
+  <script type="text/javascript" src="js/filter.js"></script>
 
-    <script type="text/javascript" src="js/filter.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
 
 
-  </body>
+</body>
 </html>

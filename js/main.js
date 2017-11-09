@@ -85,6 +85,9 @@ function getFilterMarkers (authors){
 
 }
 
+function openModal(){
+  $("#myModal").modal('show')
+}
 
  function getMainMarkers(){
 
@@ -98,20 +101,28 @@ function getFilterMarkers (authors){
 
       onEachFeature: function(feature, layer) {
 
-    var customPopup = '<div id="popUp" class="card mb-3" style="max-width: 20rem;">  '
+    var customPopup ='<div id="popUp" class="card mb-3" style="max-width: 20rem;">  '
     customPopup = customPopup + '<div id="mediaHeader" class="card-header">'
     customPopup = customPopup + '<div id="textHeader" class="text-center"> <b>Multimedia</b> </div>'
     customPopup = customPopup + '</div> '
     customPopup = customPopup + '<div id="mediaIcon" class="">'
     customPopup = customPopup + '<img id="mediaIconImg" class="rounded-circle" src="img/Icon_Multimedia.png"  width="40px"/>'
     customPopup = customPopup + '</div>'
-    customPopup = customPopup + '<img id="popUpImg" class="card-img-top" src="img/test.jpg" alt="Card image cap">'
+    customPopup = customPopup + '<a href="javascript:openModal();"><img id="popUpImg" class="card-img-top" src="img/test.jpg" alt="Card image cap">'
     customPopup = customPopup + '<div id="popUpFooter" class="card-footer pl-1 mt-1 pt-1 mb-0 pb-0">'
     customPopup = customPopup + '<h5 id="popUpTitle" class="mt-0"> Titre du récit </h5>'
     customPopup = customPopup + '<p id="popUpAuthor" class="mt-1 pl-1 mb-0 pb-1">Nom de l\'auteur</p>'
-    customPopup = customPopup +  '</div>'
+    customPopup = customPopup +  '</div></a>'
     customPopup = customPopup +  '</div></div>'
 
+
+  /*  layer.bindPopup($('<div><a href="#" class="speciallink"><h2>'
+              +feature.properties.title + '</h2></a><iframe id="player1" src="https://player.vimeo.com/video/69426498?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=0&amp;api=1&amp;player_id=player1" width="100%" height="80%" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><div>').click(
+                function() {
+                  jQuery("#myModal").modal('show')
+                  })[0]);
+                  }
+                })*/
 
 
 
@@ -120,10 +131,10 @@ function getFilterMarkers (authors){
         {
         'className' : 'custom'
         }
+
        layer.bindPopup(customPopup,customOptions)
       }
     })
-
 
  group.addLayer(introMarker).addTo(map)
  map.fitBounds(introMarker.getBounds())
@@ -132,3 +143,6 @@ function getFilterMarkers (authors){
  }
 
  getMainMarkers()
+
+
+ /******************************/

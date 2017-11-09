@@ -18,6 +18,7 @@
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.0/mapbox-gl-geocoder.css' type='text/css' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/modal_sidebar.css"/>
     <link rel="stylesheet" href="css/main.css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
@@ -29,7 +30,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 </head>
 
@@ -282,17 +282,76 @@
         </main><!-- /.container -->
 
 
+
+<!-- MODAL -->
+
+        <div class="modal left fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        		<div class="modal-dialog" role="document">
+        			<div class="modal-content">
+        				<div class="modal-header">
+                  <div id="modalIconImg"><img  class="rounded-circle" src="img/Icon_Multimedia.png"  width="50px"/></div>
+                  <button type="button" id="modalClose" class="close" data-dismiss="modal" aria-label="Close"><span id="modalClose" class="" aria-hidden="true">&harr;</span></button>
+        					<button type="button" id="modalClose" class="close" data-dismiss="modal" aria-label="Close"><span id="modalClose" class="" aria-hidden="true">&times;</span></button>
+        				</div>
+
+        					<div class="modal-body">
+                    <h4 class="modal-title pt-3" id="myModaTitle">L’île étrange</h4>
+        				<br>
+        				<span> <b>Auteur</b> : Marc </span>
+        				<br>
+        				<span> <b>Affiliation </b> : Université de Montréal - Département de Littérature </span>
+        				<br>
+        				<span> <b>Genre </b> : Nouvelle surréaliste </span>
+        				<br>
+        				<span> <b>Projet d'attache</b>  : Concours de la nouvelle surréaliste 2017 </span>
+        				<br>
+        				<span> <b>Date </b> : 09/05/2017 </span>
+        				<br>
+        				<hr>
+        				<span> <b>Tags primaires</b> : Marche à pied,Ipsum,Lorem </span>
+        				<br>
+        				<span> <b>Tags secondaires</b> : Brouillard, Brume, nuit,  </span>
+
+        				<hr>
+
+        				<iframe id="modalframe" src="https://player.vimeo.com/video/207430994" width="550" height="280" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <p><a href="https://vimeo.com/207430994">Anne-Marie Lee-Loy, &quot;One Love? The Chinese Migrant as National Foil in Early 20th Century Jamaica&quot;</a> from <a href="https://vimeo.com/user40549646">Simon Harel</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+        				<hr>
+        				<span> <b>L'île étrange récit dans la brume</b>
+                  <b>Récapitulatif / Introduction</b>
+        					<p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        					</p>
+                  <b>Chapitre 1</b>
+                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        					</p>
+                  <b>Chapitre 2</b>
+                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        					</p>
+                  <b>Chapitre 3</b>
+                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        					</p>
+                  <b>Chapitre 4</b>
+                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        					</p>
+        				</div>
+
+        			</div>
+        		</div>
+        	</div>
+<!-- END MODAL END -->
+
+
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
   <script src="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
   <script src=js/featuresCollection.js type="text/javascript"></script>
   <script type="text/javascript" src="js/filter.js"></script>
-
   <script src="js/main.js"></script>
 
 

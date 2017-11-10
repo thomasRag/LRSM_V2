@@ -27,6 +27,22 @@
 	overflow-y: auto !important;
 }
 
+.modal-body h5 {
+	font-weight:bold;
+	color: grey;
+	font-size: 18px;
+}
+
+.modal-body h6 {
+	font-weight:300;
+	color: black;
+	font-size: 14px;
+}
+
+#modalBodyContent h5{
+	padding-bottom: 15px;
+}
+
 	.modal.left .modal-body,
 	{
 		padding: 15px 15px 80px;
@@ -81,15 +97,26 @@
 
 
  }
+ .modal-backdrop {
+  display: none !important;
+}
+.modal-open .modal {
+    width: 300px;
+    margin: 0 auto;
+}
 
- #modalLocation{
 
- }
+.inFocus {
+    opacity: 1.0;
+    background-color: #f0f0f0;
+}
 
- #pin{
-	 margin-top: 0;
- }
-
- .row{
-	 margin: auto !important;
- }
+.outFocus {
+    opacity: 0.3;
+    background-color: white;
+}
+.chapter-header {
+    display: block;
+    text-align: center;
+    font-size: 120%;
+}

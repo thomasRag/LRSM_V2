@@ -282,7 +282,7 @@
 
 <!-- DEBUT MODAL -->
 
-        <div class="modal left fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal left fade" data-backdrop="static" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         		<div class="modal-dialog" role="document">
         			<div class="modal-content">
         				<div class="modal-header">
@@ -301,29 +301,30 @@
 <!-- Auteurs / Collaborateurs et Emplacements -->
               <div class="row">
                 <div class="col-md-8 d-inline">
-          				<span class="align-text-bottom mb-0 pb-0"> <h4 class=""> Nom de l'auteur</h4> </span>
-          				<span class="align-text-bottom mb-0 pb-0"> <h5 class="align-bottom"> Nom des collaborateurs </h5> </span>
+          				<span class="align-text-bottom"> <h5> Nom de l'auteur</h5> </span>
+          				<span class="align-text-bottom"> <h5> Nom des collaborateurs </h5> </span>
                 </div>
-                <div class="col-md-4 d-inline mb-0 pt-0">
-                  <div class="mt-0 pt-0">
+                <div class="col-md-4 d-inline">
+                  <div class="">
                     <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="50px">
                   </div>
-          			   <span class="d-inline">	<h6 id ="modalLocation" class=""> Emplacement principal </h6>  </span>
+
+          			   <h6 id ="modalLocation" class="text-center"> Emplacement principal </h6>
+
                 </div>
               </div>
         			<hr>
 <!-- Projets d'attache et Date-->
               <div class="row">
-              <div class="col-md-10">
+              <div class="col-md-10 d-inline-block">
         				<span> <h5> Projets d'attache </h5>  </span>
-        				<br>
         				<span> <h5> Date (01-09-2019) </h5> </span>
         			</div>
             </div>
             <hr>
 <!-- Mots Clés -->
               <div class="row">
-                <div class="col-md-11 d-inline-block">
+                <div class="col-md-11 d-inline-block mx-auto">
                   <span class="badge badge-pill badge-primary">Mots-clé #1</span>
                   <span class="badge badge-pill badge-secondary">Mots-clé #2</span>
                   <span class="badge badge-pill badge-success">Mots-clé #3</span>
@@ -341,24 +342,25 @@
               </div>
         				<hr>
 <!-- Media Princial et Description -->
-  <!-- Iframe -->
+  <!-- Main Iframe -->
+<div id="modalBodyContent">
  <div class="row">
-        				<iframe id="modalframe" src="https://player.vimeo.com/video/207430994" width="550" height="280" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        				<iframe class="mx-auto" id="modalframe" src="http://www.lrsm.ca/" width="550" height="280" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
  </div>
-  <!-- Description -->
-                <div class="row ml-2 pl-2 ">
-                  <div class="col-md-10 d-inline-block mt-2 pt-2 text-justify">
-                    <span> <p>  Vidéo de recherche-création ayant pour thème l’(auto-)aveuglement
-                                dans le Quartier des Spectacles ; une première partie sonore, sur
-                                fond noir, présente un enchaînement de bruits captés dans les rues
-                                et certains espaces publics du QdS et autour ; tandis que la seconde
-                                présente une performance de danse, effectuée par Simone, place des
-                                Arts, dont le fond sonore est une captation audio de l’échange de
-                                deux clientes au restaurant O noir. </p> </span> </div> </div>
+  <!-- Main Description -->
+  <div class="row">
+    <div class="col-md-10 mx-auto d-inline-block mt-2 pt-2 text-justify">
+      <span> <p>  Vidéo de recherche-création ayant pour thème l’(auto-)aveuglement
+                  dans le Quartier des Spectacles ; une première partie sonore, sur
+                  fond noir, présente un enchaînement de bruits captés dans les rues
+                  et certains espaces publics du QdS et autour ; tandis que la seconde
+                  présente une performance de danse, effectuée par Simone, place des
+                  Arts, dont le fond sonore est une captation audio de l’échange de
+                deux clientes au restaurant O noir. </p> </span> </div> </div>
 
         				<hr>
 <!-- Chaptire video -->
-                <div class="row">
+                <div class="row chapter">
                   <div class="col-md-10">
         				<span id="elementNumber"> <h4>Élément #1 - Video Vimeo</h4> <span>
                   </div>
@@ -367,20 +369,20 @@
             			</div>
                 </div>
                   <div class="row">
-                                 <iframe id="modalframe" src="https://player.vimeo.com/video/207430994" width="550" height="280" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                 <iframe class="mx-auto" id="modalframe" src="https://player.vimeo.com/video/207430994" width="550" height="280" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                   </div>
-                  <div class="row ml-2 pl-2 ">
-                    <div class="col-md-10 d-inline-block mt-2 pt-2 text-justify">
+                  <div class="row">
+                    <div class="col-md-10 mx-auto d-inline-block mt-2 pt-2 text-justify">
                       <span> <p>  Vidéo de recherche-création ayant pour thème l’(auto-)aveuglement
                                   dans le Quartier des Spectacles ; une première partie sonore, sur
                                   fond noir, présente un enchaînement de bruits captés dans les rues
                                   et certains espaces publics du QdS et autour ; tandis que la seconde
                                   présente une performance de danse, effectuée par Simone, place des
                                   Arts, dont le fond sonore est une captation audio de l’échange de
-                                  deux clientes au restaurant O noir. </p> </span> </div> </div>
-
+                                deux clientes au restaurant O noir. </p> </span> </div> </div>
+                <hr>
 <!-- Chaptire sonore -->
-                <div class="row">
+                <div class="row chapter">
                   <div class="col-md-10">
                 <span id="elementNumber"> <h4>Élément #2 - Enregistrement Soudcloud</h4> <span>
                   </div>
@@ -388,11 +390,11 @@
                     <span> <h5> Emplacement | Date </h5>  </span>
                   </div>
                 </div>
-                  <div class="row ml-2 pl-2">
-                    <iframe id="modalframe" width="500" height="280" frameborder="0" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/189101974&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+                  <div class="row">
+                    <iframe class="mx-auto" id="modalframe" width="500" height="280" frameborder="0" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/189101974&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
                   </div>
-                  <div class="row ml-2 pl-2 ">
-                    <div class="col-md-10 d-inline-block mt-2 pt-2 text-justify">
+                  <div class="row">
+                    <div class="col-md-10 mx-auto d-inline-block mt-2 pt-2 text-justify">
                       <span> <p>  Vidéo de recherche-création ayant pour thème l’(auto-)aveuglement
                                   dans le Quartier des Spectacles ; une première partie sonore, sur
                                   fond noir, présente un enchaînement de bruits captés dans les rues
@@ -400,9 +402,10 @@
                                   présente une performance de danse, effectuée par Simone, place des
                                   Arts, dont le fond sonore est une captation audio de l’échange de
                                 deux clientes au restaurant O noir. </p> </span> </div> </div>
+                  <hr>
 
 <!-- Chaptire photo -->
-                <div class="row">
+                <div class="row chapter">
                   <div class="col-md-10">
                 <span id="elementNumber"> <h4>Élément #3 - Photo Flickr</h4> <span>
                   </div>
@@ -410,11 +413,11 @@
                     <span> <h5> Emplacement | Date </h5>  </span>
                   </div>
                 </div>
-                  <div class="row ml-2 pl-2">
-                    <a data-flickr-embed="true" data-header="true" data-footer="true"  href="https://www.flickr.com/photos/janlupus/albums/72157625141133435" title="Bikes"><img src="https://farm8.staticflickr.com/7459/10613142683_50b8135779.jpg" width="500" height="314" alt="Bikes"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                  <div class="row">
+                    <a class="mx-auto" data-flickr-embed="true" data-header="true" data-footer="true"  href="https://www.flickr.com/photos/janlupus/albums/72157625141133435" title="Bikes"><img class="mx-auto" src="https://farm8.staticflickr.com/7459/10613142683_50b8135779.jpg" width="500" height="280" alt="Bikes"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
                   </div>
-                  <div class="row ml-2 pl-2 ">
-                    <div class="col-md-10 d-inline-block mt-2 pt-2 text-justify">
+                  <div class="row">
+                    <div class="col-md-10 mx-auto d-inline-block mt-2 pt-2 text-justify">
                       <span> <p>  Vidéo de recherche-création ayant pour thème l’(auto-)aveuglement
                                   dans le Quartier des Spectacles ; une première partie sonore, sur
                                   fond noir, présente un enchaînement de bruits captés dans les rues
@@ -422,11 +425,12 @@
                                   présente une performance de danse, effectuée par Simone, place des
                                   Arts, dont le fond sonore est une captation audio de l’échange de
                                 deux clientes au restaurant O noir. </p> </span> </div> </div>
+                  <hr>
 
 
 
 <!-- Chaptire slideshare -->
-                  <div class="row">
+                  <div class="row chapter">
                     <div class="col-md-10">
                   <span id="elementNumber"> <h4>Élément #4 - PDF Google Drive </h4> <span>
                     </div>
@@ -434,11 +438,11 @@
                       <span> <h5> Emplacement | Date </h5>  </span>
                     </div>
                   </div>
-                    <div class="row ml-3 pl-3">
-                      <iframe src="https://drive.google.com/file/d/0B3VnSl89GUNxaXI1NzNrLUZTYWs/preview" width="500" height="280"></iframe>
+                    <div class="row">
+                      <iframe  class="mx-auto" src="https://drive.google.com/file/d/0B3VnSl89GUNxaXI1NzNrLUZTYWs/preview" width="500" height="280"></iframe>
                     </div>
-                    <div class="row ml-3 pl-3 ">
-                      <div class="col-md-10 d-inline-block mt-2 pt-2 text-justify">
+                    <div class="row">
+                      <div class="col-md-10 mx-auto d-inline-block mt-2 pt-2 text-justify">
                         <span> <p>  Vidéo de recherche-création ayant pour thème l’(auto-)aveuglement
                                     dans le Quartier des Spectacles ; une première partie sonore, sur
                                     fond noir, présente un enchaînement de bruits captés dans les rues
@@ -447,6 +451,8 @@
                                     Arts, dont le fond sonore est une captation audio de l’échange de
                                   deux clientes au restaurant O noir. </p> </span> </div> </div>
 
+                                  <hr>
+                </div>
 <!-- fin modal body-->
         				</div>
 <!-- fin modal content-->

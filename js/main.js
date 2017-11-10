@@ -10,7 +10,13 @@ var baseLayer1 = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net
 
 
 
+ var imageContainerMargin = 70;  // Margin + padding
 
+ // This watches for the scrollable container
+ var scrollPosition = 0;
+ $('div#modalBodyContent').scroll(function() {
+   scrollPosition = $(this).scrollTop();
+ });
 
 console.log(featuresCollection)
 
@@ -100,7 +106,7 @@ function openModal(){
       },
 
       onEachFeature: function(feature, layer) {
-
+/************** debut popup *****************/
     var customPopup ='<div id="popUp" class="card mb-3" style="max-width: 20rem;">  '
     customPopup = customPopup + '<div id="mediaHeader" class="card-header">'
     customPopup = customPopup + '<div id="textHeader" class="text-center"> <b>Multimedia</b> </div>'
@@ -133,6 +139,52 @@ function openModal(){
         }
 
        layer.bindPopup(customPopup,customOptions)
+/************** fin popup *****************/
+
+/************** debut modal populate *****************/
+       /*var container = $('<div id="container'+feature.properties.story['id']+'"><row chapter><div class="col-md-10"> <span id="elementNumber"> <h4>Élément #'+feature.properties.story['id']+'   </h4> <span>       </div><div class="col-md-10"><span> <h5> Emplacement | Date </h5>  </span></div></div><div class="row"></div><div class="row"><div class="col-md-10 mx-auto d-inline-block mt-2 pt-2 text-justify"><span> <p>  </p> </span> </div> </div><hr></div>',{
+       });*/
+
+                    var chapter = $('<p></p><row chapter><div class="col-md-10"> <span id="elementNumber"> <h4>Élément #'+feature.properties.story['id']+'   </h4> <span>       </div><div class="col-md-10"><span> <h5> Emplacement | Date </h5>  </span></div></div><div class="row"></div><div class="row"><div class="col-md-10 mx-auto d-inline-block mt-2 pt-2 text-justify"><span> <p>  </p> </span> </div> </div><hr></div>', {
+                          text: feature.properties['id'],
+                          class: 'chapter-header'
+                        });
+
+                        var container = $('<div></div>', {
+             id: 'container' + feature.properties['id'],
+
+           });
+
+           container.append(chapter)
+           $('#modalBodyContent').append(container);
+
+           var i;
+           var areaTop = -100;
+           var areaBottom = 0;
+
+           // Calculating total height of blocks above active
+           for (i = 1; i < feature.properties['id']; i++) {
+             areaTop += $('div#container' + i).height() + imageContainerMargin;
+           }
+
+           areaBottom = areaTop + $('div#container' + feature.properties['id']).height();
+
+           $('div#modalBodyContent').scroll(function() {
+             if ($(this).scrollTop() >= areaTop && $(this).scrollTop() < areaBottom) {
+               $('.image-container').removeClass("inFocus").addClass("outFocus");
+               $('div#container' + feature.properties['id']).addClass("inFocus").removeClass("outFocus");
+
+               map.flyTo([feature.geometry.coordinates[1], feature.geometry.coordinates[0] ], 15);
+             }
+           });
+
+           // Make markers clickable
+           layer.on('click', function() {
+             alert('TEST')
+             $("div#modalBodyContent").animate({scrollTop: areaTop + "px"});
+           });
+
+/************** fin modal populate *****************/
       }
     })
 

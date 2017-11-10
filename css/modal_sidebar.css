@@ -55,7 +55,7 @@
 		height:100% !important;
 	}
 	.modal-header {
-	  background-color: red;
+	  background-color: yellow;
 
 		width: 100%;
 		display: block !important;
@@ -88,4 +88,8 @@
 
  #pin{
 	 margin-top: 0;
+ }
+
+ .row{
+	 margin: auto !important;
  }

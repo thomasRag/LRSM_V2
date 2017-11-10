@@ -180,7 +180,7 @@ function openModal(){
 
            // Make markers clickable
            layer.on('click', function() {
-             alert('TEST')
+             
              $("div#modalBodyContent").animate({scrollTop: areaTop + "px"});
            });
 

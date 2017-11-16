@@ -30,6 +30,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
 
 
+    <!-- style sheet for mapzen.js -->
+<link rel="stylesheet" href="https://mapzen.com/js/mapzen.css">
+
+<!-- latest version of mapzen.js-->
+<script src="https://mapzen.com/js/mapzen.js"></script>
+
+<!-- latest minified version of mapzen.js -->
+<script src="https://mapzen.com/js/mapzen.min.js"></script>
+
 
 </head>
 
@@ -244,7 +253,7 @@
                 <a class="nav-link" href="corpus.html">Ses corpus</a>
               </li>
               <li class="nav-item mr-5">
-                <a class="nav-link" href="apropos.html">Le LRSM</a>
+                <a class="nav-link" href="lequipe.html">Le LRSM</a>
               </li>
             </ul>
           </div>
@@ -277,7 +286,19 @@
           </div>
 
         </main><!-- /.container -->
+  <script>
+        L.Mapzen.apiKey = 'mapzen-3CAQoBZ';
+        var map = L.Mapzen.map('map', {
+  tangramOptions: {
+    scene: {
+      import: L.Mapzen.BasemapStyles.TronNoLabels
+    }
+  }
+});
+        map.setView([45.5042192,-73.5566977], 16);
 
+
+  </script>
 
 
 <!-- DEBUT MODAL -->

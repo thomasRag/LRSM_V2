@@ -24,7 +24,7 @@
 
 .modal-body {
 	max-height: calc(100vh - 150px) !important;
-	overflow-y: auto !important;
+	/*overflow-y: auto !important;*/
 }
 
 .modal-body h5 {

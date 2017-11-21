@@ -8,17 +8,16 @@ var baseLayer1 = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net
  })
  .addTo(map);
 
-
-
  var imageContainerMargin = 70;  // Margin + padding
 
  // This watches for the scrollable container
  var scrollPosition = 0;
- $('div#modalBodyContent').scroll(function() {
+ $('div#contents').scroll(function() {
    scrollPosition = $(this).scrollTop();
  });
 
-console.log(featuresCollection)
+
+
 
 var group = L.layerGroup();
 var filteredGroup = L.layerGroup();
@@ -90,9 +89,14 @@ function getFilterMarkers (authors){
    //map.fitBounds(filterMarkers.getBounds())
 
 }
+function picnicFilter(feature) {
+  if (feature.properties.Picnic === "Yes") return true
+}
+
 
 function openModal(){
   $("#myModal").modal('show')
+  map.closePopup();
 }
 
  function getMainMarkers(){
@@ -102,10 +106,16 @@ function openModal(){
     /* filter: masterFilter,*/
 
       pointToLayer: function(feature, latlng) {
-       return L.circleMarker(latlng, setColor) //, style(feature)); //,styled(feature));
-      },
+         label = String(feature.properties.story.id)
+       return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip();
+},
+  /*    filter: function(feature) {
+        if (feature.properties.main == true)
+        return true
+      },*/
 
       onEachFeature: function(feature, layer) {
+         (function(layer, properties) {
 /************** debut popup *****************/
     var customPopup ='<div id="popUp" class="card mb-3" style="max-width: 20rem;">  '
     customPopup = customPopup + '<div id="mediaHeader" class="card-header">'
@@ -139,55 +149,116 @@ function openModal(){
         }
 
        layer.bindPopup(customPopup,customOptions)
+       label = String(feature.properties.story['id'])
 /************** fin popup *****************/
 
 /************** debut modal populate *****************/
        /*var container = $('<div id="container'+feature.properties.story['id']+'"><row chapter><div class="col-md-10"> <span id="elementNumber"> <h4>Élément #'+feature.properties.story['id']+'   </h4> <span>       </div><div class="col-md-10"><span> <h5> Emplacement | Date </h5>  </span></div></div><div class="row"></div><div class="row"><div class="col-md-10 mx-auto d-inline-block mt-2 pt-2 text-justify"><span> <p>  </p> </span> </div> </div><hr></div>',{
        });*/
 
-                    var chapter = $('<p></p><row chapter><div class="col-md-10"> <span id="elementNumber"> <h4>Élément #'+feature.properties.story['id']+'   </h4> <span>       </div><div class="col-md-10"><span> <h5> Emplacement | Date </h5>  </span></div></div><div class="row"></div><div class="row"><div class="col-md-10 mx-auto d-inline-block mt-2 pt-2 text-justify"><span> <p>  </p> </span> </div> </div><hr></div>', {
-                          text: feature.properties['id'],
-                          class: 'chapter-header'
-                        });
+          var chapter = $('<p></p><row chapter><div class="col-md-10"> <span id="elementNumber"> <h4>Élément #'+feature.properties.story['id']+'   </h4> <span>       </div><div class="col-md-10"><span> <h5> Emplacement | Date </h5>  </span></div></div><div class="row"></div><div class="row"><div class="col-md-10 mx-auto d-inline-block mt-2 pt-2 text-justify"><span> <p>  </p> </span> </div> </div><hr></div>', {
+                text: feature.properties.story['id'],
+                class: 'chapter-header'
+              });
 
-                        var container = $('<div></div>', {
-             id: 'container' + feature.properties['id'],
+  /*       var container = $('<div></div>', {
+             id: 'container' + feature.properties.story['id'],
 
            });
 
-           container.append(chapter)
-           $('#modalBodyContent').append(container);
+           var description = $('<div></div>', {
+             text: feature.properties.story['text'],
+             class: 'description'
+           });
+
+           container.append(chapter).append(description)
+           $('#modalBodyContent').append(container)
+
+           var imageContainerMargin = 270;  // Margin + padding
+
+           // This watches for the scrollable container
+           var scrollPosition = 0;
+           $('#modalBodyContent').scroll(function() {
+             scrollPosition = $(this).scrollTop();
+           });
 
            var i;
            var areaTop = -100;
            var areaBottom = 0;
 
            // Calculating total height of blocks above active
-           for (i = 1; i < feature.properties['id']; i++) {
-             areaTop += $('div#container' + i).height() + imageContainerMargin;
+           for (i = 1; i < feature.properties.story['id']; i++) {
+
+             areaTop += $('#container' + feature.properties['id']).height() + imageContainerMargin;
            }
 
-           areaBottom = areaTop + $('div#container' + feature.properties['id']).height();
+           areaBottom = areaTop + $('#container' + feature.properties.story['id']).height();
 
-           $('div#modalBodyContent').scroll(function() {
+
+          $('#modalBodyContent').scroll(function() {
              if ($(this).scrollTop() >= areaTop && $(this).scrollTop() < areaBottom) {
-               $('.image-container').removeClass("inFocus").addClass("outFocus");
-               $('div#container' + feature.properties['id']).addClass("inFocus").removeClass("outFocus");
-
-               map.flyTo([feature.geometry.coordinates[1], feature.geometry.coordinates[0] ], 15);
+          $('.test').removeClass("inFocus").addClass("outFocus");
+          $('#container' + feature.properties.story['id']).addClass("inFocus").removeClass("outFocus");
+          map.flyTo([feature.geometry.coordinates[1], feature.geometry.coordinates[0] ], 18);
              }
-           });
+           });*/
+
+
+           /***********************************************************************/
+
+           var container = $('<div></div>', {
+                       id: 'container' + feature.properties['id'],
+                       class: 'image-container'
+                     });
+
+                    var description = $('<p></p>', {
+                       text: feature.properties['media_type'],
+                       class: 'description'
+                     });
+
+
+                     container.append(chapter).append(description)
+                     $('#modalBodyContent').append(container);
+
+                     var i;
+                     var areaTop = -100;
+                     var areaBottom = 0;
+
+                     // Calculating total height of blocks above active
+                     for (i = 1; i < feature.properties['id']; i++) {
+                       areaTop += $('div#container' + i).height() + imageContainerMargin;
+                     }
+
+                     areaBottom = areaTop + $('div#container' + feature.properties['id']).height();
+
+
+
+                     $('div#modalBodyContent').scroll(function() {
+                        //console.log(areaTop,areaBottom )
+                       if ($(this).scrollTop() >= areaBottom && $(this).scrollTop() < areaTop) {
+                         $('.image-container').removeClass("inFocus").addClass("outFocus");
+                         $('div#container' + feature.properties['id']).addClass("inFocus").removeClass("outFocus");
+                        // console.log([feature.geometry.coordinates[1], feature.geometry.coordinates[0]])
+                         map.flyTo([feature.geometry.coordinates[1], feature.geometry.coordinates[0] ], 18);
+                       }
+                     });
+
+/************************************************************************/
+
 
            // Make markers clickable
            layer.on('click', function() {
-             
-             $("div#modalBodyContent").animate({scrollTop: areaTop + "px"});
-           });
 
+             $("#modalBodyContent").animate({scrollTop: areaTop + "px"});
+           });
+        })(layer, feature.properties)
 /************** fin modal populate *****************/
       }
     })
 
+
+    $('div#container').addClass("inFocus");
+       $('#contents').append("<div class='space-at-the-bottom'><a href='#space-at-the-top'><i class='fa fa-chevron-up'></i></br><small>Top</small></a></div>");
  group.addLayer(introMarker).addTo(map)
  map.fitBounds(introMarker.getBounds())
 

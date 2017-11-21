@@ -1,7 +1,17 @@
 /**** LOOP THROUGHT EVERY CATEGORY TO FILTER THE DATA *****/
 /*******************************************/
 
+/**
+           * Remove null values from the Fulcrum API Endpoint
+           *
+           **/
 
+          (function removeNull(o) {
+              for (var key in o) {
+                  if (null === o[key]) o[key] = '';
+                  if (typeof o[key] === 'object') removeNull(o[key]);
+              }
+          })(featuresCollection);
 
 
     /* initialize arrays */
@@ -45,7 +55,7 @@
 
                   function getAuthor(i){
                       for (var j = 0; j < featuresCollection.features.length; j++)
-                         i.push(featuresCollection.features[j].properties.story.author.label)
+                         i.push(featuresCollection.features[j].properties.story.authors[0].label)
                       };
                   getAuthor (author_Data)
 
@@ -63,7 +73,7 @@
 
                   function getTitre(i){
                       for (var j = 0; j < featuresCollection.features.length; j++)
-                         i.push(featuresCollection.features[j].properties.story.id)
+                         i.push(featuresCollection.features[j].properties.title)
                       };
                   getTitre (titre_Data)
 

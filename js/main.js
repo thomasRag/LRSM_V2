@@ -71,13 +71,7 @@ function getFilterMarkers (i){
            return L.circleMarker(latlng, setColor) //, style(feature)); //,styled(feature));
           },
 
-          onEachFeature: function(feature, layer) {
-           //layer.bindPopup('<h1>'+marker.properties.title+'</h1><p>'+marker.properties.auteurs+'</p>'+'</h1><p>'+marker.properties.id+'</p><a href=www.google.com>Explorer le récit</a>');
-           //console.log(feature.properties.media)
-           layer.bindPopup('<div><a href="#" class="speciallink"><h2>'
-            +feature.properties.story[i] +'</h2></div>')
-
-          }
+          onEachFeature: onEachFeature
 
     }).addTo(map)
 
@@ -97,8 +91,8 @@ function openModal(){
 
 document.getElementById("modalClose").onclick = function () { getMainMarkers() };
 
- function getMainMarkers(id){
-
+ function getMainMarkers(){
+   filteredGroup.clearLayers();
  	 introMarker = L.geoJSON(featuresCollection,{
 
     /* filter: function(feature, layer) {
@@ -111,7 +105,7 @@ document.getElementById("modalClose").onclick = function () { getMainMarkers() }
 		},
 
 
-      onEachFeature: onEachFeature
+      onEachFeature: onEachFeature1
 
     })
 
@@ -125,6 +119,40 @@ document.getElementById("modalClose").onclick = function () { getMainMarkers() }
  }
 
  getMainMarkers()
+
+
+function onEachFeature1(feature, layer) {
+         (function(layer, properties) {
+/************** debut popup *****************/
+    var customPopup ='<div id="popUp" class="card mb-3" style="max-width: 20rem;">  '
+    customPopup = customPopup + '<div id="mediaHeader" class="card-header">'
+    customPopup = customPopup + '<div id="textHeader" class="text-center"> <b>Multimedia</b> </div>'
+    customPopup = customPopup + '</div> '
+    customPopup = customPopup + '<div id="mediaIcon" class="">'
+    customPopup = customPopup + '<img id="mediaIconImg" class="rounded-circle" src="img/Icon_Multimedia.png"  width="40px"/>'
+    customPopup = customPopup + '</div>'
+    customPopup = customPopup + '<a href="javascript:getFilterMarkers('+feature.properties.story['id']+'),openModal()"><img id="popUpImg" class="card-img-top" src="img/test.jpg" alt="Card image cap">'
+    customPopup = customPopup + '<div id="popUpFooter" class="card-footer pl-1 mt-1 pt-1 mb-0 pb-0">'
+    customPopup = customPopup + '<h5 id="popUpTitle" class="mt-0"> Titre du récit </h5>'
+    customPopup = customPopup + '<p id="popUpAuthor" class="mt-1 pl-1 mb-0 pb-1">Nom de l\'auteur</p>'
+    customPopup = customPopup +  '</div></a>'
+    customPopup = customPopup +  '</div></div>'
+
+
+    // specify popup options
+    var customOptions =
+        {
+        'className' : 'custom'
+        }
+
+       layer.bindPopup(customPopup,customOptions)
+       label = String(feature.properties.story['id'])
+/************** fin popup *****************/
+
+
+})(layer, feature.properties)
+}
+
 
 
 function onEachFeature(feature, layer) {

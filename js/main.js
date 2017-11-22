@@ -95,9 +95,10 @@ document.getElementById("modalClose").onclick = function () { getMainMarkers() }
    filteredGroup.clearLayers();
  	 introMarker = L.geoJSON(featuresCollection,{
 
-    /* filter: function(feature, layer) {
-       if(feature.properties.story['id'] === storyID)
-     },*/
+     filter: function(feature, layer) {
+       if(feature.properties.main === true)
+       return true
+     },
 
       pointToLayer: function(feature, latlng) {
          label = String(feature.properties.story.id)

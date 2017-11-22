@@ -53,21 +53,17 @@ function get_random_color() {
 
 var authors = $("#authorSearchBox").val();
 
+/********** GET FILTERED MARKERS OVER THE SPECIFIC STORY ID ******/
 
-
-
-function getFilterMarkers (authors){
-
+function getFilterMarkers (i){
   filteredGroup.clearLayers();
      filterMarkers = L.geoJSON(featuresCollection,{
-         filter:
-         function(feature) {
-           console.log(authors)
-          //for (var j = 0 ; j < authors.length ; j++){
-           if (feature.properties.story.author.label === authors){
+         filter:          function(feature, layer) {
+          for (var j = 0 ; j < i ; j++){
+           if (feature.properties.story['id'] == i){
+           	console.log(feature.properties.story['id'] , i)
             return true}
-
-        },
+        }},
 
           pointToLayer: function(feature, latlng) {
            return L.circleMarker(latlng, setColor) //, style(feature)); //,styled(feature));
@@ -77,7 +73,9 @@ function getFilterMarkers (authors){
            //layer.bindPopup('<h1>'+marker.properties.title+'</h1><p>'+marker.properties.auteurs+'</p>'+'</h1><p>'+marker.properties.id+'</p><a href=www.google.com>Explorer le récit</a>');
            //console.log(feature.properties.media)
            layer.bindPopup('<div><a href="#" class="speciallink"><h2>'
-            +feature.properties.story.author.label +'</h2></div>')
+            +feature.properties.story[i] +'</h2></div>')
+
+
 
           }
 
@@ -89,9 +87,7 @@ function getFilterMarkers (authors){
    //map.fitBounds(filterMarkers.getBounds())
 
 }
-function picnicFilter(feature) {
-  if (feature.properties.Picnic === "Yes") return true
-}
+
 
 
 function openModal(){
@@ -108,13 +104,30 @@ function openModal(){
       pointToLayer: function(feature, latlng) {
          label = String(feature.properties.story.id)
        return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip();
-},
+		},
   /*    filter: function(feature) {
         if (feature.properties.main == true)
         return true
       },*/
 
-      onEachFeature: function(feature, layer) {
+      
+      onEachFeature: onEachFeature 
+      
+    })
+
+
+    $('div#container').addClass("inFocus");
+       $('#contents').append("<div class='space-at-the-bottom'><a href='#space-at-the-top'><i class='fa fa-chevron-up'></i></br><small>Top</small></a></div>");
+ group.addLayer(introMarker).addTo(map)
+ map.fitBounds(introMarker.getBounds())
+
+
+ }
+
+ getMainMarkers()
+
+
+function onEachFeature(feature, layer) {
          (function(layer, properties) {
 /************** debut popup *****************/
     var customPopup ='<div id="popUp" class="card mb-3" style="max-width: 20rem;">  '
@@ -139,6 +152,23 @@ function openModal(){
                   })[0]);
                   }
                 })*/
+
+
+
+			var lg = group[feature.properties.story['id']];
+
+			    if (lg === undefined) {
+			        lg = new L.layerGroup();
+			        //add the layer to the map
+			        lg.addTo(map);
+			        //store layer
+			        group[feature.properties.story['id']] = lg;
+			    }
+
+			    //add the feature to the layer
+			    lg.addLayer(layer);      
+		
+
 
 
 
@@ -250,22 +280,39 @@ function openModal(){
            layer.on('click', function() {
 
              $("#modalBodyContent").animate({scrollTop: areaTop + "px"});
+           	//getFilterMarkers(feature.properties.story['id'])
+           		
+           	showLayer(feature.properties.story['id'])
+           	
            });
         })(layer, feature.properties)
 /************** fin modal populate *****************/
-      }
-    })
 
 
-    $('div#container').addClass("inFocus");
-       $('#contents').append("<div class='space-at-the-bottom'><a href='#space-at-the-top'><i class='fa fa-chevron-up'></i></br><small>Top</small></a></div>");
- group.addLayer(introMarker).addTo(map)
- map.fitBounds(introMarker.getBounds())
 
+/*
+introMarker.on("click", groupClick);
+ 
 
- }
+ 	function groupClick(event) {
+  console.log(event.properties);
+}*/
 
- getMainMarkers()
+}
 
+function showLayer(id) {
 
+	for (var i = 0; i < 1000; i++) {
+	hideLayer(i)};
+
+	//var lg = group[id];
+    //map.addLayer(lg);   
+}
+function hideLayer(id) {
+    
+    var lg = group[id];
+    map.removeLayer(lg);   
+}
  /******************************/
+
+

@@ -4,6 +4,8 @@ html {
 }
 body {
   padding-top: 5rem;
+  scroll-snap-type: proximity;
+        scroll-snap-destination: 0 0;
 }
 
 #map{

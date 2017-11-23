@@ -29,6 +29,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
 
 
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
 
 </head>
 
@@ -169,23 +170,6 @@
                     <div class="card" style="border-radius: 0;!important;">
                       <div class="card-header" role="tab" id="headingSix">
                         <h5 class="mb-0">
-                          <a class="collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseThree">
-                            Temporalité
-                          </a>
-                        </h5>
-                      </div>
-                      <div id="collapseSeven" class="collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion">
-                        <div class="card-body">
-
-                        <select id="genreSearchBox" class="form-control select2-multiple" multiple="multiple"></select>
-
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="card" style="border-radius: 0;!important;">
-                      <div class="card-header" role="tab" id="headingSix">
-                        <h5 class="mb-0">
                           <a class="collapsed" data-toggle="collapse" href="#collapse8" aria-expanded="false" aria-controls="collapseThree">
                             Mots-Clés
                           </a>
@@ -199,6 +183,28 @@
                         </div>
                       </div>
                     </div>
+
+                    <div class="card" style="border-radius: 0;!important;">
+                      <div class="card-header" role="tab" id="headingSix">
+                        <h5 class="mb-0">
+                          <a class="collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseThree">
+                            Temporalité
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapseSeven" class="collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion">
+                        <div class="card-body">
+
+                          <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                              <i class="fa fa-calendar"></i>&nbsp;
+                              <span></span> <b class="caret"></b>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+
 
 <!-- Fin Sous menu -->
                   </div>
@@ -369,6 +375,10 @@
 
   <script src="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+  
   <script src=js/featuresCollection2.js type="text/javascript"></script>
   <script type="text/javascript" src="js/filter.js"></script>
   <script src="js/main.js"></script>

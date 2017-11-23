@@ -142,7 +142,7 @@
    $('#genreSearchBox').select2(
 
     {
-      placeholder: "Choississez un titre",
+      placeholder: "Filtrez par titre",
       multiple: true,
       allowClear: true,
       data: genre_Data.unique()
@@ -157,16 +157,16 @@
   var genreOptions = $("#genreSearchBox option");
   genreOptions.each(function() {
       selectedItems.push( $(this).val() );
-  });*/
+  });
 
-  $("#genreSearchBox").val(selectedItems).trigger("change");
+  $("#genreSearchBox").val(selectedItems).trigger("change");*/
 
 
   function searchBoxAuthor() {
    $('#authorSearchBox').select2(
 
     {
-      placeholder: "Auteur",
+      placeholder: "Filtrez par auteur",
       multiple: true,
       allowClear: true,
      data:   author_Data.unique()
@@ -197,6 +197,9 @@
    $('#keywordSearchBox').select2(
 
     {
+      placeholder: "Filtrez par mots-clés",
+      multiple: true,
+      allowClear: true,
      data:   keyword_Data.unique()
     }
    )
@@ -217,6 +220,9 @@
    $('#locationSearchBox').select2(
 
     {
+      placeholder: "Filtrez par emplacement",
+      multiple: true,
+      allowClear: true,
      data:   location_Data.unique()
     }
    )
@@ -365,7 +371,11 @@ arrayTest(arraySelectors)
 });
 
 
-
+//Correction du bug du placeholder
+$(document).ready( function() {
+    // Correct bug to show placeholder
+    $('.select2-search__field').css({"width":"100%"});
+});
 
 $(".select2-multiple").on("select2:unselect", function () { arraySelectors = [] });
 //$(".select2-multiple").on("select2:unselect", function (e) { console.log("select2:unselect", e); });

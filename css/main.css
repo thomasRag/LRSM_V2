@@ -23,6 +23,33 @@ body {
 }
 
 
+/*******************  LIST DE TITRES DYNAMIQUE ************************/
+#arraySelectors{
+  border-color: transparent !important;
+  border-radius: 0px !important;
+  margin-bottom: 0px !important;
+  padding-bottom: 0 !important;
+}
+
+.list-group-item{
+  border-color: transparent !important;
+  border-radius: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.text_info{
+  color: black!important;
+  display:inline-block;
+  width:90%;
+  max-width:91%;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+/******************* FIN LIST DE TITRES DYNAMIQUE ************************/
+
 #projets{
   position: absolute;
   z-index: 998;
@@ -247,7 +274,7 @@ background-color: rgba(255,255,255,1);
     background-color: black;
     transform-origin: right top;
     transform: scale(0, 1);
-    transition: color 0.1s,transform 0.2s ease-out;
+    transition: color 0.1s,transform 1s ease-out;
 }
 #myTabContent a:active::before {
     background-color: white;

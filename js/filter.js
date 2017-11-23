@@ -308,38 +308,69 @@
 
 /*** retrieve searchbox selected data(s) ***/
 /*******************************************/
-
+var arraySelectors = [];
 
 $("#genreSearchBox").on("select2:select", function(e) {
-select_valGenreSearchBox = $(e.currentTarget).val();
+ a = select_valGenreSearchBox = $(e.currentTarget).val();
+  arraySelectors.push(a)
+  console.log(arraySelectors)
   // console.log(select_valGenreSearchBox)
 });
 
-
 $("#authorSearchBox").on("select2:select", function(e) {
-select_valAuthorSearchBox = $(e.currentTarget).val();
+a = select_valAuthorSearchBox = $(e.currentTarget).val();
+arraySelectors.push(a)
+console.log(arraySelectors)
   // console.log(select_valAuthorSearchBox)
 });
 
-
 $("#keywordSearchBox").on("select2:select", function(e) {
-select_valKeywordSearchBox = $(e.currentTarget).val();
+a = select_valKeywordSearchBox = $(e.currentTarget).val();
+arraySelectors.push(a)
+console.log(arraySelectors)
   // console.log(select_valKeywordSearchBox)
 });
-
 $("#locationSearchBox").on("select2:select", function(e) {
-select_valLocationSearchBox = $(e.currentTarget).val();
+a = select_valLocationSearchBox = $(e.currentTarget).val();
+arraySelectors.push(a)
+console.log(arraySelectors)
 //   console.log(select_valLocationSearchBox)
 });
 $("#ltitreSearchBox").on("select2:select", function(e) {
-select_valTitreSearchBox = $(e.currentTarget).val();
+a = select_valTitreSearchBox = $(e.currentTarget).val();
+arraySelectors.push(a)
+arrayTest(arraySelectors)
+console.log(arraySelectors)
 //   console.log(select_valLocationSearchBox)
 });
 $("#mobilitySearchBox").on("select2:select", function(e) {
-select_valMobilitySearchBox = $(e.currentTarget).val();
+a = select_valMobilitySearchBox = $(e.currentTarget).val();
+arraySelectors.push(a)
+arrayTest(arraySelectors)
+console.log(arraySelectors)
 //   console.log(select_valLocationSearchBox)
+
 });
 $("#projectSearchBox").on("select2:select", function(e) {
-select_valProjectSearchBox = $(e.currentTarget).val();
+a = select_valProjectSearchBox = $(e.currentTarget).val();
 //   console.log(select_valLocationSearchBox)
+arraySelectors.push(a)
+arrayTest(arraySelectors)
+console.log(arraySelectors)
 });
+
+// function search for titles
+  function searchTitles(arr){
+
+    for( var i=0; i<arr.length; i++ ) {
+      return true
+    }
+  }
+
+function arrayTest(i){
+  var liContainers = $('<li class="list-group-item col-md-12"></li>')
+  var aContainers = $('<a href="#" class="text_info"></a>')
+  aContainers.append(i)
+  liContainers.append(aContainers);
+  $('#arraySelectors').append(liContainers);
+}

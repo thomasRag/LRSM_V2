@@ -6,15 +6,12 @@ body {
   padding-top: 5rem;
 }
 
-.test{
-  height: 500px;
-}
-
 #map{
 
-  position: absolute;
+  position: fixed;
+  z-index: 55!important;
   left:15%;
-  top:8%;
+  top:12%;
   bottom: 0;
   min-height: 88%;
   min-width: 85%;
@@ -23,12 +20,18 @@ body {
 }
 
 
+
 /*******************  LIST DE TITRES DYNAMIQUE ************************/
+
+
 #arraySelectors{
   border-color: transparent !important;
   border-radius: 0px !important;
   margin-bottom: 0px !important;
   padding-bottom: 0 !important;
+  max-height: 99%;
+  margin-left: 1;
+  display: block;
 }
 
 .list-group-item{
@@ -36,6 +39,7 @@ body {
   border-radius: 0px !important;
   margin: 0px !important;
   padding: 0px !important;
+
 }
 
 .text_info{
@@ -79,9 +83,10 @@ body {
   z-index: 100;
   left:0;
   top:8%;
-  height: 92%;
+  max-height: 92%;
   width: 100%;
   background-color: white;
+  overflow: auto;
 }
 
 #submenu{
@@ -334,16 +339,6 @@ a {
 
 /************************* MY MODAL *****************************/
 
-#narration {
-    position: absolute;
-    width: 30vw;
-    min-width: 300px;
-    right: 0px;
-    height: 100vh;
-    overflow: auto;
-    z-index: 99;
-    background: rgba(254,254,254, 1.0); /* to apply opacity background only. */
-}
 
 
 #modalBodyContent {
@@ -376,18 +371,6 @@ a {
     color: #fff;
 }
 
-#title {
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    background-color: white;
-    width: 30vw;
-    min-width: 300px;
-    z-index: 100;
-    margin: 0px;
-    padding: 0px;
-}
-
 h3 {
     margin-bottom: 0px;
 }
@@ -400,43 +383,6 @@ h3 {
     text-align: center;
 }
 
-.image-container img {
-    height: auto;
-    width: auto;
-    max-height: 100%;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-
-    /* Three lines that center vertically */
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.img-holder {
-    margin: 0px;
-    height: 200px;
-    max-height: 200px;
-    width: 100%;
-}
-
-.title-text {
-    font-weight: bold;
-    text-align: center;
-    margin: 10px;
-}
-
-.chapter-header {
-    display: block;
-    text-align: center;
-    font-size: 120%;
-}
-
-.source {
-    font-size: 9pt;
-    margin: 20px;
-}
 
 .description {
     margin: 20px;
@@ -453,32 +399,4 @@ h3 {
 .outFocus {
     opacity: 0.3;
     background-color: white;
-}
-
-@media only screen and (max-device-width: 480px) {
-  ::-webkit-scrollbar {
-      display: none;
-  }
-  #map {
-    width: 100vw;
-  }
-  #title {
-    width: 80%;
-    left: 10%;
-    min-width: 0;
-  }
-  #narration {
-    width: 80%;
-    min-width: 0;
-    left: 10%;
-    background: none;
-    opacity: 0.8;
-  }
-  .description {
-      padding: 0;
-      padding-bottom: 10px;
-  }
-  .leaflet-control-container {
-      display: none;
-  }
 }

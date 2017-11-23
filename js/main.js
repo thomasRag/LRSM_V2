@@ -10,6 +10,7 @@ var baseLayer1 = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net
 
 var group = L.layerGroup();
 var filteredGroup = L.layerGroup();
+var mainMarkers ;
 
 setColor = {
  radius: 8,
@@ -66,6 +67,36 @@ function get_random_color() {
             map.panTo(map.unproject(px), {animate: true}); // pan to new center
    });
 
+
+   map.on('moveend ', function() {
+      $("#arraySelectors").empty();
+    // Construct an empty list to fill with onscreen markers.
+    var inBounds = [];
+    // Get the map bounds - the top-left and bottom-right locations.
+        bounds = map.getBounds();
+
+    // For each marker, consider whether it is currently visible by comparing
+    // with the current map bounds.
+    mainMarkers.eachLayer(function(marker) {
+        if (bounds.contains(marker.getLatLng())) {
+            inBounds.push(marker.feature.properties.story.id)
+          ;
+        }
+    });
+
+    for (i = 0; i < inBounds.length; i++) {
+      var liContainers = $('<li class="list-group-item col-md-12"></li>')
+      var aContainers = $('<a href="#" class="text_info"></a>')
+      aContainers.append(inBounds[i])
+      liContainers.append(aContainers);
+      $('#arraySelectors').append(liContainers);}
+    // Display a list of markers.
+  //  document.getElementById('coordinates').innerHTML = inBounds.join('\n');
+});
+
+
+
+
 /**********end random functions******/
 
 
@@ -97,7 +128,7 @@ function getFilterMarkers (i){
 
   // Change container class in to outfocus if
   $('div#container').addClass("inFocus");
-  $('div#modalBodyContent').append("<div class='space-at-the-bottom'><a href='#space-at-the-top'><i class='fa fa-chevron-up'></i></br><small>Top</small></a></div>");
+  
 
   // remove the main markers
   group.clearLayers();
@@ -139,6 +170,9 @@ function getFilterMarkers (i){
 
      group.addLayer(mainMarkers).addTo(map)
      map.fitBounds(mainMarkers.getBounds())
+
+
+
      }
 
      getMainMarkers()
@@ -167,6 +201,7 @@ function getFilterMarkers (i){
           {'className' : 'custom'}
       // bind html code and class options to the popup
       layer.bindPopup(customPopup,customOptions)
+
     };
 
 

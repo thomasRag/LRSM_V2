@@ -56,7 +56,7 @@
 
 
 
-                  <!-- Sous menu -->
+<!-- Sous menu -->
               <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                   <div class="ml-3"><p class="mb-1" style="font-size: 0.8em;"> Filtrer les récits par </p></div>
@@ -200,7 +200,7 @@
                       </div>
                     </div>
 
-
+<!-- Fin Sous menu -->
                   </div>
                 </div>
 
@@ -209,9 +209,9 @@
 
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
-
 <!-- ICI VIENT LA LISTE DYNAMIQUE DE TOUS LES RÉCITS CLASSÉS PAR "NOUVEAUTÉ" -->
-                  <ul id="arraySelectors" class="col-md-12 mb-0" style="width:100%;"></ul>
+
+                  <ul id="arraySelectors" class="ml-1 col-md-11" style=""></ul>
 
 
                 </div>
@@ -280,34 +280,42 @@
 
 <!-- DEBUT MODAL -->
 
-        <div class="modal left fade" data-backdrop="static" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal left fade" data-backdrop="static" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="width:0px;">
         		<div class="modal-dialog" role="document">
         			<div class="modal-content">
         				<div class="modal-header">
                   <div id="modalIconImg"><img  class="rounded-circle" src="img/Icon_Multimedia.png"  width="50px"/></div>
-                  <button type="button" id="" class="close" data-dismiss="modal" aria-label="Close"><span id="modalClose" class="" aria-hidden="true">&times;</span></button>
+                  <button type="button" id="modalClose" class="close" data-dismiss="modal" aria-label="Close"><span id="modalClose" class="" aria-hidden="true">&times;</span></button>
         					<button type="button" id="" class="close" data-dismiss="modal" aria-label="Close"><span id="" class="" aria-hidden="true">&harr;</span></button>
         				</div>
               <div class="modal-body">
 <!-- Titre -->
         	    <div class="row">
                 <div class="modal-title col-md-10">
-                  <span>  <h2 class="pt-5" id="myModaTitle">Titre du récit</h2> </span>
+                  <span>  <h2 class="pt-3" id="myModaTitle">Titre du récit sur plusieurs lignes</h2> </span>
                 </div>
               </div>
                 <br>
 <!-- Auteurs / Collaborateurs et Emplacements -->
               <div class="row">
-                <div class="col-md-8 d-inline">
-          				<span class="align-text-bottom"> <h5> Nom de l'auteur</h5> </span>
-          				<span class="align-text-bottom"> <h5> Nom des collaborateurs </h5> </span>
+                <div class="col-md-6 d-inline">
+          				<span class="align-text-bottom"> <h5> Nom de l'auteur sur plusieurs lignes</h5> </span>
+          				<span class="align-text-bottom"> <h5> Nom des collaborateurs sur plusieurs lignes </h5> </span>
                 </div>
-                <div class="col-md-4 d-inline">
+                <div class="col-md-3 d-inline">
                   <div class="">
-                    <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="50px">
+                    <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="40px">
                   </div>
 
           			   <h6 id ="modalLocation" class="text-center"> Emplacement principal </h6>
+
+                </div>
+                <div class="col-md-3 d-inline">
+                  <div class="">
+                    <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="40px">
+                  </div>
+
+                   <h6 id ="modalLocation" class="text-center"> Mobilité </h6>
 
                 </div>
               </div>
@@ -315,8 +323,8 @@
 <!-- Projets d'attache et Date-->
               <div class="row">
               <div class="col-md-10 d-inline-block">
-        				<span> <h5> Projets d'attache </h5>  </span>
-        				<span> <h5> Date (01-09-2019) </h5> </span>
+        				<span> <h6> Projets d'attache </h6>  </span>
+        				<span> <h6> Date (01-09-2019) </h6> </span>
         			</div>
             </div>
             <hr>

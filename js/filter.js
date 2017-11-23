@@ -129,7 +129,6 @@
   $("#authorSearchBox").select2();
   $("#keywordSearchBox").select2();
   $("#locationSearchBox").select2();
-
   $("#titreSearchBox").select2();
   $("#mobilitySearchBox").select2();
   $("#projectSearchBox").select2();
@@ -153,10 +152,12 @@
  };
   searchBoxGenre()
 
+  /////////////////////////////////////////////////////////////*/
+/* POPULATE THE SELECT BOX WITH ALL THE VALUES
   var genreOptions = $("#genreSearchBox option");
   genreOptions.each(function() {
       selectedItems.push( $(this).val() );
-  });
+  });*/
 
   $("#genreSearchBox").val(selectedItems).trigger("change");
 
@@ -173,7 +174,8 @@
    )
  };
   searchBoxAuthor()
-/*
+
+/* POPULATE THE SELECT BOX WITH ALL THE VALUES
   var authorOptions = $("#authorSearchBox option");
   authorOptions.each(function() {
       selectedItems.push( $(this).val() );
@@ -182,14 +184,14 @@
   $("#authorSearchBox").val(selectedItems).trigger("change");
 */
 
-/////////////////////////////////////////////////////////////////////////
-
+/*///////////////////////////////////////////////////////////////////////
+/* POPULATE THE SELECT BOX WITH ALL THE VALUES
   $("#authorSearchBox").val(selectedItems).change(function() {
     //console.log($("#authorSearchBox").val())
       getFilterMarkers ($("#authorSearchBox").val());
 });
 
-/////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////*/
 
   function searchBoxKeyword() {
    $('#keywordSearchBox').select2(
@@ -201,12 +203,13 @@
  };
   searchBoxKeyword()
 
+/* POPULATE THE SELECT BOX WITH ALL THE VALUES
   var keywordOptions = $("#keywordSearchBox option");
   keywordOptions.each(function() {
       selectedItems.push( $(this).val() );
   });
 
-  $("#keywordSearchBox").val(selectedItems).trigger("change");
+  $("#keywordSearchBox").val(selectedItems).trigger("change");*/
 
 /////////////////////////////////////////////////////////////////////////
 
@@ -220,15 +223,13 @@
  };
   searchBoxLocation()
 
+/* POPULATE THE SELECT BOX WITH ALL THE VALUES
   var lcoationOptions = $("#locationSearchBox option");
   lcoationOptions.each(function() {
       selectedItems.push( $(this).val() );
   });
 
-  $("#locationSearchBox").val(selectedItems).trigger("change");
-
-
-
+  $("#locationSearchBox").val(selectedItems).trigger("change");*/
 
 /////////////////////////////////////////////////////////////////////////
 
@@ -236,7 +237,7 @@
    $('#titreSearchBox').select2(
 
     {
-      placeholder: "Choississez un titre",
+      placeholder: "Filtrez par titre",
       multiple: true,
       allowClear: true,
       data: titre_Data.unique()
@@ -247,12 +248,13 @@
 
   searchBoxTitre()
 
+/* POPULATE THE SELECT BOX WITH ALL THE VALUES
   var titreOptions = $("#titreSearchBox option");
   titreOptions.each(function() {
       selectedItems.push( $(this).val() );
   });
 
-  $("#titreSearchBox").val(selectedItems).trigger("change");
+  $("#titreSearchBox").val(selectedItems).trigger("change");*/
 /////////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////////////////
@@ -261,7 +263,7 @@
    $('#mobilitySearchBox').select2(
 
     {
-      placeholder: "Choississez un titre",
+      placeholder: "Filtrez par mobilité",
       multiple: true,
       allowClear: true,
       data: mobility_Data.unique()
@@ -271,22 +273,22 @@
  };
 
   searchBoxMobility()
-
+/* POPULATE THE SELECT BOX WITH ALL THE VALUES
   var mobilityOptions = $("#mobilitySearchBox option");
   mobilityOptions.each(function() {
       selectedItems.push( $(this).val() );
   });
 
-  $("#mobilitySearchBox").val(selectedItems).trigger("change");
+  $("#mobilitySearchBox").val(selectedItems).trigger("change");*/
 /////////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////////////////
 
-  function searchBoxProject() {
+function searchBoxProject() {
    $('#projectSearchBox').select2(
 
     {
-      placeholder: "Choississez un titre",
+      placeholder: "Filtrez par projets",
       multiple: true,
       allowClear: true,
       data: project_Data.unique()
@@ -297,12 +299,15 @@
 
   searchBoxProject()
 
+
+/* POPULATE THE SELECT BOX WITH ALL THE VALUES
   var projectOptions = $("#projectSearchBox option");
   projectOptions.each(function() {
       selectedItems.push( $(this).val() );
   });
 
-  $("#projectSearchBox").val(selectedItems).trigger("change");
+  $("#projectSearchBox").val(selectedItems).trigger("change");*/
+
 /////////////////////////////////////////////////////////////////////////
 
 
@@ -313,41 +318,41 @@ var arraySelectors = [];
 $("#genreSearchBox").on("select2:select", function(e) {
  a = select_valGenreSearchBox = $(e.currentTarget).val();
   arraySelectors.push(a)
-  console.log(arraySelectors)
+  arrayTest(arraySelectors)
   // console.log(select_valGenreSearchBox)
 });
 
 $("#authorSearchBox").on("select2:select", function(e) {
 a = select_valAuthorSearchBox = $(e.currentTarget).val();
 arraySelectors.push(a)
-console.log(arraySelectors)
+arrayTest(arraySelectors)
   // console.log(select_valAuthorSearchBox)
 });
 
 $("#keywordSearchBox").on("select2:select", function(e) {
 a = select_valKeywordSearchBox = $(e.currentTarget).val();
 arraySelectors.push(a)
-console.log(arraySelectors)
+arrayTest(arraySelectors)
   // console.log(select_valKeywordSearchBox)
 });
 $("#locationSearchBox").on("select2:select", function(e) {
 a = select_valLocationSearchBox = $(e.currentTarget).val();
 arraySelectors.push(a)
-console.log(arraySelectors)
+arrayTest(arraySelectors)
 //   console.log(select_valLocationSearchBox)
 });
-$("#ltitreSearchBox").on("select2:select", function(e) {
+$("#titreSearchBox").on("select2:select", function(e) {
 a = select_valTitreSearchBox = $(e.currentTarget).val();
 arraySelectors.push(a)
 arrayTest(arraySelectors)
-console.log(arraySelectors)
+
 //   console.log(select_valLocationSearchBox)
 });
 $("#mobilitySearchBox").on("select2:select", function(e) {
 a = select_valMobilitySearchBox = $(e.currentTarget).val();
 arraySelectors.push(a)
 arrayTest(arraySelectors)
-console.log(arraySelectors)
+
 //   console.log(select_valLocationSearchBox)
 
 });
@@ -356,21 +361,20 @@ a = select_valProjectSearchBox = $(e.currentTarget).val();
 //   console.log(select_valLocationSearchBox)
 arraySelectors.push(a)
 arrayTest(arraySelectors)
-console.log(arraySelectors)
+
 });
 
+
+
+
+$(".select2-multiple").on("select2:unselect", function () { arraySelectors = [] });
+//$(".select2-multiple").on("select2:unselect", function (e) { console.log("select2:unselect", e); });
+
 // function search for titles
-  function searchTitles(arr){
 
-    for( var i=0; i<arr.length; i++ ) {
-      return true
-    }
-  }
 
+/*************** function test to retrieve list of values from the select boxes and pass them into the LIST li containers **/
+//retrive multidimentional arrays
 function arrayTest(i){
-  var liContainers = $('<li class="list-group-item col-md-12"></li>')
-  var aContainers = $('<a href="#" class="text_info"></a>')
-  aContainers.append(i)
-  liContainers.append(aContainers);
-  $('#arraySelectors').append(liContainers);
+console.log(i)
 }

@@ -40,7 +40,7 @@ function get_random_color() {
 
 /********** random functions******/
 
-    // Calendar function
+    //////////// Calendar function
 
     $(function() {
 
@@ -68,15 +68,9 @@ function get_random_color() {
 
 });
 
-    // SCROLL BY CHAPTER RELATED
-    var imageContainerMargin = 70;  // Margin + padding
+  ///////////End Calendar function
 
-    // SCROLL BY CHAPTER RELATED
-    // This watches for the scrollable container
-    var scrollPosition = 0;
-    $('div#contents').scroll(function() {
-      scrollPosition = $(this).scrollTop();
-    });
+
 
     // MODAL RELATED
      function openModal(){
@@ -96,13 +90,13 @@ function get_random_color() {
             map.panTo(map.unproject(px), {animate: true}); // pan to new center
    });
 
-
+/////////////// Retrieve by extend function /////////////////
    map.on('moveend ', function() {
       $("#arraySelectors").empty();
     // Construct an empty list to fill with onscreen markers.
     var inBounds = [];
     // Get the map bounds - the top-left and bottom-right locations.
-        bounds = map.getBounds();
+    bounds = map.getBounds();
 
     // For each marker, consider whether it is currently visible by comparing
     // with the current map bounds.
@@ -120,9 +114,8 @@ function get_random_color() {
       liContainers.append(aContainers);
       $('#arraySelectors').append(liContainers);}
     // Display a list of markers.
-  //  document.getElementById('coordinates').innerHTML = inBounds.join('\n');
 });
-
+/////////////// END Retrieve by extend function /////////////////
 
 
 
@@ -135,6 +128,7 @@ function get_random_color() {
 
 function getFilterMarkers (i){
   filteredGroup.clearLayers();
+
      filterMarkers = L.geoJSON(featuresCollection,{
 
         // filter for the specific id of the click main marker
@@ -146,7 +140,8 @@ function getFilterMarkers (i){
         }},
 
           pointToLayer: function(feature, latlng) {
-           return L.circleMarker(latlng, setColor) //, style(feature)); //,styled(feature));
+             label = String(feature.properties.order)
+           return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip(); //, style(feature)); //,styled(feature));
           },
 
           // on each feature call the modal and populate it with the specific related information gathered in the geojson
@@ -238,23 +233,22 @@ function getFilterMarkers (i){
 
 function modalPopulate (feature,layer){
 
-    // CREATE DYNAMICALLY THE HTML CODE TO POPULATE THE MODAL SCROLL BY CHAPTER SECTION OF THE STORIES
-    ////////////////////////////////////////////////////////////////
-          var chapter = $('<p></p><row chapter><div class="col-md-10"> <span id="elementNumber"> <h4>Élément #'+feature.properties.story['id']
+// CREATE DYNAMICALLY THE HTML CODE TO POPULATE THE MODAL SCROLL BY CHAPTER SECTION OF THE STORIES
+  ///////////////////////////////////////////////////////////////
+          var chapter = $('<p></p><row chapter><div class="col-md-10"> <span id="elementNumber"> <h4>Élément #'+feature.properties['order']
             +'   </h4> <span>       </div><div class="col-md-10"><span> <h5> Emplacement | Date </h5>  </span></div></div><div class="row"></div><div class="row">'
-            +'<div class="col-md-10 mx-auto d-inline-block mt-2 pt-2 text-justify"><span> <p>  </p> </span> </div> </div><hr></div>',
+            +'<div class="col-md-10 mx-auto d-inline-block mt-2 pt-2 text-justify"></div> </div><hr></div>',
             {
-                text: feature.properties.story['id'],
+                text: feature.properties['order'],
                 class: 'chapter-header'
                 });
 
           var container = $('<div></div>', {
-                       id: 'container' + feature.properties['id'],
+                       id: 'container' + feature.properties['order'],
                        class: 'image-container'
                      });
 
-          var description = $('<p></p>', {
-             text: feature.properties['media_type'],
+          var description = $('<p> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>', {
              class: 'description'
            });
      //////////////////////END HTML ////////////////////////////////
@@ -263,26 +257,36 @@ function modalPopulate (feature,layer){
          container.append(chapter).append(description);
          $('#modalBodyContent').append(container);
 
+/*******************************************************/
 
+
+         // SCROLL BY CHAPTER RELATED
+         var imageContainerMargin = 300;  // Margin + padding
+
+         // SCROLL BY CHAPTER RELATED
+         // This watches for the scrollable container
+         var scrollPosition = 0;
+         $('div#contents').scroll(function() {
+           scrollPosition = $(this).scrollTop();
+         });
 
          var i;
          var areaTop = -100;
          var areaBottom = 0;
-
          // Calculating total height of blocks above active
-         for (i = 1; i < feature.properties['id']; i++) {
+         for (i = 1; i < feature.properties['order']; i++) {
            areaTop += $('div#container' + i).height() + imageContainerMargin;
          }
-         areaBottom = areaTop + $('div#container' + feature.properties['id']).height();
+         areaBottom = areaTop + $('div#container' + feature.properties['order']).height();
 
 
          // Check if the bloc (or chapter) is active by check its positions y in the container
-         $('div#modalBodyContent').scroll(function() {
+         $('#modalBodyContent').scroll(function() {
             //console.log(areaTop,areaBottom )
              if ($(this).scrollTop() >= areaBottom && $(this).scrollTop() < areaTop) {
                //add special class infocus for the active block (chapter)
                $('.image-container').removeClass("inFocus").addClass("outFocus");
-               $('div#container' + feature.properties['id']).addClass("inFocus").removeClass("outFocus");
+               $('div#container' + feature.properties['order']).addClass("inFocus").removeClass("outFocus");
                // fly to the specific marker related to the chapter
                map.flyTo([feature.geometry.coordinates[1], feature.geometry.coordinates[0] ], 18);
            }

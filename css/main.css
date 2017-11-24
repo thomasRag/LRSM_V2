@@ -21,7 +21,11 @@ body {
 
 }
 
-
+#modalBodyContent{
+	height: 100% !important;
+	max-height: 100% !important;
+	overflow-y: scroll !important;
+}
 
 /*******************  LIST DE TITRES DYNAMIQUE ************************/
 
@@ -341,28 +345,6 @@ a {
 
 /************************* MY MODAL *****************************/
 
-
-
-#modalBodyContent {
-    padding: 0%;
-    width: 100%;
-    margin-top: 0px; /*Adjust if Title header needs more space */
-    max-height: calc(100vh - 150px) !important; /* Adjust to fit max Description length, one setting for all; alternative is 100% */
-    overflow-y: auto !important;
-    overflow-x: hidden;
-}
-
-#modalBodyContent .space-at-the-top {
-    height: 30px;
-    margin: 0px;
-}
-
-#modalBodyContent .space-at-the-bottom {
-    height: 130px;
-    margin: 0px;
-    text-align: center;
-    padding-top: 70px;
-}
 
 #chapter {
     position: absolute;

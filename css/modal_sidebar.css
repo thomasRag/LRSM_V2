@@ -25,8 +25,9 @@
 	}
 
 .modal-body {
-	height: calc(100vh - 350px) !important;
-	/*overflow-y: auto !important;*/
+	position: relative;
+	height: 90% !important;
+	/*overflow-x: auto !important;*/
 }
 
 .modal-body h5 {
@@ -113,7 +114,60 @@
 }
 
 #modalBodyContent{
-	height: 100% !important;
-	max-height: 100% !important;
-	overflow: scroll !important;
+	overflow-y: scroll !important;
+	overflow-x: hidden !important;
+
+}
+
+
+article {
+	position: absolute;
+	width: 100%;
+	padding-left: 30%;
+}
+
+.sections {
+	background: rgba(255,255,255,0.5);
+	padding-bottom: 20px;
+}
+
+@media (min-width: 800px) {
+	#map {
+		width: 70%;
+	}
+	article {
+		padding-left: 70%;
+	}
+}
+
+
+.prose blockquote {
+	margin-bottom: 0;
+}
+cite {
+	margin-bottom: 20px;
+	display: block;
+}
+.quiet {
+	color:rgba(0,0,0,0.5);
+}
+.prose h3 {
+	padding-top: 0;
+}
+
+.scroll {
+	display:block;
+	text-align:center;
+}
+
+section {
+	padding: 50px 30px;
+	color: rgba(0,0,0,0.5);
+	-webkit-transition:background 500ms, color 500ms;
+	transition:background 500ms, color 500ms;
+	margin-bottom: 0;
+}
+section.active {
+	background: rgba(255,255,255,0.85);
+	color:#404040;
 }

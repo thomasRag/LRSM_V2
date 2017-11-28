@@ -27,6 +27,19 @@ body {
 	overflow-y: scroll !important;
 }
 
+.starter-template
+{
+  position: absolute;
+  top : 18%;
+}
+
+.modaltest{
+position: absolute!important;
+height: 80px !important;
+
+
+}
+
 /*******************  LIST DE TITRES DYNAMIQUE ************************/
 
 
@@ -360,19 +373,16 @@ h3 {
 }
 
 .image-container {
-    /* margin + padding = imageContainerMargin in script.js */
-    /* Important for scrolling! */
-    margin: 50px 0 0 0;
-    padding: 20px 0 0 0;
-    text-align: center;
+  width: 100% !important;
+  margin: 50px 0 0 0;
+  padding: 20px 0 0 0;
+  text-align: center;
 }
 
 
 .description {
-    margin: 20px;
-    text-align: left;
-    font-size: 11pt;
-    padding: 20px;
+    text-align: center;
+    font-size: 12pt;
 }
 
 .inFocus {

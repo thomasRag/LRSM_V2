@@ -12,6 +12,7 @@ L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}
 var group = L.layerGroup()
 var filteredGroup = L.layerGroup()
 var mainMarkers
+var filteredMarkers
 
 var setColor = {
   radius: 8,
@@ -53,7 +54,7 @@ document.getElementById('modalClose').onclick = function () {
 */
 
 map.on('popupopen', function (e) {
-            /** *** !! Auto Pan to the center of the popup ToolTip !! *****/
+/** *** !! Auto Pan to the center of the popup ToolTip !! *****/
   var px = map.project(e.popup._latlng) // find the pixel location on the map where the popup anchor is
   px.y -= e.popup._container.clientHeight / 2 // find the height of the popup container, divide by 2, subtract from the Y axis of marker location
   map.panTo(map.unproject(px), {animate: true}) // pan to new center
@@ -65,13 +66,12 @@ map.on('popupopen', function (e) {
 
 map.on('moveend ', function () {
   $('#arraySelectors').empty()
-    // Construct an empty list to fill with onscreen markers.
-  var inBounds = []
-    // Get the map bounds - the top-left and bottom-right locations.
-  var bounds = map.getBounds()
 
-    // For each marker, consider whether it is currently visible by comparing
-    // with the current map bounds.
+  var inBounds = [] // Construct an empty list to fill with onscreen markers.
+
+  var bounds = map.getBounds() // Get the map bounds - the top-left and bottom-right locations.
+
+// For each marker, consider whether it is currently visible by comparing  with the current map bounds.
   mainMarkers.eachLayer(function (marker) {
     if (bounds.contains(marker.getLatLng())) {
       inBounds.push(marker.feature.properties.story.id)
@@ -93,9 +93,9 @@ map.on('moveend ', function () {
 var myFilterLayer
 function getFilterMarkers (myFilterLayer) {
   filteredGroup.clearLayers()
-  var filterMarkers = L.geoJSON(featuresCollection, {
+  filterMarkers = L.geoJSON(featuresCollection, {
 
-        // filter for the specific id of the click main marker
+// filter for the specific id of the click main marker
     filter: function (feature, layer) {
       for (var j = 0; j < myFilterLayer; j++) {
         if (feature.properties.story['id'] === myFilterLayer) {
@@ -106,24 +106,22 @@ function getFilterMarkers (myFilterLayer) {
     },
 
     pointToLayer: function (feature, latlng) {
-      // var label = String(feature.properties.order)
-      return L.circleMarker(latlng, setColor)// .bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
+      var label = String(feature.properties.order)
+      return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
     },
 
-          // on each feature call the modal and populate it with the specific related information gathered in the geojson
+// on each feature call the modal and populate it with the specific related information gathered in the geojson
     onEachFeature: modalPopulate
 
   }).addTo(map)
 
-  // Change container class in to outfocus if
-  $('div#container').addClass('inFocus')
+  $('div#container').addClass('inFocus')// Change container class in to outfocus if
 
-  // remove the main markers
-  group.clearLayers()
-  // add the filteredMarkers to the filteredGroup
-  filteredGroup.addLayer(filterMarkers).addTo(map)
-  // fit bounds of the filtered specifici markers
-  map.fitBounds(filterMarkers.getBounds().pad(Math.sqrt(2) / 2))
+  group.clearLayers() // remove the main markers
+
+  filteredGroup.addLayer(filterMarkers).addTo(map) // add the filteredMarkers to the filteredGroup
+
+  map.fitBounds(filterMarkers.getBounds().pad(Math.sqrt(2) / 2)) // fit bounds of the filtered specifici markers
 }
 
 /**
@@ -131,23 +129,19 @@ function getFilterMarkers (myFilterLayer) {
 */
 
 function getMainMarkers () {
-       // Clear previously filtered markers
-  filteredGroup.clearLayers()
+  filteredGroup.clearLayers() // Clear previously filtered markers
 
   mainMarkers = L.geoJSON(featuresCollection, {
-         // Filter properties main = true
+
     filter: function (feature, layer) {
       if (feature.properties.main === true) { return true }
     },
-         // Display main markers as CircleMarkers
+// Display main markers as CircleMarkers
     pointToLayer: function (feature, latlng) {
       var label = String(feature.properties.story.id)
       return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
     },
-
-          // Call function onEachFeature1 (return)
     onEachFeature: onEachFeature
-
   })
 
   group.addLayer(mainMarkers).addTo(map)
@@ -193,61 +187,69 @@ function onEachFeature (feature, layer) {
 function modalPopulate (feature, layer) {
     // CREATE DYNAMICALLY THE HTML CODE TO POPULATE THE MODAL SCROLL BY CHAPTER SECTION OF THE STORIES
     // / /////////////////////////////////////////////////////////////
-  var chapter = $('<p></p><row chapter><div class="col-md-10"> <span id="elementNumber"> <h4>Élément #' + feature.properties.story['id'] +
-            '   </h4> <span>       </div><div class="col-md-10"><span> <h5> Emplacement | Date </h5>  </span></div></div><div class="row"></div><div class="row">' +
-            '<div class="col-md-10 mx-auto d-inline-block mt-2 pt-2 text-justify"><span> <p>  </p> </span> </div> </div><hr></div>',
+  var chapter = $('<div class="col-md-11 chapter"><h4>Élément #' + feature.properties['order'] + ' </h4><hr></div>',
     {
-      text: feature.properties.story['id'],
       class: 'chapter-header'
     })
 
-  var container = $('<div></div>', {
-    id: 'container' + feature.properties['id'],
+  var container = $('<section></section>', {
+    id: feature.properties['order'],
     class: 'image-container'
   })
 
-  var description = $('<p></p>', {
-    text: feature.properties['media_type'],
+  var description = $('<div>' + feature.properties.story['text'] + '</div>', {
     class: 'description'
   })
 
-// SCROLL BY CHAPTER
-  var imageContainerMargin = 70  // Margin + padding
+  chapter.append(description)
+  container.append(chapter)
 
-// SCROLL BY CHAPTER RELATED
-  // This watches for the scrollable container
-  $('div#modalBodyContent').scroll(function () {
-    var scrollPosition = $(this).scrollTop()
-  })
-
-  // append the html code to the container itself
-  container.append(chapter).append(description)
   $('#modalBodyContent').append(container)
+}
 
-  var i
-  var areaTop = -100
-  var areaBottom = 0
+    /**
+    * function that check for the container id and zoom to the parent feature
+    * @param {numeric} newId
+    */
 
-  // Calculating total height of blocks above active
-  for (i = 1; i < feature.properties['id']; i++) {
-    areaTop += $('div#container' + i).height() + imageContainerMargin
-  }
-  areaBottom = areaTop + $('div#container' + feature.properties['id']).height()
+var narrative = document.getElementById('modalBodyContent')
+var sections = narrative.getElementsByTagName('section')
+var currentId = ''
 
-  // Check if the bloc (or chapter) is active by check its positions y in the container
-  $('div#modalBodyContent').scroll(function () {
-  // console.log(areaTop,areaBottom )
-    if ($(this).scrollTop() >= areaBottom && $(this).scrollTop() < areaTop) {
-  // add special class infocus for the active block (chapter)
-      $('.image-container').removeClass('inFocus').addClass('outFocus')
-      $('div#container' + feature.properties['id']).addClass('inFocus').removeClass('outFocus')
-  // fly to the specific marker related to the chapter
-      map.flyTo([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], 18)
+function setId (newId) {
+          // If the ID hasn't actually changed, don't do anything
+  if (newId === currentId) return
+          // Otherwise, iterate through layers, setting the current
+          // marker to a different color and zooming to it.
+  filterMarkers.eachLayer(function (layer) {
+    if (String(layer.feature.properties.order) === newId) {
+      map.flyTo([layer.feature.geometry.coordinates[1], layer.feature.geometry.coordinates[0]], 18)
     }
   })
-
-  // Click on a geometry = automaticly scroll to the right block (chapter)
-  layer.on('click', function () {
-    $('#modalBodyContent').animate({scrollTop: areaTop + 'px'})
-  })
+          // highlight the current section
+  for (var i = 0; i < sections.length; i++) {
+    sections[i].className = sections[i].id === newId ? 'active' : ''
+  }
+          // And then set the new id as the current one,
+          // so that we know to do nothing at the beginning
+          // of this function if it hasn't changed between calls
+  currentId = newId
+        //  console.log(currentId)
+}
+      // If you were to do this for real, you would want to use
+      // something like underscore's _.debounce function to prevent this
+      // call from firing constantly.
+narrative.onscroll = function (e) {
+  var narrativeHeight = narrative.offsetHeight
+  var newId = currentId
+          // Find the section that's currently scrolled-to.
+          // We iterate backwards here so that we find the topmost one.
+  for (var i = sections.length - 1; i >= 0; i--) {
+            // console.log(sections.length)
+    var rect = sections[i].getBoundingClientRect()
+    if (rect.top >= 0 && rect.top <= narrativeHeight) {
+      newId = sections[i].id
+    }
+  };
+  setId(newId)
 }

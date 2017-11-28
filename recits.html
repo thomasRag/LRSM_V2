@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg"/>
+    <title>Le Laboratoire des Récits du Soi Mobile</title>
+
+     <!-- Latest Jquery -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css">
+     <!-- Latest Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/modal_sidebar.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+</head>
+
+
+<body>
+
+<!-- top navbar -->
+<nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarsExampleDefault">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active mr-5">
+          <a class="nav-link" href="index.html">Cartographies <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item mr-5">
+          <a class="nav-link" href="projets.html">Ses projets</a>
+        </li>
+        <li class="nav-item mr-5">
+          <a class="nav-link" href="corpus.html">Ses corpus</a>
+        </li>
+        <li class="nav-item mr-5">
+          <a class="nav-link" href="apropos.html">Le LRSM</a>
+        </li>
+      </ul>
+    </div>
+
+</nav>
+
+<nav id="submenu" class="navbar-expand-md">
+  <div class="collapse navbar-collapse " id="submenuCollapse">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active mr-5">
+        <a class="nav-link" href="tron.html">En cours <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item mr-5">
+        <a class="nav-link" href="projets.html">Passés</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- end top navbar -->
+
+
+
+
+<main role="main" class="container">
+  <div class="starter-template ml-5 mr-5 mb-2 pl-5 pr-5 pb-2 col-md-6">
+<!-- Titre -->
+
+        	    <div class="row">
+                <div class="modal-title col-md-10">
+                  <span>  <h2 class="pt-3" id="myModaTitle">Titre du récit sur plusieurs lignes</h2> </span>
+                </div>
+              </div>
+                <br>
+<!-- Auteurs / Collaborateurs et Emplacements -->
+              <div class="row">
+                <div class="col-md-6 d-inline">
+          				<span class="align-text-bottom"> <h5> Nom de l'auteur sur plusieurs lignes</h5> </span>
+          				<span class="align-text-bottom"> <h5> Nom des collaborateurs sur plusieurs lignes </h5> </span>
+                </div>
+                <div class="col-md-3 d-inline">
+                  <div class="">
+                    <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="40px">
+                  </div>
+
+          			   <h6 id ="modalLocation" class="text-center"> Emplacement principal </h6>
+
+                </div>
+                <div class="col-md-3 d-inline">
+                  <div class="">
+                    <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="40px">
+                  </div>
+
+                   <h6 id ="modalLocation" class="text-center"> Mobilité </h6>
+
+                </div>
+              </div>
+        			<hr>
+<!-- Projets d'attache et Date-->
+              <div class="row">
+              <div class="col-md-10 d-inline-block">
+        				<span> <h6> Projets d'attache </h6>  </span>
+        				<span> <h6> Date (01-09-2019) </h6> </span>
+        			</div>
+            </div>
+            <hr>
+<!-- Mots Clés -->
+              <div class="row">
+                <div class="col-md-11 d-inline-block mx-auto">
+                  <span class="badge badge-pill badge-primary">Mots-clé #1</span>
+                  <span class="badge badge-pill badge-secondary">Mots-clé #2</span>
+                  <span class="badge badge-pill badge-success">Mots-clé #3</span>
+                  <span class="badge badge-pill badge-danger">Mots-clé #4</span>
+                  <span class="badge badge-pill badge-warning">Mots-clé #5</span>
+                  <span class="badge badge-pill badge-info">Mots-clé #6</span>
+                  <span class="badge badge-pill badge-light">Mots-clé #7</span>
+                  <span class="badge badge-pill badge-dark">Mots-clé #8</span>
+                  <span class="badge badge-pill badge-primary">Mots-clé #1</span>
+                  <span class="badge badge-pill badge-secondary">Mots-clé #2</span>
+                  <span class="badge badge-pill badge-success">Mots-clé #3</span>
+                  <span class="badge badge-pill badge-danger">Mots-clé #4</span>
+        				<br>
+                </div>
+              </div>
+        				<hr>
+
+<div class="row">
+               <img class="mx-auto" id="modalframe" src="http://www.lrsm.ca/uploads/7/7/7/3/77735836/5571463_orig.png" width="550" height="280" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></img>
+</div>
+ <!-- Main Description -->
+ <div class="row">
+   <div class="col-md-10 mx-auto d-inline-block mt-2 pt-2 text-justify">
+     <span> <p>  Vidéo de recherche-création ayant pour thème l’(auto-)aveuglement
+                 dans le Quartier des Spectacles ; une première partie sonore, sur
+                 fond noir, présente un enchaînement de bruits captés dans les rues
+                 et certains espaces publics du QdS et autour ; tandis que la seconde
+                 présente une performance de danse, effectuée par Simone, place des
+                 Arts, dont le fond sonore est une captation audio de l’échange de
+               deux clientes au restaurant O noir. </p> </span> </div> </div>
+
+               <hr>
+<!-- Chaptire video -->
+               <div class="row chapter">
+                 <div class="col-md-10">
+               <span id="elementNumber"> <h4>Élément #1 - Video Vimeo</h4> <span>
+                 </div>
+                 <div class="col-md-10">
+                   <span> <h5> Emplacement | Date </h5>  </span>
+                 </div>
+               </div>
+                 <div class="row">
+                                <iframe class="mx-auto" id="modalframe" src="https://player.vimeo.com/video/207430994" width="550" height="280" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                 </div>
+                 <div class="row">
+                   <div class="col-md-10 mx-auto d-inline-block mt-2 pt-2 text-justify">
+                     <span> <p>  Vidéo de recherche-création ayant pour thème l’(auto-)aveuglement
+                                 dans le Quartier des Spectacles ; une première partie sonore, sur
+                                 fond noir, présente un enchaînement de bruits captés dans les rues
+                                 et certains espaces publics du QdS et autour ; tandis que la seconde
+                                 présente une performance de danse, effectuée par Simone, place des
+                                 Arts, dont le fond sonore est une captation audio de l’échange de
+                               deux clientes au restaurant O noir. </p> </span> </div> </div>
+               <hr>
+<!-- Chaptire sonore -->
+               <div class="row chapter">
+                 <div class="col-md-10">
+               <span id="elementNumber"> <h4>Élément #2 - Enregistrement Soudcloud</h4> <span>
+                 </div>
+                 <div class="col-md-10">
+                   <span> <h5> Emplacement | Date </h5>  </span>
+                 </div>
+               </div>
+                 <div class="row">
+                   <iframe class="mx-auto" id="modalframe" width="500" height="280" frameborder="0" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/189101974&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+                 </div>
+                 <div class="row">
+                   <div class="col-md-10 mx-auto d-inline-block mt-2 pt-2 text-justify">
+                     <span> <p>  Vidéo de recherche-création ayant pour thème l’(auto-)aveuglement
+                                 dans le Quartier des Spectacles ; une première partie sonore, sur
+                                 fond noir, présente un enchaînement de bruits captés dans les rues
+                                 et certains espaces publics du QdS et autour ; tandis que la seconde
+                                 présente une performance de danse, effectuée par Simone, place des
+                                 Arts, dont le fond sonore est une captation audio de l’échange de
+                               deux clientes au restaurant O noir. </p> </span> </div> </div>
+                 <hr>
+
+<!-- Chaptire photo -->
+               <div class="row chapter">
+                 <div class="col-md-10">
+               <span id="elementNumber"> <h4>Élément #3 - Photo Flickr</h4> <span>
+                 </div>
+                 <div class="col-md-10">
+                   <span> <h5> Emplacement | Date </h5>  </span>
+                 </div>
+               </div>
+                 <div class="row">
+                   <a class="mx-auto" data-flickr-embed="true" data-header="true" data-footer="true"  href="https://www.flickr.com/photos/janlupus/albums/72157625141133435" title="Bikes"><img class="mx-auto" src="https://farm8.staticflickr.com/7459/10613142683_50b8135779.jpg" width="500" height="280" alt="Bikes"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                 </div>
+                 <div class="row">
+                   <div class="col-md-10 mx-auto d-inline-block mt-2 pt-2 text-justify">
+                     <span> <p>  Vidéo de recherche-création ayant pour thème l’(auto-)aveuglement
+                                 dans le Quartier des Spectacles ; une première partie sonore, sur
+                                 fond noir, présente un enchaînement de bruits captés dans les rues
+                                 et certains espaces publics du QdS et autour ; tandis que la seconde
+                                 présente une performance de danse, effectuée par Simone, place des
+                                 Arts, dont le fond sonore est une captation audio de l’échange de
+                               deux clientes au restaurant O noir. </p> </span> </div> </div>
+                 <hr>
+
+
+
+<!-- Chaptire slideshare -->
+                 <div class="row chapter">
+                   <div class="col-md-10">
+                 <span id="elementNumber"> <h4>Élément #4 - PDF Google Drive </h4> <span>
+                   </div>
+                   <div class="col-md-10">
+                     <span> <h5> Emplacement | Date </h5>  </span>
+                   </div>
+                 </div>
+                   <div class="row">
+                     <iframe  class="mx-auto" src="https://drive.google.com/file/d/0B3VnSl89GUNxaXI1NzNrLUZTYWs/preview" width="500" height="280"></iframe>
+                   </div>
+                   <div class="row">
+                     <div class="col-md-10 mx-auto d-inline-block mt-2 pt-2 text-justify">
+                       <span> <p>  Vidéo de recherche-création ayant pour thème l’(auto-)aveuglement
+                                   dans le Quartier des Spectacles ; une première partie sonore, sur
+                                   fond noir, présente un enchaînement de bruits captés dans les rues
+                                   et certains espaces publics du QdS et autour ; tandis que la seconde
+                                   présente une performance de danse, effectuée par Simone, place des
+                                   Arts, dont le fond sonore est une captation audio de l’échange de
+                                 deux clientes au restaurant O noir. </p> </span>
+                          </div>
+                      </div>
+
+                                 <hr>
+
+  <!-- Main Iframe -->
+    </main><!-- /.container -->
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -35,6 +35,19 @@ function getRandomColor () {
 
 /** ******** END MAP FUNCTIONS ***********/
 
+/****************Buttons filter functions*******************/
+$(".btn-rounded").click(function(){
+  if ($(this).hasClass("btn-active"))
+    {
+      $(this).removeClass("btn-active")
+    }
+    else {
+      $(this).addClass("btn-active");
+    }
+});
+/**********************************************/
+
+
 /**
 * function that show the modal and close the popup
 */
@@ -92,7 +105,7 @@ map.on('moveend ', function () {
 * function that filter the mainMarkers layer on click
 */
 var myFilterLayer
-function getFilterMarkers (myFilterLayer) {
+function getFilterMarkersById (myFilterLayer) {
   filteredGroup.clearLayers()
   filterMarkers = L.geoJSON(featuresCollection, {
 
@@ -119,11 +132,10 @@ function getFilterMarkers (myFilterLayer) {
   $('div#container').addClass('inFocus')// Change container class in to outfocus if
 
   group.clearLayers() // remove the main markers
-
   filteredGroup.addLayer(filterMarkers).addTo(map) // add the filteredMarkers to the filteredGroup
-
   map.fitBounds(filterMarkers.getBounds().pad(Math.sqrt(2) / 2)) // fit bounds of the filtered specifici markers
 }
+
 
 /**
 * function that display the main markers
@@ -164,7 +176,7 @@ function onEachFeature (feature, layer) {
   customPopup = customPopup + '<div id="mediaIcon" class="">'
   customPopup = customPopup + '<img id="mediaIconImg" class="rounded-circle" src="img/Icon_Multimedia.png"  width="40px"/>'
   customPopup = customPopup + '</div>'
-  customPopup = customPopup + '<a href="javascript:getFilterMarkers(' + feature.properties.story['id'] + '),openModal()"><img id="popUpImg" class="card-img-top" src="img/test.jpg" alt="Card image cap">'
+  customPopup = customPopup + '<a href="javascript:getFilterMarkersById(' + feature.properties.story['id'] + '),openModal()"><img id="popUpImg" class="card-img-top" src="img/test.jpg" alt="Card image cap">'
   customPopup = customPopup + '<div id="popUpFooter" class="card-footer pl-1 mt-1 pt-1 mb-0 pb-0">'
   customPopup = customPopup + '<h5 id="popUpTitle" class="mt-0"> Titre du récit </h5>'
   customPopup = customPopup + '<p id="popUpAuthor" class="mt-1 pl-1 mb-0 pb-1">Nom de l\'auteur</p>'

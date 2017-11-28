@@ -89,6 +89,8 @@
 
 		#modalIconImg{
 			position: absolute;
+			background-color: white;
+			border-radius: 50% !important;
 		  z-index: 99;
 		  top:25px;
 		  left:10px;
@@ -96,10 +98,6 @@
 		  padding: 0;
 		}
 
- .modal-title{
-
-
- }
  .modal-backdrop {
   display: none !important;
 	left: 0!important;

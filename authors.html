@@ -91,40 +91,8 @@
                       </div>
                       <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body">
-                          <div class="row">
-                            <div class="col-sm-12 block text-center">
-                              <div class="btn-filter">
-                              <button class=" btn btn-rounded">
-                                   <img src="img/LRSM-Audio.png" class="rounded" width="55"/>
-                              </button>
-                              </div>
-                              <div class="btn-filter">
-                              <button class=" btn btn-rounded">
-                                   <img src="img/LRSM-Photo.png" class="rounded" width="55"/>
-                              </button>
-                              </div>
-                              <div class="btn-filter">
-                              <button class=" btn btn-rounded">
-                                   <img src="img/LRSM-Multimedia.png" class="rounded" width="55"/>
-                              </button>
-                              </div>
-                              <div class="btn-filter">
-                              <button class=" btn btn-rounded">
-                                   <img src="img/LRSM-Video.png" class="rounded" width="55"/>
-                              </button>
-                              </div>
-                              <div class="btn-filter">
-                              <button class=" btn btn-rounded">
-                                   <img src="img/LRSM-Ecrit.png" class="rounded" width="55"/>
-                              </button>
-                              </div>
-                              <div class="btn-filter">
-                              <button class=" btn btn-rounded">
-                                   <img src="img/LRSM-Ecrit.png" class="rounded" width="55"/>
-                              </button>
-                              </div>
-                            </div>
-                          </div>
+
+                          <select id="genreSearchBox" class="form-control select2-multiple" multiple="multiple"></select>
 
                         </div>
                       </div>
@@ -174,44 +142,9 @@
                       </div>
                       <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion">
                         <div class="card-body">
-                          <div class="row">
-                            <div class="col-sm-12 block text-center">
 
-                              <div class="btn-filter">
-                              <button class=" btn btn-rounded">
-                                   <img src="img/LRSM-Auto.png" class="rounded" width="55"/>
-                              </button>
-                              </div>
-                              <div class="btn-filter">
-                              <button class=" btn btn-rounded">
-                                   <img src="img/LRSM-Velo.png" class="rounded" width="55"/>
-                              </button>
-                              </div>
-                              <div class="btn-filter">
-                              <button class=" btn btn-rounded">
-                                   <img src="img/LRSM-Autre.png" class="rounded" width="55"/>
-                              </button>
-                              </div>
-                              <div class="btn-filter">
-                              <button class=" btn btn-rounded">
-                                   <img src="img/LRSM-TC.png" class="rounded" width="55"/>
-                              </button>
-                              </div>
-                              <div class="btn-filter">
-                              <button class=" btn btn-rounded">
-                                   <img src="img/LRSM-A-pied.png" class="rounded" width="55"/>
-                              </button>
-                              </div>
-                              <div class="btn-filter">
-                              <button class=" btn btn-rounded">
-                                   <img src="img/LRSM-Autre.png" class="rounded" width="55"/>
-                              </button>
-                              </div>
+                        <select id="mobilitySearchBox" class="form-control select2-multiple" multiple="multiple"></select>
 
-
-
-                            </div>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -313,10 +246,13 @@
             <div class="collapse navbar-collapse " id="submenuCollapse">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active mr-5">
-                  <a class="nav-link" href="tron.html">En cours <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="index.html">Carto-récits <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item mr-5">
-                  <a class="nav-link" href="projets.html">Passés</a>
+                  <a class="nav-link" href="cartoFiction.html">Carto-fiction</a>
+                </li>
+                <li class="nav-item mr-5">
+                  <a class="nav-link" href="cartedessois.html" javascript:getFilterMarkersByAuthors()>Carte des sois</a>
                 </li>
               </ul>
             </div>
@@ -345,7 +281,7 @@
         		<div class="modal-dialog" role="document">
         			<div class="modal-content">
         				<div class="modal-header">
-                  <div id="modalIconImg"><img  class="rounded-circle" src="img/LRSM-Multimedia.png"  width="50px"/></div>
+                  <div id="modalIconImg"><img  class="rounded-circle" src="img/Icon_Multimedia.png"  width="50px"/></div>
                   <button type="button" id="modalClose" class="close" data-dismiss="modal" aria-label="Close"><span id="modalClose" class="" aria-hidden="true">&times;</span></button>
         					<button type="button" id="" class="close" data-dismiss="modal" aria-label="Close"><span id="" class="" aria-hidden="true">&harr;</span></button>
         				</div>

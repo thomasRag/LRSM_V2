@@ -108,7 +108,7 @@ $( document ).ready(function(){noUiSlider.create(dateSlider, {
     format: { to: toFormat, from: Number }
 
 });
-})
+
 
 function sp( event ){ event.stopPropagation(); }
 
@@ -147,7 +147,7 @@ var tooltipInputs = [makeTT(0, dateSlider), makeTT(1, dateSlider)];
 dateSlider.noUiSlider.on('update', function(values, handle) {
    tooltipInputs[handle].value = values[handle];
 });
-
+})
 
 /**********************************************/
 

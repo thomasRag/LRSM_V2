@@ -84,6 +84,7 @@ function toFormat (v) {
 
 
 var dateSlider = document.getElementById('slider-date');
+var noUiSlider
 
 noUiSlider.create(dateSlider, {
 // Create two timestamps to define a range.
@@ -104,7 +105,7 @@ noUiSlider.create(dateSlider, {
 // Two more timestamps indicate the handle starting positions.
 
 
-  
+
     format: { to: toFormat, from: Number }
 
 });

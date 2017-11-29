@@ -85,7 +85,7 @@ function toFormat (v) {
 var dateSlider = document.getElementById('slider-date');
 
 
-$.noUiSlider.create(dateSlider, {
+noUiSlider.create(dateSlider, {
 // Create two timestamps to define a range.
     connect: true,
 	  start: [ timeStamp('2017'), timeStamp('2018') ],

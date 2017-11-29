@@ -1,6 +1,8 @@
+/* main project color rgb(66, 220, 244) */
 html {
   position: relative;
   min-height: 100%;
+
 }
 body {
   padding-top: 5rem;
@@ -20,6 +22,12 @@ body {
   min-width: 85%;
   z-index: 10;
 
+}
+
+#dateRangeSliderModal{
+  background-color: transaprent !important;;
+  position: absolute !important;
+  top: 90% !important;
 }
 
 #modalBodyContent{
@@ -200,7 +208,7 @@ background-color: rgba(255,255,255,1);
 /******************** LINK SUBMENU DECORATION *************************/
 
 #submenu a:hover, #submenu a:focus, #submenu a:active {
-  color: #993399;
+  color: rgb(66, 220, 244);
   text-decoration: none;
 }
 #submenu a {
@@ -229,13 +237,13 @@ background-color: rgba(255,255,255,1);
     left: 0;
     height: 3px;
     width: 100%;
-    background-color: #993399;
+    background-color: rgb(66, 220, 244);
     transform-origin: right top;
     transform: scale(0, 1);
     transition: color 0.1s,transform 0.2s ease-out;
 }
 #submenu a:active::before {
-    background-color: #993399;
+    background-color: rgb(66, 220, 244);
 }
 #submenu a:hover::before, #submenu a:focus::before {
     transform-origin: left top;
@@ -357,7 +365,7 @@ background-color: rgba(255,255,255,1);
   border-radius: 0px;
   width: 85%;
   height: 8%;
-  background-color: #993399;
+  background-color: rgb(66, 185, 244);
 }
 
 /*************************/
@@ -420,3 +428,6 @@ h3 {
     opacity: 0.3;
     background-color: white;
 }
+
+
+/*********************** noUiSlider ******************/

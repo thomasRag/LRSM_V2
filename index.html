@@ -23,18 +23,18 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <!-- Date Range slider -->
 
-
-    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+    <link rel="stylesheet" id="themeCSS" href="src/noUiSlider.css">
 
 </head>
 
 
 <body>
+
+
 
 
 <!-- sidebar -->
@@ -254,7 +254,8 @@
                     <div class="card" style="border-radius: 0;!important;">
                       <div class="card-header" role="tab" id="headingSix">
                         <h5 class="mb-0">
-                          <a class="collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseThree">
+
+                          <a id="hrefDate" class="collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseThree">
                             Temporalité
                           </a>
                         </h5>
@@ -262,10 +263,9 @@
                       <div id="collapseSeven" class="collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion">
                         <div class="card-body">
 
-                          <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
-                              <i class="fa fa-calendar"></i>&nbsp;
-                              <span></span> <b class="caret"></b>
-                          </div>
+                            <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm"></button>
+                              <input type="date"  id="dateFrom" value="1900-06-01">
+                              <input type="date"  id="dateTo" value="2017-06-01">-->
 
                         </div>
                       </div>
@@ -336,6 +336,8 @@
           </div>
 
         </main><!-- /.container -->
+
+
 
 
 
@@ -420,20 +422,30 @@
 <!-- END MODAL END -->
         	</div>
 
+          <!-- Modal for the Date Range Slider-->
+
+          <div id="dateRangeSliderModal" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false"aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div id="sliderHeigh" class="modal-dialog">
+                <div class="modal-content">
+                    <div id="slider-date"></div>
+              </div>
+
+              </div>
+          </div>
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<!-- Date Range Slider -->
+  <script src="src/wNumb.js"></script>
+  <script src="src/noUiSlider.js"></script>
+<!-- /. Date Range Slider -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
-
-  <script src="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-
   <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-  <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-
   <script src=js/featuresCollection.js type="text/javascript"></script>
   <script type="text/javascript" src="js/filter.js"></script>
   <script src="js/main.js"></script>

@@ -35,26 +35,20 @@ function getRandomColor () {
 
 /** ******** END MAP FUNCTIONS ***********/
 
-/****************Buttons filter functions*******************/
-$(".btn-rounded").click(function(){
-  if ($(this).hasClass("btn-active"))
-    {
-      $(this).removeClass("btn-active")
-    }
-    else {
-      $(this).addClass("btn-active");
-    }
-});
+/** **************Buttons filter functions*******************/
+$('.btn-rounded').click(function () {
+  if ($(this).hasClass('btn-active')) {
+    $(this).removeClass('btn-active')
+  } else {
+    $(this).addClass('btn-active')
+  }
+})
 
-$(document).ready(function(){
-  $("#hrefDate").click(function(){
+$(document).ready(function () {
+  $('#hrefDate').click(function () {
     $('#dateRangeSliderModal').modal('toggle')
   })
-});
-
-
-
-
+})
 
 /**********************************************/
 
@@ -145,7 +139,6 @@ function getFilterMarkersById (myFilterLayer) {
   filteredGroup.addLayer(filterMarkers).addTo(map) // add the filteredMarkers to the filteredGroup
   map.fitBounds(filterMarkers.getBounds().pad(Math.sqrt(2) / 2)) // fit bounds of the filtered specifici markers
 }
-
 
 /**
 * function that display the main markers

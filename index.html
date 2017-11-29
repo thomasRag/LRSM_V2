@@ -18,7 +18,7 @@
     <!-- Latest mapbox geodcoder -->
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.0/mapbox-gl-geocoder.css' type='text/css' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
 
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="css/modal_sidebar.css"/>
@@ -92,34 +92,34 @@
                       <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body">
                           <div class="row">
-                            <div class="col-sm-12 block text-center">
+                            <div id="genreButtons" class="col-sm-12 block text-center">
                               <div class="btn-filter">
-                              <button class=" btn btn-rounded">
+                              <button id="autdioButton" class=" btn btn-rounded" value="audio">
                                    <img src="img/LRSM-Audio.png" class="rounded" width="55"/>
                               </button>
                               </div>
                               <div class="btn-filter">
-                              <button class=" btn btn-rounded">
+                              <button  id="photoButton" class=" btn btn-rounded" value="photo">
                                    <img src="img/LRSM-Photo.png" class="rounded" width="55"/>
                               </button>
                               </div>
-                              <div class="btn-filter">
-                              <button class=" btn btn-rounded">
+                              <div  class="btn-filter">
+                              <button id="multimediaButtons" class=" btn btn-rounded" value="multimedia">
                                    <img src="img/LRSM-Multimedia.png" class="rounded" width="55"/>
                               </button>
                               </div>
                               <div class="btn-filter">
-                              <button class=" btn btn-rounded">
+                              <button id="videoButton"  class=" btn btn-rounded" value="video">
                                    <img src="img/LRSM-Video.png" class="rounded" width="55"/>
                               </button>
                               </div>
                               <div class="btn-filter">
-                              <button class=" btn btn-rounded">
+                              <button id="ecritButton"class=" btn btn-rounded" value="ecrit">
                                    <img src="img/LRSM-Ecrit.png" class="rounded" width="55"/>
                               </button>
                               </div>
                               <div class="btn-filter">
-                              <button class=" btn btn-rounded">
+                              <button id="dessinButton" class="btn btn-rounded" value="dessin">
                                    <img src="img/LRSM-Ecrit.png" class="rounded" width="55"/>
                               </button>
                               </div>
@@ -175,35 +175,35 @@
                       <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion">
                         <div class="card-body">
                           <div class="row">
-                            <div class="col-sm-12 block text-center">
+                            <div id="mobilityButtons" class="col-sm-12 block text-center">
 
                               <div class="btn-filter">
-                              <button class=" btn btn-rounded">
+                              <button id="automobile" class=" btn btn-rounded" value="en auto">
                                    <img src="img/LRSM-Auto.png" class="rounded" width="55"/>
                               </button>
                               </div>
                               <div class="btn-filter">
-                              <button class=" btn btn-rounded">
+                              <button id="velo" class="btn btn-rounded" value="à velo">
                                    <img src="img/LRSM-Velo.png" class="rounded" width="55"/>
                               </button>
                               </div>
                               <div class="btn-filter">
-                              <button class=" btn btn-rounded">
+                              <button id="autres" class=" btn btn-rounded" value="autres">
                                    <img src="img/LRSM-Autre.png" class="rounded" width="55"/>
                               </button>
                               </div>
                               <div class="btn-filter">
-                              <button class=" btn btn-rounded">
+                              <button id="transportEnCommun" class=" btn btn-rounded" value="transports en commun">
                                    <img src="img/LRSM-TC.png" class="rounded" width="55"/>
                               </button>
                               </div>
                               <div class="btn-filter">
-                              <button class=" btn btn-rounded">
+                              <button id="aPied" class=" btn btn-rounded" value="à pied">
                                    <img src="img/LRSM-A-pied.png" class="rounded" width="55"/>
                               </button>
                               </div>
                               <div class="btn-filter">
-                              <button class=" btn btn-rounded">
+                              <button id="laboratoireMobile" class=" btn btn-rounded" value="laboratoire mobile">
                                    <img src="img/LRSM-Autre.png" class="rounded" width="55"/>
                               </button>
                               </div>
@@ -438,10 +438,10 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-  <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
   <!-- Date Range Slider -->
   <script src="src/nouislider.min.js"></script>
   <script src="src/wNumb.js"></script>

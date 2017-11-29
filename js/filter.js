@@ -304,15 +304,8 @@ searchBoxProject()
 /** * retrieve searchbox selected data(s) ***/
 /*******************************************/
 var arraySelectors = []
-
-$('#genreSearchBox').on('select2:select', function (e) {
-  var selectValGenreSearchBox = $(e.currentTarget).val()
-  arraySelectors.push(selectValGenreSearchBox)
-  arrayTest(arraySelectors)
-  // console.log(selectValGenreSearchBox)
-})
-
-$('#authorSearchBox').on('select2:select', function (e) {
+/*
+$('#authorSearchBox').on('change', function (e) {
   var selectValAuthorSearchBox = $(e.currentTarget).val()
   arraySelectors.push(selectValAuthorSearchBox)
   arrayTest(arraySelectors)
@@ -347,24 +340,197 @@ $('#mobilitySearchBox').on('select2:select', function (e) {
 })
 $('#projectSearchBox').on('select2:select', function (e) {
   var selectValProjectSearchBox = $(e.currentTarget).val()
-//   console.log(selectValLocationSearchBox)
-  arraySelectors.push(selectValProjectSearchBox)
-  arrayTest(arraySelectors)
+      arraySelectors.push(selectValProjectSearchBox)
+      arrayTest(arraySelectors)
 })
+*/
 
-// Correction du bug du placeholder
-$(document).ready(function () {
-    // Correct bug to show placeholder
-  $('.select2-search__field').css({'width': '100%'})
+var megaArray =[]
+$('.select2-multiple').on('change', function (e) {
+    var arrayValues= []
+    arrayValues.push($(e.currentTarget).val())
+    console.log(arrayValues)
 })
-
-$('.select2-multiple').on('select2:unselect', function () { arraySelectors = [] })
 // $(".select2-multiple").on("select2:unselect", function (e) { console.log("select2:unselect", e); });
 
-// function search for titles
+/**
+ * Loop through all buttons , validate if they are already in the aray and push the value in master array
+ */
+
+/*function that wrap all funcion in one function but it is WIP
+
+function test(){
+$('.btn-filter').children('button').each(function () {
+    var fired_button = $(this).val();
+    buttonsArray.push(fired_button)
+
+    if($(this).hasClass('btn-active')){
+        arraySelectors.push(fired_button)
+        arrayTest(arraySelectors)
+    }
+    else{
+        //remove the existing occurence of the value in the master array
+        for (var i = 0, j = 0; i < arraySelectors.length; i++) {
+            if (arraySelectors[i] != fired_button)
+                arraySelectors[j++] = arraySelectors[i];
+        }
+        arraySelectors.length = j;
+        arrayTest(arraySelectors)
+    }
+});
+}
+
+$("#automobile").click(function() {
+    test()
+});*/
+var mobilityArrays = []
+var genreArrays = []
+
+
+function mobilityArray(e){
+    var fired_button = e.val();
+    if(e.hasClass('btn-active')){
+        mobilityArrays.push(fired_button)
+        arrayTest(mobilityArrays)
+    }
+    else{
+        //remove the existing occurence of the value in the master array
+        for (var i = 0, j = 0; i < mobilityArrays.length; i++) {
+            if (mobilityArrays[i] != fired_button)
+                mobilityArrays[j++] = mobilityArrays[i];
+        }
+        mobilityArrays.length = j;
+        arrayTest(mobilityArrays)
+    }
+}
+function genreArray(e){
+    var fired_button = e.val();
+    if(e.hasClass('btn-active')){
+        genreArrays.push(fired_button)
+        arrayTest(genreArrays)
+    }
+    else{
+        //remove the existing occurence of the value in the master array
+        for (var i = 0, j = 0; i < genreArrays.length; i++) {
+            if (genreArrays[i] != fired_button)
+                genreArrays[j++] = genreArrays[i];
+        }
+        genreArrays.length = j;
+        arrayTest(genreArrays)
+    }
+}
+
+$(function() {
+    //Mobility buttons
+    $("#automobile").click(function () {
+        mobilityArray($(this))
+        updateJSON(mobilityArrays,'mobility')
+    })
+    $("#velo").click(function () {
+        mobilityArray($(this))
+        updateJSON(mobilityArrays,'mobility')
+    })
+    $("#aPied").click(function () {
+        mobilityArray($(this))
+        updateJSON(mobilityArrays,'mobility')
+    })
+    $("#autres").click(function () {
+        mobilityArray($(this))
+        updateJSON(mobilityArrays,'mobility')
+    })
+    $("#transportEnCommun").click(function () {
+        mobilityArray($(this))
+        updateJSON(mobilityArrays,'mobility')
+    })
+    $("#laboratoireMobile").click(function () {
+        mobilityArray($(this))
+        updateJSON(mobilityArrays,'mobility')
+    })
+    // Genre buttons
+    $("#photoButton").click(function () {
+        genreArray($(this))
+        updateJSON(genreArrays,'genre')
+    })
+    $("#videoButton").click(function () {
+        genreArray($(this))
+        updateJSON(genreArrays,'genre')
+    })
+    $("#ecritButton").click(function () {
+        genreArray($(this))
+        updateJSON(genreArrays,'genre')
+    })
+    $("#dessinButton").click(function () {
+        genreArray($(this))
+        updateJSON(genreArrays,'genre')
+    })
+    $("#multimediaButtons").click(function () {
+        genreArray($(this))
+        updateJSON(genreArrays,'genre')
+    })
+    $("#autdioButton").click(function () {
+        genreArray($(this))
+        updateJSON(genreArrays,'genre')
+    })
+})
+
+/*next update arrays everytime there is a change on the buttonsArray*/
+
+var jsonFilter = new Object()
+jsonFilter.title=[]
+jsonFilter.genre=genreArrays
+jsonFilter.authors=[]
+jsonFilter.location=[]
+jsonFilter.mobility = mobilityArrays
+jsonFilter.project=[]
+jsonFilter.keyword=[]
+jsonFilter.timeframe=
+
+updateJSON =(
+     function(array,key){
+        if(key === 'title'){
+            jsonFilter.title = array
+        }
+        else if (key === 'genre'){
+            jsonFilter.genre = array
+        }
+        else if (key === 'authors'){
+            jsonFilter.authors = array
+        }
+        else if (key === 'location'){
+            jsonFilter.location = array
+        }
+        else if (key === 'mobility'){
+            jsonFilter.mobility = array
+        }
+        else if (key === 'tiprojectle'){
+            jsonFilter.project = array
+        }
+        else if (key === 'keyword'){
+            jsonFilter.keyword = array
+        }
+        else if (key === 'timeframe'){
+           jsonFilter.timeframe = array
+        }
+        console.log(jsonFilter)
+    })()
+
 
 /** ************* function test to retrieve list of values from the select boxes and pass them into the LIST li containers **/
 // retrive multidimentional arrays
 function arrayTest (i) {
   console.log(i)
 }
+
+// When the slider changes, update the tooltip
+dateSlider.noUiSlider.on('update', function (values, handle) {
+    tooltipInputs[handle].value = values[handle]
+    var myArray = timeArray.push(values[0],values[1])
+    updateJSON(myArray,'timeFrame')
+    console.log(values[0],values[1])
+})
+
+// Correction du bug du placeholder dans select2
+$(document).ready(function () {
+    // Correct bug to show placeholder
+    $('.select2-search__field').css({'width': '100%'})
+})

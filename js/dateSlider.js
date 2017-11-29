@@ -49,7 +49,7 @@ noUiSlider.create(dateSlider, {
 })
 
 function sp (event) { event.stopPropagation() }
-
+var timeArray=[]
 function makeTT (i, slider) {
   var tooltip = document.createElement('div'),
   		input = document.createElement('input')
@@ -84,4 +84,6 @@ var tooltipInputs = [makeTT(0, dateSlider), makeTT(1, dateSlider)]
 // When the slider changes, update the tooltip
 dateSlider.noUiSlider.on('update', function (values, handle) {
   tooltipInputs[handle].value = values[handle]
+  timeArray.push(values[0],values[1])
 })
+

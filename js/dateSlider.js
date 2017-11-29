@@ -1,4 +1,6 @@
 
+
+
 /**********************************************/
 // Create a new date from a string, return as a timestamp.
 function timeStamp(str){
@@ -24,8 +26,6 @@ function formatDate ( date ) {
 function toFormat (v) {
     return formatDate(new Date(v));
 }
-
-
 
 var dateSlider = document.getElementById('slider-date');
 noUiSlider.create(dateSlider, {

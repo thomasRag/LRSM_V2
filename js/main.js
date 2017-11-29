@@ -60,8 +60,7 @@ function timeStamp(str){
     return new Date(str).getTime();
 }
 // Create a list of day and monthnames.
-var
-	months = [
+var	months = [
 		"01", "02", "03",
 		"04", "05", "06", "07",
 		"08", "09", "10",
@@ -84,9 +83,9 @@ function toFormat (v) {
 
 
 var dateSlider = document.getElementById('slider-date');
-var noUiSlider
 
-noUiSlider.create(dateSlider, {
+
+$.noUiSlider.create(dateSlider, {
 // Create two timestamps to define a range.
     connect: true,
 	  start: [ timeStamp('2017'), timeStamp('2018') ],

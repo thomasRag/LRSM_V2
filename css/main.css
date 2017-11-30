@@ -155,6 +155,56 @@ height: 80px !important;
   height: 5%;
   background-color: #343434;
 }
+#legend{
+    position: absolute;
+    z-index: 99;
+    left:15%;
+    bottom:0;
+    border-radius: 0px;
+    width: 85%;
+    height: 5%;
+    background-color: rgba(49,49,49,0.5);
+}
+
+#legend:after{
+    background-color: red;
+    opacity: 1;
+}
+
+.legenditem{
+    text-align:center;
+    color:white;
+}
+
+
+
+.fa{
+    display: inline-block;
+}
+
+#faAudio{
+    color:turquoise;
+}
+#faDessin{
+    color:darkorange;
+}
+#faEcrit{
+    color:lawngreen;
+}
+#faMulti{
+    color:yellow;
+}
+#faNew{
+    color:white;
+}
+#faVideo{
+    color:red;
+}
+#faPhoto{
+    color:purple;
+}
+
+
 
 /****************** POPUP ***************************/
 

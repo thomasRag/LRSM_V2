@@ -401,7 +401,7 @@ function mobilityArray(e){
     var fired_button = e.val();
     if(e.hasClass('btn-active')){
         mobilityArrays.push(fired_button)
-        arrayTest(mobilityArrays)
+        //arrayTest(mobilityArrays)
     }
     else{
         //remove the existing occurence of the value in the master array
@@ -410,7 +410,7 @@ function mobilityArray(e){
                 mobilityArrays[j++] = mobilityArrays[i];
         }
         mobilityArrays.length = j;
-        arrayTest(mobilityArrays)
+        updateJSON(genreArrays,'genre')
     }
 }
 /**
@@ -421,7 +421,7 @@ function genreArray(e){
     var fired_button = e.val();
     if(e.hasClass('btn-active')){
         genreArrays.push(fired_button)
-        arrayTest(genreArrays)
+        //arrayTest(genreArrays)
     }
     else{
         //remove the existing occurence of the value in the master array
@@ -430,7 +430,8 @@ function genreArray(e){
                 genreArrays[j++] = genreArrays[i];
         }
         genreArrays.length = j;
-        arrayTest(genreArrays)
+        //arrayTest(genreArrays)
+        updateJSON(genreArrays,'genre')
     }
 }
 
@@ -543,6 +544,8 @@ function updateJSON(array,key){
     console.log(jsonFilter)
 }
 
+
+
 /**
  * function that update the json everytime the slider is updated
  *
@@ -552,7 +555,7 @@ dateSlider.noUiSlider.on('update', function (values, handle) {
     tooltipInputs[handle].value = values[handle]
     timeArrays = [values[0],values[1]]
     updateJSON(timeArrays,'timeframe')
-    console.log(jsonFilter)
+    //console.log(jsonFilter)
 })
 // Correction du bug du placeholder dans select2
 $(document).ready(function () {

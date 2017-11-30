@@ -3,10 +3,10 @@ const $ = window.$
 
 /** ******** MAP FUNCTIONS ***********/
 var L
-var map = L.map('map', { zoomControl: false }).setView([45.5314, -73.6750], 11)
+var map = L.map('map', { zoomControl: false }).setView([45.5314, -73.6750], 8)
 new L.Control.Zoom({ position: 'topright' }).addTo(map)
-L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
-  maxZoom: 18,
+L.tileLayer('https://api.mapbox.com/styles/v1/clementg123/cjamwpz34e0ol2rlnix8smzuh/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xlbWVudGcxMjMiLCJhIjoiY2o2M3ZhODh3MWxwNDJxbnJnaGZxcWNoMiJ9.YroDniTcealGFJgHtQ2hDg', {
+  maxZoom: 22,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, ' +
   '&copy; <a href="https://carto.com/attribution">CARTO</a>'
 }).addTo(map)
@@ -77,6 +77,7 @@ map.on('popupopen', function (e) {
   var px = map.project(e.popup._latlng) // find the pixel location on the map where the popup anchor is
   px.y -= e.popup._container.clientHeight / 2 // find the height of the popup container, divide by 2, subtract from the Y axis of marker location
   map.panTo(map.unproject(px), {animate: true}) // pan to new center
+    console.log(jsonFilter)
 })
 
  /**
@@ -134,12 +135,14 @@ function getFilterMarkersById (myFilterLayer) {
 
   }).addTo(map)
 
-  $('div#container').addClass('inFocus')// Change container class in to outfocus if
+  $('#container').addClass('inFocus')// Change container class in to outfocus if
 
   group.clearLayers() // remove the main markers
   filteredGroup.addLayer(filterMarkers).addTo(map) // add the filteredMarkers to the filteredGroup
   map.fitBounds(filterMarkers.getBounds().pad(Math.sqrt(2) / 2)) // fit bounds of the filtered specifici markers
 }
+
+///////////////////////////////* FINIR LA MECANIQUE DE FILTRE ********************////////////////////////
 
 /**
 * function that display the main markers
@@ -270,3 +273,15 @@ narrative.onscroll = function (e) {
   };
   setId(newId)
 }
+/*
+function myJSONFilter(feature,json){
+
+    if (feature.properties.main === true)
+      for (var i = 0; i < feature.length; i++) {
+      if (feature.properties.genre === json.mobility)
+      { return true }
+    }
+
+function (feature, layer) {
+
+},*/

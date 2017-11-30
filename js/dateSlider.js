@@ -49,7 +49,7 @@ noUiSlider.create(dateSlider, {
 })
 
 function sp (event) { event.stopPropagation() }
-var timeArray=[]
+
 function makeTT (i, slider) {
   var tooltip = document.createElement('div'),
   		input = document.createElement('input')
@@ -80,9 +80,5 @@ function makeTT (i, slider) {
 // An 0/1 indexed array of input elements
 var tooltipInputs = [makeTT(0, dateSlider), makeTT(1, dateSlider)]
 
-// When the slider changes, update the tooltip
-dateSlider.noUiSlider.on('update', function (values, handle) {
-  tooltipInputs[handle].value = values[handle]
-  timeArray.push(values[0],values[1])
-})
+/* updateJSON function from timeslider is located in filter.js*/
 

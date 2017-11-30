@@ -118,7 +118,7 @@ function getFilterMarkersById (myFilterLayer) {
     filter: function (feature, layer) {
       for (var j = 0; j < myFilterLayer; j++) {
         if (feature.properties.story['id'] === myFilterLayer) {
-          console.log(feature.properties.story['id'], myFilterLayer)
+          //console.log(feature.properties.story['id'], myFilterLayer)
           return true
         }
       }

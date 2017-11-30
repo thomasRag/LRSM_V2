@@ -77,7 +77,6 @@ function makeTT (i, slider) {
 
   return input
 }
-
 // An 0/1 indexed array of input elements
 var tooltipInputs = [makeTT(0, dateSlider), makeTT(1, dateSlider)]
 

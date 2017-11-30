@@ -1,5 +1,6 @@
 
 const $ = window.$
+
 /** ******** MAP FUNCTIONS ***********/
 var L
 var map = L.map('map', { zoomControl: false }).setView([45.5314, -73.6750], 11)

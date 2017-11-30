@@ -483,36 +483,35 @@ jsonFilter.location=[]
 jsonFilter.mobility = mobilityArrays
 jsonFilter.project=[]
 jsonFilter.keyword=[]
-jsonFilter.timeframe=
+jsonFilter.timeframe=[]
 
-updateJSON =(
-     function(array,key){
-        if(key === 'title'){
-            jsonFilter.title = array
-        }
-        else if (key === 'genre'){
-            jsonFilter.genre = array
-        }
-        else if (key === 'authors'){
-            jsonFilter.authors = array
-        }
-        else if (key === 'location'){
-            jsonFilter.location = array
-        }
-        else if (key === 'mobility'){
-            jsonFilter.mobility = array
-        }
-        else if (key === 'tiprojectle'){
-            jsonFilter.project = array
-        }
-        else if (key === 'keyword'){
-            jsonFilter.keyword = array
-        }
-        else if (key === 'timeframe'){
-           jsonFilter.timeframe = array
-        }
-        console.log(jsonFilter)
-    })()
+function updateJSON(array,key){
+    if(key === 'title'){
+        jsonFilter.title = array
+    }
+    else if (key === 'genre'){
+        jsonFilter.genre = array
+    }
+    else if (key === 'authors'){
+        jsonFilter.authors = array
+    }
+    else if (key === 'location'){
+        jsonFilter.location = array
+    }
+    else if (key === 'mobility'){
+        jsonFilter.mobility = array
+    }
+    else if (key === 'tiprojectle'){
+        jsonFilter.project = array
+    }
+    else if (key === 'keyword'){
+        jsonFilter.keyword = array
+    }
+    else if (key === 'timeframe'){
+        jsonFilter.timeframe = array
+    }
+    console.log(jsonFilter)
+}
 
 
 /** ************* function test to retrieve list of values from the select boxes and pass them into the LIST li containers **/
@@ -520,14 +519,6 @@ updateJSON =(
 function arrayTest (i) {
   console.log(i)
 }
-
-// When the slider changes, update the tooltip
-dateSlider.noUiSlider.on('update', function (values, handle) {
-    tooltipInputs[handle].value = values[handle]
-    var myArray = timeArray.push(values[0],values[1])
-    updateJSON(myArray,'timeFrame')
-    console.log(values[0],values[1])
-})
 
 // Correction du bug du placeholder dans select2
 $(document).ready(function () {

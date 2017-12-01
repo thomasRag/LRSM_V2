@@ -12,6 +12,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/clementg123/cjamwpz34e0ol2rlnix8sm
 }).addTo(map)
 
 var group = L.layerGroup()
+var filteredGroup = L.layerGroup()
 var authorsGroup = L.layerGroup()
 var projectsGroup = L.layerGroup()
 var timeGroup = L.layerGroup()
@@ -20,8 +21,6 @@ var titleGroup = L.layerGroup()
 var keyWordGroup = L.layerGroup()
 var locationGroup = L.layerGroup()
 var genreGroup = L.layerGroup()
-var mainMarkers = L.featureGroup()
-var filteredMarkers = L.featureGroup()
 
 
 var setColor = {
@@ -42,7 +41,33 @@ function getRandomColor () {
   return color
 }
 
-
+function setGenreStyle() {
+    for (var j = 0; j < group.length; j++) {
+        (function (layer) {
+            if (layer.feature.properties.story.media_links.media_type === 'pdf') {
+                layer.feature.setStyle({fillColor: 'blue'})
+            }
+            else if (layer.feature.properties.story.media_links.media_type === 'video') {
+                layer.feature.setStyle({fillColor: 'grey'})
+            }
+            else if (layer.feature.properties.story.media_links.media_type === 'audio') {
+                layer.feature.setStyle({fillColor: 'teal'})
+            }
+            else if (layer.feature.properties.story.media_links.media_type === 'photo') {
+                layer.feature.setStyle({fillColor: 'yellow'})
+            }
+            else if (layer.feature.properties.story.media_links.media_type === 'multimedia') {
+                layer.feature.setStyle({fillColor: 'green'})
+            }
+            else if (layer.feature.properties.story.media_links.media_type === 'dessin') {
+                layer.feature.setStyle({fillColor: 'red'})
+            }
+            else if (layer.feature.properties.story.media_links.media_type === 'animation') {
+                layer.feature.setStyle({fillColor: 'red'})
+            }
+        });
+    }
+}
 
 /*
 
@@ -125,6 +150,7 @@ map.on('moveend ', function () {
 * function that filter the mainMarkers layer on click
 */
 var myFilterLayer
+
 function getFilterMarkersById (myFilterLayer) {
   filteredGroup.clearLayers()
 
@@ -141,8 +167,8 @@ function getFilterMarkersById (myFilterLayer) {
     },
 
     pointToLayer: function (feature, latlng) {
-      var label = String(feature.properties.order)
-      return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
+      //var label = String(feature.properties.order)
+      return L.circleMarker(latlng, setColor)//.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
     },
 
 // on each feature call the modal and populate it with the specific related information gathered in the geojson
@@ -157,15 +183,15 @@ function getFilterMarkersById (myFilterLayer) {
   map.fitBounds(filterMarkers.getBounds().pad(Math.sqrt(2) / 2)) // fit bounds of the filtered specifici markers
 }
 
-///////////////////////////////* FINIR LA MECANIQUE DE FILTRE ********************////////////////////////
+
 
 /**
 * function that display the main markers
 */
-
+var mainmarkers
 function getMainMarkers () {
-  group.clearLayers()
-  filteredGroup.clearLayers() // Clear previously filtered markers
+
+  //filteredGroup.clearLayers() // Clear previously filtered markers
 
   mainMarkers = L.geoJSON(featuresCollection, {
 
@@ -175,8 +201,30 @@ function getMainMarkers () {
     },
 // Display main markers as CircleMarkers
     pointToLayer: function (feature, latlng) {
-      var label = String(feature.properties.story.id)
-      return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
+      //var label = String(feature.properties.story.id)
+      return L.circleMarker(latlng, function(){
+              if (feature.properties.story.media_links[0].media_type === 'pdf') {
+                  return feature.setStyle({fillColor: 'yellow'})
+              }
+              else if (feature.properties.story.media_links[0].media_type === 'vidéo') {
+                  return feature.setStyle({fillColor: 'white'})
+              }
+              else if (feature.properties.story.media_links[0].media_type === 'audio') {
+                  return feature.setStyle({fillColor: 'teal'})
+              }
+              else if (feature.properties.story.media_links[0].media_type === 'photo') {
+                  return feature.setStyle({fillColor: 'yellow'})
+              }
+              else if (feature.properties.story.media_links[0].media_type === 'multimedia') {
+                  return feature.setStyle({fillColor: 'green'})
+              }
+              else if (feature.properties.story.media_links[0].media_type === 'dessin') {
+                  return  feature.setStyle({fillColor: 'red'})
+              }
+              else if (feature.properties.story.media_links[0].media_type === 'animation') {
+                  return  feature.setStyle({fillColor: 'red'})
+              }
+      })//.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
     },
     onEachFeature: onEachFeature
   })
@@ -185,6 +233,7 @@ function getMainMarkers () {
   map.fitBounds(mainMarkers.getBounds())
 }
 
+$(getMainMarkers ())
 
 /**
  * Functions that read the different arrays in the jsonFilter and return earch of the keys for the specific object.
@@ -271,6 +320,7 @@ function getTitleMarkers () {
             var label = String(feature.properties.story.title)
             return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
         },
+        onEachFeature: modalPopulate
     })
 
     titleGroup.addLayer(titleMarkers).addTo(map)
@@ -295,6 +345,7 @@ function getAuthorsMarkers () {
             var label = String(feature.properties.story.authors[0].label)
             return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
         },
+        onEachFeature: modalPopulate
     })
 
     authorsGroup.addLayer(authorsMarkers).addTo(map)
@@ -319,6 +370,7 @@ function getGenreMarkers () {
             var label = String(feature.properties.story.genres[0].label)
             return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
         },
+        onEachFeature: modalPopulate
     })
 
     genreGroup.addLayer(genreMarkers).addTo(map)
@@ -341,10 +393,12 @@ function getMobiltyMarkers () {
                     return true
                 }}
         },
+
         pointToLayer: function (feature, latlng) {
             var label = String(feature.properties.story.mobiltys[0].label)
             return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
         },
+        onEachFeature: modalPopulate
     })
 
     mobiltyGroup.addLayer(mobiltyMarkers).addTo(map)

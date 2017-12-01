@@ -156,6 +156,7 @@ height: 80px !important;
   background-color: #343434;
 }
 #legend{
+    display:none;
     position: absolute;
     z-index: 99;
     left:15%;
@@ -167,19 +168,61 @@ height: 80px !important;
 }
 
 #legend:after{
-    background-color: red;
+    background-color: transparent;
     opacity: 1;
 }
 
-.legenditem{
-    text-align:center;
+.col-7{
+    width: 13%;
+}
+
+.legendtext{
+
     color:white;
+    display: inline;
+}
+
+.legenditem{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#legendCollapse {
+    width: 100$% !important;
 }
 
 
+#legendXS{
+    display: none;
+    position: absolute;
+    z-index: 99;
+    left:15%;
+    bottom:0;
+    border-radius: 0px;
+    width: 85%;
+    height: 5%;
+    background-color: rgba(49,49,49,0.5);
+}
 
-.fa{
+#legendXS:after{
+    background-color: transparent;
+    opacity: 0;
+}
+
+
+.legendtext{
+
+    color:white;
+    display: inline;
+}
+
+.legenditemXS{
     display: inline-block;
+    vertical-align: middle;
+}
+
+#legendCollapseXS {
+    width: 100$% !important;
 }
 
 #faAudio{

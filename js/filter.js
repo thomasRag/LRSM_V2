@@ -65,17 +65,17 @@ function getLocation (i) {
 getLocation(locationData)
 
 function getTitre (i) {
-  for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.title) }
+  for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.title) }
 };
 getTitre(titreData)
 
 function getMobility (i) {
-  for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.id) }
+  for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.mobility) }
 };
 getMobility(mobilityData)
 
 function getProject (i) {
-  for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.id) }
+  for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.projects) }
 };
 getProject(projectData)
 
@@ -367,11 +367,67 @@ var timeArrays= []
  * @type {Array}
  */
 
-$('#titreSearchBox').on('change', function (e) {
+function arrayRemover(array, element) {
+    const index = array.indexOf(element);
+
+    if (index !== -1) {
+        array.splice(index, 1);
+    }
+    //console.log(array)
+}
+/**
+ *
+ * TITLE
+ *
+ */
+
+$('#titreSearchBox').on('select2:select', function (e) {
     titleArrays= []
     titleArrays.push($(e.currentTarget).val())
     updateJSON(titleArrays,'title')
+    getTitleMarkers()
     })
+$('#titreSearchBox').on('select2:unselecting', function (e) {
+    var el = $(e.currentTarget).val()
+
+    if (el.length === undefined){
+        titleGroup.clearLayers()
+    }
+    else if (el.length === 0){
+        titleGroup.clearLayers()
+    }
+    else{
+        titleGroup.clearLayers()
+        arrayRemover(authorsArrays,el)
+        updateJSON(authorsArrays,'authors')
+        getTitleMarkers()
+    }
+
+    })
+
+$('#titreSearchBox').on('select2:unselect', function (e) {
+    var el = $(e.currentTarget).val()
+
+    if (el.length === undefined){
+        titleGroup.clearLayers()
+    }
+    else if (el.length === 0){
+        titleGroup.clearLayers()
+    }
+    else {
+        titleGroup.clearLayers()
+        arrayRemover(authorsArrays, el)
+        updateJSON(authorsArrays, 'authors')
+        getTitleMarkers()
+    }
+    })
+
+/**
+ *
+ * PROJECT
+ *
+ */
+
 $('#projectSearchBox').on('change', function (e) {
     projetArrays= []
     projetArrays.push($(e.currentTarget).val())
@@ -387,10 +443,54 @@ $('#keywordSearchBox').on('change', function (e) {
     keyWordArrays.push($(e.currentTarget).val())
     updateJSON(keyWordArrays,'keyword')
 })
-$('#authorSearchBox').on('change', function (e) {
-    authorsArrays= []
-    authorsArrays.push($(e.currentTarget).val())
+
+
+/**
+ * 
+ * AUTHORS
+ * 
+ */
+$('#authorSearchBox').on('select2:select', function (e) {
+        authorsArrays.length = 0
+        authorsArrays.push($(e.currentTarget).val())
+        updateJSON(authorsArrays,'authors')
+        getAuthorsMarkers()
+   })
+$('#authorSearchBox').on('select2:unselecting', function (e) {
+    var el = $(e.currentTarget).val()
+
+
+
+    if (el.length === undefined){
+        authorsGroup.clearLayers()
+    }
+    else if (el.length === 0){
+        authorsGroup.clearLayers()
+    }
+    else{
+    //authorsGroup.clearLayers()
+    arrayRemover(authorsArrays,el)
     updateJSON(authorsArrays,'authors')
+    getAuthorsMarkers()
+    }
+})
+
+$('#authorSearchBox').on('select2:unselect', function (e) {
+
+    var el = $(e.currentTarget).val()
+
+    if (el.length === undefined){
+        authorsGroup.clearLayers()
+    }
+    else if (el.length === 0){
+        authorsGroup.clearLayers()
+    }
+    else{
+        authorsGroup.clearLayers()
+        arrayRemover(authorsArrays,el)
+        updateJSON(authorsArrays,'authors')
+        getAuthorsMarkers()
+    }
 })
 
 /**
@@ -398,19 +498,20 @@ $('#authorSearchBox').on('change', function (e) {
  * @type {Array}
  */
 function mobilityArray(e){
-    var fired_button = e.val();
+    var firedValue = e.val();
     if(e.hasClass('btn-active')){
-        mobilityArrays.push(fired_button)
+        mobilityArrays.push(firedValue)
         //arrayTest(mobilityArrays)
     }
     else{
         //remove the existing occurence of the value in the master array
         for (var i = 0, j = 0; i < mobilityArrays.length; i++) {
-            if (mobilityArrays[i] != fired_button)
+            if (mobilityArrays[i] != firedValue)
                 mobilityArrays[j++] = mobilityArrays[i];
         }
         mobilityArrays.length = j;
-        updateJSON(genreArrays,'genre')
+        updateJSON(mobilityArrays,'mobility')
+        getMobiltyMarkers ()
     }
 }
 /**
@@ -418,20 +519,22 @@ function mobilityArray(e){
  * @type {Array}
  */
 function genreArray(e){
-    var fired_button = e.val();
+    var firedValue = e.val();
     if(e.hasClass('btn-active')){
-        genreArrays.push(fired_button)
+        genreArrays.push(firedValue)
         //arrayTest(genreArrays)
     }
     else{
         //remove the existing occurence of the value in the master array
         for (var i = 0, j = 0; i < genreArrays.length; i++) {
-            if (genreArrays[i] != fired_button)
+            if (genreArrays[i] != firedValue)
                 genreArrays[j++] = genreArrays[i];
         }
         genreArrays.length = j;
         //arrayTest(genreArrays)
         updateJSON(genreArrays,'genre')
+        console.log(jsonFilter)
+        getGenreMarkers ()
     }
 }
 
@@ -541,7 +644,7 @@ function updateJSON(array,key){
     else if (key === 'timeframe'){
         jsonFilter.timeframe = array
     }
-    console.log(jsonFilter)
+    //console.log(jsonFilter)
 }
 
 

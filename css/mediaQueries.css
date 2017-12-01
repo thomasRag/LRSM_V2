@@ -1,0 +1,20 @@
+@media (max-width: 575px) {
+    #legendXS{
+    display: block !important;
+    }
+}
+
+@media (max-width: 767px) {
+    #legendXS{
+    display: block !important; }
+}
+
+@media (max-width: 991px) {
+    #legendXS{
+    display: none !important; }
+}
+
+@media (max-width: 1199px) {
+    #legendXS{
+    display: none !important; }
+}

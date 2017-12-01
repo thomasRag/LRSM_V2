@@ -19,9 +19,10 @@
   <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.0/mapbox-gl-geocoder.css' type='text/css' />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" />
 
-
+  <link rel="stylesheet" id="themeCSS" href="src/mediaQueries.css">
   <link rel="stylesheet" href="css/main.css"/>
   <link rel="stylesheet" href="css/modal_sidebar.css"/>
+  <link rel="stylesheet" id="themeCSS" href="src/mediaQueries.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css"/>
@@ -324,31 +325,30 @@
 <!-- /. end top navbar -->
 
 <!--  legend -->
-<nav id="legend" class="navbar-expand-md align-middle">
-  <div class="collapse navbar-collapse col-12 align-middle" id="legendCollapse">
-    <ul class="navbar-nav align-middle mr-2 ">
-      <li class="nav-item  align-middle">
-        <div class="legenditem col align-middle" ><i id="faAudio" class="fa fa-circle align-middle" aria-hidden="true"  ></i>Audio</div>
-      </li>
-      <li class="nav-item  mx-auto ">
-        <div class="legenditem col" ><i id="faDessin" class="fa fa-circle" aria-hidden="true"  ></i>Dessin</div>
-      </li>
-      <li class="nav-item  mx-auto ">
-        <div class="legenditem col" ><i id="faEcrit" class="fa fa-circle" aria-hidden="true"  ></i>Écrit</div>
-      </li>
-      <li class="nav-item mx-auto">
-        <div class="legenditem col" ><i id="faMulti" class="fa fa-circle" aria-hidden="true"  ></i>Multimédia</div>
-      </li>
-      <li class="nav-item  mx-auto">
-        <div class="legenditem col align-middle" ><i id="faPhoto" class="fa fa-circle" aria-hidden="true"  ></i>Photo</div>
-      </li>
-      <li class="nav-itemmx-auto">
-        <div class="legenditem col"><i  id="faVideo" class="fa fa-circle" aria-hidden="true"  ></i>Video</div>
-      </li>
-      <li class="nav-itemmx-auto">
-        <div class="legenditem col" ><i  id="faNew" class="fa fa-circle" aria-hidden="true"  ></i>Nouveauté</div>
-      </li>
-     </ul>
+<nav id="legend" class="navbar-expand-md"  >
+  <div class="col-lg-12" id="legendCollapse">
+
+
+      <div class="legenditem col-7 pt-2"><i  id="faAudio" class="fa fa-circle" aria-hidden="true"  ></i><p class="legendtext  pl-1 pt-2">Audio</p></div>
+      <div class="legenditem col-7 pt-2"><i  id="faDessin" class="fa fa-circle" aria-hidden="true"  ></i><p class="legendtext  pl-1 pt-2">Dessin</p></div>
+      <div class="legenditem col-7 pt-2"><i  id="faEcrit" class="fa fa-circle" aria-hidden="true"  ></i><p class="legendtext  pl-1 pt-2">Écrit</p></div>
+      <div class="legenditem col-7 pt-2"><i  id="faMulti" class="fa fa-circle" aria-hidden="true"  ></i><p class="legendtext  pl-1 pt-2">Multimedia</p></div>
+      <div class="legenditem col-7 pt-2"><i  id="faPhoto" class="fa fa-circle" aria-hidden="true"  ></i><p class="legendtext  pl-1 pt-2">Photo</p></div>
+      <div class="legenditem col-7 pt-2"><i  id="faVideo" class="fa fa-circle" aria-hidden="true"  ></i><p class="legendtext  pl-1 pt-2">Video</p></div>
+      <div class="legenditem col-7 pt-2"><i  id="faNew" class="fa fa-circle-o" aria-hidden="true"  ></i><p class="legendtext  pl-1 pt-2">Nouveauté</p></div>
+
+  </div>
+</nav>
+
+<nav id="legendXS" class="navbar-expand-md">
+  <div class="col-lg-12" id="legendCollapseXS">
+    <div class="legenditemXS col-7 pt-2"><i  id="faAudio" class="fa fa-circle" aria-hidden="true"  ></i><p class="legendtext  pl-1 pt-1">Audio</p></div>
+    <div class="legenditemXS col-7 pt-1"><i  id="faDessin" class="fa fa-circle" aria-hidden="true"  ></i><p class="legendtext  pl-1 pt-1">Dessin</p></div>
+    <div class="legenditemXS col-7 pt-1"><i  id="faEcrit" class="fa fa-circle" aria-hidden="true"  ></i><p class="legendtext  pl-1 pt-1">Écrit</p></div>
+    <div class="legenditemXS col-7 pt-1"><i  id="faMulti" class="fa fa-circle" aria-hidden="true"  ></i><p class="legendtext  pl-1 pt-1">Multimedia</p></div>
+    <div class="legenditemXS col-7 pt-1"><i  id="faPhoto" class="fa fa-circle" aria-hidden="true"  ></i><p class="legendtext  pl-1 pt-1">Photo</p></div>
+    <div class="legenditemXS col-7 pt-1"><i  id="faVideo" class="fa fa-circle" aria-hidden="true"  ></i><p class="legendtext  pl-1 pt-1">Video</p></div>
+    <div class="legenditemXS col-7 pt-1"><i  id="faNew" class="fa fa-circle-o" aria-hidden="true"  ></i><p class="legendtext  pl-1 pt-1">Nouveauté</p></div>
   </div>
 </nav>
 <!--  ./ end legend -->
@@ -475,7 +475,7 @@
 <script src="src/wNumb.js"></script>
 <script src="js/dateSlider.js"></script>
 <!-- /. Date Range Slider -->
-<script src=js/featuresCollection.js type="text/javascript"></script>
+<script src=js/fc3.js type="text/javascript"></script>
 <script type="text/javascript" src="js/filter.js"></script>
 <script src="js/main.js"></script>
 

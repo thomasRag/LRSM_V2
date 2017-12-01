@@ -183,7 +183,106 @@ function getFilterMarkersById (myFilterLayer) {
   map.fitBounds(filterMarkers.getBounds().pad(Math.sqrt(2) / 2)) // fit bounds of the filtered specifici markers
 }
 
+function style(feature){
+  for(var i = 0; i < 5; i++) {
+      var media_type = feature.properties.story.genres[0].label
+      console.log(media_type)
 
+      if (media_type === undefined)
+          {
+              return {
+              radius: 8,
+              fillColor: 'rgba(255,255,255,0',
+              color: '#ffffff',
+              weight: 1,
+              opacity: 1,
+              fillOpacity: 0.5
+          }
+      }
+      else if (media_type === 0) {
+          {
+              return {
+                  radius: 8,
+                  fillColor: 'rgba(255,255,255,0)',
+                  color: '#ffffff',
+                  weight: 1,
+                  opacity: 1,
+                  fillOpacity: 0.5
+              }}
+          }
+
+      else if (media_type === 'pdf') {
+          return {
+              radius: 8,
+              fillColor: 'green',
+              color: '#ffffff',
+              weight: 1,
+              opacity: 1,
+              fillOpacity: 0.5
+          }
+      }
+      else if (media_type === 'video') {
+          return {
+              radius: 8,
+              fillColor: 'red',
+              color: '#ffffff',
+              weight: 1,
+              opacity: 1,
+              fillOpacity: 0.5
+          }
+      }
+      else if (media_type === 'audio') {
+          return {
+              radius: 8,
+              fillColor: 'teal',
+              color: '#ffffff',
+              weight: 1,
+              opacity: 1,
+              fillOpacity: 0.5
+          }
+      }
+      else if (media_type === 'photo') {
+          return {
+              radius: 8,
+              fillColor: 'purple',
+              color: '#ffffff',
+              weight: 1,
+              opacity: 1,
+              fillOpacity: 0.5
+          }
+      }
+      else if (media_type === 'Documentaire') {
+          return {
+              radius: 8,
+              fillColor: 'purple',
+              color: '#ffffff',
+              weight: 1,
+              opacity: 1,
+              fillOpacity: 0.5
+          }
+      }
+      else if (media_type === 'dessin') {
+          return {
+              radius: 8,
+              fillColor: 'blue',
+              color: '#ffffff',
+              weight: 1,
+              opacity: 1,
+              fillOpacity: 0.5
+          }
+      }
+      else if (media_type === 'animation') {
+          return {
+              radius: 8,
+              fillColor: 'grey',
+              color: '#ffffff',
+              weight: 1,
+              opacity: 1,
+              fillOpacity: 0.5
+          }
+      }
+  }
+}
 
 /**
 * function that display the main markers
@@ -202,29 +301,8 @@ function getMainMarkers () {
 // Display main markers as CircleMarkers
     pointToLayer: function (feature, latlng) {
       //var label = String(feature.properties.story.id)
-      return L.circleMarker(latlng, function(){
-              if (feature.properties.story.media_links[0].media_type === 'pdf') {
-                  return feature.setStyle({fillColor: 'yellow'})
-              }
-              else if (feature.properties.story.media_links[0].media_type === 'vidéo') {
-                  return feature.setStyle({fillColor: 'white'})
-              }
-              else if (feature.properties.story.media_links[0].media_type === 'audio') {
-                  return feature.setStyle({fillColor: 'teal'})
-              }
-              else if (feature.properties.story.media_links[0].media_type === 'photo') {
-                  return feature.setStyle({fillColor: 'yellow'})
-              }
-              else if (feature.properties.story.media_links[0].media_type === 'multimedia') {
-                  return feature.setStyle({fillColor: 'green'})
-              }
-              else if (feature.properties.story.media_links[0].media_type === 'dessin') {
-                  return  feature.setStyle({fillColor: 'red'})
-              }
-              else if (feature.properties.story.media_links[0].media_type === 'animation') {
-                  return  feature.setStyle({fillColor: 'red'})
-              }
-      })//.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
+      return L.circleMarker(latlng,style(feature))
+      //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
     },
     onEachFeature: onEachFeature
   })
@@ -322,7 +400,7 @@ function getTitleMarkers () {
         },
         onEachFeature: modalPopulate
     })
-
+    group.clearLayers()
     titleGroup.addLayer(titleMarkers).addTo(map)
 }
 
@@ -347,7 +425,7 @@ function getAuthorsMarkers () {
         },
         onEachFeature: modalPopulate
     })
-
+    group.clearLayers()
     authorsGroup.addLayer(authorsMarkers).addTo(map)
 }
 
@@ -372,7 +450,7 @@ function getGenreMarkers () {
         },
         onEachFeature: modalPopulate
     })
-
+    group.clearLayers()
     genreGroup.addLayer(genreMarkers).addTo(map)
 }
 
@@ -400,7 +478,7 @@ function getMobiltyMarkers () {
         },
         onEachFeature: modalPopulate
     })
-
+    group.clearLayers()
     mobiltyGroup.addLayer(mobiltyMarkers).addTo(map)
 }
 

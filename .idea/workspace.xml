@@ -16,12 +16,12 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="209" column="60" lean-forward="false" selection-start-line="209" selection-start-column="60" selection-end-line="209" selection-end-column="60" />
+            <state relative-caret-position="2380">
+              <caret line="480" column="23" lean-forward="false" selection-start-line="480" selection-start-column="23" selection-end-line="480" selection-end-column="23" />
               <folding>
-                <marker date="1512160189493" expanded="true" signature="451:457" ph="©" />
-                <marker date="1512160189493" expanded="true" signature="533:539" ph="©" />
-                <marker date="1512160189493" expanded="true" signature="14250:14267" ph="..." />
+                <marker date="1512162566449" expanded="true" signature="451:457" ph="©" />
+                <marker date="1512162566449" expanded="true" signature="533:539" ph="©" />
+                <marker date="1512162566449" expanded="true" signature="15680:15697" ph="..." />
               </folding>
             </state>
           </provider>
@@ -30,8 +30,8 @@
       <file leaf-file-name="fc3.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/fc3.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="570" column="35" lean-forward="false" selection-start-line="570" selection-start-column="25" selection-end-line="570" selection-end-column="35" />
+            <state relative-caret-position="77">
+              <caret line="622" column="17" lean-forward="false" selection-start-line="622" selection-start-column="13" selection-end-line="622" selection-end-column="17" />
               <folding>
                 <marker date="1512156612527" expanded="true" signature="18043:18049" ph=" " />
                 <marker date="1512156612527" expanded="true" signature="20420:20427" ph="’" />
@@ -103,7 +103,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>titleArrays</find>
       <find>line-height</find>
       <find>test</find>
       <find>col-lg-4</find>
@@ -128,16 +127,18 @@
       <find>proj</find>
       <find>proje</find>
       <find>authors</find>
-      <find>main</find>
       <find>get</find>
       <find>genre</find>
       <find>layer.</find>
       <find>media_type</find>
+      <find>feature.properties.story.media_links[0].media_type</find>
+      <find>main</find>
     </findStrings>
     <replaceStrings>
       <replace>col-4</replace>
       <replace>mobility</replace>
       <replace>title</replace>
+      <replace>media_type</replace>
       <replace>properties.story.title</replace>
     </replaceStrings>
   </component>
@@ -312,12 +313,12 @@
       <option name="presentableId" value="Default" />
       <updated>1511965192348</updated>
       <workItem from="1511965198047" duration="50095000" />
-      <workItem from="1512104774871" duration="27368000" />
+      <workItem from="1512104774871" duration="29954000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77463000" />
+    <option name="totallyTimeSpent" value="80049000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -477,8 +478,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/fc3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="570" column="35" lean-forward="false" selection-start-line="570" selection-start-column="25" selection-end-line="570" selection-end-column="35" />
+        <state relative-caret-position="77">
+          <caret line="622" column="17" lean-forward="false" selection-start-line="622" selection-start-column="13" selection-end-line="622" selection-end-column="17" />
           <folding>
             <marker date="1512156612527" expanded="true" signature="18043:18049" ph=" " />
             <marker date="1512156612527" expanded="true" signature="20420:20427" ph="’" />
@@ -520,12 +521,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="209" column="60" lean-forward="false" selection-start-line="209" selection-start-column="60" selection-end-line="209" selection-end-column="60" />
+        <state relative-caret-position="2380">
+          <caret line="480" column="23" lean-forward="false" selection-start-line="480" selection-start-column="23" selection-end-line="480" selection-end-column="23" />
           <folding>
-            <marker date="1512160189493" expanded="true" signature="451:457" ph="©" />
-            <marker date="1512160189493" expanded="true" signature="533:539" ph="©" />
-            <marker date="1512160189493" expanded="true" signature="14250:14267" ph="..." />
+            <marker date="1512162566449" expanded="true" signature="451:457" ph="©" />
+            <marker date="1512162566449" expanded="true" signature="533:539" ph="©" />
+            <marker date="1512162566449" expanded="true" signature="15680:15697" ph="..." />
           </folding>
         </state>
       </provider>

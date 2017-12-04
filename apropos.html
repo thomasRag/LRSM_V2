@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -8,28 +7,22 @@
     <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg"/>
     <title>Le Laboratoire des Récits du Soi Mobile</title>
 
-     <!-- Latest Jquery -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css">
-     <!-- Latest Bootstrap -->
+    <!-- Latest Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <!-- Latest mapboxgl -->
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
-    <!-- Latest mapbox geodcoder -->
-    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.0/mapbox-gl-geocoder.css' type='text/css' />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" />
+
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/nav_template.css"/>
+    <link rel="stylesheet" href="css/apropos.css"/>
+    <link rel="stylesheet" href="css/modal_sidebar.css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-
-
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 </head>
 
@@ -37,86 +30,220 @@
 <body>
 
 
+<!-- sidebar -->
+
 <nav id="sideBar" class="col-sm-3 col-md-2 d-none d-sm-block sidebar">
-  <div  id="navbarbrand">
-      <a class="navbar-brand" href="#"><img  id="logo" src="img/4.png"></a>
-  </div>
+
+    <div id="navbarbrand">
+        <a class="navbar-brand" href="#"><img  id="logo" src="img/4.png"></a>
+    </div>
+
+    <!-- /. Side Menu -->
+    </div>
 </nav>
+<!-- /. sidebar -->
+
 
 <!-- top navbar -->
-<nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top">
+<nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top sticky">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse " id="navbarsExampleDefault">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active mr-5">
-          <a class="nav-link" href="index.html">Cartographies <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item mr-5">
-          <a class="nav-link" href="projets.html">Ses projets</a>
-        </li>
-        <li class="nav-item mr-5">
-          <a class="nav-link" href="corpus.html">Ses corpus</a>
-        </li>
-        <li class="nav-item mr-5">
-          <a class="nav-link" href="apropos.html">Le LRSM</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <nav id="submenu" class="navbar-expand-md">
-      <div class="collapse navbar-collapse " id="submenuCollapse">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active mr-5">
-            <a class="nav-link" href="index.html">En cours <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item mr-5">
-            <a class="nav-link" href="projets.html">Passés</a>
-          </li>
+            <li class="nav-item active mr-5">
+                <a class="nav-link" href="index.html">Cartographies <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">Ses projets</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="corpus.html">Ses corpus</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="apropos.html">Le LRSM</a>
+
+            </li>
         </ul>
-      </div>
-    </nav>
-<!-- end top navbar -->
+    </div>
+</nav>
+
+<nav id="submenu" class="navbar-expand-md sticky  ">
+    <div class="collapse navbar-collapse " id="submenuCollapse">
+
+        <ul id="submenuCarto" class="navbar-nav ml-auto d-none">
+            <li class="nav-item active mr-5">
+                <a class="nav-link" href="tron.html"> Cartographies des récits <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">Cartographies SF</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">Cartographies des sois</a>
+            </li>
+        </ul>
+
+        <ul id="submenuProjects" class="navbar-nav ml-auto d-none">
+            <li class="nav-item active mr-5">
+                <a class="nav-link" href="tron.html">En cours <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">Passés</a>
+            </li>
+        </ul>
+
+        <ul id="submenuCorpus" class="navbar-nav ml-auto d-none">
+            <li class="nav-item active mr-5">
+                <a class="nav-link" href="tron.html">Théoriques<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">Littéraires</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">Médiatiqus</a>
+            </li>
+        </ul>
+
+        <ul id="submenuLRSM" class="navbar-nav ml-auto">
+            <li class="nav-item active mr-5">
+                <a class="nav-link" href="tron.html">À propos<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">L'Équipe</a>
+            </li>
+        </ul>
+
+
+    </div>
+</nav>
+<!-- /. top navbar -->
 
 
 
 
-<main role="main">
+<main role="main" class="container">
 
-<div class="jumbotron">
-  <h1 class="display-3">Jumbotron heading</h1>
-  <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-  <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
-</div>
+    <div class="row">
 
-<div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Subheading</h4>
-    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+        <div id="mainPage" class="col-sm-12 blog-main pt-2 ml-0 mr-0 pl-0 pr-0 mb-4 specialHeight">
 
-    <h4>Subheading</h4>
-    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+            <div class="blog-post d-inline-block">
 
-    <h4>Subheading</h4>
-    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-  </div>
+                <!-- Titre dynamique en fonction du routing (Théorique/Littéraire/Médiatique) -->
+                <h2 class="pl-5">À propos du LRSM </h2>
 
-  <div class="col-lg-6">
-    <h4>Subheading</h4>
-    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+                <div class="col-xs-9  d-inline-block pt-5 pl-5 align-top mr-5 pr-5 ">
 
-    <h4>Subheading</h4>
-    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+                    <div class="card">
 
-    <h4>Subheading</h4>
-    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-  </div>
-</div>
+                          <div class="card-body">
+                              <div class="line"><i></i></div>
+                              <div class="line"><i></i></div>
+                              <div class="line"><i></i></div>
+                              <div class="line"><i></i></div>
+                            <blockquote class="blockquote mb-0">
+                                <h4 class="d-inline-block text-justify mb-5"> Le laboratoire sur les récits du soi mobile (LRSM), une initiative de Simon Harel </h4>
+                                <cite class="d-inline-block text-justify"> Le laboratoire sur les récits du soi mobile, une infrastructure de recherche financée par la fondation canadienne pour l'innovation, étudie des créations locales, diffusées mondialement en temps réel, une production réseautée, géoréférencée, souvent éphémère, qui dépasse le champ formel de la littérature pour devenir le pivot des échanges sociaux et économiques de notre ère communicationnelle globale. Cette forme d’expression n’est plus l’apanage des élites : elle s’intègre progressivement au mode de vie de la majorité, même si de nouvelles fractures numériques se créent au passage. Le récit du soi mobile se positionne plus que jamais au cœur de nombreux enjeux individuels et collectifs ; il nous faut par conséquent apprendre à mieux comprendre et à définir cette forme d’expression qui pourrait devenir une nouvelle clé de lecture de notre époque.</cite>
 
-</main>
+                                <footer class="blockquote-footer ">Simon Harel <cite title="Source Title">Université de Montréal</cite></footer>
+                                <div class="square"></div>
+                            </blockquote>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="listing"class="col-xs-9 d-inline-block pt-5 pl-5 mr-5 pr-5">
+                    <div class="col-sm-12 align-top ml-0 pl-0">
+                        <div class="card">
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <h4 class="d-inline-block mb-5"> Le LRSM </h4>
+                                    <p class="d-inline-block text-justify"> Fondé en 2012, Le Laboratoire sur les Récits du Soi Mobile (LRSM) est une infrastructure de recherche universitaire financée par la Fondation canadienne pour l'innovation. Il est composé d'une unité mobile, un camion équipé avec des outils de captation audiovisuels, ainsi que d'une plateforme fixe, un studio d'écriture visuelle à l'Université de Montréal qui accueille les chercheurs de différentes disciplines. Le Laboratoire sur les récits du soi mobile (LRSM)  se veut un lieu de convergence médiatique et culturel où des chercheurs et partenaires travaillent avec des outils de captation audiovisuels pour cerner les réalités et les enjeux de l'espace - urbain, imaginaire, identitaire, interculturel et politique - qui circonscrivent et fédèrent l'ensemble des sciences humaines. Le Laboratoire sur les récits du soi mobile (LRSM) fait partie des infrastructures de recherche de la Faculté des arts et des sciences de l'Université de Montréal.</p>
+                                    <footer class="blockquote-footer text-lowercase">SIMON HAREL <cite title="Source Title">Université de Montréal</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!-- Contact -->
+                <div class="container second-portion">
+                    <div class="row">
+                        <!--  -->
+                        <div class="col-xs-12 col-sm-6 col-lg-4">
+                            <div class="box">
+                                <div class="icon">
+                                    <div class="image"><i class="fa fa-at" aria-hidden="true"></i></div>
+                                    <div class="info">
+                                        <h3 class="title">COURRIEL</h3>
+                                        <p>
+                                            <a class="mt-2"href="mailto:contact.lrsm@gmail.com"><h5> contact.lrsm@gmail.com</h5></a>
+                                            <br>
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div class="space"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-lg-4">
+
+                            <div class="box ">
+                                <div class="icon">
+                                    <div class="image"><i class="fa fa-mobile" aria-hidden="true"></i></div>
+                                    <div class="info">
+                                        <h3 class="title pb-4">CONTACT</h3>
+                                        <address>
+                                            <strong class="pr-2">Tél.</strong><a href="+15146220587"><abbr title="Phone"></abbr> (123) 456-7890</a><br>
+                                            <strong class="pr-2">Fax</strong><a href="+15146220587"><abbr title="Fax"></abbr> (123) 456-7890</a><br>
+
+                                            </a>
+                                        </address>
+                                    </div>
+                                </div>
+                                <div class="space"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-lg-4">
+                            <div class="box">
+                                <div class="icon">
+                                    <div class="image"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                                    <div class="info">
+                                        <h3 class="title">ADRESSE</h3>
+                                        <address>
+                                            <strong>Twitter, Inc.</strong><br>
+                                            1355 Market Street, Suite 900<br>
+                                            San Francisco, CA 94103<br>
+
+                                        </address>
+
+                                    </div>
+                                </div>
+                                <div class="space"></div>
+                            </div>
+                        </div>
+<!-- /Contact -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+                <ul class="ct-socials">
+                    <li><a href="/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+
+            </div><!-- /.blog-main -->
+</main><!-- /.container -->
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

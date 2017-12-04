@@ -1,0 +1,54 @@
+.card{
+    border: none;
+}
+
+.box > .icon { text-align: center; position: relative; }
+.box > .icon > .image { position: relative; z-index: 2; margin: auto; width: 88px; height: 88px; border: 8px solid white;  line-height: 88px; border-radius: 50%; background: rgb(66, 185, 244); vertical-align: middle; }
+
+.box > .icon > .image > i { font-size: 36px !important; color: #fff !important; }
+.box > .icon:hover > .image > i { color: white !important; }
+.box > .icon > .info { margin-top: -24px; background: rgba(0, 0, 0, 0.0); border: 1px solid #e0e0e0; border-radius: 2%; padding: 15px 0 10px 0; min-height:163px;}
+.box > .icon:hover > .info { background: rgba(0, 0, 0, 0.0); border-color: #e0e0e0; border-radius: 2%;}
+.box > .icon > .info > h3.title { padding-top: 20px; font-family: "Robot",sans-serif !important; font-size: 16px; color: black; font-weight: 700; }
+.box > .icon > .info > p { font-family: "Robot",sans-serif !important; font-size: 13px; color: white; line-height: 1.5em; margin: 20px;}
+.box .space { height: 30px; }
+
+.line {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+.line:nth-of-type(1) {
+    transform: rotate(0deg);
+}
+.line:nth-of-type(2) {
+    transform: rotate(90deg);
+    margin-left:60px;
+}
+ .line:nth-of-type(3) {
+    transform: rotate(180deg);
+}
+ .line:nth-of-type(4) {
+    transform: rotate(270deg);
+    margin-left:-60px;
+}
+ .line i {
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: block;
+    position: absolute;
+    border-bottom: 10px dashed;
+    animation: move 3.5s infinite linear;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

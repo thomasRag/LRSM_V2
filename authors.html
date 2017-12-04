@@ -7,29 +7,22 @@
     <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg"/>
     <title>Le Laboratoire des Récits du Soi Mobile</title>
 
-     <!-- Latest Jquery -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css">
      <!-- Latest Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <!-- Latest mapboxgl -->
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
-    <!-- Latest mapbox geodcoder -->
-    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.0/mapbox-gl-geocoder.css' type='text/css' />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" />
+
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/nav_template.css"/>
+    <link rel="stylesheet" href="css/authors.css"/>
     <link rel="stylesheet" href="css/modal_sidebar.css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
 
-
-    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
 
 </head>
 
@@ -37,343 +30,155 @@
 <body>
 
 
+
 <!-- sidebar -->
 
-          <nav id="sideBar" class="col-sm-3 col-md-2 d-none d-sm-block sidebar">
+<nav id="sideBar" class="col-sm-3 col-md-2 d-none d-sm-block sidebar">
 
-          <div  id="navbarbrand">
-                <a class="navbar-brand" href="#"><img  id="logo" src="img/4.png"></a>
-            </div>
+    <div id="navbarbrand">
+        <a class="navbar-brand" href="#"><img  id="logo" src="img/4.png"></a>
+    </div>
 
-            <div id="sideMenu">
-              <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" style="font-weight:bold; font-size:1.5rem;"id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Carte</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="profile-tab" style="font-weight:300; font-size:1.5rem;" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Liste</a>
-                </li>
-              </ul>
-
-
-
-<!-- Sous menu de filtre-->
-              <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                  <div class="ml-3"><p class="mb-1" style="font-size: 0.8em;"> Filtrer les récits par </p></div>
-                  <div id="accordion" role="tablist">
-
-                    <div class="card">
-                      <div class="card-header" role="tab" id="headingOne">
-                        <h5 class="mb-0">
-                          <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Titre
-                          </a>
-                        </h5>
-                      </div>
-
-                      <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-                        <div class="card-body">
-
-                        <select id="titreSearchBox" class="form-control select2-multiple" multiple="multiple"></select>
-
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="card">
-                      <div class="card-header" role="tab" id="headingTwo">
-                        <h5 class="mb-0">
-                          <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Genre
-                          </a>
-                        </h5>
-                      </div>
-                      <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
-                        <div class="card-body">
-
-                          <select id="genreSearchBox" class="form-control select2-multiple" multiple="multiple"></select>
-
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="card">
-                      <div class="card-header" role="tab" id="headingThree">
-                        <h5 class="mb-0">
-                          <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Auteur
-                          </a>
-                        </h5>
-                      </div>
-                      <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-                        <div class="card-body">
-
-                        <select id="authorSearchBox" class="form-control select2-multiple" multiple="multiple"></select>
-
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="card">
-                      <div class="card-header" role="tab" id="headingFour">
-                        <h5 class="mb-0">
-                          <a class="collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                            Emplacement
-                          </a>
-                        </h5>
-                      </div>
-                      <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-                        <div class="card-body">
-
-                        <select id="locationSearchBox" class="form-control select2-multiple" multiple="multiple"></select>
-
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="card">
-                      <div class="card-header" role="tab" id="headingFive">
-                        <h5 class="mb-0">
-                          <a class="collapsed" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
-                            Mobilité
-                          </a>
-                        </h5>
-                      </div>
-                      <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion">
-                        <div class="card-body">
-
-                        <select id="mobilitySearchBox" class="form-control select2-multiple" multiple="multiple"></select>
-
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="card" style="border-radius: 0;!important;">
-                      <div class="card-header" role="tab" id="headingSix">
-                        <h5 class="mb-0">
-                          <a class="collapsed" data-toggle="collapse" href="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
-                            Projet d'attache
-                          </a>
-                        </h5>
-                      </div>
-                      <div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion">
-                        <div class="card-body">
-
-                        <select id="projectSearchBox" class="form-control select2-multiple" multiple="multiple"></select>
-
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="card" style="border-radius: 0;!important;">
-                      <div class="card-header" role="tab" id="headingSix">
-                        <h5 class="mb-0">
-                          <a class="collapsed" data-toggle="collapse" href="#collapse8" aria-expanded="false" aria-controls="collapseThree">
-                            Mots-Clés
-                          </a>
-                        </h5>
-                      </div>
-                      <div id="collapse8" class="collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion">
-                        <div class="card-body">
-
-                        <select id="keywordSearchBox" class="form-control select2-multiple" multiple="multiple"></select>
-
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="card" style="border-radius: 0;!important;">
-                      <div class="card-header" role="tab" id="headingSix">
-                        <h5 class="mb-0">
-                          <a class="collapsed" data-toggle="collapse" href="#collapseSeven" aria-expanded="false" aria-controls="collapseThree">
-                            Temporalité
-                          </a>
-                        </h5>
-                      </div>
-                      <div id="collapseSeven" class="collapse" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion">
-                        <div class="card-body">
-
-                          <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
-                              <i class="fa fa-calendar"></i>&nbsp;
-                              <span></span> <b class="caret"></b>
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-<!-- Fin Sous menu filtre -->
-              </div>
-                </div>
-                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                  <ul id="arraySelectors" class="ml-1 col-md-11" style=""></ul>
-<!-- Ici vient la liste des récits filtrés par Extent-->
-                </div>
-              </div>
-            </div>
-<!-- Fin Side Menu -->
-          </div>
-        </nav>
-<!-- end sidebar -->
+    <!-- /. Side Menu -->
+    </div>
+</nav>
+<!-- /. sidebar -->
 
 
 <!-- top navbar -->
-      <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+<nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top sticky">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-          <div class="collapse navbar-collapse " id="navbarsExampleDefault">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active mr-5">
+    <div class="collapse navbar-collapse " id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active mr-5">
                 <a class="nav-link" href="index.html">Cartographies <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item mr-5">
+            </li>
+            <li class="nav-item mr-5">
                 <a class="nav-link" href="projets.html">Ses projets</a>
-              </li>
-              <li class="nav-item mr-5">
+            </li>
+            <li class="nav-item mr-5">
                 <a class="nav-link" href="corpus.html">Ses corpus</a>
-              </li>
-              <li class="nav-item mr-5">
+            </li>
+            <li class="nav-item mr-5">
                 <a class="nav-link" href="apropos.html">Le LRSM</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
 
-        <nav id="submenu" class="navbar-expand-md">
-            <div class="collapse navbar-collapse " id="submenuCollapse">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item active mr-5">
-                  <a class="nav-link" href="index.html">Carto-récits <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item mr-5">
-                  <a class="nav-link" href="cartoFiction.html">Carto-fiction</a>
-                </li>
-                <li class="nav-item mr-5">
-                  <a class="nav-link" href="cartedessois.html" javascript:getFilterMarkersByAuthors()>Carte des sois</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-<!-- end top navbar -->
+            </li>
+        </ul>
+    </div>
+</nav>
 
+<nav id="submenu" class="navbar-expand-md sticky  ">
+    <div class="collapse navbar-collapse " id="submenuCollapse">
 
+        <ul id="submenuCarto" class="navbar-nav ml-auto d-none">
+            <li class="nav-item active mr-5">
+                <a class="nav-link" href="tron.html"> Cartographies des récits <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">Cartographies SF</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">Cartographies des sois</a>
+            </li>
+        </ul>
 
+        <ul id="submenuProjects" class="navbar-nav ml-auto d-none">
+            <li class="nav-item active mr-5">
+                <a class="nav-link" href="tron.html">En cours <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">Passés</a>
+            </li>
+        </ul>
+
+        <ul id="submenuCorpus" class="navbar-nav ml-auto d-none">
+            <li class="nav-item active mr-5">
+                <a class="nav-link" href="tron.html">Théoriques<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">Littéraires</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">Médiatiqus</a>
+            </li>
+        </ul>
+
+        <ul id="submenuLRSM" class="navbar-nav ml-auto d-none">
+            <li class="nav-item active mr-5">
+                <a class="nav-link" href="tron.html">À propos<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">L'Équipe</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- /. top navbar -->
 
         <main role="main" class="container">
+          <div class="row">
 
-          <div class="starter-template">
-            <div class="">
-               <div id="map">
-                </div>
-            </div>
-          </div>
+        <div id="mainPage" class="col-sm-12 blog-main pt-2 ml-0 mr-0 pl-0 pr-0 mb-4">
 
-        </main><!-- /.container -->
+            <div class="blog-post d-inline-block">
+<!-- Titre dynamique en fonction du routing (Théorique/Littéraire/Médiatique) -->
+            <h2 class="blog-post-title pl-5">Nom de l'auteur &rarr;dynamique&larr;</h2>
+<!-- Titre du sous ensemble dynamique -->
+       <div class="col-sm-7  d-inline-block pt-5 pl-5 align-top mr-4 ">
+           <p> &rarr;dynamique&larr; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+       tellus leo, viverra vitae dapibus non, finibus id libero. Sed sem mi,
+       vestibulum id tincidunt non, maximus vitae odio. Pellentesque fringilla
+       tortor id risus vulputate imperdiet vitae a odio. Nulla dictum tortor eu
+       fermentum ultrices.  </p>
+           <p>
+       Phasellus metus est, varius euismod vulputate quis, lobortis quis
+       neque. Curabitur aliquet bibendum nunc molestie malesuada. Sed diam
+       tortor, mollis in viverra vel, pellentesque in nisi. Fusce accumsan
+       posuere suscipit. Proin id elit et tortor consequat ornare. Nunc a
+       tristique ipsum, ac lacinia metus.
+       </p>
+           <p>
+               Donec ut lacus ex. Phasellus lorem
+       lacus, cursus volutpat tortor interdum, suscipit dignissim purus.
+       Nunc faucibus dui euismod molestie tincidunt. Ut pulvinar nec justo
+       sed tincidunt. In non tempus quam. </p>
+       </div>
+       <div id="listing"class="col-sm-4  d-inline-block pt-5 pl-5 pl-3  mr-0 pr-0">
+           <div class="col-sm-12 align-top ml-0 pl-0">
+               <h4 class="mb-2 pb-2">
+                   Liste des oeuvres
+               </h4>
+               <p class="col-sm-12 mr-0 pr-0">
+                   Tire d'une oevure  &rarr;dynamique&larr;
+               </p> <hr>
 
+               <p class="col-sm-12 mr-0 pr-0">
+                   Tire d'une oevure  &rarr;dynamique&larr;
+               </p><hr>
 
+               <p class="col-sm-12 mr-0 pr-0">
+                   Titre très long qui s’étend sur
+                   trois lignes Titre très long qui
+                   s’étend sur trois lignes  &rarr;dynamique&larr;
+               </p><hr>
+           </div>
+       </div>
 
-<!-- DEBUT MODAL -->
+          <ul class="ct-socials">
+            <li><a href="/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
 
-        <div class="modal left fade" data-backdrop="static" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="width:0px;">
-        		<div class="modal-dialog" role="document">
-        			<div class="modal-content">
-        				<div class="modal-header">
-                  <div id="modalIconImg"><img  class="rounded-circle" src="img/Icon_Multimedia.png"  width="50px"/></div>
-                  <button type="button" id="modalClose" class="close" data-dismiss="modal" aria-label="Close"><span id="modalClose" class="" aria-hidden="true">&times;</span></button>
-        					<button type="button" id="" class="close" data-dismiss="modal" aria-label="Close"><span id="" class="" aria-hidden="true">&harr;</span></button>
-        				</div>
-              <div class="modal-body">
-<!-- Titre -->
-<div class="fifty mb-0 pb-0" style="height:40% !important;">
-        	    <div class="row">
-                <div class="modal-title col-md-10">
-                  <span>  <h2 class="pt-3" id="myModaTitle">Titre du récit sur plusieurs lignes</h2> </span>
-                </div>
-              </div>
-                <br>
-<!-- Auteurs / Collaborateurs et Emplacements -->
-              <div class="row">
-                <div class="col-md-6 d-inline">
-          				<span class="align-text-bottom"> <h5> Nom de l'auteur sur plusieurs lignes</h5> </span>
-          				<span class="align-text-bottom"> <h5> Nom des collaborateurs sur plusieurs lignes </h5> </span>
-                </div>
-                <div class="col-md-3 d-inline">
-                  <div class="">
-                    <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="40px">
-                  </div>
-
-          			   <h6 id ="modalLocation" class="text-center"> Emplacement principal </h6>
-
-                </div>
-                <div class="col-md-3 d-inline">
-                  <div class="">
-                    <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="40px">
-                  </div>
-
-                   <h6 id ="modalLocation" class="text-center"> Mobilité </h6>
-
-                </div>
-              </div>
-        			<hr>
-<!-- Projets d'attache et Date-->
-              <div class="row">
-              <div class="col-md-3 d-inline-block">
-        				<span> <h6> Projets d'attache </h6>  </span>
-        				<span> <h6> Date (01-09-2019) </h6> </span>
-        			</div>
-
-<!-- Mots Clés -->
-
-                <div class="col-md-8 d-inline-block mx-auto">
-                  <span class="badge badge-pill badge-primary">Mots-clé #1</span>
-                  <span class="badge badge-pill badge-secondary">Mots-clé #2</span>
-                  <span class="badge badge-pill badge-success">Mots-clé #3</span>
-                  <span class="badge badge-pill badge-danger">Mots-clé #4</span>
-                  <span class="badge badge-pill badge-warning">Mots-clé #5</span>
-                  <span class="badge badge-pill badge-info">Mots-clé #6</span>
-                  <span class="badge badge-pill badge-light">Mots-clé #7</span>
-                  <span class="badge badge-pill badge-dark">Mots-clé #8</span>
-            				<br>
-                </div>
-              </div>
-        		  <hr>
-</div>
-<!-- Media Princial et Description -->
-<article class='modaltest col-md-11 pl-1  ml-1 pt-1 mt-1 mb-1 pb-1' id="modalBodyContent" style="height:50% !important;">
-  <div id='sections' class='sections'></div>
-    <!-- Main Iframe -->
-  </article>
-
-<!-- fin modal body-->
-        				</div>
-<!-- fin modal content-->
-        			</div>
-<!-- fin modal dialog-->
-        		</div>
-<!-- END MODAL END -->
-        	</div>
-
-
+      </div><!-- /.blog-main -->
+    </main><!-- /.container -->
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
-
-  <script src="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-
-  <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-  <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-
-  <script src=js/featuresCollection.js type="text/javascript"></script>
-  <script type="text/javascript" src="js/filter.js"></script>
-  <script src="js/main.js"></script>
-
 
 </body>
 </html>

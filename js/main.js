@@ -32,6 +32,42 @@ var setColor = {
   fillOpacity: 0.5
 }
 
+$("#menuCarto").hover(function(){
+
+    $('#submenuLRSM').addClass('d-none');
+    $('#submenuCorpus').addClass('d-none');
+    $('#submenuProjects').addClass('d-none');
+    $('#submenuCarto').removeClass('d-none');
+    $('#submenuCarto').addClass('d-block');
+
+});
+$("#menuProjets").hover(function(){
+    $('#submenuLRSM').addClass('d-none');
+    $('#submenuCorpus').addClass('d-none');
+    $('#submenuCarto').addClass('d-none');
+    $('#submenuProjects').removeClass('d-none');
+    $('#submenuProjects').addClass('d-block');
+
+});
+$("#menuCorpora").hover(function(){
+
+    $('#submenuLRSM').addClass('d-none');
+    $('#submenuCarto').addClass('d-none');
+    $('#submenuProjects').addClass('d-none');
+    $('#submenuCorpus').removeClass('d-none');
+    $('#submenuCorpus').addClass('d-block');
+
+});
+$("#menuLRSM").hover(function(){
+    $('#submenuCorpus').addClass('d-none');
+    $('#submenuCarto').addClass('d-none');
+    $('#submenuProjects').addClass('d-none');
+    $('#submenuLRSM').removeClass('d-none');
+    $('#submenuLRSM').addClass('d-block');
+
+});
+
+
 function getRandomColor () {
   var letters = '0123456789ABCDEF'.split('')
   var color = '#'
@@ -45,25 +81,25 @@ function setGenreStyle() {
     for (var j = 0; j < group.length; j++) {
         (function (layer) {
             if (layer.feature.properties.story.media_links.media_type === 'pdf') {
-                layer.feature.setStyle({fillColor: 'blue'})
+                layer.feature.setStyle({fillColor: 'yellow'})
             }
             else if (layer.feature.properties.story.media_links.media_type === 'video') {
-                layer.feature.setStyle({fillColor: 'grey'})
+                layer.feature.setStyle({fillColor: 'red'})
             }
             else if (layer.feature.properties.story.media_links.media_type === 'audio') {
                 layer.feature.setStyle({fillColor: 'teal'})
             }
             else if (layer.feature.properties.story.media_links.media_type === 'photo') {
-                layer.feature.setStyle({fillColor: 'yellow'})
+                layer.feature.setStyle({fillColor: 'purple'})
             }
             else if (layer.feature.properties.story.media_links.media_type === 'multimedia') {
                 layer.feature.setStyle({fillColor: 'green'})
             }
             else if (layer.feature.properties.story.media_links.media_type === 'dessin') {
-                layer.feature.setStyle({fillColor: 'red'})
+                layer.feature.setStyle({fillColor: 'yellow'})
             }
             else if (layer.feature.properties.story.media_links.media_type === 'animation') {
-                layer.feature.setStyle({fillColor: 'red'})
+                layer.feature.setStyle({fillColor: 'yellow'})
             }
         });
     }
@@ -133,7 +169,7 @@ map.on('moveend ', function () {
 // For each marker, consider whether it is currently visible by comparing  with the current map bounds.
   mainMarkers.eachLayer(function (marker) {
     if (bounds.contains(marker.getLatLng())) {
-      inBounds.push(marker.feature.properties.story.id)
+      inBounds.push(marker.feature.properties.story.title)
     }
   })
 
@@ -254,7 +290,7 @@ function style(feature){
       else if (media_type === 'Documentaire') {
           return {
               radius: 8,
-              fillColor: 'purple',
+              fillColor: 'yellow',
               color: '#ffffff',
               weight: 1,
               opacity: 1,
@@ -264,7 +300,7 @@ function style(feature){
       else if (media_type === 'dessin') {
           return {
               radius: 8,
-              fillColor: 'blue',
+              fillColor: 'yellow',
               color: '#ffffff',
               weight: 1,
               opacity: 1,
@@ -274,7 +310,7 @@ function style(feature){
       else if (media_type === 'animation') {
           return {
               radius: 8,
-              fillColor: 'grey',
+              fillColor: 'yellow',
               color: '#ffffff',
               weight: 1,
               opacity: 1,
@@ -290,7 +326,7 @@ function style(feature){
 var mainmarkers
 function getMainMarkers () {
 
-  //filteredGroup.clearLayers() // Clear previously filtered markers
+  filteredGroup.clearLayers() // Clear previously filtered markers
 
   mainMarkers = L.geoJSON(featuresCollection, {
 

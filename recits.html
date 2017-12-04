@@ -42,6 +42,7 @@
 <!-- /. sidebar -->
 
 
+
 <!-- top navbar -->
 <nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top sticky">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,16 +52,16 @@
     <div class="collapse navbar-collapse " id="navbarsExampleDefault">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active mr-5">
-                <a class="nav-link" href="index.html">Cartographies <span class="sr-only">(current)</span></a>
+                <a id="menuCarto" class="nav-link" href="index.html">Cartographies <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item mr-5">
-                <a class="nav-link" href="projets.html">Ses projets</a>
+                <a id="menuProjets" class="nav-link" href="projets.html">Ses projets</a>
             </li>
             <li class="nav-item mr-5">
-                <a class="nav-link" href="corpus.html">Ses corpus</a>
+                <a id="menuCorpora" class="nav-link" href="corpora.html">Ses corpus</a>
             </li>
             <li class="nav-item mr-5">
-                <a class="nav-link" href="apropos.html">Le LRSM</a>
+                <a id="menuLRSM" class="nav-link" href="apropos.html">Le LRSM</a>
 
             </li>
         </ul>
@@ -103,12 +104,18 @@
             </li>
         </ul>
 
-        <ul id="submenuLRSM" class="navbar-nav ml-auto d-none">
+        <ul id="submenuLRSM" class="navbar-nav ml-auto">
             <li class="nav-item active mr-5">
-                <a class="nav-link" href="tron.html">À propos<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="apropos.html">À propos<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item mr-5">
-                <a class="nav-link" href="projets.html">L'Équipe</a>
+                <a class="nav-link" href="equipeLRSM.html">L'Équipe</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="auteurs.html">Auteurs</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="recits.html">Récits</a>
             </li>
         </ul>
     </div>
@@ -127,7 +134,7 @@
                                     <div class="row">
                                         <div id="modalIconImg"><img  class="rounded-circle" src="img/LRSM-Multimedia.png"  width="50px"/></div>
                                         <div class="modal-title col-md-10 col-lg-8">
-                                            <span>  <h2 class="pt-3" id="myModaTitle">Titre du récit sur plusieurs lignes</h2> </span>
+                                            <span>  <h2 class="pt-0" id="myModaTitle">Titre du récit sur plusieurs lignes</h2> </span>
                                         </div>
                                     </div>
                                     <br>

@@ -82,36 +82,3 @@
     padding: 0;
 }
 
-@media (max-width: 1099px) {
-    #mainPage{
-        position: absolute;
-        top:18% !important;
-        left: 5%;
-        width: 90%;
-        height: 75%;
-        background-color: yellow;
-    }
-
-    .ct-socials {
-        position: fixed;
-        top: 25%;
-        right: 1%;
-}
-}
-    /* Landscape tablets and medium desktops */
-    @media (min-width: 1100px) and (max-width: 1460px) {
-        #mainPage{
-            position: absolute;
-            top:18% !important;
-            left: 10%;
-            width: 80%;
-            height: 75%;
-            background-color: yellow;
-        }
-
-        .ct-socials {
-            position: fixed;
-            top: 25%;
-            right: 5%;
-        }
-    }

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg"/>
+    <title>Le Laboratoire des Récits du Soi Mobile</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <!-- Latest Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- Latest mapboxgl -->
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/nav_template.css"/>
+    <link rel="stylesheet" href="css/projects.css"/>
+    <link rel="stylesheet" href="css/modal_sidebar.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+
+<!-- sidebar -->
+
+<nav id="sideBar" class="col-sm-3 col-md-2 d-none d-sm-block sidebar">
+
+    <div id="navbarbrand">
+        <a class="navbar-brand" href="#"><img  id="logo" src="img/4.png"></a>
+    </div>
+
+    <!-- /. Side Menu -->
+    </div>
+</nav>
+<!-- /. sidebar -->
+
+
+<!-- top navbar -->
+<nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top sticky">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active mr-5">
+                <a class="nav-link" href="index.html">Cartographies <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">Ses projets</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="corpus.html">Ses corpus</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="apropos.html">Le LRSM</a>
+
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<nav id="submenu" class="navbar-expand-md sticky  ">
+    <div class="collapse navbar-collapse " id="submenuCollapse">
+
+        <ul id="submenuCarto" class="navbar-nav ml-auto d-none">
+            <li class="nav-item active mr-5">
+                <a class="nav-link" href="tron.html"> Cartographies des récits <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">Cartographies SF</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">Cartographies des sois</a>
+            </li>
+        </ul>
+
+        <ul id="submenuProjects" class="navbar-nav ml-auto">
+            <li class="nav-item active mr-5">
+                <a class="nav-link" href="tron.html">En cours <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">Passés</a>
+            </li>
+        </ul>
+
+        <ul id="submenuCorpus" class="navbar-nav ml-auto d-none">
+            <li class="nav-item active mr-5">
+                <a class="nav-link" href="tron.html">Théoriques<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">Littéraires</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">Médiatiqus</a>
+            </li>
+        </ul>
+
+        <ul id="submenuLRSM" class="navbar-nav ml-auto d-none">
+            <li class="nav-item active mr-5">
+                <a class="nav-link" href="tron.html">À propos<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="projets.html">L'Équipe</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- /. top navbar -->
+
+<main role="main" class="container">
+    <div class="row">
+
+        <div id="mainPage" class="col-sm-12 blog-main pt-2 ml-0 mr-0 pl-0 pr-0 mb-4">
+
+            <div class="blog-post d-inline-block specialHeight" >
+                <!-- Titre dynamique en fonction du routing (Théorique/Littéraire/Médiatique) -->
+                <div class="mb-5 pb-5">
+                <h2 class="blog-post-title pl-5">Nom du projet &rarr;dynamique&larr;</h2>
+                <!-- Titre du sous ensemble dynamique -->
+                <h5 class="blog-post-title pl-5 pt-5 " >Description mise en contexte &rarr;dynamique&larr;</h5>
+                <div class="col-sm-7  d-inline-block pt-2 pl-5 align-top mr-4 pb-1 ">
+                    <img class="mx-auto pb-2 pt-2 pl-5 col-sm-3 img-fluid" src="img/racine.jpg"  alt="Bikes">
+                    <img class="mx-auto pb-2 pt-2 pl-2 col-sm-3 img-fluid" src="img/racine.jpg"  alt="Bikes">
+                    <img class="mx-auto pb-2 pt-2 pl-1 col-sm-3 img-fluid" src="img/racine.jpg"  alt="Bikes">
+                    <p> &rarr;dynamique&larr; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+                        tellus leo, viverra vitae dapibus non, finibus id libero. Sed sem mi,
+                        vestibulum id tincidunt non, maximus vitae odio. Pellentesque fringilla
+                        tortor id risus vulputate imperdiet vitae a odio. Nulla dictum tortor eu
+                        fermentum ultrices.  </p>
+
+                    <p>
+
+                        Phasellus metus est, varius euismod vulputate quis, lobortis quis
+                        neque. Curabitur aliquet bibendum nunc molestie malesuada. Sed diam
+                        tortor, mollis in viverra vel, pellentesque in nisi. Fusce accumsan
+                        posuere suscipit. Proin id elit et tortor consequat ornare. Nunc a
+                        tristique ipsum, ac lacinia metus.
+                    </p>
+                    <p>
+                        Donec ut lacus ex. Phasellus lorem
+                        lacus, cursus volutpat tortor interdum, suscipit dignissim purus.
+                        Nunc faucibus dui euismod molestie tincidunt. Ut pulvinar nec justo
+                        sed tincidunt. In non tempus quam. </p>
+                </div>
+
+                <div id="listing" class="col-sm-4 d-inline-block pt-0 mt-0 pl-5  mr-0 pr-0">
+                    <div class="col-sm-12 align-top ml-0 pl-0">
+                        <h4 class="mb-2 pb-2">
+                            Liste des oeuvres
+                        </h4>
+                        <p class="col-sm-12 mr-0 pr-0">
+                            Tire d'une oevure  &rarr;dynamique&larr;
+                        </p> <hr>
+
+                        <p class="col-sm-12 mr-0 pr-0">
+                            Tire d'une oevure  &rarr;dynamique&larr;
+                        </p><hr>
+
+                        <p class="col-sm-12 mr-0 pr-0">
+                            Titre très long qui s’étend sur
+                            trois lignes Titre très long qui
+                            s’étend sur trois lignes  &rarr;dynamique&larr;
+                        </p><hr>
+                    </div>
+                </div>
+
+                <h5 class="blog-post-title pl-5 pt-5 ">Un deuxième sous-titre &rarr;dynamique&larr;</h5>
+                <div class="col-sm-3  d-inline-block pl-5  mr-0 pr-0"><img class="mx-auto pb-2 pt-2 img-fluid" src="img/racine.jpg"  alt="Bikes"></div>
+                <div class="col-sm-4  d-inline-block pt-2 pl-5 align-top mr-4 ">
+
+                    <p> &rarr;dynamique&larr; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+                        tellus leo, viverra vitae dapibus non, finibus id libero. Sed sem mi,
+                        vestibulum id tincidunt non, maximus vitae odio. Pellentesque fringilla
+                        tortor id risus vulputate imperdiet vitae a odio. Nulla dictum tortor eu
+                        fermentum ultrices.  </p>
+                    <p>
+                        Phasellus metus est, varius euismod vulputate quis, lobortis quis
+                        neque. Curabitur aliquet bibendum nunc molestie malesuada. Sed diam
+                        tortor, mollis in viverra vel, pellentesque in nisi. Fusce accumsan
+                        posuere suscipit. Proin id elit et tortor consequat ornare. Nunc a
+                        tristique ipsum, ac lacinia metus.
+                    </p>
+                    <p>
+                        Donec ut lacus ex. Phasellus lorem
+                        lacus, cursus volutpat tortor interdum, suscipit dignissim purus.
+                        Nunc faucibus dui euismod molestie tincidunt. Ut pulvinar nec justo
+                        sed tincidunt. In non tempus quam. </p>
+
+                </div>
+                </div>
+
+
+                <ul class="ct-socials">
+                    <li><a href="/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+
+            </div><!-- /.blog-main -->
+</main><!-- /.container -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+</body>
+</html>

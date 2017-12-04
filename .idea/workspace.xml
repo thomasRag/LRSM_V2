@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac66da2b-85f3-40d3-a07e-9b903eaebc30" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/equipeLRSM.html" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/apropos.html" afterPath="$PROJECT_DIR$/apropos.html" />
-      <change beforePath="$PROJECT_DIR$/authors.html" afterPath="$PROJECT_DIR$/auteurs.html" />
-      <change beforePath="$PROJECT_DIR$/corpora.html" afterPath="$PROJECT_DIR$/corpora.html" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change beforePath="$PROJECT_DIR$/lequipe.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/nav_template.html" afterPath="$PROJECT_DIR$/nav_template.html" />
-      <change beforePath="$PROJECT_DIR$/projects.html" afterPath="$PROJECT_DIR$/projets.html" />
-      <change beforePath="$PROJECT_DIR$/recits.html" afterPath="$PROJECT_DIR$/recits.html" />
-      <change beforePath="$PROJECT_DIR$/tron.html" afterPath="$PROJECT_DIR$/cartoSF.html" />
+      <change beforePath="$PROJECT_DIR$/css/apropos.css" afterPath="$PROJECT_DIR$/css/apropos.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,29 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projets.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projets.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="61" column="66" lean-forward="false" selection-start-line="61" selection-start-column="66" selection-end-line="61" selection-end-column="66" />
-              <folding>
-                <element signature="e#5271#5277#0" expanded="true" />
-                <element signature="e#5286#5292#0" expanded="true" />
-                <element signature="e#5738#5744#0" expanded="true" />
-                <element signature="e#5753#5759#0" expanded="true" />
-                <element signature="e#7378#7384#0" expanded="true" />
-                <element signature="e#7393#7399#0" expanded="true" />
-                <element signature="e#7538#7544#0" expanded="true" />
-                <element signature="e#7553#7559#0" expanded="true" />
-                <element signature="e#7825#7831#0" expanded="true" />
-                <element signature="e#7840#7846#0" expanded="true" />
-                <element signature="e#8009#8015#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="502">
@@ -78,6 +45,16 @@
                 <marker date="1512364860679" expanded="true" signature="533:539" ph="©" />
                 <marker date="1512364860679" expanded="true" signature="16746:16763" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="apropos.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/apropos.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="671">
+              <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -176,7 +153,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>authors</find>
       <find>get</find>
       <find>genre</find>
       <find>layer.</find>
@@ -206,6 +182,7 @@
       <find>setGenreStyle</find>
       <find>modal</find>
       <find>modsal</find>
+      <find>list</find>
     </findStrings>
     <replaceStrings>
       <replace>col-4</replace>
@@ -232,7 +209,6 @@
         <option value="$PROJECT_DIR$/js/fc3.js" />
         <option value="$PROJECT_DIR$/js/filter.js" />
         <option value="$PROJECT_DIR$/css/authors.css" />
-        <option value="$PROJECT_DIR$/css/apropos.css" />
         <option value="$PROJECT_DIR$/lequipe.html" />
         <option value="$PROJECT_DIR$/css/nav_template.css" />
         <option value="$PROJECT_DIR$/index_modal_static.html" />
@@ -251,6 +227,7 @@
         <option value="$PROJECT_DIR$/recits.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/css/apropos.css" />
       </list>
     </option>
   </component>
@@ -422,12 +399,12 @@
       <option name="presentableId" value="Default" />
       <updated>1511965192348</updated>
       <workItem from="1511965198047" duration="50095000" />
-      <workItem from="1512104774871" duration="58788000" />
+      <workItem from="1512104774871" duration="59749000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108883000" />
+    <option name="totallyTimeSpent" value="109844000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -646,14 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/apropos.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/mediaQueries.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -782,6 +751,14 @@
             <marker date="1512364860679" expanded="true" signature="533:539" ph="©" />
             <marker date="1512364860679" expanded="true" signature="16746:16763" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/apropos.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>

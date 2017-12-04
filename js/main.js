@@ -31,7 +31,7 @@ var setColor = {
   opacity: 1,
   fillOpacity: 0.5
 }
-
+/*
 $("#menuCarto").hover(function(){
 
     $('#submenuLRSM').addClass('d-none');
@@ -65,7 +65,7 @@ $("#menuLRSM").hover(function(){
     $('#submenuLRSM').removeClass('d-none');
     $('#submenuLRSM').addClass('d-block');
 
-});
+});*/
 
 
 function getRandomColor () {

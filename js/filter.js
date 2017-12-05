@@ -367,13 +367,89 @@ var timeArrays= []
  * @type {Array}
  */
 
+$(function(){
+    $("#titreSearchBox").change(function() {
+        if ($(this).val() != "") {
+            $('#titleFilterIcon').removeClass("d-none")
+            $('#titleFilterIcon').addClass("d-inline")
+        }
+        else{
+            $('#titleFilterIcon').removeClass("d-inline")
+            $('#titleFilterIcon').addClass("d-none")
+        }
+    })
+    $("#authorSearchBox").change(function() {
+        if ($(this).val() != "") {
+            $('#authorsFilterIcon').removeClass("d-none")
+            $('#authorsFilterIcon').addClass("d-inline")
+        }
+        else{
+            $('#authorsFilterIcon').removeClass("d-inline")
+            $('#authorsFilterIcon').addClass("d-none")
+        }
+    })
+    $("#locationSearchBox").change(function() {
+        if ($(this).val() != "") {
+            $('#locationFilterIcon').removeClass("d-none")
+            $('#locationFilterIcon').addClass("d-inline")
+        }
+        else{
+            $('#locationFilterIcon').removeClass("d-inline")
+            $('#locationFilterIcon').addClass("d-none")
+        }
+    })
+    $("#projectSearchBoxSearchBox").change(function() {
+        if ($(this).val() != "") {
+            $('#projectsFilterIcon').removeClass("d-none")
+            $('#projectsFilterIcon').addClass("d-inline")
+        }
+        else{
+            $('#projectsFilterIcon').removeClass("d-inline")
+            $('#projectsFilterIcon').addClass("d-none")
+        }
+    })
+    $("#keywordSearchBox").change(function() {
+        if ($(this).val() != "") {
+            $('#keywordFilterIcon').removeClass("d-none")
+            $('#keywordFilterIcon').addClass("d-inline")
+        }
+        else{
+            $('#keywordFilterIcon').removeClass("d-inline")
+            $('#keywordFilterIcon').addClass("d-none")
+        }
+    })
+})
+
+$(function (){
+    $(".select2-multiple").change(function(){
+        if(
+            $(this).val() === ""){
+
+            if(map.hasLayer(authorsMarkers)) {
+                console.log('authorsMarkers cleared')
+                authorsMarkers.clearLayers()
+            }
+            else if(map.hasLayer(titleMarkers)) {
+                console.log('titleMarkers cleared')
+                titleMarkers.clearLayers()
+            }
+
+        }
+
+        else {
+            getMainMarkers()
+        }
+
+    })
+})
+
 function arrayRemover(array, element) {
     const index = array.indexOf(element);
 
     if (index !== -1) {
         array.splice(index, 1);
     }
-    //console.log(array)
+
 }
 /**
  *
@@ -497,10 +573,20 @@ $('#authorSearchBox').on('select2:unselect', function (e) {
  * function that listen to the Mobility buttons and push values to its specific array
  * @type {Array}
  */
+$('.btn-rounded').click(function () {
+    if ($(this).hasClass('btn-active')) {
+        $(this).removeClass('btn-active')
+    } else {
+        $(this).addClass('btn-active')
+    }
+})
+
 function mobilityArray(e){
     var firedValue = e.val();
     if(e.hasClass('btn-active')){
         mobilityArrays.push(firedValue)
+        $('#mobilityFilterIcon').removeClass("d-none")
+        $('#mobilityFilterIcon').addClass("d-inline")
         //arrayTest(mobilityArrays)
     }
     else{
@@ -514,6 +600,36 @@ function mobilityArray(e){
         getMobiltyMarkers ()
     }
 }
+
+/**
+ * genreButtons
+ * function that turn on off the filter icon if there are 0 btn-active
+ */
+
+$('#genreButtons > .btn-filter > .btn-rounded').click(function() {
+    var $items = $('#genreButtons > .btn-filter > .btn-active');
+    if($items.length === 0)
+    {
+        $('#genreFilterIcon').removeClass("d-inline")
+        $('#genreFilterIcon').addClass("d-none")
+     }
+   }
+);
+/**
+ * mobilityButtons
+ * function that turn on off the filter icon if there are 0 btn-active
+ */
+$('#mobilityButtons > .btn-filter > .btn-rounded').click(function() {
+        var $items = $('#mobilityButtons > .btn-filter > .btn-active');
+        if($items.length === 0)
+        {
+            $('#mobilityFilterIcon').removeClass("d-inline")
+            $('#mobilityFilterIcon').addClass("d-none")
+        }
+    }
+);
+
+
 /**
  * function that listen to the genre buttons and push values to its specific array
  * @type {Array}
@@ -522,7 +638,8 @@ function genreArray(e){
     var firedValue = e.val();
     if(e.hasClass('btn-active')){
         genreArrays.push(firedValue)
-        //arrayTest(genreArrays)
+        $('#genreFilterIcon').removeClass("d-none")
+        $('#genreFilterIcon').addClass("d-inline")
     }
     else{
         //remove the existing occurence of the value in the master array
@@ -531,7 +648,6 @@ function genreArray(e){
                 genreArrays[j++] = genreArrays[i];
         }
         genreArrays.length = j;
-        //arrayTest(genreArrays)
         updateJSON(genreArrays,'genre')
         console.log(jsonFilter)
         getGenreMarkers ()
@@ -644,7 +760,7 @@ function updateJSON(array,key){
     else if (key === 'timeframe'){
         jsonFilter.timeframe = array
     }
-    //console.log(jsonFilter)
+
 }
 
 
@@ -658,7 +774,7 @@ dateSlider.noUiSlider.on('update', function (values, handle) {
     tooltipInputs[handle].value = values[handle]
     timeArrays = [values[0],values[1]]
     updateJSON(timeArrays,'timeframe')
-    //console.log(jsonFilter)
+
 })
 // Correction du bug du placeholder dans select2
 $(document).ready(function () {

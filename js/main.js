@@ -6,10 +6,8 @@ var L
 var map = L.map('map', { zoomControl: false }).setView([45.5314, -73.6750], 8)
 new L.Control.Zoom({ position: 'topright' }).addTo(map)
 L.tileLayer('https://api.mapbox.com/styles/v1/clementg123/cjamwpz34e0ol2rlnix8smzuh/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xlbWVudGcxMjMiLCJhIjoiY2o2M3ZhODh3MWxwNDJxbnJnaGZxcWNoMiJ9.YroDniTcealGFJgHtQ2hDg', {
-  maxZoom: 22,
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, ' +
-  '&copy; <a href="https://carto.com/attribution">CARTO</a>'
-}).addTo(map)
+  maxZoom: 22
+ }).addTo(map)
 
 var group = L.layerGroup()
 var filteredGroup = L.layerGroup()
@@ -21,7 +19,7 @@ var titleGroup = L.layerGroup()
 var keyWordGroup = L.layerGroup()
 var locationGroup = L.layerGroup()
 var genreGroup = L.layerGroup()
-
+var allGroups = L.layerGroup()
 
 var setColor = {
   radius: 8,
@@ -31,41 +29,8 @@ var setColor = {
   opacity: 1,
   fillOpacity: 0.5
 }
-/*
-$("#menuCarto").hover(function(){
 
-    $('#submenuLRSM').addClass('d-none');
-    $('#submenuCorpus').addClass('d-none');
-    $('#submenuProjects').addClass('d-none');
-    $('#submenuCarto').removeClass('d-none');
-    $('#submenuCarto').addClass('d-block');
 
-});
-$("#menuProjets").hover(function(){
-    $('#submenuLRSM').addClass('d-none');
-    $('#submenuCorpus').addClass('d-none');
-    $('#submenuCarto').addClass('d-none');
-    $('#submenuProjects').removeClass('d-none');
-    $('#submenuProjects').addClass('d-block');
-
-});
-$("#menuCorpora").hover(function(){
-
-    $('#submenuLRSM').addClass('d-none');
-    $('#submenuCarto').addClass('d-none');
-    $('#submenuProjects').addClass('d-none');
-    $('#submenuCorpus').removeClass('d-none');
-    $('#submenuCorpus').addClass('d-block');
-
-});
-$("#menuLRSM").hover(function(){
-    $('#submenuCorpus').addClass('d-none');
-    $('#submenuCarto').addClass('d-none');
-    $('#submenuProjects').addClass('d-none');
-    $('#submenuLRSM').removeClass('d-none');
-    $('#submenuLRSM').addClass('d-block');
-
-});*/
 
 
 function getRandomColor () {
@@ -112,15 +77,12 @@ function setGenreStyle() {
 /** ******** END MAP FUNCTIONS ***********/
 
 /** **************Buttons filter functions*******************/
-$('.btn-rounded').click(function () {
-  if ($(this).hasClass('btn-active')) {
-    $(this).removeClass('btn-active')
-  } else {
-    $(this).addClass('btn-active')
-  }
-})
 
-$(document).ready(function () {
+
+
+
+$(function(){
+
   $('#hrefDate').click(function () {
     $('#dateRangeSliderModal').modal('toggle')
   })
@@ -139,9 +101,9 @@ function openModal () {
 /**
 * function that revert back to the mainMarkers layer
 */
-document.getElementById('modalClose').onclick = function () {
-  getMainMarkers()
-}
+//document.getElementById('modalClose').onclick = function () {
+ // getMainMarkers()
+//}
 
 /**
 * pan the popup to the center of the screen
@@ -166,12 +128,23 @@ map.on('moveend ', function () {
 
   var bounds = map.getBounds() // Get the map bounds - the top-left and bottom-right locations.
 
-// For each marker, consider whether it is currently visible by comparing  with the current map bounds.
-  mainMarkers.eachLayer(function (marker) {
-    if (bounds.contains(marker.getLatLng())) {
-      inBounds.push(marker.feature.properties.story.title)
+    if (map.hasLayer(mainMarkers)){
+        // For each marker, consider whether it is currently visible by comparing  with the current map bounds.
+        mainMarkers.eachLayer(function (marker) {
+            if (bounds.contains(marker.getLatLng())) {
+                inBounds.push(marker.feature.properties.story.title)
+            }
+        })
     }
-  })
+    else if (map.hasLayer(allGroups)){
+        allGroups.eachLayer(function (marker) {
+            if (bounds.contains(marker.getLatLng())) {
+                inBounds.push(marker.feature.properties.story.title)
+            }
+        })
+    }
+
+
 
   for (var i = 0; i < inBounds.length; i++) {
     var liContainers = $('<li class="list-group-item col-md-12"></li>')
@@ -417,7 +390,7 @@ function mobilitySearch(){
 
 function getTitleMarkers () {
 
-    var titleMarkers = L.geoJSON(featuresCollection, {
+     titleMarkers = L.geoJSON(featuresCollection, {
 
         filter: function (feature) {
 
@@ -438,11 +411,12 @@ function getTitleMarkers () {
     })
     group.clearLayers()
     titleGroup.addLayer(titleMarkers).addTo(map)
+    //allGroups.addLayer(titleMarkers).addTo(map)
 }
 
 function getAuthorsMarkers () {
 
-    var authorsMarkers = L.geoJSON(featuresCollection, {
+     authorsMarkers = L.geoJSON(featuresCollection, {
 
         filter: function (feature) {
 
@@ -463,11 +437,12 @@ function getAuthorsMarkers () {
     })
     group.clearLayers()
     authorsGroup.addLayer(authorsMarkers).addTo(map)
+    //allGroups.addLayer(authorsMarkers).addTo(map)
 }
 
 function getGenreMarkers () {
 
-    var genreMarkers = L.geoJSON(featuresCollection, {
+     genreMarkers = L.geoJSON(featuresCollection, {
 
         filter: function (feature) {
 
@@ -494,7 +469,7 @@ function getGenreMarkers () {
 
 function getMobiltyMarkers () {
 
-    var mobiltyMarkers = L.geoJSON(featuresCollection, {
+     mobiltyMarkers = L.geoJSON(featuresCollection, {
 
         filter: function (feature) {
 
@@ -563,7 +538,7 @@ function onEachFeature (feature, layer) {
      */
 
     layer.on('mouseover', function(){
-        $('#legend').css("display","inline-block")
+        $('#legend').css("display","inline")
     });
     layer.on('mouseout', function () {
         $('#legend').css("display","none")

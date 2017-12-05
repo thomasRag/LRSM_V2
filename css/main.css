@@ -2,26 +2,23 @@
 html {
   position: relative;
   min-height: 100%;
-
+  font-family: Arial !important;
 }
 body {
-  padding-top: 5rem;
-  background-color: rgba(240,240,240,1);
+
+    background: rgb(247, 247, 247);
   scroll-snap-type: proximity;
         scroll-snap-destination: 0 0;
 }
 
 #map{
 
-  position: fixed;
-  z-index: 55!important;
-  left:15%;
-  top:12%;
+  position: absolute;
+  z-index: 1 !important;
+  right: 0;
   bottom: 0;
-  min-height: 88%;
-  min-width: 85%;
-  z-index: 10;
-
+  height: 87%;
+  width: 200%;
 }
 
 #dateRangeSliderModal{
@@ -34,12 +31,6 @@ body {
 	height: 100% !important;
 	max-height: 100% !important;
 	overflow-y: scroll !important;
-}
-
-.starter-template
-{
-  position: absolute;
-  top : 18%;
 }
 
 .modaltest{
@@ -81,12 +72,11 @@ height: 80px !important;
 
 
 #arraySelectors{
-  border-color: transparent !important;
+  background-color: #F7F7F7 !important;
   border-radius: 0px !important;
   margin-bottom: 0px !important;
   padding-bottom: 0 !important;
   max-height: 99%;
-  margin-left: 1;
   display: block;
 }
 
@@ -95,7 +85,7 @@ height: 80px !important;
   border-radius: 0px !important;
   margin: 0px !important;
   padding: 0px !important;
-
+    background-color: #F7F7F7 !important;
 }
 
 .text_info{
@@ -123,15 +113,24 @@ height: 80px !important;
 
 /******************************************************************************/
 
+#navbar {
+    margin-left: 0;
+    z-index: 999;
+    left: 0 !important;
+    right: 0 !important;
+}
+
 /****** sideBar ******/
+
+
 #sideBar{
   position: absolute;
-  z-index: 0;
+  z-index: 90;
   left:0;
   top:0;
-  width: 15%;
   height: 100%;
-  background-color: rgba(240,240,240,1);
+    background-color: #F7F7F7;
+
 }
 
 #sideMenu{
@@ -141,29 +140,46 @@ height: 80px !important;
   top:8%;
   max-height: 92%;
   width: 100%;
-  background-color: white;
+  background-color: #F7F7F7;
   overflow: auto;
+}
+#underLeftMenu{
+    background-color: red;
+
+    bottom: 0;
+    left:0;
+}
+
+.bottomLogo{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+    bottom: 0;
+    left:0;
 }
 
 #submenu{
   position: absolute;
-  z-index: 99;
-  left:15%;
+  z-index: 20;
   top:8%;
   border-radius: 0px;
-  width: 85%;
   height: 5%;
   background-color: #343434;
 }
+
+
+
 #legend{
     display:none;
     position: absolute;
     z-index: 99;
-    left:15%;
+    /*left:15%;*/
+    right: 0;
     bottom:0;
     border-radius: 0px;
-    width: 85%;
-    height: 5%;
+    width: 83.25%;
+    height: 6%;
     background-color: rgba(49,49,49,0.5);
 }
 
@@ -193,14 +209,15 @@ height: 80px !important;
 
 
 #legendXS{
-    display: none;
+    display:none;
     position: absolute;
     z-index: 99;
-    left:15%;
+    /*left:15%;*/
+    right: 0;
     bottom:0;
     border-radius: 0px;
-    width: 85%;
-    height: 5%;
+    width: 83.25%;
+    height: 6%;
     background-color: rgba(49,49,49,0.5);
 }
 
@@ -300,6 +317,10 @@ background-color: rgba(255,255,255,1);
 
 /******************** LINK SUBMENU DECORATION *************************/
 
+#submenu{
+    right:0;
+}
+
 #submenu a:hover, #submenu a:focus, #submenu a:active {
   color: rgb(66, 220, 244);
   text-decoration: none;
@@ -318,7 +339,6 @@ background-color: rgba(255,255,255,1);
     font-size: 12px;
     line-height: 5px;
     font-weight: 900;
-    text-transform: uppercase;
     transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
     color: grey;
 }
@@ -346,6 +366,8 @@ background-color: rgba(255,255,255,1);
 
 /******************** LINK navbar DECORATION *************************/
 
+
+
 #navbar a:hover, #navbar a:focus, #navbar a:active {
     color: white;
     text-decoration: none;
@@ -364,7 +386,6 @@ background-color: rgba(255,255,255,1);
     font-size: 12px;
     line-height: 16px;
     font-weight: 900;
-    text-transform: uppercase;
     transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
     color: #000;
 }
@@ -410,7 +431,7 @@ background-color: rgba(255,255,255,1);
     font-size: 12px;
     line-height: 16px;
     font-weight: 900;
-    text-transform: uppercase;
+
     transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
     color: #000;
 }
@@ -454,9 +475,7 @@ background-color: rgba(255,255,255,1);
 
 #navbar {
   position: absolute;
-  left:15%;
   border-radius: 0px;
-  width: 85%;
   height: 8%;
   background-color: rgb(66, 185, 244);
 }
@@ -559,3 +578,4 @@ h3 {
         right: 5%;
     }
 }
+

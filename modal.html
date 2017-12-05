@@ -14,10 +14,10 @@
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/main.css"/>
+
     <link rel="stylesheet" href="css/nav_template.css"/>
-    <link rel="stylesheet" href="css/authors.css"/>
-    <link rel="stylesheet" href="css/modal_sidebar.css"/>
+    <link rel="stylesheet" href="css/recitInfoPanel.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet">
@@ -28,17 +28,22 @@
 
 
 <body>
+
 <!-- top navbar -->
 <div id="topNavbar" class="container">
     <div class="d-flex d-flex-row">
+
         <div id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top col-sm-12">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse " id="navbarsExampleDefault">
+
                 <ul class="navbar-nav ml-auto">
+
                     <li class="nav-item active mr-5">
-                        <a id="menuCarto" class="nav-link" href="index.html">Cartographies
+                        <a id="menuCarto" class="nav-link" href="">Cartographies
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
@@ -57,6 +62,9 @@
     </div>
     <div class="d-flex d-flex-row">
         <div id="submenu" class="navbar-expand-md col-12">
+            <button class="btn" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse col-12" id="submenuCollapse">
                 <ul id="submenuCarto" class="navbar-nav ml-auto">
                     <li class="nav-item active mr-5">
@@ -108,24 +116,103 @@
     <!-- /. end container -->
 </div>
 <!-- /. end top navbar -->
-<main role="main" class="container">
+<div id="recitInfoPanel" class="container">
     <div class="row">
+        <div class="card">
+            <div class="card-header">
+                <button id="modalCloseButton" class="btn btn-default mr-auto"><i class="fa fa-wrench"></i>  </button>
 
-        <div id="mainPage" class="col-sm-12 blog-main pt-2 ml-0 mr-0 pl-0 pr-0 mb-4">
+            </div>
+            <div class="card-body pl-4 pr-4 ">
+                <div class="row">
+                    <!--<div id="modalIconImg"><img  class="rounded-circle" src="img/LRSM-Multimedia.png"  width="50px"/></div>-->
+                    <div class="modal-title col-md-10 col-lg-8">
+                        <span>  <h2 class="pt-0" id="myModaTitle">Titre du récit sur plusieurs lignes</h2> </span>
+                    </div>
+                </div>
+                <br>
+                <!-- Auteurs / Collaborateurs et Emplacements -->
+                <div class="row">
+                    <div class="col-md-6 d-inline">
+                        <span class="align-text-bottom"> <h5> Nom de l'auteur sur plusieurs lignes</h5> </span>
+                        <span class="align-text-bottom"> <h5> Nom des collaborateurs sur plusieurs lignes </h5> </span>
+                    </div>
+                    <div class="col-md-3 d-inline">
+                        <div class="">
+                            <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="40px">
+                        </div>
 
-            <div class="blog-post d-inline-block">
-                <!-- Titre dynamique en fonction du routing (Théorique/Littéraire/Médiatique) -->
+                        <h6 id ="modalLocation" class="text-center"> Emplacement principal </h6>
 
+                    </div>
+                    <div class="col-md-3 d-inline ">
+                        <div class="">
+                            <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="40px">
+                        </div>
+
+                        <h6 id ="modalMobility" class="text-center"> Mobilité </h6>
+
+                    </div>
+                </div>
+                <hr>
+                <!-- Projets d'attache et Date-->
+                <div class="row">
+                    <div class="col-md-5 d-inline-block  text-left">
+                        <span> <h6> Projets d'attache qui prend de la place </h6>  </span>
+                        <span> <h6> Date (01-09-2019) </h6> </span>
+                    </div>
+
+                    <!-- Mots Clés -->
+
+                    <div class="col-md-7 d-inline-block mx-auto mr-0  text-right">
+                        <span class="badge badge-pill badge-primary">Mots-clé un peu long #1</span>
+                        <span class="badge badge-pill badge-secondary">Mots-clé très long comme ca #2</span>
+                        <span class="badge badge-pill badge-success">Mots-clé court #3</span>
+                        <span class="badge badge-pill badge-danger">Mots-clé #4</span>
+                        <span class="badge badge-pill badge-warning">Mots-clé court #5</span>
+                        <span class="badge badge-pill badge-info">Mots-clé très long comme ca#6</span>
+                        <span class="badge badge-pill badge-light">Mots-clé #7</span>
+                        <span class="badge badge-pill badge-dark">Mots-clé un peu long #8</span>
+                        <br>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <!-- Media Princial et Description -->
+
+            <article class='col-md-12 pl-2 ml-2 pt-1 mt-1 mb-1 pb-1 specialHeight ' id="articles">
+                <div class="row">
+                    <img class="mx-auto col-sm-12 col-md-10" src="img/lrsm_apropos.png" width="500" height="280" alt="Bikes">
+                    <div class="col-md-10 col-lg-10  mx-auto d-inline-block mt-2 pt-2 text-justify">
+      <span> <p>  Vidéo de recherche-création ayant pour thème l’(auto-)aveuglement
+                  dans le Quartier des Spectacles ; une première partie sonore, sur
+                  fond noir, présente un enchaînement de bruits captés dans les rues
+                  et certains espaces publics du QdS et autour ; tandis que la seconde
+                  présente une performance de danse, effectuée par Simone, place des
+                  Arts, dont le fond sonore est une captation audio de l’échange de
+                deux clientes au restaurant O noir. </p> </span>
+                    </div> </div>
+
+                <hr>
+                <!-- Chaptire video -->
+                <div class="row chapter">
+                    <div class="col-md-10 col-lg-10 ml-4">
+        				<span id="elementNumber"> <h4>Élément #1 - Video Vimeo</h4> </span>
+                    </div>
+                    <div class="col-md-10 col-lg-10 ml-4">
+                        <span> <h5> Emplacement | Date </h5>  </span>
+                    </div>
                 </div>
 
-                <ul class="ct-socials">
-                    <li><a href="/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
 
-            </div><!-- /.blog-main -->
-</main><!-- /.container -->
+                <div id='sections' class='sections'></div>
+                <!-- Main Iframe -->
+            </article>
+
+            <!-- fin modal body-->
+        </div>
+        </div>
+    </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>

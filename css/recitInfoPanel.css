@@ -1,0 +1,34 @@
+#recitInfoPanel{
+    z-index: 250;
+    position: absolute;
+    top: 12.9%;
+    left: 0px;
+    width: 45%;
+    height: 100%;
+}
+
+.card {
+    background-color: transparent;
+    border-radius: 0 !important;
+}
+
+.card-header{
+    border-radius: 0 !important;
+    background-color: yellow;
+    height: 10px;
+}
+
+.card-body{
+    border-radius: 0 !important;
+}
+
+
+
+#test2{
+    z-index: 1000;
+    position:fixed;
+    bottom:0;
+    right:0;
+    width:200px;
+    height: 200x;
+}

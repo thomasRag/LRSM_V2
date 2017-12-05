@@ -28,106 +28,86 @@
 
 
 <body>
-
-
-<!-- sidebar -->
-
-<nav id="sideBar" class="col-sm-3 col-md-2 d-none d-sm-block sidebar">
-
-    <div id="navbarbrand">
-        <a class="navbar-brand" href="#"><img  id="logo" src="img/4.png"></a>
-    </div>
-
-    <!-- /. Side Menu -->
-    </div>
-</nav>
-<!-- /. sidebar -->
-
-
 <!-- top navbar -->
-<nav id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top sticky">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse " id="navbarsExampleDefault">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active mr-5">
-                <a id="menuCarto" class="nav-link" href="index.html">Cartographies <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item mr-5">
-                <a id="menuProjets" class="nav-link" href="projets.html">Ses projets</a>
-            </li>
-            <li class="nav-item mr-5">
-                <a id="menuCorpora" class="nav-link" href="corpora.html">Ses corpus</a>
-            </li>
-            <li class="nav-item mr-5">
-                <a id="menuLRSM" class="nav-link" href="apropos.html">Le LRSM</a>
-
-            </li>
-        </ul>
+<div id="topNavbar" class="container">
+    <div class="d-flex d-flex-row">
+        <div id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top col-sm-12">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active mr-5">
+                        <a id="menuCarto" class="nav-link" href="index.html">Cartographies
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a id="menuProjets" class="nav-link" href="projets.html">Ses projets</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a id="menuCorpora" class="nav-link" href="corpora.html">Ses corpus</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a id="menuLRSM" class="nav-link" href="apropos.html">Le LRSM</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-</nav>
+    <div class="d-flex d-flex-row">
+        <div id="submenu" class="navbar-expand-md col-12">
+            <div class="collapse navbar-collapse col-12" id="submenuCollapse">
+                <ul id="submenuCarto" class="navbar-nav ml-auto d-none">
+                    <li class="nav-item active mr-5">
+                        <a class="nav-link" href="index.html"> Cartographies des récits <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="cartedessois.html">Cartographies des sois</a>
+                    </li>
+                </ul>
 
-<nav id="submenu" class="navbar-expand-md sticky  ">
-    <div class="collapse navbar-collapse " id="submenuCollapse">
+                <ul id="submenuProjects" class="navbar-nav ml-auto d-none">
+                    <li class="nav-item active mr-5">
+                        <a class="nav-link" href="projets.html">En cours <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="projets.html">Passés</a>
+                    </li>
+                </ul>
 
-        <ul id="submenuCarto" class="navbar-nav ml-auto d-none">
-            <li class="nav-item active mr-5">
-                <a class="nav-link" href="tron.html"> Cartographies des récits <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item mr-5">
-                <a class="nav-link" href="projets.html">Cartographies SF</a>
-            </li>
-            <li class="nav-item mr-5">
-                <a class="nav-link" href="projets.html">Cartographies des sois</a>
-            </li>
-        </ul>
+                <ul id="submenuCorpus" class="navbar-nav ml-auto d-none">
+                    <li class="nav-item active mr-5">
+                        <a class="nav-link" href="corpora.html">Théoriques<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="corpora.html">Littéraires</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="corpora.html">Médiatiqus</a>
+                    </li>
+                </ul>
 
-        <ul id="submenuProjects" class="navbar-nav ml-auto d-none">
-            <li class="nav-item active mr-5">
-                <a class="nav-link" href="tron.html">En cours <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item mr-5">
-                <a class="nav-link" href="projets.html">Passés</a>
-            </li>
-        </ul>
-
-        <ul id="submenuCorpus" class="navbar-nav ml-auto d-none">
-            <li class="nav-item active mr-5">
-                <a class="nav-link" href="tron.html">Théoriques<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item mr-5">
-                <a class="nav-link" href="projets.html">Littéraires</a>
-            </li>
-            <li class="nav-item mr-5">
-                <a class="nav-link" href="projets.html">Médiatiqus</a>
-            </li>
-        </ul>
-
-        <ul id="submenuLRSM" class="navbar-nav ml-auto">
-            <li class="nav-item active mr-5">
-                <a class="nav-link" href="apropos.html">À propos<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item mr-5">
-                <a class="nav-link" href="equipeLRSM.html">L'Équipe</a>
-            </li>
-            <li class="nav-item mr-5">
-                <a class="nav-link" href="auteurs.html">Auteurs</a>
-            </li>
-            <li class="nav-item mr-5">
-                <a class="nav-link" href="recits.html">Récits</a>
-            </li>
-        </ul>
-
-
+                <ul id="submenuLRSM" class="navbar-nav ml-auto">
+                    <li class="nav-item active mr-5">
+                        <a class="nav-link" href="apropos.html">À propos<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="equipeLRSM.html">L'Équipe</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="auteurs.html">Auteurs</a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a class="nav-link" href="recits.html">Récits</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-</nav>
-<!-- /. top navbar -->
-
-
-
-
+    <!-- /. end container -->
+</div>
+<!-- /. end top navbar -->
 <main role="main" class="container">
 
     <div class="row">
@@ -144,11 +124,7 @@
                     <div class="card">
 
                           <div class="card-body">
-                              <div class="line"><i></i></div>
-                              <div class="line"><i></i></div>
-                              <div class="line"><i></i></div>
-                              <div class="line"><i></i></div>
-                            <blockquote class="blockquote mb-0">
+                             <blockquote class="blockquote mb-0">
                                 <h4 class="d-inline-block text-justify mb-5"> Le laboratoire sur les récits du soi mobile (LRSM), une initiative de Simon Harel </h4>
                                 <cite class="d-inline-block text-justify"> Le laboratoire sur les récits du soi mobile, une infrastructure de recherche financée par la fondation canadienne pour l'innovation, étudie des créations locales, diffusées mondialement en temps réel, une production réseautée, géoréférencée, souvent éphémère, qui dépasse le champ formel de la littérature pour devenir le pivot des échanges sociaux et économiques de notre ère communicationnelle globale. Cette forme d’expression n’est plus l’apanage des élites : elle s’intègre progressivement au mode de vie de la majorité, même si de nouvelles fractures numériques se créent au passage. Le récit du soi mobile se positionne plus que jamais au cœur de nombreux enjeux individuels et collectifs ; il nous faut par conséquent apprendre à mieux comprendre et à définir cette forme d’expression qui pourrait devenir une nouvelle clé de lecture de notre époque.</cite>
 

@@ -7,28 +7,25 @@
     height: 100%;
 }
 
-.card {
+#recitInfoPanel  .card {
     background-color: transparent;
     border-radius: 0 !important;
 }
 
-.card-header{
+#recitInfoPanel  .card-header{
     border-radius: 0 !important;
     background-color: yellow;
     height: 10px;
 }
 
-.card-body{
+#recitInfoPanel  .card-body{
     border-radius: 0 !important;
 }
 
 
-
-#test2{
-    z-index: 1000;
-    position:fixed;
-    bottom:0;
-    right:0;
-    width:200px;
-    height: 200x;
+#recitInfoPanel  .hidden {
+    width:0% !important;
+    background:#f90;
+    color:#000;
 }
+

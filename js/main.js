@@ -79,8 +79,6 @@ function setGenreStyle() {
 /** **************Buttons filter functions*******************/
 
 
-
-
 $(function(){
 
   $('#hrefDate').click(function () {
@@ -94,10 +92,27 @@ $(function(){
 * function that show the modal and close the popup
 */
 function openModal () {
-  $('#myModal').modal('show')
+  if ($("#recitInfoPanel").hasClass('modalInactive')){
+    console.log('je suis inactif')
+    $("#recitInfoPanel").animate({left: "0px"})
+    $("#recitInfoPanel").removeClass('modalActive')
+    $("#map").width('55%')}
+  else{
+    console.log('je suis actif')
+  $("#recitInfoPanel").animate({left: "-1000px"})
+  $("#recitInfoPanel").addClass('modalActive')
+  $("#map").width('85%')}
   map.closePopup()
 }
 
+
+$(function (){
+  $('#modalCloseButton').click(function(){
+    $("#recitInfoPanel").animate({left: "-1000px"})
+    $("#recitInfoPanel").addClass('modalActive')
+    $("#map").width('85%')}
+  )
+})
 /**
 * function that revert back to the mainMarkers layer
 */

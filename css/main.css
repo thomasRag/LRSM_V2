@@ -56,6 +56,8 @@ body {
 /*************************************************************************/
 
 #topLogoNavBar{
+    margin:0;
+    padding: 0;
     height: 200px;
     background-color: lightgrey;
 }
@@ -324,9 +326,6 @@ background-color: rgba(255,255,255,1);
 }
 /******************************************************************************/
 
-.navbar-fixed-top .active a {
-background-color: lawngreen;
-}
 /******************** LINK SUBMENU DECORATION *************************/
 #sideMenu .tab-content{
 background-color: #F7F7F7;
@@ -517,34 +516,67 @@ background-color: #F7F7F7;
 
 /***************************** NAVBAR *********************************/
 
-#navbar {
-  position: absolute;
-  border-radius: 0px;
-  height: 8%;
-  background-color: rgb(35,195,237);
-}
-#logoNavBar{
-    height:8%;
-    padding: 0 !important;
-    margin: 0 !important;
+#navBarLogos{
+    position: absolute;
+    border-radius: 0px;
+    height: 8%;
+    left:0;
 }
 
+#logoNavBar {
+    position: absolute;
+    height: 100%;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    left: 0;
+}
+
+#logo{
+    height: 100%;
+    left:0;
+    background-color: black;
+    padding: 0 !important;
+    margin: 0 auto !important;
+
+}
+
+#logotxt{
+    height: 100%;
+    left:0;
+    background-color: #343E41;
+
+    width: 100%;
+}
+
+#navbar {
+    position: absolute;
+    border-radius: 0px;
+    height: 8%;
+    background-color: rgb(35,195,237);
+}
+
+#navbarBrands {
+    position: absolute;
+    border-radius: 0px;
+    height: 8%;
+    padding: 0 !important;
+    margin: 0 !important;
+
+}
 #navLogo{
     height: 100% !important;
     background-color: black;
-}
+    padding: 0;
+    margin: 0;
+    left :0 !important;
 
-.navbar-brand {
-    padding-left: 0;
-}
-
-#navLogo{
-
-    width: 200px !important;
+   /* width: 200px !important;*/
 }
 #navLogoText{
+
     height: 100% !important;
-    width: 500px !important;
+    padding: 0;
+    margin: 0;
     background-color: #343E41;
 }
 

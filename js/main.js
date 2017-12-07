@@ -30,9 +30,6 @@ var setColor = {
   fillOpacity: 0.5
 }
 
-
-
-
 function getRandomColor () {
   var letters = '0123456789ABCDEF'.split('')
   var color = '#'
@@ -70,9 +67,6 @@ function setGenreStyle() {
     }
 }
 
-/*
-
-}*/
 
 /** ******** END MAP FUNCTIONS ***********/
 

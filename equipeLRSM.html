@@ -27,83 +27,97 @@
 
 <body>
 <!-- top navbar -->
-<div id="topNavbar" class="container">
-    <div class="d-flex d-flex-row">
-        <div id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top col-sm-12">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarsExampleDefault">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active mr-5">
-                        <a id="menuCarto" class="nav-link" href="index.html">Cartographies
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a id="menuProjets" class="nav-link" href="projets.html">Ses projets</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a id="menuCorpora" class="nav-link" href="corpora.html">Ses corpus</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a id="menuLRSM" class="nav-link" href="apropos.html">Le LRSM</a>
-                    </li>
-                </ul>
+<div id="topLogoNavBar" class="">
+    <div id="navBarLogos" class="container-fluid navbar-container align-items-center">
+        <div id="logoNavBar" class="navbar navbar-expand-md navbar-dark fixed-top col-sm-2 my-auto">
+            <div id="navLogo" class="navbar-brand col-sm-3 pr-2 mx-auto my-auto align-self-center" href="#">
+                <img src="img/Logo-LRSM-INVERSE.svg" alt="" class="img-fluid">
+            </div>
+            <div id="navLogoText" class="navbar-brand col-sm-9 mx-auto my-auto align-self-center" href="#">
+                <img src="img/Logo-LRSM-TYPO-INVERSE.svg" alt="" class="img-fluid">
             </div>
         </div>
     </div>
-    <div class="d-flex d-flex-row">
-        <div id="submenu" class="navbar-expand-md col-12">
-            <div class="collapse navbar-collapse col-12" id="submenuCollapse">
-                <ul id="submenuCarto" class="navbar-nav ml-auto d-none">
-                    <li class="nav-item active mr-5">
-                        <a class="nav-link" href="index.html"> Cartographies des récits <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="cartedessois.html">Cartographies des sois</a>
-                    </li>
-                </ul>
-
-                <ul id="submenuProjects" class="navbar-nav ml-auto d-none">
-                    <li class="nav-item active mr-5">
-                        <a class="nav-link" href="projets.html">En cours <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="projets.html">Passés</a>
-                    </li>
-                </ul>
-
-                <ul id="submenuCorpus" class="navbar-nav ml-auto d-none">
-                    <li class="nav-item active mr-5">
-                        <a class="nav-link" href="corpora.html">Théoriques<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="corpora.html">Littéraires</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="corpora.html">Médiatiqus</a>
-                    </li>
-                </ul>
-
-                <ul id="submenuLRSM" class="navbar-nav ml-auto">
-                    <li class="nav-item active mr-5">
-                        <a class="nav-link" href="apropos.html">À propos<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="equipeLRSM.html">L'Équipe</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="auteurs.html">Auteurs</a>
-                    </li>
-                    <li class="nav-item mr-5">
-                        <a class="nav-link" href="recits.html">Récits</a>
-                    </li>
-                </ul>
+    <div id="topNavbar" class="">
+        <div class="container-fluid navbar-container">
+            <div id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top col-sm-10 pr-0 mt-0 mb-0 mr-0 ml-0 ml-auto">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse col-12 mr-0 text-right" id="navbarsExampleDefault">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active mr-5  ">
+                            <a id="menuCarto" class="nav-link" href="index.html">Cartographies
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a id="menuProjets" class="nav-link" href="projets.html">Ses projets</a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a id="menuCorpora" class="nav-link" href="corpora.html">Ses corpus</a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a id="menuLRSM" class="nav-link" href="apropos.html">Le LRSM</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
+        <div class="d-flex d-flex-row">
+            <div id="submenu" class="navbar-expand-md col-sm-10">
+                <div class="collapse navbar-collapse col-sm-12 pt-1" id="submenuCollapse">
+                    <div class="row ml-auto my-auto">
+                        <ul id="submenuCarto" class="navbar-nav d-none">
+                            <li class="nav-item active mr-5">
+                                <a class="nav-link" href="index.html"> Cartographies des récits <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item mr-5">
+                                <a class="nav-link" href="cartedessois.html">Cartographies des sois</a>
+                            </li>
+                        </ul>
+
+                        <ul id="submenuProjects" class="navbar-nav d-none">
+                            <li class="nav-item active mr-5">
+                                <a class="nav-link" href="projets.html">En cours <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item mr-5">
+                                <a class="nav-link" href="projets.html">Passés</a>
+                            </li>
+                        </ul>
+
+                        <ul id="submenuCorpus" class="navbar-nav d-none">
+                            <li class="nav-item active mr-5">
+                                <a class="nav-link" href="corpora.html">Théoriques<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item mr-5">
+                                <a class="nav-link" href="corpora.html">Littéraires</a>
+                            </li>
+                            <li class="nav-item mr-5">
+                                <a class="nav-link" href="corpora.html">Médiatiques</a>
+                            </li>
+                        </ul>
+
+                        <ul id="submenuLRSM" class="navbar-nav d-none">
+                            <li class="nav-item active mr-5">
+                                <a class="nav-link" href="apropos.html">À propos<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item mr-5">
+                                <a class="nav-link" href="equipeLRSM.html">L'Équipe</a>
+                            </li>
+                            <li class="nav-item mr-5">
+                                <a class="nav-link" href="auteurs.html">Auteurs</a>
+                            </li>
+                            <li class="nav-item mr-5">
+                                <a class="nav-link" href="recits.html">Récits</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /. end container -->
     </div>
-    <!-- /. end container -->
 </div>
 <!-- /. end top navbar -->
 <main role="main" class="container">
@@ -111,18 +125,18 @@
 
         <div id="mainPage" class="col-sm-12 blog-main pt-2 ml-0 mr-0 pl-0 pr-0 mb-4">
 
-            <div  class="blog-post d-inline-block pl-5 specialHeight">
+            <div  class="blog-post d-inline-block specialHeight">
                 <!-- Titre dynamique en fonction du routing (Théorique/Littéraire/Médiatique) -->
                     <h2 class="pl-5 ">L'équipe</h2>
 
-                    <div id="equipeContainer" class="col-sm-12  pb-5 pt-5 pl-5 d-inline-block specialHeight">
+                    <div id="equipeContainer" class="col-sm-12 pl-0 mr-0 pr-0 pb-5 pt-5 d-flex-inline specialHeight">
 
                         <div class="card col-sm-3 d-inline-block mr-3 ml-3 mt-3 mb-3 pl-2 pr-2 pt-2 pb-2">
                             <div class="card-header">
                                 Prénom Nom
                             </div>
                             <div class="card-body">
-                                <blockPrénom Nom class="blockPrénom Nom mb-0">
+                                <blockquote class="blockquote mb-0">
                                     <p>Lorem ipsum dolor sit amet,
                                         consectetur adipiscing elit.
                                         Pellentesque tellus leo, viverra vitae
@@ -132,8 +146,8 @@
                                         fringilla tortor id risus vulputate
                                         imperdiet vitae a odio. Nulla dictum
                                         tortor eu fermentum ultrices.</p>
-                                    <footer class="blockPrénom Nom-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                                </blockPrénom Nom>
+                                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                                </blockquote>
                             </div>
                         </div>
 
@@ -142,7 +156,7 @@
                                 Prénom Nom
                             </div>
                             <div class="card-body">
-                                <blockPrénom Nom class="blockPrénom Nom mb-0">
+                                <blockquote class="blockquote mb-0">
                                     <p>Lorem ipsum dolor sit amet,
                                         consectetur adipiscing elit.
                                         Pellentesque tellus leo, viverra vitae
@@ -152,15 +166,15 @@
                                         fringilla tortor id risus vulputate
                                         imperdiet vitae a odio. Nulla dictum
                                         tortor eu fermentum ultrices.</p>
-                                    <footer class="blockPrénom Nom-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                                </blockPrénom Nom>
+                                    <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                                </blockquote>
                             </div>
                         </div><div class="card col-sm-3 d-inline-block mr-3 ml-3 mt-3 mb-3 pl-2 pr-2 pt-2 pb-2">
                         <div class="card-header">
                             Prénom Nom
                         </div>
                         <div class="card-body">
-                            <blockPrénom Nom class="blockPrénom Nom mb-0">
+                            <blockquote class="blockquote mb-0">
                                 <p>Lorem ipsum dolor sit amet,
                                     consectetur adipiscing elit.
                                     Pellentesque tellus leo, viverra vitae
@@ -170,8 +184,8 @@
                                     fringilla tortor id risus vulputate
                                     imperdiet vitae a odio. Nulla dictum
                                     tortor eu fermentum ultrices.</p>
-                                <footer class="blockPrénom Nom-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                            </blockPrénom Nom>
+                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            </blockquote>
                         </div>
                     </div><div class="card col-sm-3 d-inline-block mr-3 ml-3 mt-3 mb-3 pl-2 pr-2 pt-2 pb-2">
                         <div class="card-header">
@@ -181,7 +195,7 @@
                             Prénom Nom
                         </div>
                         <div class="card-body">
-                            <blockPrénom Nom class="blockPrénom Nom mb-0">
+                            <blockquote class="blockquote mb-0">
                                 <p>Lorem ipsum dolor sit amet,
                                     consectetur adipiscing elit.
                                     Pellentesque tellus leo, viverra vitae
@@ -191,15 +205,15 @@
                                     fringilla tortor id risus vulputate
                                     imperdiet vitae a odio. Nulla dictum
                                     tortor eu fermentum ultrices.</p>
-                                <footer class="blockPrénom Nom-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                            </blockPrénom Nom>
+                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            </blockquoe>
                         </div>
                     </div><div class="card col-sm-3 d-inline-block mr-3 ml-3 mt-3 mb-3 pl-2 pr-2 pt-2 pb-2">
                         <div class="card-header">
                             Prénom Nom
                         </div>
                         <div class="card-body">
-                            <blockPrénom Nom class="blockPrénom Nom mb-0">
+                            <blockquote class="blockquote mb-0">
                                 <p>Lorem ipsum dolor sit amet,
                                     consectetur adipiscing elit.
                                     Pellentesque tellus leo, viverra vitae
@@ -209,15 +223,15 @@
                                     fringilla tortor id risus vulputate
                                     imperdiet vitae a odio. Nulla dictum
                                     tortor eu fermentum ultrices.</p>
-                                <footer class="blockPrénom Nom-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                            </blockPrénom Nom>
+                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            </blockquote>
                         </div>
                     </div><div class="card col-sm-3 d-inline-block mr-3 ml-3 mt-3 mb-3 pl-2 pr-2 pt-2 pb-2">
                         <div class="card-header">
                             Prénom Nom
                         </div>
                         <div class="card-body">
-                            <blockPrénom Nom class="blockPrénom Nom mb-0">
+                            <blockquote class="blockquote mb-0">
                                 <p>Lorem ipsum dolor sit amet,
                                     consectetur adipiscing elit.
                                     Pellentesque tellus leo, viverra vitae
@@ -227,8 +241,8 @@
                                     fringilla tortor id risus vulputate
                                     imperdiet vitae a odio. Nulla dictum
                                     tortor eu fermentum ultrices.</p>
-                                <footer class="blockPrénom Nom-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                            </blockPrénom Nom>
+                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                            </blockquote>
                         </div>
                     </div>
 
@@ -248,8 +262,8 @@
 
         </div><!-- /.blog-main -->
 </main><!-- /.container -->
-
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="js/subMenu.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 

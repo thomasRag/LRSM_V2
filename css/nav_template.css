@@ -6,11 +6,9 @@
     height: 75%;
     background-color: grey;
 }
-
 .specialHeight{
     height: auto !important;
 }
-
 #equipeContainer{
     left:5% !important;
 }

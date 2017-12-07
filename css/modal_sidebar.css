@@ -117,51 +117,6 @@
 
 }
 
-
-article {
-	position: absolute;
-	width: 100%;
-	padding-left: 30%;
-}
-
-.sections {
-	background: rgba(255,255,255,0.5);
-	padding-bottom: 20px;
-}
-
-
-.prose blockquote {
-	margin-bottom: 0;
-}
-cite {
-	margin-bottom: 20px;
-	display: block;
-}
-.quiet {
-	color:rgba(0,0,0,0.5);
-}
-.prose h3 {
-	padding-top: 0;
-}
-
-.scroll {
-	display:block;
-	text-align:center;
-}
-
-section {
-	padding: 50px 30px;
-	color: rgba(0,0,0,0.5);
-	-webkit-transition:background 500ms, color 500ms;
-	transition:background 500ms, color 500ms;
-	margin-bottom: 0;
-}
-section.active {
-	background: rgba(255,255,255,0.85);
-	color:#404040;
-}
-
-
 .overflow {
 	overflow: scroll;
 }

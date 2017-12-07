@@ -89,30 +89,32 @@ $(function(){
 /**********************************************/
 
 /**
-* function that show the modal and close the popup
+* function that show the panel and close the popup
 */
 function openModal () {
   if ($("#recitInfoPanel").hasClass('modalInactive')){
     console.log('je suis inactif')
-    $("#recitInfoPanel").animate({left: "0px"})
+    $("#recitInfoPanel").animate({left: "0px"},0)
     $("#recitInfoPanel").removeClass('modalActive')
     $("#map").width('55%')}
   else{
     console.log('je suis actif')
-  $("#recitInfoPanel").animate({left: "-1000px"})
+  $("#recitInfoPanel").animate({left: "-1000px"},0)
   $("#recitInfoPanel").addClass('modalActive')
   $("#map").width('85%')}
   map.closePopup()
 }
-
-
-$(function (){
-  $('#modalCloseButton').click(function(){
+/**
+ * function that dismiss the panel revert back to the  the popup
+ */
+function closeModal(){
+  $('#panelCloseButton').click(function(){
     $("#recitInfoPanel").animate({left: "-1000px"})
     $("#recitInfoPanel").addClass('modalActive')
+    getMainMarkers()
     $("#map").width('85%')}
   )
-})
+}
 /**
 * function that revert back to the mainMarkers layer
 */
@@ -129,7 +131,7 @@ map.on('popupopen', function (e) {
   var px = map.project(e.popup._latlng) // find the pixel location on the map where the popup anchor is
   px.y -= e.popup._container.clientHeight / 2 // find the height of the popup container, divide by 2, subtract from the Y axis of marker location
   map.panTo(map.unproject(px), {animate: true}) // pan to new center
-    console.log(jsonFilter)
+
 })
 
  /**
@@ -204,7 +206,7 @@ function getFilterMarkersById (myFilterLayer) {
 
   group.clearLayers() // remove the main markers
   filteredGroup.addLayer(filterMarkers).addTo(map) // add the filteredMarkers to the filteredGroup
-  map.fitBounds(filterMarkers.getBounds().pad(Math.sqrt(2) / 2)) // fit bounds of the filtered specifici markers
+  map.fitBounds(filterMarkers.getBounds())//.pad(Math.sqrt(2) / 2)) // fit bounds of the filtered specifici markers
 }
 
 function style(feature){
@@ -216,7 +218,7 @@ function style(feature){
           {
               return {
               radius: 8,
-              fillColor: 'rgba(255,255,255,0',
+              fillColor: 'rgba(255,255,255,0)',
               color: '#ffffff',
               weight: 1,
               opacity: 1,
@@ -569,32 +571,103 @@ function onEachFeature (feature, layer) {
 function modalPopulate (feature, layer) {
     // CREATE DYNAMICALLY THE HTML CODE TO POPULATE THE MODAL SCROLL BY CHAPTER SECTION OF THE STORIES
     // / /////////////////////////////////////////////////////////////
-  var chapter = $('<div class="col-md-11 chapter"><h4>Élément #' + feature.properties['order'] + ' </h4><hr></div>',
-    {
-      class: 'chapter-header'
-    })
+//for (var i=0; i<feature.length;i++){
+  var articleHeader = $('<div id="myArticles" class="row">' +
+    '    <div class="card">' +
+    '      <div class="card-header d-inline-block ">' +
+    '        <div class="col-sm-12 d-inline-block mr-1 pr-1 text-right">' +
+    '          <a id="panelExpand" class="mr-2"><i class="fa fa-expand"></i> </a>' +
+    '          <a id="panelCloseButton" class="mr-0 ml-2" href="javascript:closeModal()"><i class="fa fa-times"></i> </a>' +
+    '        </div>' +
+    '    </div>' +
+    '      <div id="articlesPrimary" class="card-body pl-4 pr-4">' +
+    '        <div class="row">' +
+    '          <!--<div id="modalIconImg"><img  class="rounded-circle" src="img/LRSM-Multimedia.png"  width="50px"/></div>-->' +
+    '          <div class="modal-title mt-2 pt-2 col-md-10 col-lg-8">')
 
-  var container = $('<section></section>', {
-    id: feature.properties['order'],
-    class: 'image-container'
-  })
+  var articleTitle = $('<span>  <h2 class="pt-0" id="myModaTitle">'+feature.properties.story['title']+'</h2> </span></div></div><br>')
 
-  var description = $('<div>' + feature.properties.story['text'] + '</div>', {
-    class: 'description'
-  })
+  var articleAuthorsCollaborators =$('<div class="row">' +
+    '          <div class="col-md-6 d-inline">' +
+    '            <span class="align-text-bottom"> <h5> '+feature.properties.story.authors[0]['label']+'</h5> </span>' +
+    '            <span class="align-text-bottom"> <h5> '+feature.properties.story.collaborators[0]['label']+' </h5> </span>' +
+    '          </div><div class="col-md-3 d-inline"><div class="">'+
+    '           <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="40px"></div>')
 
-  chapter.append(description)
-  container.append(chapter)
+  var articleMobility =$('<h6 id ="modalMobility" class="text-center"> '+feature.properties.story.mobility+' </h6>' +
+    '          </div>' +
+    '          <div class="col-md-3 d-inline ">' +
+    '            <div class="">' +
+    '              <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="40px">' +
+    '            </div>')
 
-  $('#modalBodyContent').append(container)
+  var articleLocation =$('<h6 id ="modalLocation" class="text-center"> '+feature.properties.story.main_location['label']+' </h6>' +
+    '          </div>' +
+    '        </div>' +
+    '        <hr>')
+
+  var articleProjectDate=$('<div class="row">' +
+    '          <div class="col-md-5 d-inline-block  text-left">' +
+    '            <span> <h6> '+feature.properties.story.project['label']+' </h6>  </span>' +
+    '            <span> <h6> '+feature.properties.story.date+' </h6> </span>' +
+    '          </div><div class="col-md-7 d-inline-block mx-auto mr-0 text-right">')
+
+  var articleKeyWord = $('<span class="badge badge-pill badge-primary">'+feature.properties.story.date+'</span>')
+
+  var articleElement = $('<br></div></div><hr>\'<div id="articlesContainer" class="card-body"><article class="col-md-10 pl-2 ml-2 pt-1 mt-1 mb-1 pb-1 mx-auto" id="articles">')
+
+
+
+
+  var articleSection = $('' +
+    '<section id='+feature.properties['order']+'><div class="row chapter">' +
+    '          <div class="col-md-10 col-lg-10 ml-4">' +
+    '            <span id="elementNumber"> <h4>' + feature.properties['title'] + '</h4> </span>' +
+    '          </div>' +
+    '          <div class="col-md-10 col-lg-10 ml-4">' +
+    '            <span> <h5>' + feature.properties['date']+'|'+ feature.properties['date'] + ' </h5>  </span>' +
+    '          </div>' +
+    '        </div>' +
+    '        <div class="row">' +
+    '          <iframe class="mx-auto mt-4 col-sm-12 col-md-10" src="https://player.vimeo.com/video/231561016" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>' +
+    '        </div>' +
+    '        <div class="row">' +
+    '          <div class="col-md-10 col-lg-10  mx-auto d-inline-block mt-2 pt-2 text-justify">' +
+    '                      <span> <p>  '+ feature.properties.story['text'] + ' </p> </span>' +
+    '          </div> </div>' +
+    '        <hr></section>')
+
+
+  var articleEnd = $('<!-- fin modal body-->' +
+    '       </article> </div>' +
+    '    </div>' +
+    '  </div>' +
+    '  </div>')
+
+
+  articleSection.append(articleEnd)
+  articleElement.append(articleKeyWord)
+  articleKeyWord.append(articleProjectDate)
+  articleProjectDate.append(articleLocation)
+  articleLocation.append(articleMobility)
+  articleMobility.append(articleAuthorsCollaborators)
+  articleAuthorsCollaborators.append(articleTitle)
+  articleTitle.append(articleHeader)
+
+
+  $('#recitInfoPanel').append(articleHeader)
+
+  console.log($('#recitInfoPanel'))
+
 }
 
-    /**
+
+  /**
     * function that check for the container id and zoom to the parent feature
     * @param {numeric} newId
     */
 
-var narrative = document.getElementById('modalBodyContent')
+var narrative = document.getElementById('articles')
 var sections = narrative.getElementsByTagName('section')
 var currentId = ''
 
@@ -604,7 +677,11 @@ function setId (newId) {
           // Otherwise, iterate through layers, setting the current
           // marker to a different color and zooming to it.
   filterMarkers.eachLayer(function (layer) {
-    if (String(layer.feature.properties.order) === newId) {
+    if(String(layer.feature.properties['order'])=== undefined){
+      console.log('article undefined')
+      return false
+    }
+    else if (String(layer.feature.properties['order']) === newId) {
       map.flyTo([layer.feature.geometry.coordinates[1], layer.feature.geometry.coordinates[0]], 18)
     }
   })

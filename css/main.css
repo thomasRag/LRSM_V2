@@ -1,8 +1,15 @@
 /* main project color rgb(66, 220, 244) */
+
+@font-face {
+    font-family: 'CircularStd-Black'; /*a name to be used later*/
+    src: url('CircularStd-Black.otf'); /*URL to font*/
+}
+
 html {
   position: relative;
   min-height: 100%;
-  font-family: Arial !important;
+  background-color: lightgrey;
+
 }
 body {
 
@@ -12,28 +19,24 @@ body {
 }
 
 #map{
-
   position: absolute;
-  z-index: 1 !important;
+  z-index: 10 !important;
   right: 0;
   bottom: 0;
-  height: 87%;
-  width:83.25%;
-}
+  height: 87.25%;
+  width:83.5%;
 
+}
 #dateRangeSliderModal{
   background-color: transaprent !important;;
   position: absolute !important;
   top: 90% !important;
 }
-
 #articlesContainer{
-
 	height: 80% !important;
 	overflow-y: scroll !important;
     top:0;
 }
-
 .modaltest{
 position: absolute!important;
 height: 80px !important;
@@ -42,36 +45,35 @@ height: 80px !important;
 .card-header{
   max-height: 70px;
 }
-/** buttons***/
+/*****************************************************************************/
+
+/**************  BOUTONS DE FILTRE (MOBILITY & GENRES) **************/
 
 .btn-filter{
   padding: 5px;
   display: inline-block;
 }
-
 .btn-circle{
   border-radius: 60%;
 }
-
 .btn-rounded{
-  border-radius: 50% !important;
+  border-radius: 200% !important;
+    border-width: 0px;
   padding: 0 !important;
   margin:0 !important;
 }
-
 .rounded {
   border-radius: 50% !important;
 }
-
 .btn-active {
-  background-color: rgb(66, 220, 244) !important;
+  background-color: rgb(35,195,237) !important;
 }
 .btn-active-first {
-  background-color: rgb(166, 220, 244) !important;
+  background-color: rgb(35,195,237) !important;
 }
+/*****************************************************************************/
+
 /*******************  LIST DE TITRES DYNAMIQUE ************************/
-
-
 #arraySelectors{
   background-color: #F7F7F7 !important;
   border-radius: 0px !important;
@@ -99,8 +101,9 @@ height: 80px !important;
   overflow:hidden;
 }
 
-/******************* FIN LIST DE TITRES DYNAMIQUE ************************/
+/*****************************************************************************/
 
+/****************************** PAGE PROJETS *******************************/
 #projets{
   position: absolute;
   z-index: 998;
@@ -110,23 +113,12 @@ height: 80px !important;
   height:92%;
   background-color: none;
   }
-
-
 /******************************************************************************/
 
-#navbar {
-    margin-left: 0;
-    z-index: 999;
-    left: 0 !important;
-    right: 0 !important;
-}
-
-/****** sideBar ******/
-
-
+/************************************ SIDEBAR **********************************/
 #sideBar{
   position: absolute;
-  z-index: 90;
+  z-index: 900;
   left:0;
   top:0;
   height: 100%;
@@ -136,7 +128,7 @@ height: 80px !important;
 
 #sideMenu{
   position: absolute;
-  z-index: 100;
+  z-index: 900;
   left:0;
   top:8%;
   max-height: 92%;
@@ -144,21 +136,7 @@ height: 80px !important;
   background-color: #F7F7F7;
   overflow: auto;
 }
-#underLeftMenu{
-    background-color: red;
 
-    bottom: 0;
-    left:0;
-}
-
-.bottomLogo{
-    width: 100px;
-    height: 100px;
-    background-color: red;
-
-    bottom: 0;
-    left:0;
-}
 
 #submenu{
   position: absolute;
@@ -166,11 +144,14 @@ height: 80px !important;
   top:8%;
   border-radius: 0px;
   height: 5%;
-  background-color: #343434;
+  background-color: #343E41;
 }
 
+#myTab .nav-item{
 
+}
 
+/************************ LEGEND *********************/
 #legend{
     display:none;
     position: absolute;
@@ -217,7 +198,7 @@ height: 80px !important;
     right: 0;
     bottom:0;
     border-radius: 0px;
-    width: 83.25%;
+    width: 85%;
     height: 6%;
     background-color: rgba(49,49,49,0.5);
 }
@@ -264,8 +245,7 @@ height: 80px !important;
 #faPhoto{
     color:purple;
 }
-
-
+/******************************************************************************/
 
 /****************** POPUP ***************************/
 
@@ -310,13 +290,55 @@ height: 80px !important;
 #popUpImg{
 background-color: rgba(255,255,255,1);
 }
+/******************************************************************************/
 
-
-
-/**********************************************************/
-
-
+.navbar-fixed-top .active a {
+background-color: lawngreen;
+}
 /******************** LINK SUBMENU DECORATION *************************/
+#sideMenu .tab-content{
+background-color: #F7F7F7;
+
+}
+
+.nav-pills > a {
+    border-radius: 0 !important;
+    background-color: grey;
+}
+
+
+.nav-pills .nav-link.active, .show>.nav-pills .nav-link{
+    color: black !important;
+    font-weight: bolder ;
+    font-size: 22px;
+}
+
+#carte-tab {
+    color:grey;
+    border-radius: 0 ;
+    border-right: 1px solid grey;
+    background-color: lightgrey;
+    height :110%;
+    }
+#liste-tab {
+    color:grey;
+    border-radius: 0 ;
+    border-right: 1px solid grey;
+    background-color: lightgrey;
+    height :110%;
+}
+
+#liste-tab .active a,#liste-tab .active a:hover {
+    border-radius: 0 ;
+    border-right: 1px solid grey;
+    color:red!important;
+
+}
+
+#liste-tab .active a,#liste-tab .active a:hover {
+    border-radius: 0 ;
+    color:red !important;
+}
 
 #submenu{
     right:0;
@@ -326,22 +348,20 @@ background-color: rgba(255,255,255,1);
   color: rgb(66, 220, 244);
   text-decoration: none;
 }
-#submenu a {
-    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-    text-decoration: none;
-    transition: color 0.1s, background-color 0.1s;
-}
  #submenu a {
+     font-family: 'CircularStd-Black';
+     text-decoration: none;
+     transition: color 0.1s, background-color 0.1s;
     position: relative;
     display: block;
     padding: 20px 0;
     margin: 0 5px;
     letter-spacing: 1px;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 5px;
-    font-weight: 900;
+    font-weight: 300;
     transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
-    color: grey;
+    color: white;
 }
  #submenu a::before {
     content: '';
@@ -363,18 +383,16 @@ background-color: rgba(255,255,255,1);
     transform-origin: left top;
     transform: scale(1, 1);
 }
-/******************** END LINK DECORATION *************************/
+/*********************************************************************/
 
 /******************** LINK navbar DECORATION *************************/
-
-
 
 #navbar a:hover, #navbar a:focus, #navbar a:active {
     color: white;
     text-decoration: none;
 }
 #navbar a {
-    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'CircularStd-Black';
     text-decoration: none;
     transition: color 0.1s, background-color 0.1s;
 }
@@ -384,7 +402,7 @@ background-color: rgba(255,255,255,1);
     padding: 16px 0;
     margin: 0 5px;
     letter-spacing: 1px;
-    font-size: 12px;
+    font-size: 19px;
     line-height: 16px;
     font-weight: 900;
     transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
@@ -410,7 +428,7 @@ background-color: rgba(255,255,255,1);
     transform-origin: left top;
     transform: scale(1, 1);
 }
-/******************** END LINK DECORATION *************************/
+/*********************************************************************/
 
 /******************** LINK FITLER DECORATION *************************/
 
@@ -419,7 +437,7 @@ background-color: rgba(255,255,255,1);
     text-decoration: none;
 }
 #myTabContent a {
-    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'CircularStd-Black';
     text-decoration: none;
     transition: color 0.1s, background-color 0.1s;
 }
@@ -429,7 +447,7 @@ background-color: rgba(255,255,255,1);
     padding: 16px 0;
     margin: 0 5px;
     letter-spacing: 1px;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 16px;
     font-weight: 900;
 
@@ -456,32 +474,49 @@ background-color: rgba(255,255,255,1);
     transform-origin: left top;
     transform: scale(1, 1);
 }
-/******************** END LINK DECORATION *************************/
+
+.nav-link{
+    font-family: 'CircularStd-Black';
+    text-decoration: none;
+    transition: color 0.1s, background-color 0.1s;
+}
+/*********************************************************************/
 
 
-#logo{
-  width:100px;
-}
-/****** navBar ******/
-#navbarbrand {
-  position: absolute;
-  z-index: 100;
-  left:0px;
-  top:0;
-  border-radius: 0px;
-  height: 8%;
-  width: 100%;
-  background-color: black;
-}
+/***************************** NAVBAR *********************************/
 
 #navbar {
   position: absolute;
   border-radius: 0px;
   height: 8%;
-  background-color: rgb(66, 185, 244);
+  background-color: rgb(35,195,237);
+}
+#logoNavBar{
+    height:8%;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
-/*************************/
+#navLogo{
+    height: 100% !important;
+    background-color: black;
+}
+
+.navbar-brand {
+    padding-left: 0;
+}
+
+#navLogo{
+
+    width: 200px !important;
+}
+#navLogoText{
+    height: 100% !important;
+    width: 500px !important;
+    background-color: #343E41;
+}
+
+
 
 a {
   color:black;
@@ -490,7 +525,9 @@ a {
 .collapsed {
   color:grey;
 }
+/*****************************************************************************/
 
+/****************************** SELECT2 DROPDOWNS ***************************/
 .select2 ,.select2-container, .select2-container--default, .select2-container--focus{
   width: 100% !important;
 
@@ -502,10 +539,64 @@ a {
   border-color: rgba(244,244,244,0.8) !important;
 }
 
+/*****************************************************************************/
 
-/************************* MY MODAL *****************************/
+/************************* RECIT INFO PANEL *****************************/
+#recitInfoPanel{
+    z-index: 250;
+    position: fixed;
+    top: 8%;
+    left: 0px;
+    width: 45%;
+    height: 92%;
+}
+
+#recitInfoPanel  .card {
+    background-color: #F7F7F7;
+    border-radius: 0 !important;
+}
+
+#recitInfoPanel  .card-header{
+    border-radius: 0 !important;
+    background-color: yellow;
+    height: 5.25%;
+}
+
+#recitInfoPanel  .card-body{
+    border-radius: 0 !important;
+}
 
 
+
+#articlesPrimary {
+    height: 86vh;
+    max-height: 86vh;
+}
+
+#articlesContainer {
+    max-height: 56%;
+    height: 56%;
+    overflow-y:scroll;
+}
+
+.modalActive{
+    left: 0;
+}
+.modalInactive{
+    left: -1000;
+}
+
+#panelCloseButton{
+    position: relative;
+    cursor: auto;
+}
+#panelExpand{
+    position: relative;
+    cursor: auto;
+}
+/*****************************************************************************/
+
+/********************* SCROLL DOWN BY CHAPTER ************************/
 #chapter {
     position: absolute;
     z-index: 999;
@@ -541,10 +632,11 @@ h3 {
     opacity: 0.3;
     background-color: white;
 }
+/****  ****/
+/*****************************************************************************/
 
 
-/*********************** noUiSlider ******************/
-
+/****************************** Media Queries ***********************************/
 
 @media (max-width: 1099px) {
     #mainPage{
@@ -580,45 +672,4 @@ h3 {
     }
 }
 
-#recitInfoPanel{
-    z-index: 250;
-    position: fixed;
-    top: 8%;
-    left: 0px;
-    width: 45%;
-    height: 92%;
-}
-
-#recitInfoPanel  .card {
-    background-color: #F7F7F7;
-    border-radius: 0 !important;
-}
-
-#recitInfoPanel  .card-header{
-    border-radius: 0 !important;
-    background-color: yellow;
-    height: 10px;
-}
-
-#recitInfoPanel  .card-body{
-    border-radius: 0 !important;
-}
-
-#articlesPrimary {
-    height: 90vh;
-    max-height: 90vh;
-}
-
-#articlesContainer {
-    max-height: 58%;
-    height: 58%;
-    overflow-y:scroll;
-}
-
-.modalActive{
-    left: 0;
-}
-.modalInactive{
-    left: -1000;
-}
-
+/*****************************************************************************/

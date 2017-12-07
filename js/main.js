@@ -57,12 +57,6 @@ function setGenreStyle() {
             else if (layer.feature.properties.story.media_links.media_type === 'multimedia') {
                 layer.feature.setStyle({fillColor: 'green'})
             }
-            else if (layer.feature.properties.story.media_links.media_type === 'dessin') {
-                layer.feature.setStyle({fillColor: 'yellow'})
-            }
-            else if (layer.feature.properties.story.media_links.media_type === 'animation') {
-                layer.feature.setStyle({fillColor: 'yellow'})
-            }
         });
     }
 }
@@ -202,10 +196,10 @@ function getFilterMarkersById (myFilterLayer) {
   filteredGroup.addLayer(filterMarkers).addTo(map) // add the filteredMarkers to the filteredGroup
   map.fitBounds(filterMarkers.getBounds())//.pad(Math.sqrt(2) / 2)) // fit bounds of the filtered specifici markers
 }
-
+/*
 function style(feature){
   for(var i = 0; i < 5; i++) {
-      var media_type = feature.properties.story.genres[0].label
+      var media_type = feature.properties.story.media_links[0]['media_type']['label']
       console.log(media_type)
 
       if (media_type === undefined)
@@ -271,38 +265,8 @@ function style(feature){
               fillOpacity: 0.5
           }
       }
-      else if (media_type === 'Documentaire') {
-          return {
-              radius: 8,
-              fillColor: 'yellow',
-              color: '#ffffff',
-              weight: 1,
-              opacity: 1,
-              fillOpacity: 0.5
-          }
-      }
-      else if (media_type === 'dessin') {
-          return {
-              radius: 8,
-              fillColor: 'yellow',
-              color: '#ffffff',
-              weight: 1,
-              opacity: 1,
-              fillOpacity: 0.5
-          }
-      }
-      else if (media_type === 'animation') {
-          return {
-              radius: 8,
-              fillColor: 'yellow',
-              color: '#ffffff',
-              weight: 1,
-              opacity: 1,
-              fillOpacity: 0.5
-          }
-      }
-  }
-}
+    }
+}*/
 
 /**
 * function that display the main markers
@@ -321,7 +285,7 @@ function getMainMarkers () {
 // Display main markers as CircleMarkers
     pointToLayer: function (feature, latlng) {
       //var label = String(feature.properties.story.id)
-      return L.circleMarker(latlng,style(feature))
+      return L.circleMarker(latlng)
       //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
     },
     onEachFeature: onEachFeature
@@ -580,11 +544,11 @@ function modalPopulate (feature, layer) {
     '          <div class="modal-title mt-2 pt-2 col-md-10 col-lg-8">')
 
   var articleTitle = $('<span>  <h2 class="pt-0" id="myModaTitle">'+feature.properties.story['title']+'</h2> </span></div></div><br>')
-
+/*
   var articleAuthorsCollaborators =$('<div class="row">' +
     '          <div class="col-md-6 d-inline">' +
     '            <span class="align-text-bottom"> <h5> '+feature.properties.story.authors[0]['label']+'</h5> </span>' +
-    '            <span class="align-text-bottom"> <h5> '+feature.properties.story.collaborators[0]['label']+' </h5> </span>' +
+    '            <span class="align-text-bottom"> <h5> '+feature.properties.story.collaborators[0]['label']+'/ </h5> </span>' +
     '          </div><div class="col-md-3 d-inline"><div class="">'+
     '           <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="40px"></div>')
 
@@ -637,15 +601,15 @@ function modalPopulate (feature, layer) {
     '    </div>' +
     '  </div>' +
     '  </div>')
+*/
 
-
-  articleSection.append(articleEnd)
+ /* articleSection.append(articleEnd)
   articleElement.append(articleKeyWord)
   articleKeyWord.append(articleProjectDate)
   articleProjectDate.append(articleLocation)
   articleLocation.append(articleMobility)
   articleMobility.append(articleAuthorsCollaborators)
-  articleAuthorsCollaborators.append(articleTitle)
+  articleAuthorsCollaborators.append(articleTitle)*/
   articleTitle.append(articleHeader)
 
 

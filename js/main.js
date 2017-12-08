@@ -488,17 +488,102 @@ function getMobiltyMarkers () {
 
 function onEachFeature (feature, layer) {
       // Create HTML POP UP //
+
+  /**
+   * function that check if authors are multiple and returns a list if true
+   * @returns {string}
+   */
+  var authorsPopUp = function(){
+    var authorsList =[]
+    for(var i =0 ; i < feature.properties.story.authors.length; i++){
+      //console.log(feature.properties.story.authors.length)
+      if (feature.properties.story.authors.length > 1){
+        authorsList.push(feature.properties.story.authors[i].label)
+        //console.log(authorsList)
+
+      }
+      else {
+        return feature.properties.story.authors[0].label
+      }
+    }
+   // console.log(authorsList.join(', '))
+    return authorsList.join(', <br>')
+  }
+
+  var dynamicIcon =  function(){
+try {
+    if (feature.properties.story.media_links.length === undefined ){
+      return 'Autre'
+    }
+
+    else if (feature.properties.story.media_links.length > 1){
+      return 'Multimédia'
+    }
+    else if (feature.properties.story.media_links[0].media_type === 'photo'){
+      return 'Photo'
+    }
+    else if (feature.properties.story.media_links[0].media_type === 'vidéo') {
+      return 'Video'
+    }
+
+    else if (feature.properties.story.media_links[0].media_type === 'pdf') {
+        return 'Écrit'
+      }
+
+      else if (feature.properties.story.media_links[0].media_type === 'audio') {
+        return 'Audio'
+      }
+    }
+
+  catch(e) {
+    return;
+  }
+
+}
+
+var dynamicHeader = function(){
+
+  try {
+    if (feature.properties.story.media_links.length === undefined ){
+      return 'grey'
+    }
+
+    else if (feature.properties.story.media_links.length > 1){
+      return 'yellow'
+    }
+    else if (feature.properties.story.media_links[0].media_type === 'photo'){
+      return 'purple'
+    }
+    else if (feature.properties.story.media_links[0].media_type === 'vidéo') {
+      return 'red'
+    }
+
+    else if (feature.properties.story.media_links[0].media_type === 'pdf') {
+      return 'green'
+    }
+
+    else if (feature.properties.story.media_links[0].media_type === 'audio') {
+      return 'teal'
+    }
+  }
+
+  catch(e) {
+    console.log(e)
+  }
+
+}
+
   var customPopup = '<div id="popUp" class="card mb-3" style="max-width: 20rem;">  '
-  customPopup = customPopup + '<div id="mediaHeader" class="card-header">'
-  customPopup = customPopup + '<div id="textHeader" class="text-center"> <b>Multimedia</b> </div>'
+  customPopup = customPopup + '<div id="mediaHeader" class="card-header" style="background-color: '+dynamicHeader()+'!important;">'
+  customPopup = customPopup + '<div id="textHeader" class="mr-0 text-center"> <b>'+dynamicIcon()+'</b> </div>'
   customPopup = customPopup + '</div> '
-  customPopup = customPopup + '<div id="mediaIcon" class="">'
-  customPopup = customPopup + '<img id="mediaIconImg" class="rounded-circle" src="img/Icon_Multimedia.png"  width="40px"/>'
+  customPopup = customPopup + '<div id="mediaIconContainer" class="row rounded-circle">'
+  customPopup = customPopup + '<img id="mediaIcon" class="rounded-circle" src="img/LRSM-'+dynamicIcon()+'.svg" width="40px"/>'
   customPopup = customPopup + '</div>'
-  customPopup = customPopup + '<a href="javascript:getFilterMarkersById(' + feature.properties.story['id'] + '),openModal()"><img id="popUpImg" class="card-img-top" src="img/test.jpg" alt="Card image cap">'
-  customPopup = customPopup + '<div id="popUpFooter" class="card-footer pl-1 mt-1 pt-1 mb-0 pb-0">'
-  customPopup = customPopup + '<h5 id="popUpTitle" class="mt-0"> Titre du récit </h5>'
-  customPopup = customPopup + '<p id="popUpAuthor" class="mt-1 pl-1 mb-0 pb-1">Nom de l\'auteur</p>'
+  customPopup = customPopup + '<a href="javascript:getFilterMarkersById(' + feature.properties.story['id'] + '),openModal()"><img id="popUpImg" class="card-img-top" src='+feature.properties.story.thumbnail+' alt="Card image cap">'
+  customPopup = customPopup + '<div id="popUpFooter" class="card-footer pr-0 pl-1 mt-1 pt-1 mb-0 pb-0">'
+  customPopup = customPopup + '<h5 id="popUpTitle" class="mt-0"> '+ feature.properties.story.title +' </h5>'
+  customPopup = customPopup + '<p id="popUpAuthor" class="mt-1 pl-1 mb-0 pb-1">'+authorsPopUp()+'</p>'
   customPopup = customPopup + '</div></a>'
   customPopup = customPopup + '</div></div>'
 
@@ -529,7 +614,11 @@ function onEachFeature (feature, layer) {
 function modalPopulate (feature, layer) {
     // CREATE DYNAMICALLY THE HTML CODE TO POPULATE THE MODAL SCROLL BY CHAPTER SECTION OF THE STORIES
     // / /////////////////////////////////////////////////////////////
-//for (var i=0; i<feature.length;i++){
+
+  var panelTitle = $('<h2 class="pt-0" id="myModaTitle">' + feature.properties.story.title + '</h2>')
+
+  /*
+
   var articleHeader = $('<div id="myArticles" class="row">' +
     '    <div class="card">' +
     '      <div class="card-header d-inline-block ">' +
@@ -544,82 +633,79 @@ function modalPopulate (feature, layer) {
     '          <div class="modal-title mt-2 pt-2 col-md-10 col-lg-8">')
 
   var articleTitle = $('<span>  <h2 class="pt-0" id="myModaTitle">'+feature.properties.story['title']+'</h2> </span></div></div><br>')
-/*
+
   var articleAuthorsCollaborators =$('<div class="row">' +
     '          <div class="col-md-6 d-inline">' +
     '            <span class="align-text-bottom"> <h5> '+feature.properties.story.authors[0]['label']+'</h5> </span>' +
-    '            <span class="align-text-bottom"> <h5> '+feature.properties.story.collaborators[0]['label']+'/ </h5> </span>' +
+    '            <span class="align-text-bottom"> <h5> '+feature.properties.story.collaborators[0]['label']+' </h5> </span>' +
     '          </div><div class="col-md-3 d-inline"><div class="">'+
     '           <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="40px"></div>')
 
-  var articleMobility =$('<h6 id ="modalMobility" class="text-center"> '+feature.properties.story.mobility+' </h6>' +
-    '          </div>' +
-    '          <div class="col-md-3 d-inline ">' +
-    '            <div class="">' +
-    '              <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="40px">' +
-    '            </div>')
+    var articleMobility =$('<h6 id ="modalMobility" class="text-center"> '+feature.properties.story.mobility+' </h6>' +
+      '          </div>' +
+      '          <div class="col-md-3 d-inline ">' +
+      '            <div class="">' +
+      '              <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="40px">' +
+      '            </div>')
 
-  var articleLocation =$('<h6 id ="modalLocation" class="text-center"> '+feature.properties.story.main_location['label']+' </h6>' +
-    '          </div>' +
-    '        </div>' +
-    '        <hr>')
+    var articleLocation =$('<h6 id ="modalLocation" class="text-center"> '+feature.properties.story.main_location['label']+' </h6>' +
+      '          </div>' +
+      '        </div>' +
+      '        <hr>')
 
-  var articleProjectDate=$('<div class="row">' +
-    '          <div class="col-md-5 d-inline-block  text-left">' +
-    '            <span> <h6> '+feature.properties.story.project['label']+' </h6>  </span>' +
-    '            <span> <h6> '+feature.properties.story.date+' </h6> </span>' +
-    '          </div><div class="col-md-7 d-inline-block mx-auto mr-0 text-right">')
+    var articleProjectDate=$('<div class="row">' +
+      '          <div class="col-md-5 d-inline-block  text-left">' +
+      '            <span> <h6> '+feature.properties.story.project['label']+' </h6>  </span>' +
+      '            <span> <h6> '+feature.properties.story.date+' </h6> </span>' +
+      '          </div><div class="col-md-7 d-inline-block mx-auto mr-0 text-right">')
 
-  var articleKeyWord = $('<span class="badge badge-pill badge-primary">'+feature.properties.story.date+'</span>')
+    var articleKeyWord = $('<span class="badge badge-pill badge-primary">'+feature.properties.story.date+'</span>')
 
-  var articleElement = $('<br></div></div><hr>\'<div id="articlesContainer" class="card-body"><article class="col-md-10 pl-2 ml-2 pt-1 mt-1 mb-1 pb-1 mx-auto" id="articles">')
-
-
-
-
-  var articleSection = $('' +
-    '<section id='+feature.properties['order']+'><div class="row chapter">' +
-    '          <div class="col-md-10 col-lg-10 ml-4">' +
-    '            <span id="elementNumber"> <h4>' + feature.properties['title'] + '</h4> </span>' +
-    '          </div>' +
-    '          <div class="col-md-10 col-lg-10 ml-4">' +
-    '            <span> <h5>' + feature.properties['date']+'|'+ feature.properties['date'] + ' </h5>  </span>' +
-    '          </div>' +
-    '        </div>' +
-    '        <div class="row">' +
-    '          <iframe class="mx-auto mt-4 col-sm-12 col-md-10" src="https://player.vimeo.com/video/231561016" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>' +
-    '        </div>' +
-    '        <div class="row">' +
-    '          <div class="col-md-10 col-lg-10  mx-auto d-inline-block mt-2 pt-2 text-justify">' +
-    '                      <span> <p>  '+ feature.properties.story['text'] + ' </p> </span>' +
-    '          </div> </div>' +
-    '        <hr></section>')
-
-
-  var articleEnd = $('<!-- fin modal body-->' +
-    '       </article> </div>' +
-    '    </div>' +
-    '  </div>' +
-    '  </div>')
+    var articleElement = $('<br></div></div><hr><div id="articlesContainer" class="card-body"><article class="col-md-10 pl-2 ml-2 pt-1 mt-1 mb-1 pb-1 mx-auto" id="articles">')
 */
 
- /* articleSection.append(articleEnd)
+
+
+    var articleSection = $('' +
+      '<section id='+feature.properties['order']+'><div class="row chapter">' +
+      '          <div class="col-md-10 col-lg-10 ml-4">' +
+      '            <span id="elementNumber"> <h4>' + feature.properties['title'] + '</h4> </span>' +
+      '          </div>' +
+      '          <div class="col-md-10 col-lg-10 ml-4">' +
+      '            <span> <h5>' + feature.properties['date']+'|'+ feature.properties['date'] + ' </h5>  </span>' +
+      '          </div>' +
+      '        </div>' +
+      '        <div class="row">' +
+      '          <iframe class="mx-auto mt-4 col-sm-12 col-md-10" src="https://player.vimeo.com/video/231561016" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>' +
+      '        </div>' +
+      '        <div class="row">' +
+      '          <div class="col-md-10 col-lg-10  mx-auto d-inline-block mt-2 pt-2 text-justify">' +
+      '                      <span> <p>  '+ feature.properties.story['text'] + ' </p> </span>' +
+      '          </div> </div>' +
+      '        <hr></section>')
+
+/*
+    var articleEnd = $('<!-- fin modal body-->' +
+      '       </article> </div>' +
+      '    </div>' +
+      '  </div>' +
+      '  </div>')
+
+
+  articleSection.append(articleEnd)
   articleElement.append(articleKeyWord)
   articleKeyWord.append(articleProjectDate)
   articleProjectDate.append(articleLocation)
   articleLocation.append(articleMobility)
   articleMobility.append(articleAuthorsCollaborators)
-  articleAuthorsCollaborators.append(articleTitle)*/
-  articleTitle.append(articleHeader)
+  articleAuthorsCollaborators.append(articleTitle)
+  articleTitle.append(articleHeader)*/
 
+  $('#panelTitle').append(panelTitle)
+  $('#articles').append(articleSection)
 
-  $('#recitInfoPanel').append(articleHeader)
-
-  console.log($('#recitInfoPanel'))
 
 }
-
-
   /**
     * function that check for the container id and zoom to the parent feature
     * @param {numeric} newId

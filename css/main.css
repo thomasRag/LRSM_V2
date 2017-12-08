@@ -308,7 +308,7 @@ a .nav-link{
   left:0;
   margin:0;
   padding: 0;
-  background-color: yellow;
+  background-color: grey;
   border-radius: 0 !important;
 }
 
@@ -316,10 +316,19 @@ a .nav-link{
   position: absolute;
   z-index: 10;
   top:-10px;
-  left:5px;
+  left:-10px;
   margin:0;
   padding: 0;
+  background-color: white;
 }
+
+#textHeader{
+    font-family: 'CircularStd-Black';
+    font-size: medium;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
 
 #popUpImg{
 background-color: rgba(255,255,255,1);
@@ -607,12 +616,12 @@ a {
 
 /************************* RECIT INFO PANEL *****************************/
 #recitInfoPanel{
-    z-index: 250;
-    position: fixed;
+    z-index: 1000;
+    position: absolute;
     top: 8%;
     left: 0px;
     width: 45%;
-    height: 92%;
+    height: 10%;
 }
 
 #recitInfoPanel  .card {
@@ -637,7 +646,9 @@ a {
     max-height: 86vh;
 }
 
-#articlesContainer {
+
+
+#articles{
     max-height: 56%;
     height: 56%;
     overflow-y:scroll;

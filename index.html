@@ -418,56 +418,55 @@
 <!--  ./ end legend -->
 
 
+
 <div id="recitInfoPanel" class="container modalInactive" style="left: -1000px; z-index: 1000;">
   <div id="myArticle" class="row">
     <div class="card">
       <div class="card-header d-inline-block ">
         <div class="col-sm-12 d-inline-block mr-1 pr-1 text-right">
           <a id="panelExpand" class="mr-2"><i class="fa fa-expand"></i> </a>
-          <a id="panelCloseButton" class="mr-0 ml-2"><i class="fa fa-times"></i> </a>
+          <a id="panelCloseButton" class="mr-0 ml-2" href="javascript:closeModal()"><i class="fa fa-times"></i> </a>
         </div>
-    </div>
+      </div>
       <div id="articlesPrimary" class="card-body pl-4 pr-4">
         <div class="row">
-
           <div class="modal-title mt-2 pt-2 col-md-10 col-lg-8">
-            <span>  <h2 class="pt-0" id="myModaTitle">Titre du récit sur plusieurs lignes</h2> </span>
+            <span id="panelTitle"></span>
           </div>
         </div>
         <br>
-
         <div class="row">
           <div class="col-md-6 d-inline">
-            <span class="align-text-bottom"> <h5> Nom de l'auteur sur plusieurs lignes</h5> </span>
-            <span class="align-text-bottom"> <h5> Nom des collaborateurs sur plusieurs lignes </h5> </span>
+            <span class="align-text-bottom">
+              <h5> Nom de l'auteur sur plusieurs lignes</h5>
+            </span>
+            <span class="align-text-bottom">
+              <h5> Nom des collaborateurs sur plusieurs lignes </h5>
+            </span>
           </div>
           <div class="col-md-3 d-inline">
             <div class="">
               <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.svg" width="40px">
             </div>
-
             <h6 id ="modalLocation" class="text-center"> Emplacement principal </h6>
-
           </div>
           <div class="col-md-3 d-inline ">
             <div class="">
               <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.svg" width="40px">
             </div>
-
             <h6 id ="modalMobility" class="text-center"> Mobilité </h6>
-
           </div>
         </div>
         <hr>
-
         <div class="row">
           <div class="col-md-5 d-inline-block  text-left">
-            <span> <h6> Projets d'attache qui prend de la place </h6>  </span>
-            <span> <h6> Date (01-09-2019) </h6> </span>
+            <span>
+              <h6> Projets d'attache qui prend de la place </h6>
+            </span>
+            <span>
+              <h6> Date (01-09-2019) </h6>
+            </span>
           </div>
-
-
-
           <div class="col-md-7 d-inline-block mx-auto mr-0 text-right">
             <span class="badge badge-pill badge-primary">Mots-clé un peu long #1</span>
             <span class="badge badge-pill badge-secondary">Mots-clé très long comme ca #2</span>
@@ -479,32 +478,6 @@
             <span class="badge badge-pill badge-dark">Mots-clé un peu long #8</span>
             <br>
           </div>
-        </div>
-        <hr>
-
-
-<div id="articlesContainer" class="card-body">
-      <article class='col-md-10 pl-2 ml-2 pt-1 mt-1 mb-1 pb-1 mx-auto' id="articles">
-
-
-
-      </article>
-
-
-        </div>
-    </div>
-  </div>
-  </div>
-
-</div>
-
-<div id="dateRangeSliderModal" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false"aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div id="sliderHeigh" class="modal-dialog">
-    <div class="modal-content">
-      <div id="slider-date"></div>
-    </div>
-  </div>
-</div>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

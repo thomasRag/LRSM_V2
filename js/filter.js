@@ -21,31 +21,22 @@ var locationData = []
 var titreData = []
 var mobilityData = []
 var projectData = []
-/* ATTEMPT TO Minimize the code -- failed
-                  var   getGD = ""
-                  var   getAD = ""
-                  var   getKD = ""
-                  var   getLD = ""
 
-                  function getData(i,k){
-
-                  getGD = featuresCollection.features[j].properties.story.genres[0].label
-                  getAD = featuresCollection.features[j].properties.story.author.label
-                  getKD = featuresCollection.features[j].properties.story.main_tag.label
-                  getLD = featuresCollection.features[j].properties.story.main_location.label
-
-                      for (var j = 0; j < featuresCollection.features.length; j++)
-                        return i.push(k)
-                      };
-
-                  getData(genreData,getGD)
-                  getData(authorData,getAD)
-                  getData(keywordData,getKD)
-                  getData(locationData,getLD)
-*/
 
 function getGenre (i) {
-  for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.genres[0].label) }
+
+  for (var j = 0; j < featuresCollection.features.length; j++) {
+    try {
+      i.push(featuresCollection.features[j].properties.story.genres[0].label)
+    }
+    catch(err) {
+      console.log(err.message)
+      console.log(featuresCollection.features[j].properties.story.id)
+        }
+        finally {
+      i.push(featuresCollection.features[j].properties.story.genres[0].label)
+        }
+    }
 };
 getGenre(genreData)
 

@@ -581,7 +581,7 @@ var dynamicHeader = function(){
   customPopup = customPopup + '<img id="mediaIcon" class="rounded-circle" src="img/LRSM-'+dynamicIcon()+'.svg" width="40px"/>'
   customPopup = customPopup + '</div>'
   customPopup = customPopup + '<a href="javascript:getFilterMarkersById(' + feature.properties.story['id'] + '),openModal()"><img id="popUpImg" class="card-img-top" src='+feature.properties.story.thumbnail+' alt="Card image cap">'
-  customPopup = customPopup + '<div id="popUpFooter" class="card-footer pr-0 pl-1 mt-1 pt-1 mb-0 pb-0">'
+  customPopup = customPopup + '<div id="popUpFooter" class="card-footer pr-0 pl-1 mt-0 pt-0 mb-0 pb-0">'
   customPopup = customPopup + '<h5 id="popUpTitle" class="mt-0"> '+ feature.properties.story.title +' </h5>'
   customPopup = customPopup + '<p id="popUpAuthor" class="mt-1 pl-1 mb-0 pb-1">'+authorsPopUp()+'</p>'
   customPopup = customPopup + '</div></a>'

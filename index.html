@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css"/>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.5/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.5/MarkerCluster.Default.css" />
   <link rel="stylesheet" id="themeCSS" href="src/nouislider.css">
 </head>
 <body>
@@ -34,8 +36,9 @@
       <div id="sideMenu" class=" ml-0 pl-0 mr-0 pr-0 d-none d-sm-block">
         <ul class="nav nav-pills nav-fill" id="myTab" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" id="carte-tab" data-toggle="tab" href="#carte" role="tab" aria-controls="carte" aria-selected="true">Carte</a>
+            <a class="nav-link active" id="carte-tab" data-toggle="tab" href="#carte" role="tab" aria-controls="carte" aria-selected="true">Filtre</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" id="liste-tab"  data-toggle="tab" href="#liste" role="tab" aria-controls="liste" aria-selected="false">Liste</a>
           </li>
@@ -306,7 +309,7 @@
               <a class="nav-link" href="index.html"> Cartographies des récits <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item mr-5">
-              <a class="nav-link" href="cartedessois.html">Cartographies des sois</a>
+              <a class="nav-link" href="javascript:getFilterMarkersByAuthors()">Cartographies des sois</a>
             </li>
           </ul>
 
@@ -431,53 +434,46 @@
       <div id="articlesPrimary" class="card-body pl-4 pr-4">
         <div class="row">
           <div class="modal-title mt-2 pt-2 col-md-10 col-lg-8">
-            <span id="panelTitle"></span>
+<!-- DYNAMIC TITLE -->
+            <span id="articleTitle"></span>
           </div>
         </div>
         <br>
         <div class="row">
           <div class="col-md-6 d-inline">
-            <span class="align-text-bottom">
-              <h5> Nom de l'auteur sur plusieurs lignes</h5>
-            </span>
-            <span class="align-text-bottom">
-              <h5> Nom des collaborateurs sur plusieurs lignes </h5>
-            </span>
+<!-- DYNAMIC AUTHOR -->
+            <span id="articleAuthor" class="align-text-bottom"></span>
+<!-- DYNAMIC COLLABORATORS -->
+            <span id="articleCollaborator" class="align-text-bottom"></span>
           </div>
           <div class="col-md-3 d-inline">
             <div class="">
-              <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.svg" width="40px">
+              <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="40px">
             </div>
-            <h6 id ="modalLocation" class="text-center"> Emplacement principal </h6>
+<!-- DYNAMIC MAIN LOCATION -->
+            <span id="articleLocation" class="align-text-bottom"></span>
           </div>
           <div class="col-md-3 d-inline ">
             <div class="">
-              <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.svg" width="40px">
+              <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="40px">
             </div>
-            <h6 id ="modalMobility" class="text-center"> Mobilité </h6>
+<!-- DYNAMIC  MOBILITY -->
+            <span id="articleMobility" class="align-text-bottom"></span>
           </div>
         </div>
         <hr>
         <div class="row">
-          <div class="col-md-5 d-inline-block  text-left">
-            <span>
-              <h6> Projets d'attache qui prend de la place </h6>
+          <div class="col-sm-5 d-inline-block text-left">
+            <span id="articleProject">
+<!-- DYNAMIC  PROJECTS -->
             </span>
-            <span>
-              <h6> Date (01-09-2019) </h6>
+            <span id="articleDate">
+<!-- DYNAMIC  DATE -->
             </span>
           </div>
-          <div class="col-md-7 d-inline-block mx-auto mr-0 text-right">
-            <span class="badge badge-pill badge-primary">Mots-clé un peu long #1</span>
-            <span class="badge badge-pill badge-secondary">Mots-clé très long comme ca #2</span>
-            <span class="badge badge-pill badge-success">Mots-clé court #3</span>
-            <span class="badge badge-pill badge-danger">Mots-clé #4</span>
-            <span class="badge badge-pill badge-warning">Mots-clé court #5</span>
-            <span class="badge badge-pill badge-info">Mots-clé très long comme ca#6</span>
-            <span class="badge badge-pill badge-light">Mots-clé #7</span>
-            <span class="badge badge-pill badge-dark">Mots-clé un peu long #8</span>
-            <br>
-          </div>
+          <div id="articleKeyWord" class="col-sm-7 d-inline-block mr-0 text-right">
+           <br>
+          </div></div></div></div></div></div>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -486,6 +482,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.5/leaflet.markercluster-src.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.5/leaflet.markercluster.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 <!-- Date Range Slider -->
 <script src="src/nouislider.min.js"></script>
@@ -493,7 +491,9 @@
 <script src="js/dateSlider.js"></script>
 <!-- /. Date Range Slider -->
 <script src=js/fc3.js type="text/javascript"></script>
+<script src=js/authorsFC.js type="text/javascript"></script>
 <script type="text/javascript" src="js/filter.js"></script>
+<script src="js/authors.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

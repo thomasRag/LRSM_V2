@@ -21,6 +21,8 @@ var locationGroup = L.layerGroup()
 var genreGroup = L.layerGroup()
 var allGroups = L.layerGroup()
 
+
+
 var setColor = {
   radius: 8,
   fillColor: getRandomColor(),
@@ -65,6 +67,7 @@ function setGenreStyle() {
 /** ******** END MAP FUNCTIONS ***********/
 
 /** **************Buttons filter functions*******************/
+
 
 
 $(function(){
@@ -141,20 +144,37 @@ map.on('moveend ', function () {
             }
         })
     }
-    else if (map.hasLayer(allGroups)){
-        allGroups.eachLayer(function (marker) {
-            if (bounds.contains(marker.getLatLng())) {
-                inBounds.push(marker.feature.properties.story.title)
+    else if (map.hasLayer(markerCluster)){
+      /* function that retrive unique objects from an array */
+
+      markerCluster.eachLayer(function (marker) {
+        if (bounds.contains(marker.getLatLng())) {
+                inBounds.push(marker.feature.properties.author.name)
+
             }
         })
     }
 
+  /**
+   *
+   * function that returns a array with unique values
+   * @returns {*[array]}
+   */
+  Array.prototype.unique = function () {
+    return this.filter(function (value, index, self) {
+      return self.indexOf(value) === index
+    })
+  }
 
-
-  for (var i = 0; i < inBounds.length; i++) {
+  var myInboundsList = inBounds.unique()
+  /**
+   * function that push the unique values into a new <a></a>
+   * @returns {*[array]}
+   */
+  for (var i = 0; i < myInboundsList.length; i++) {
     var liContainers = $('<li class="list-group-item col-md-12"></li>')
-    var aContainers = $('<a href="#" class="text_info"></a>')
-    aContainers.append(inBounds[i])
+    var aContainers = $('<a href="#" class="text_info" value="'+myInboundsList[i]+'"></a>')
+    aContainers.append(myInboundsList[i])
     liContainers.append(aContainers)
     $('#arraySelectors').append(liContainers)
   }
@@ -536,12 +556,12 @@ try {
     }
 
   catch(e) {
-    return;
+    return
   }
 
 }
 
-var dynamicHeader = function(){
+  var dynamicHeader = function(){
 
   try {
     if (feature.properties.story.media_links.length === undefined ){
@@ -568,7 +588,7 @@ var dynamicHeader = function(){
   }
 
   catch(e) {
-    console.log(e)
+    return
   }
 
 }
@@ -615,58 +635,135 @@ function modalPopulate (feature, layer) {
     // CREATE DYNAMICALLY THE HTML CODE TO POPULATE THE MODAL SCROLL BY CHAPTER SECTION OF THE STORIES
     // / /////////////////////////////////////////////////////////////
 
-  var panelTitle = $('<h2 class="pt-0" id="myModaTitle">' + feature.properties.story.title + '</h2>')
+  var authorsModal = function(){
+    var authorsList =[]
+    for(var i =0 ; i < feature.properties.story.authors.length; i++){
+      //console.log(feature.properties.story.authors.length)
+      if (feature.properties.story.authors.length > 1){
+        authorsList.push(feature.properties.story.authors[i].label)
+        //console.log(authorsList)
 
-  /*
+      }
+      else {
+        return feature.properties.story.authors[0].label
+      }
+    }
+    // console.log(authorsList.join(', '))
+    return authorsList.join(' <br>')
+  }
 
-  var articleHeader = $('<div id="myArticles" class="row">' +
-    '    <div class="card">' +
-    '      <div class="card-header d-inline-block ">' +
-    '        <div class="col-sm-12 d-inline-block mr-1 pr-1 text-right">' +
-    '          <a id="panelExpand" class="mr-2"><i class="fa fa-expand"></i> </a>' +
-    '          <a id="panelCloseButton" class="mr-0 ml-2" href="javascript:closeModal()"><i class="fa fa-times"></i> </a>' +
-    '        </div>' +
-    '    </div>' +
-    '      <div id="articlesPrimary" class="card-body pl-4 pr-4">' +
-    '        <div class="row">' +
-    '          <!--<div id="modalIconImg"><img  class="rounded-circle" src="img/LRSM-Multimedia.png"  width="50px"/></div>-->' +
-    '          <div class="modal-title mt-2 pt-2 col-md-10 col-lg-8">')
+  var collaboratorsModal = function(){
+    var collaboratorsList =[]
+    for(var i =0 ; i < feature.properties.story.collaborators.length; i++){
+      //console.log(feature.properties.story.authors.length)
+      if (feature.properties.story.collaborators.length > 1){
+        collaboratorsList.push(feature.properties.story.collaborators[i].label)
+        //console.log(authorsList)
+      }
+      else {
+        return feature.properties.story.collaborators[0].label
+      }
+    }
+    // console.log(authorsList.join(', '))
+    return collaboratorsList.join(', <br>')
+  }
 
-  var articleTitle = $('<span>  <h2 class="pt-0" id="myModaTitle">'+feature.properties.story['title']+'</h2> </span></div></div><br>')
+  var keyWordsModal = function(i){
+    var tagsList =[]
+    for(var i  ; i < feature.properties.story.tags.length; i++){
+      //console.log(feature.properties.story.authors.length)
+      if (feature.properties.story.tags.length > 1){
+        tagsList.push(feature.properties.story.tags[i].label)
+        //console.log(authorsList)
+      }
+      else {
+        return feature.properties.story.tags[i].label
+      }
+    }
+    // console.log(authorsList.join(', '))
+    return tagsList.join(', ').split(',')
+  }
 
-  var articleAuthorsCollaborators =$('<div class="row">' +
-    '          <div class="col-md-6 d-inline">' +
-    '            <span class="align-text-bottom"> <h5> '+feature.properties.story.authors[0]['label']+'</h5> </span>' +
-    '            <span class="align-text-bottom"> <h5> '+feature.properties.story.collaborators[0]['label']+' </h5> </span>' +
-    '          </div><div class="col-md-3 d-inline"><div class="">'+
-    '           <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="40px"></div>')
+try {
+      var articleTitle = $('<h2 class="pt-0" id="articleTitle">' + feature.properties.story.title + '</h2>')
+    }
+    catch(e) {
+      console.log(e)
+    }
+finally {
+  articleTitle
+}
 
-    var articleMobility =$('<h6 id ="modalMobility" class="text-center"> '+feature.properties.story.mobility+' </h6>' +
-      '          </div>' +
-      '          <div class="col-md-3 d-inline ">' +
-      '            <div class="">' +
-      '              <img id="pin"  class="mx-auto d-block"  src="img/GooglePin.png" width="40px">' +
-      '            </div>')
+try {
+    var articleAuthors = $('<h5>'+ authorsModal()+ '</h5>')
+  }     catch(e) {
+  console.log(e)
+  }
+finally {
+  articleAuthors
+}
 
-    var articleLocation =$('<h6 id ="modalLocation" class="text-center"> '+feature.properties.story.main_location['label']+' </h6>' +
-      '          </div>' +
-      '        </div>' +
-      '        <hr>')
+try {
+    var articleCollaborators = $('<h5>'+collaboratorsModal()+'</h5>')
+  }
+  catch(e) {
+    console.log(e)
+  }
+  finally {
+  articleCollaborators
+}
+try {
+    var articleMobility =$('<h6 id ="modalMobility" class="text-center"> '+feature.properties.story.mobility+' </h6>')
+  }     catch(e) {
+  console.log(e)
+  }
+finally {
+  articleMobility
+}
+try {
+    var articleLocation =$('<h6 id ="modalLocation" class="text-center"> '+feature.properties.story.main_location['label']+' </h6>')
+  }     catch(e) {
+  console.log(e)
+  }
+finally {
+  articleLocation
+}
+try {
+    var articleProject=$('<h6> '+feature.properties.story.project['label']+'</h6>')
+  }
+  catch(e) {
+    console.log(e)
+  }
+finally {
+  articleProject
+}
 
-    var articleProjectDate=$('<div class="row">' +
-      '          <div class="col-md-5 d-inline-block  text-left">' +
-      '            <span> <h6> '+feature.properties.story.project['label']+' </h6>  </span>' +
-      '            <span> <h6> '+feature.properties.story.date+' </h6> </span>' +
-      '          </div><div class="col-md-7 d-inline-block mx-auto mr-0 text-right">')
+try {
+    var articleDate=$('<h6> '+feature.properties.story.date+'</h6>')
+  }
+  catch(e) {
+    console.log(e)
+  }
+finally {
+  articleDate
+}
 
-    var articleKeyWord = $('<span class="badge badge-pill badge-primary">'+feature.properties.story.date+'</span>')
+try {
+  var test = $('<div></div>')
+  var articleKeyWord = $('<span id="tag" class="badge badge-pill badge-primary">'+keyWordsModal()+'</span>')
+    }
 
-    var articleElement = $('<br></div></div><hr><div id="articlesContainer" class="card-body"><article class="col-md-10 pl-2 ml-2 pt-1 mt-1 mb-1 pb-1 mx-auto" id="articles">')
-*/
+  catch(e) {
+    console.log(e)
+  }
+  finally {
+  for(var i =0 ; i < feature.properties.story.tags.length; i++){
+    test.append($('<span id="tag'+i+'" class="badge badge-pill badge-primary">'+keyWordsModal(i)+'</span>'))
+  }
+}
 
-
-
-    var articleSection = $('' +
+/*
+  var articleSection = $('' +
       '<section id='+feature.properties['order']+'><div class="row chapter">' +
       '          <div class="col-md-10 col-lg-10 ml-4">' +
       '            <span id="elementNumber"> <h4>' + feature.properties['title'] + '</h4> </span>' +
@@ -684,25 +781,24 @@ function modalPopulate (feature, layer) {
       '          </div> </div>' +
       '        <hr></section>')
 
-/*
+
     var articleEnd = $('<!-- fin modal body-->' +
       '       </article> </div>' +
       '    </div>' +
       '  </div>' +
-      '  </div>')
+      '  </div>')*/
 
 
-  articleSection.append(articleEnd)
-  articleElement.append(articleKeyWord)
-  articleKeyWord.append(articleProjectDate)
-  articleProjectDate.append(articleLocation)
-  articleLocation.append(articleMobility)
-  articleMobility.append(articleAuthorsCollaborators)
-  articleAuthorsCollaborators.append(articleTitle)
-  articleTitle.append(articleHeader)*/
 
-  $('#panelTitle').append(panelTitle)
-  $('#articles').append(articleSection)
+  $('#articleKeyWord').empty().html(test)
+  $('#articleDate').empty().html(articleDate)
+  $('#articleProject').empty().html(articleProject)
+  $('#articleLocation').empty().html(articleLocation)
+  $('#articleMobility').empty().html(articleMobility)
+  $('#articleCollaborator').empty().html(articleCollaborators)
+  $('#articleAuthor').empty().html(articleAuthors)
+  $('#articleTitle').empty().html(articleTitle)
+  //$('#articles').append(articleSection)
 
 
 }

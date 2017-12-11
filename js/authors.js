@@ -86,7 +86,7 @@ var getAuthorName =function(){
       }
     },
     pointToLayer: function (feature, latlng) {
-      //var label = String(feature.properties.order)
+      //var label = String(feature.properties.author.name)
       return L.circleMarker(latlng)//.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
     },
     onEachFeature : function(feature,layer){
@@ -98,6 +98,7 @@ var getAuthorName =function(){
 
 
   })
+
   authorsfileredGroup.addLayer(filteredAuthors).addTo(map)
   map.fitBounds(filteredAuthors.getBounds(),{maxZoom : 10})//.pad(Math.sqrt(2) / 2)) // fit bounds of the filtered specifici markers
 

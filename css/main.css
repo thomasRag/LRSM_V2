@@ -62,10 +62,15 @@ body {
     background-color: lightgrey;
 }
 #dateRangeSliderModal{
+    color:red !important;
+    z-index: 800 !important;
   background-color: transaprent !important;;
   position: absolute !important;
   top: 90% !important;
 }
+
+
+
 #articlesContainer{
 	height: 80% !important;
 	overflow-y: scroll !important;
@@ -140,7 +145,9 @@ height: 80px !important;
 }
 
 /*****************************************************************************/
-
+.player{
+    padding-left:50px !important;
+}
 /****************************** PAGE PROJETS *******************************/
 #projets{
   position: absolute;
@@ -559,6 +566,10 @@ background-color: #F7F7F7;
     background-color: #343E41;
 
     width: 100%;
+}
+
+.text-justify {
+    text-align: justify !important;
 }
 
 #navbar {

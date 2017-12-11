@@ -22,23 +22,23 @@ var titreData = []
 var mobilityData = []
 var projectData = []
 
-
+/*
 function getGenre (i) {
 
   for (var j = 0; j < featuresCollection.features.length; j++) {
     try {
-      i.push(featuresCollection.features[j].properties.story.genres[0].label)
+      var test = i.push(featuresCollection.features[j].properties.story.genres[0].label)
     }
     catch(err) {
       console.log(err.message)
       console.log(featuresCollection.features[j].properties.story.id)
         }
         finally {
-      i.push(featuresCollection.features[j].properties.story.genres[0].label)
+      return test
         }
     }
 };
-getGenre(genreData)
+getGenre(genreData)*/
 
 function getAuthor (i) {
   for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.authors[0].label) }
@@ -49,24 +49,24 @@ function getKeyword (i) {
   for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.main_tag.label) }
 };
 getKeyword(keywordData)
-
+/*
 function getLocation (i) {
   for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.main_location.label) }
 };
 getLocation(locationData)
-
+*/
 function getTitre (i) {
   for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.title) }
 };
 getTitre(titreData)
 
 function getMobility (i) {
-  for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.mobility) }
+  for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.mobility) }
 };
 getMobility(mobilityData)
 
 function getProject (i) {
-  for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.projects) }
+  for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.projects) }
 };
 getProject(projectData)
 
@@ -104,7 +104,7 @@ Array.prototype.unique = function () {
 /** *** initialize select2 *******/
 /*******************************************/
 
-$('#genreSearchBox').select2()
+
 $('#authorSearchBox').select2()
 $('#keywordSearchBox').select2()
 $('#locationSearchBox').select2()
@@ -332,7 +332,7 @@ $('#projectSearchBox').on('select2:select', function (e) {
       arrayTest(arraySelectors)
 })
 */
-// $(".select2-multiple").on("select2:unselect", function (e) { console.log("select2:unselect", e); });
+ $(".select2-multiple").on("select2:unselect", function (e) { console.log("select2:unselect", e); });
 
 /**
  * Loop through all buttons , validate if they are already in the aray and push the value in master array
@@ -513,9 +513,9 @@ $('#keywordSearchBox').on('change', function (e) {
 
 
 /**
- * 
+ *
  * AUTHORS
- * 
+ *
  */
 $('#authorSearchBox').on('select2:select', function (e) {
         authorsArrays.length = 0

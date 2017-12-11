@@ -42,21 +42,21 @@ function getRandomColor () {
 }
 
 function setGenreStyle() {
-    for (var j = 0; j < group.length; j++) {
+    for (var j = 0; j < mainMarkers.length; j++) {
         (function (layer) {
-            if (layer.feature.properties.story.media_links.media_type === 'pdf') {
+            if (layer.feature.properties.story.media_links[0].media_type === 'pdf') {
                 layer.feature.setStyle({fillColor: 'yellow'})
             }
-            else if (layer.feature.properties.story.media_links.media_type === 'video') {
+            else if (layer.feature.properties.story.media_links[0].media_type === 'video') {
                 layer.feature.setStyle({fillColor: 'red'})
             }
-            else if (layer.feature.properties.story.media_links.media_type === 'audio') {
+            else if (layer.feature.properties.story.media_links[0].media_type === 'audio') {
                 layer.feature.setStyle({fillColor: 'teal'})
             }
-            else if (layer.feature.properties.story.media_links.media_type === 'photo') {
+            else if (layer.feature.properties.story.media_links[0].media_type === 'photo') {
                 layer.feature.setStyle({fillColor: 'purple'})
             }
-            else if (layer.feature.properties.story.media_links.media_type === 'multimedia') {
+            else if (layer.feature.properties.story.media_links[0].media_type === 'multimedia') {
                 layer.feature.setStyle({fillColor: 'green'})
             }
         });
@@ -76,6 +76,7 @@ $(function(){
     $('#dateRangeSliderModal').modal('toggle')
   })
 })
+
 
 /**********************************************/
 
@@ -220,13 +221,14 @@ function getFilterMarkersById (myFilterLayer) {
   filteredGroup.addLayer(filterMarkers).addTo(map) // add the filteredMarkers to the filteredGroup
   map.fitBounds(filterMarkers.getBounds(),{maxZoom:14})//.pad(Math.sqrt(2) / 2)) // fit bounds of the filtered specifici markers
 }
-/*
+
 function style(feature){
+try{
   for(var i = 0; i < 5; i++) {
-      var media_type = feature.properties.story.media_links[0]['media_type']['label']
+      var media_type = feature.properties.story.genre[0].label
       console.log(media_type)
 
-      if (media_type === undefined)
+      if (media_type === null )
           {
               return {
               radius: 8,
@@ -237,6 +239,7 @@ function style(feature){
               fillOpacity: 0.5
           }
       }
+
       else if (media_type === 0) {
           {
               return {
@@ -290,7 +293,78 @@ function style(feature){
           }
       }
     }
-}*/
+}
+catch (e){
+  console.log(e)
+}
+finally {
+  if (media_type === null )
+  {
+    return {
+      radius: 8,
+      fillColor: 'rgba(255,255,255,0)',
+      color: '#ffffff',
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.5
+    }
+  }
+
+  else if (media_type === 0) {
+    {
+      return {
+        radius: 8,
+        fillColor: 'rgba(255,255,255,0)',
+        color: '#ffffff',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.5
+      }}
+  }
+
+  else if (media_type === 'pdf') {
+    return {
+      radius: 8,
+      fillColor: 'green',
+      color: '#ffffff',
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.5
+    }
+  }
+  else if (media_type === 'video') {
+    return {
+      radius: 8,
+      fillColor: 'red',
+      color: '#ffffff',
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.5
+    }
+  }
+  else if (media_type === 'audio') {
+    return {
+      radius: 8,
+      fillColor: 'teal',
+      color: '#ffffff',
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.5
+    }
+  }
+  else if (media_type === 'photo') {
+    return {
+      radius: 8,
+      fillColor: 'purple',
+      color: '#ffffff',
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.5
+    }
+  }
+}
+
+}
 
 /**
 * function that display the main markers
@@ -309,7 +383,7 @@ function getMainMarkers () {
 // Display main markers as CircleMarkers
     pointToLayer: function (feature, latlng) {
       //var label = String(feature.properties.story.id)
-      return L.circleMarker(latlng)
+      return L.circleMarker(latlng,style(feature))
       //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
     },
     onEachFeature: onEachFeature
@@ -690,7 +764,25 @@ function modalPopulate (feature, layer) {
    // return tagsList.join(', ').split(',')
   }
 
+  var videoFrame = '<iframe class="mx-auto mt-4 col-sm-12 col-md-10" src="'+feature.properties.story.media_links[0].link+'" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
+  var photoFrame = '<a class="mx-auto" data-flickr-embed="true" data-header="true" data-footer="true"  href="https://www.flickr.com/photos/janlupus/albums/72157625141133435" title="Bikes"><img class="mx-auto" src="'+feature.properties.story.media_links[0].link+'" width="500" height="280" alt="Bikes"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>'
+  var audioFrame = '<iframe class="mx-auto" id="modalframe" width="500" height="280" frameborder="0" src="'+feature.properties.story.media_links[0].link+'"&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>'
 
+  var mediaFrameModal = function (){
+    /*for(var i  ; i < feature.properties.story.media_links.length; i++){
+
+      if (feature.properties.story.media_links.length > 1){
+        console.log(feature.properties.story.media_links.length)
+         return '<iframe class="mx-auto" id="modalframe" width="500" height="280" frameborder="0" src="'+feature.properties.story.media_links[i].link+'"&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>'
+
+      }
+      else {
+        console.log(feature.properties.story.media_links.length)
+        return '<iframe class="mx-auto mt-4 col-sm-12 col-md-10" src="'+feature.properties.story.media_links[i].link+'" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
+      }
+    }*/
+    return feature.properties.media
+  }
 
 
 
@@ -760,7 +852,7 @@ finally {
 
 try {
   var kwPills = $('<div></div>')
-  var articleKeyWord = $('<span id="tag" class="badge badge-pill badge-primary">'+keyWordsModal()+'</span>')
+  var articleKeyWord = $('<script>$(".badgeRdColor").css("background-color", "rgb(35,195,237)")</script><span id="tag" class="badge badge-pill badgeRdColor">'+keyWordsModal()+'</span>')
     }
 
   catch(e) {
@@ -768,12 +860,13 @@ try {
   }
   finally {
   for(var i =0 ; i < feature.properties.story.tags.length; i++){
-    kwPills.append($('<span id="tag'+i+'" class="badge badge-pill badge-primary">'+keyWordsModal(i)+'</span>'))
+
+    kwPills.append($('<script>$(".badgeRdColor").css("background-color", "rgb(35,195,237)")</script><span id="tag'+i+'" class="badge badge-pill badgeRdColor">'+keyWordsModal(i)+'</span>'))
   }
 }
 
 try{
-  var mainImg =$('<img class="img-fluid d-block" src="'+feature.properties.story.thumbnail+'">')
+  var mainImg =$('<img class="img-fluid d-block align-item-center mr-auto ml-auto" src="'+feature.properties.story.thumbnail+'">')
 }
 catch(e){
     console.log(e)
@@ -795,24 +888,19 @@ finally {
 
 try {
 //  var sections = $('<div></div>')
-  //for(var i  ; i < filterMarkers.getLayers().length; i++) {
-    var articleSection = $('<section id=' + feature.properties.order + '>' +
-      '          <div class="col-md-10 col-lg-10 ml-4">' +
-
+  //for(var i =0 ; i < filterMarkers.getLayers().length; i++) {
+    var articleSection = $('<section id=' + feature.properties.order + 'class="col-md-10 col-lg-10 mx-auto">' +
+      '          <div class="col-md-10 col-lg-10 mx-auto">' +
       '            <span id="elementNumber"> <h4>' + feature.properties['title'] + '</h4> </span>' +
       '          </div>' +
-      '          <div class="col-md-10 col-lg-10 ml-4">' +
+      '          <div class="col-md-10 col-lg-10 mx-auto">' +
       '            <span> <h5>' + feature.properties['date'] + ' | ' + feature.properties['date'] + ' </h5>  </span>' +
       '          </div>' +
-      '        </div>' +
       '        <div class="row">' +
-      '          <iframe class="mx-auto mt-4 col-sm-12 col-md-10" src="https://player.vimeo.com/video/231561016" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>' +
-      '        </div>' +
-      '        <div class="row">' +
-      '          <div class="col-md-10 col-lg-10  mx-auto d-inline-block mt-2 pt-2 text-justify">' +
-      '                      <span> <p>  ' + feature.properties['description'] + ' </p> </span>' +
-      '          </div>' +
-      '        <hr></section>')
+      '<div class="col-md-9 col-lg-9 mx-auto">'+
+      mediaFrameModal() +
+      '       <span class="text-justify text-center">  ' + feature.properties['description'] + ' </span>' +
+      '        </div><hr></section>')
    // sections.append(articleSection)
   }
 //}
@@ -822,17 +910,6 @@ catch(e) {
 finally{
   articleSection
 }
-
-
-/*
-    var articleEnd = $('<!-- fin modal body-->' +
-      '       </article> </div>' +
-      '    </div>' +
-      '  </div>' +
-      '  </div>')
-*/
-
-
 
   $('#articles').append(articleSection)
 
@@ -871,7 +948,7 @@ function setId (newId) {
       return false
     }
     else if (String(layer.feature.properties['order']) === newId) {
-      map.flyTo([layer.feature.geometry.coordinates[1], layer.feature.geometry.coordinates[0]], 18)
+      map.flyTo([layer.feature.geometry.coordinates[1], layer.feature.geometry.coordinates[0]], 15)
     }
   })
           // highlight the current section

@@ -1,4 +1,3 @@
-
 /**********************************************/
 // Create a new date from a string, return as a timestamp.
 function timeStamp (str) {
@@ -17,8 +16,8 @@ function formatDate (date) {
   return date.getDate() + '-' +
     // weekdays[date.getDay()] + ", " +
 
-        months[date.getMonth()] + '-' +
-        date.getFullYear()
+    months[date.getMonth()] + '-' +
+    date.getFullYear()
 }
 
 function toFormat (v) {
@@ -29,10 +28,10 @@ var dateSlider = document.getElementById('slider-date')
 noUiSlider.create(dateSlider, {
 // Create two timestamps to define a range.
   connect: true,
-	  start: [ timeStamp('2017'), timeStamp('2018') ],
+  start: [ timeStamp('2017'), timeStamp('2018') ],
   range: {
-		// Starting at 500, step the value by 500,
-		// until 4000 is reached. From there, step by 1000.
+    // Starting at 500, step the value by 500,
+    // until 4000 is reached. From there, step by 1000.
     'min': timeStamp('0000'),
     '10%': [ timeStamp('2017'), 7 * 24 * 60 * 60 * 1000 ],
     '80%': [ timeStamp('2018'), 7 * 24 * 60 * 60 * 1000 ],
@@ -52,15 +51,15 @@ function sp (event) { event.stopPropagation() }
 
 function makeTT (i, slider) {
   var tooltip = document.createElement('div'),
-  		input = document.createElement('input')
+    input = document.createElement('input')
 
-	// Add the input to the tooltip
+  // Add the input to the tooltip
   tooltip.className = 'noUi-tooltip'
   tooltip.appendChild(input)
 
   // On change, set the slider
   input.addEventListener('change', function () {
-  	var values = []
+    var values = []
     var toNumber = timeStamp(this.value)
     values[i] = toNumber
     slider.noUiSlider.set(values)
@@ -77,8 +76,12 @@ function makeTT (i, slider) {
 
   return input
 }
+
 // An 0/1 indexed array of input elements
 var tooltipInputs = [makeTT(0, dateSlider), makeTT(1, dateSlider)]
 
-/* updateJSON function from timeslider is located in filter.js*/
-
+// When the slider changes, update the tooltip
+dateSlider.noUiSlider.on('update', function (values, handle) {
+  console.log(values[handle])
+  tooltipInputs[handle].value = values[handle]
+})

@@ -108,6 +108,7 @@ height: 80px !important;
 /*****************************************************************************/
 
 /*******************  LIST DE TITRES DYNAMIQUE ************************/
+
 #arraySelectors{
   background-color: #F7F7F7 !important;
   border-radius: 0px !important;
@@ -115,9 +116,11 @@ height: 80px !important;
   padding-bottom: 0 !important;
   max-height: 99%;
   display: block;
+    z-index: 0;
 }
 
 .list-group-item{
+    z-index: 1;
   border-color: transparent !important;
   border-radius: 0px !important;
   margin: 0px !important;
@@ -126,6 +129,7 @@ height: 80px !important;
 }
 
 .text_info{
+    z-index: 300;
   color: black!important;
   display:inline-block;
   width:90%;
@@ -649,8 +653,8 @@ a {
 
 
 #articles{
-    max-height: 56%;
-    height: 56%;
+    max-height: 200%;
+    height: 200%;
     overflow-y:scroll;
 }
 

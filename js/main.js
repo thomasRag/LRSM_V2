@@ -100,6 +100,7 @@ function openModal () {
  */
 function closeModal(){
   $('#panelCloseButton').click(function(){
+    $('#articles').empty()
     $("#recitInfoPanel").animate({left: "-1000px"})
     $("#recitInfoPanel").addClass('modalActive')
     getMainMarkers()
@@ -172,13 +173,16 @@ map.on('moveend ', function () {
    * @returns {*[array]}
    */
   for (var i = 0; i < myInboundsList.length; i++) {
-    var liContainers = $('<li class="list-group-item col-md-12"></li>')
-    var aContainers = $('<a href="#" class="text_info" value="'+myInboundsList[i]+'"></a>')
-    aContainers.append(myInboundsList[i])
+    var liContainers = $('<li id="" class="list-group-item col-md-12"></li>')
+    var aContainers = $('<a href="javascript:getAuthorName()" class="text_info"><span id="'+i+'" class="text_info">'+myInboundsList[i]+'</span></a>')
+    //var spanContainer =$('<button id="" class="text_info btn btn-default">'+myInboundsList[i]+'</button>')
     liContainers.append(aContainers)
     $('#arraySelectors').append(liContainers)
   }
 })
+
+
+
 
 /**
 * function that filter the mainMarkers layer on click
@@ -214,7 +218,7 @@ function getFilterMarkersById (myFilterLayer) {
 
   group.clearLayers() // remove the main markers
   filteredGroup.addLayer(filterMarkers).addTo(map) // add the filteredMarkers to the filteredGroup
-  map.fitBounds(filterMarkers.getBounds())//.pad(Math.sqrt(2) / 2)) // fit bounds of the filtered specifici markers
+  map.fitBounds(filterMarkers.getBounds(),{maxZoom:14})//.pad(Math.sqrt(2) / 2)) // fit bounds of the filtered specifici markers
 }
 /*
 function style(feature){
@@ -658,14 +662,15 @@ function modalPopulate (feature, layer) {
       //console.log(feature.properties.story.authors.length)
       if (feature.properties.story.collaborators.length > 1){
         collaboratorsList.push(feature.properties.story.collaborators[i].label)
-        //console.log(authorsList)
+
       }
       else {
         return feature.properties.story.collaborators[0].label
       }
+      return collaboratorsList.join(', <br>')
     }
     // console.log(authorsList.join(', '))
-    return collaboratorsList.join(', <br>')
+
   }
 
   var keyWordsModal = function(i){
@@ -674,6 +679,7 @@ function modalPopulate (feature, layer) {
       //console.log(feature.properties.story.authors.length)
       if (feature.properties.story.tags.length > 1){
         tagsList.push(feature.properties.story.tags[i].label)
+        return tagsList.join(', ').split(',')
         //console.log(authorsList)
       }
       else {
@@ -681,8 +687,12 @@ function modalPopulate (feature, layer) {
       }
     }
     // console.log(authorsList.join(', '))
-    return tagsList.join(', ').split(',')
+   // return tagsList.join(', ').split(',')
   }
+
+
+
+
 
 try {
       var articleTitle = $('<h2 class="pt-0" id="articleTitle">' + feature.properties.story.title + '</h2>')
@@ -749,7 +759,7 @@ finally {
 }
 
 try {
-  var test = $('<div></div>')
+  var kwPills = $('<div></div>')
   var articleKeyWord = $('<span id="tag" class="badge badge-pill badge-primary">'+keyWordsModal()+'</span>')
     }
 
@@ -758,18 +768,41 @@ try {
   }
   finally {
   for(var i =0 ; i < feature.properties.story.tags.length; i++){
-    test.append($('<span id="tag'+i+'" class="badge badge-pill badge-primary">'+keyWordsModal(i)+'</span>'))
+    kwPills.append($('<span id="tag'+i+'" class="badge badge-pill badge-primary">'+keyWordsModal(i)+'</span>'))
   }
 }
 
-/*
-  var articleSection = $('' +
-      '<section id='+feature.properties['order']+'><div class="row chapter">' +
+try{
+  var mainImg =$('<img class="img-fluid d-block" src="'+feature.properties.story.thumbnail+'">')
+}
+catch(e){
+    console.log(e)
+}
+finally {
+    mainImg
+  }
+
+  try{
+    var mainDescription =$('<p>'+feature.properties.story.text+'</p>')
+  }
+  catch(e){
+    console.log(e)
+  }
+  finally {
+    mainDescription
+  }
+
+
+try {
+//  var sections = $('<div></div>')
+  //for(var i  ; i < filterMarkers.getLayers().length; i++) {
+    var articleSection = $('<section id=' + feature.properties.order + '>' +
       '          <div class="col-md-10 col-lg-10 ml-4">' +
+
       '            <span id="elementNumber"> <h4>' + feature.properties['title'] + '</h4> </span>' +
       '          </div>' +
       '          <div class="col-md-10 col-lg-10 ml-4">' +
-      '            <span> <h5>' + feature.properties['date']+'|'+ feature.properties['date'] + ' </h5>  </span>' +
+      '            <span> <h5>' + feature.properties['date'] + ' | ' + feature.properties['date'] + ' </h5>  </span>' +
       '          </div>' +
       '        </div>' +
       '        <div class="row">' +
@@ -777,20 +810,36 @@ try {
       '        </div>' +
       '        <div class="row">' +
       '          <div class="col-md-10 col-lg-10  mx-auto d-inline-block mt-2 pt-2 text-justify">' +
-      '                      <span> <p>  '+ feature.properties.story['text'] + ' </p> </span>' +
-      '          </div> </div>' +
+      '                      <span> <p>  ' + feature.properties['description'] + ' </p> </span>' +
+      '          </div>' +
       '        <hr></section>')
+   // sections.append(articleSection)
+  }
+//}
+catch(e) {
+  console.log(e)
+}
+finally{
+  articleSection
+}
 
 
+/*
     var articleEnd = $('<!-- fin modal body-->' +
       '       </article> </div>' +
       '    </div>' +
       '  </div>' +
-      '  </div>')*/
+      '  </div>')
+*/
 
 
 
-  $('#articleKeyWord').empty().html(test)
+  $('#articles').append(articleSection)
+
+  $('#mainDescription').empty().html(mainDescription)
+  $('#mainImg').empty().html(mainImg)
+
+  $('#articleKeyWord').empty().html(kwPills)
   $('#articleDate').empty().html(articleDate)
   $('#articleProject').empty().html(articleProject)
   $('#articleLocation').empty().html(articleLocation)

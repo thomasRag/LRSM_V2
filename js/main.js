@@ -5,7 +5,7 @@ const $ = window.$
 var L
 var map = L.map('map', { zoomControl: false }).setView([45.5314, -73.6750], 8)
 new L.Control.Zoom({ position: 'topright' }).addTo(map)
-L.tileLayer('https://api.mapbox.com/styles/v1/clementg123/cjamwpz34e0ol2rlnix8smzuh/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xlbWVudGcxMjMiLCJhIjoiY2o2M3ZhODh3MWxwNDJxbnJnaGZxcWNoMiJ9.YroDniTcealGFJgHtQ2hDg', {
+L.tileLayer('https://api.mapbox.com/styles/v1/clementg123/cjb338httt3cz2spo5i4hcrvh/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xlbWVudGcxMjMiLCJhIjoiY2o2M3ZhODh3MWxwNDJxbnJnaGZxcWNoMiJ9.YroDniTcealGFJgHtQ2hDg', {
   maxZoom: 22
  }).addTo(map)
 
@@ -42,21 +42,21 @@ function getRandomColor () {
 }
 
 function setGenreStyle() {
-    for (var j = 0; j < mainMarkers.length; j++) {
+    for (var j = 0; j < group.length; j++) {
         (function (layer) {
-            if (layer.feature.properties.story.media_links[0].media_type === 'pdf') {
+            if (layer.feature.properties.story.media_links.media_type === 'pdf') {
                 layer.feature.setStyle({fillColor: 'yellow'})
             }
-            else if (layer.feature.properties.story.media_links[0].media_type === 'video') {
+            else if (layer.feature.properties.story.media_links.media_type === 'video') {
                 layer.feature.setStyle({fillColor: 'red'})
             }
-            else if (layer.feature.properties.story.media_links[0].media_type === 'audio') {
+            else if (layer.feature.properties.story.media_links.media_type === 'audio') {
                 layer.feature.setStyle({fillColor: 'teal'})
             }
-            else if (layer.feature.properties.story.media_links[0].media_type === 'photo') {
+            else if (layer.feature.properties.story.media_links.media_type === 'photo') {
                 layer.feature.setStyle({fillColor: 'purple'})
             }
-            else if (layer.feature.properties.story.media_links[0].media_type === 'multimedia') {
+            else if (layer.feature.properties.story.media_links.media_type === 'multimedia') {
                 layer.feature.setStyle({fillColor: 'green'})
             }
         });
@@ -77,6 +77,19 @@ $(function(){
   })
 })
 
+/**
+ * function that listen to the Mobility buttons and push values to its specific array
+ * @type {Array}
+ */
+$('.btn-rounded').click(function () {
+  if ($(this).hasClass('btn-active')) {
+    $(this).removeClass('btn-active')
+  } else {
+    $(this).addClass('btn-active')
+  }
+})
+
+
 
 /**********************************************/
 
@@ -85,13 +98,13 @@ $(function(){
 */
 function openModal () {
   if ($("#recitInfoPanel").hasClass('modalInactive')){
-    console.log('je suis inactif')
+
     $("#recitInfoPanel").animate({left: "0px"},0)
     $("#recitInfoPanel").removeClass('modalActive')
     $("#map").width('55%')}
   else{
-    console.log('je suis actif')
-  $("#recitInfoPanel").animate({left: "-1000px"},0)
+
+  $("#recitInfoPanel").animate({left: "-800px"},0)
   $("#recitInfoPanel").addClass('modalActive')
   $("#map").width('85%')}
   map.closePopup()
@@ -102,7 +115,7 @@ function openModal () {
 function closeModal(){
   $('#panelCloseButton').click(function(){
     $('#articles').empty()
-    $("#recitInfoPanel").animate({left: "-1000px"})
+    $("#recitInfoPanel").animate({left: "-800px"})
     $("#recitInfoPanel").addClass('modalActive')
     getMainMarkers()
     $("#map").width('85%')}
@@ -221,14 +234,12 @@ function getFilterMarkersById (myFilterLayer) {
   filteredGroup.addLayer(filterMarkers).addTo(map) // add the filteredMarkers to the filteredGroup
   map.fitBounds(filterMarkers.getBounds(),{maxZoom:14})//.pad(Math.sqrt(2) / 2)) // fit bounds of the filtered specifici markers
 }
-
+/*
 function style(feature){
-try{
   for(var i = 0; i < 5; i++) {
-      var media_type = feature.properties.story.genre[0].label
+      var media_type = feature.properties.story.media_links[0]['media_type']['label']
       console.log(media_type)
-
-      if (media_type === null )
+      if (media_type == undefined)
           {
               return {
               radius: 8,
@@ -294,77 +305,9 @@ try{
       }
     }
 }
-catch (e){
-  console.log(e)
-}
-finally {
-  if (media_type === null )
-  {
-    return {
-      radius: 8,
-      fillColor: 'rgba(255,255,255,0)',
-      color: '#ffffff',
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.5
-    }
-  }
+*/
 
-  else if (media_type === 0) {
-    {
-      return {
-        radius: 8,
-        fillColor: 'rgba(255,255,255,0)',
-        color: '#ffffff',
-        weight: 1,
-        opacity: 1,
-        fillOpacity: 0.5
-      }}
-  }
 
-  else if (media_type === 'pdf') {
-    return {
-      radius: 8,
-      fillColor: 'green',
-      color: '#ffffff',
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.5
-    }
-  }
-  else if (media_type === 'video') {
-    return {
-      radius: 8,
-      fillColor: 'red',
-      color: '#ffffff',
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.5
-    }
-  }
-  else if (media_type === 'audio') {
-    return {
-      radius: 8,
-      fillColor: 'teal',
-      color: '#ffffff',
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.5
-    }
-  }
-  else if (media_type === 'photo') {
-    return {
-      radius: 8,
-      fillColor: 'purple',
-      color: '#ffffff',
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.5
-    }
-  }
-}
-
-}
 
 /**
 * function that display the main markers
@@ -380,10 +323,17 @@ function getMainMarkers () {
       //console.log(feature)
       if (feature.properties.main === true) { return true }
     },
+
 // Display main markers as CircleMarkers
     pointToLayer: function (feature, latlng) {
+
+     var icon = new  L.icon.pulse({iconSize:[12,12],color : 'lightgrey' ,heartbeat:Math.floor(Math.random() * 6) + 1});
+
+
+
+
       //var label = String(feature.properties.story.id)
-      return L.circleMarker(latlng,style(feature))
+      return L.marker(latlng, {icon: icon})
       //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
     },
     onEachFeature: onEachFeature
@@ -395,6 +345,28 @@ function getMainMarkers () {
 
 $(getMainMarkers ())
 
+mainMarkers.on('add', function(){
+  var myIcon = document.querySelector('.my-icon')
+  setTimeout(function(){
+    myIcon.style.width = '50px'
+    myIcon.style.height = '50px'
+    myIcon.style.marginLeft = '-25px'
+    myIcon.style.marginTop = '-25px'
+  }, 1000)
+
+  setTimeout(function(){
+    myIcon.style.borderRadius = '10%'
+    myIcon.style.backgroundColor = 'skyblue'
+  }, 2000)
+
+  setTimeout(function(){
+    myIcon.style.width = '30px'
+    myIcon.style.height = '30px'
+    myIcon.style.borderRadius = '50%'
+    myIcon.style.marginLeft = '-15px'
+    myIcon.style.marginTop = '-15px'
+  })
+})
 /**
  * Functions that read the different arrays in the jsonFilter and return earch of the keys for the specific object.
  * @returns {string}
@@ -429,34 +401,23 @@ function authorsSearch(){
 }
 
 function genreSearch(){
-
-    if (jsonFilter.story.genre.length === undefined){
-        return false
-    }
-    else if (jsonFilter.story.genre.length === 0){
-        return false
-}
-    for (var j = 0; j < jsonFilter.story.genre[0].length; i++) {
-        if (jsonFilter.story.genre[0][j] === undefined){
-            return false
-        }
-        else {
-
-            return jsonFilter.story.genre[0][j]
-        }}
+    for (var j = 0; j < jsonFilter.genre.length; i++) {
+      console.log(jsonFilter.genre)
+      return jsonFilter.genre[j]
+  }
 }
 
 function mobilitySearch(){
-    if (jsonFilter.story.mobility[0].length === undefined){
+    if (jsonFilter.mobility.length === undefined){
         return false
     }
-    for (var j = 0; j < jsonFilter.mobility[0].length; i++) {
-        if (jsonFilter.story.mobility[0][j] === undefined){
+    for (var j = 0; j < jsonFilter.mobility.length; i++) {
+        if (jsonFilter.mobility[j] === undefined){
             return false
         }
         else {
 
-            return jsonFilter.story.mobility[0][j]
+            return jsonFilter.mobility[j]
         }}
 }
 
@@ -522,14 +483,14 @@ function getGenreMarkers () {
             for (var i = 0; i < featuresCollection.features.length; i++) {
                 //A finir author = boucle sur le nombre des authors dans le récit (authors pluriel)
                 if (feature.properties.main === true
-                    && feature.properties.story.genres[0].label === genreSearch()
+                    && feature.properties.story.category === genreSearch()
                 )
                 {
                     return true
                 }}
         },
         pointToLayer: function (feature, latlng) {
-            var label = String(feature.properties.story.genres[0].label)
+            var label = String(feature.properties.story.category)
             return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
         },
         onEachFeature: modalPopulate
@@ -549,7 +510,7 @@ function getMobiltyMarkers () {
             for (var i = 0; i < featuresCollection.features.length; i++) {
                 //A finir author = boucle sur le nombre des authors dans le récit (authors pluriel)
                 if (feature.properties.main === true
-                    && feature.properties.story.mobiltys[0].label === mobiltySearch()
+                    && feature.properties.story.mobility === mobilitySearch()
                 )
                 {
                     return true
@@ -557,7 +518,7 @@ function getMobiltyMarkers () {
         },
 
         pointToLayer: function (feature, latlng) {
-            var label = String(feature.properties.story.mobiltys[0].label)
+            var label = String(feature.properties.story.mobility)
             return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
         },
         onEachFeature: modalPopulate

@@ -22,23 +22,12 @@ var titreData = []
 var mobilityData = []
 var projectData = []
 
-/*
+
 function getGenre (i) {
 
-  for (var j = 0; j < featuresCollection.features.length; j++) {
-    try {
-      var test = i.push(featuresCollection.features[j].properties.story.genres[0].label)
-    }
-    catch(err) {
-      console.log(err.message)
-      console.log(featuresCollection.features[j].properties.story.id)
-        }
-        finally {
-      return test
-        }
-    }
+  for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.category) }
 };
-getGenre(genreData)*/
+getGenre(genreData)
 
 function getAuthor (i) {
   for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.authors[0].label) }
@@ -109,35 +98,11 @@ $('#authorSearchBox').select2()
 $('#keywordSearchBox').select2()
 $('#locationSearchBox').select2()
 $('#titreSearchBox').select2()
-$('#mobilitySearchBox').select2()
 $('#projectSearchBox').select2()
 /** * initializing select2 searchbox data ***/
 /*******************************************/
 
 // var selectedItems = []
-
-function searchBoxGenre () {
-  $('#genreSearchBox').select2(
-
-    {
-      placeholder: 'Filtrez par titre',
-      multiple: true,
-      allowClear: true,
-      data: genreData.unique()
-    }
-
-   )
-};
-searchBoxGenre()
-
-  /// //////////////////////////////////////////////////////////*/
-/* POPULATE THE SELECT BOX WITH ALL THE VALUES
-  var genreOptions = $("#genreSearchBox option");
-  genreOptions.each(function() {
-      selectedItems.push( $(this).val() );
-  });
-
-  $("#genreSearchBox").val(selectedItems).trigger("change"); */
 
 function searchBoxAuthor () {
   $('#authorSearchBox').select2(
@@ -242,31 +207,6 @@ searchBoxTitre()
 
 /// //////////////////////////////////////////////////////////////////////
 
-function searchBoxMobility () {
-  $('#mobilitySearchBox').select2(
-
-    {
-      placeholder: 'Filtrez par mobilité',
-      multiple: true,
-      allowClear: true,
-      data: mobilityData.unique()
-    }
-
-   )
-};
-
-searchBoxMobility()
-/* POPULATE THE SELECT BOX WITH ALL THE VALUES
-  var mobilityOptions = $("#mobilitySearchBox option");
-  mobilityOptions.each(function() {
-      selectedItems.push( $(this).val() );
-  });
-
-  $("#mobilitySearchBox").val(selectedItems).trigger("change"); */
-/// //////////////////////////////////////////////////////////////////////
-
-/// //////////////////////////////////////////////////////////////////////
-
 function searchBoxProject () {
   $('#projectSearchBox').select2(
 
@@ -277,7 +217,7 @@ function searchBoxProject () {
       data: projectData.unique()
     }
 
-   )
+  )
 };
 
 searchBoxProject()
@@ -288,7 +228,7 @@ searchBoxProject()
       selectedItems.push( $(this).val() );
   });
 
-  $("#projectSearchBox").val(selectedItems).trigger("change"); */
+  $("#projectSearchBox").val(selectedItems).trigger("change");*/
 
 /// //////////////////////////////////////////////////////////////////////
 
@@ -332,7 +272,7 @@ $('#projectSearchBox').on('select2:select', function (e) {
       arrayTest(arraySelectors)
 })
 */
- $(".select2-multiple").on("select2:unselect", function (e) { console.log("select2:unselect", e); });
+ //$(".select2-multiple").on("select2:unselect", function (e) { console.log("select2:unselect", e); });
 
 /**
  * Loop through all buttons , validate if they are already in the aray and push the value in master array
@@ -389,7 +329,7 @@ $(function(){
             $('#locationFilterIcon').addClass("d-none")
         }
     })
-    $("#projectSearchBoxSearchBox").change(function() {
+    $("#projectSearchBox").change(function() {
         if ($(this).val() != "") {
             $('#projectsFilterIcon').removeClass("d-none")
             $('#projectsFilterIcon').addClass("d-inline")
@@ -411,6 +351,12 @@ $(function(){
     })
 })
 
+
+/**
+ * Listen to all the select2 boxes, if all empty , getMainMarkers
+ * @type {Array}
+ */
+/*
 $(function (){
     $(".select2-multiple").change(function(){
         if(
@@ -432,7 +378,11 @@ $(function (){
         }
 
     })
-})
+})*/
+/**
+ *function that remove duplicate in the array
+ *
+ */
 
 function arrayRemover(array, element) {
     const index = array.indexOf(element);
@@ -527,7 +477,6 @@ $('#authorSearchBox').on('select2:unselecting', function (e) {
     var el = $(e.currentTarget).val()
 
 
-
     if (el.length === undefined){
         authorsGroup.clearLayers()
     }
@@ -560,17 +509,7 @@ $('#authorSearchBox').on('select2:unselect', function (e) {
     }
 })
 
-/**
- * function that listen to the Mobility buttons and push values to its specific array
- * @type {Array}
- */
-$('.btn-rounded').click(function () {
-    if ($(this).hasClass('btn-active')) {
-        $(this).removeClass('btn-active')
-    } else {
-        $(this).addClass('btn-active')
-    }
-})
+
 
 function mobilityArray(e){
     var firedValue = e.val();
@@ -579,6 +518,7 @@ function mobilityArray(e){
         $('#mobilityFilterIcon').removeClass("d-none")
         $('#mobilityFilterIcon').addClass("d-inline")
         //arrayTest(mobilityArrays)
+      console.log(jsonFilter)
     }
     else{
         //remove the existing occurence of the value in the master array
@@ -588,7 +528,7 @@ function mobilityArray(e){
         }
         mobilityArrays.length = j;
         updateJSON(mobilityArrays,'mobility')
-        getMobiltyMarkers ()
+        //getMobiltyMarkers ()
     }
 }
 
@@ -626,23 +566,21 @@ $('#mobilityButtons > .btn-filter > .btn-rounded').click(function() {
  * @type {Array}
  */
 function genreArray(e){
-    var firedValue = e.val();
-    if(e.hasClass('btn-active')){
-        genreArrays.push(firedValue)
-        $('#genreFilterIcon').removeClass("d-none")
-        $('#genreFilterIcon').addClass("d-inline")
+  var fired_button = e.val();
+  if(e.hasClass('btn-active')){
+    genreArrays.push(fired_button)
+    $('#genreFilterIcon').removeClass("d-none")
+    $('#genreFilterIcon').addClass("d-inline")
+  }
+  else{
+    //remove the existing occurence of the value in the master array
+    for (var i = 0, j = 0; i < genreArrays.length; i++) {
+      if (genreArrays[i] != fired_button)
+        genreArrays[j++] = genreArrays[i];
     }
-    else{
-        //remove the existing occurence of the value in the master array
-        for (var i = 0, j = 0; i < genreArrays.length; i++) {
-            if (genreArrays[i] != firedValue)
-                genreArrays[j++] = genreArrays[i];
-        }
-        genreArrays.length = j;
-        updateJSON(genreArrays,'genre')
-        console.log(jsonFilter)
-        getGenreMarkers ()
-    }
+    genreArrays.length = j;
+  }
+  console.log(jsonFilter)
 }
 
 /**

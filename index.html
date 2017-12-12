@@ -6,6 +6,7 @@
   <meta property="og:image" content="http://ia.media-imdb.com/rock.jpg"/>
   <title>Le Laboratoire des Récits du Soi Mobile</title>
   <!-- Latest Jquery -->
+  <link rel="stylesheet" href="src/leaflet-icon-pulse-master/dist/L.Icon.Pulse.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css">
   <!-- Latest Bootstrap -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
@@ -24,6 +25,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.5/MarkerCluster.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.5/MarkerCluster.Default.css" />
   <link rel="stylesheet" id="themeCSS" href="src/nouislider.css">
+
+
 </head>
 <body>
 
@@ -51,22 +54,6 @@
             </div>
             <div id="accordion" role="tablist">
               <div class="card">
-                <div class="card-header col-12" role="tab" id="headingOne">
-                  <h5 class="mb-0 ml-0 pl-0 d-inline-block col-sm-10 align-left">
-                    <a class="collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                      Titre</a>
-                  </h5>
-                  <div class="d-none" id="titleFilterIcon">
-                    <i class="fa fa-filter d-inline-block col-sm-1 mr-0 align-right" aria-hidden="true"></i>
-                  </div>
-                </div>
-                <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-                  <div class="card-body">
-                    <select id="titreSearchBox" class="form-control select2-multiple" multiple="multiple"></select>
-                  </div>
-                </div>
-              </div>
-              <div class="card">
                 <div class="card-header col-12" role="tab" id="headingTwo">
                   <h5 class="mb-0 ml-0 pl-0 d-inline-block col-sm-10 align-left">
                     <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -91,7 +78,7 @@
                           </button>
                         </div>
                         <div  class="btn-filter">
-                          <button id="multimediaButtons" class=" btn btn-rounded" value="multimedia" data-toggle="tooltip" data-placement="top" title="Multimédia">
+                          <button id="multimediaButtons" class=" btn btn-rounded" value="multimédia" data-toggle="tooltip" data-placement="top" title="Multimédia">
                             <img src="img/LRSM-Multimédia.svg" class="rounded" width="55"/>
                           </button>
                         </div>
@@ -101,7 +88,7 @@
                           </button>
                         </div>
                         <div class="btn-filter">
-                          <button id="ecritButton" class=" btn btn-rounded" value="ecrit" data-toggle="tooltip" data-placement="top" title="Écrit">
+                          <button id="ecritButton" class=" btn btn-rounded" value="écrit" data-toggle="tooltip" data-placement="top" title="Écrit">
                             <img src="img/LRSM-Écrit.svg" class="rounded" width="55"/>
                           </button>
                         </div>
@@ -112,6 +99,22 @@
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header col-12" role="tab" id="headingOne">
+                  <h5 class="mb-0 ml-0 pl-0 d-inline-block col-sm-10 align-left">
+                    <a class="collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      Titre</a>
+                  </h5>
+                  <div class="d-none" id="titleFilterIcon">
+                    <i class="fa fa-filter d-inline-block col-sm-1 mr-0 align-right" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    <select id="titreSearchBox" class="form-control select2-multiple" multiple="multiple"></select>
                   </div>
                 </div>
               </div>
@@ -271,87 +274,87 @@
 <!-- end of main-->
 <!-- top navbar -->
 <div id="topNavBar">
-<div id="navbarBrands" class="navbar navbar-expand-md navbar-dark fixed-top col-sm-2 pt-0 mt-0 pr-0 mt-0 mb-0 mr-0 ml-0">
-  <div id="logo"class="navbar-brand" href="#">
-    <img src="img/LOGO-LRSM-INVERSE.svg" width="auto" height="70" class="d-inline-block align-left" alt="">
+  <div id="navbarBrands" class="navbar navbar-expand-md navbar-dark fixed-top col-sm-2 pt-0 mt-0 pr-0 mt-0 mb-0 mr-0 ml-0">
+    <div id="logo"class="navbar-brand" href="#">
+      <img src="img/LOGO-LRSM-INVERSE.svg" width="auto" height="70" class="d-inline-block align-left" alt="">
+    </div>
+    <div id="logotxt" class="navbar-brand ml-0 mr-0" href="#">
+      <img src="img/LOGO-LRSM-Typo-INVERSE.svg" width="auto" height="70" class="d-inline-block" alt="">
+    </div>
   </div>
-  <div id="logotxt" class="navbar-brand ml-0 mr-0" href="#">
-    <img src="img/LOGO-LRSM-Typo-INVERSE.svg" width="auto" height="70" class="d-inline-block" alt="">
+  <div id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top col-sm-10 pr-0 mt-0 mb-0 mr-0 ml-0 ml-auto">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse col-12 mr-0 text-right" id="navbarsExampleDefault">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item mr-5">
+          <a id="menuLRSM" class="nav-link" href="apropos.html">Le LRSM</a>
+        </li>
+        <li class="nav-item active mr-5  ">
+          <a id="menuCarto" class="nav-link" href="index.html">Ses Cartes
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item mr-5">
+          <a id="menuProjets" class="nav-link" href="projets.html">Ses projets</a>
+        </li>
+        <li class="nav-item mr-5">
+          <a id="menuCorpora" class="nav-link" href="corpora.html">Ses corpus</a>
+        </li>
+      </ul>
+    </div>
+  </div> <div id="submenu" class="navbar-expand-md col-sm-10">
+  <div class="collapse navbar-collapse col-sm-12 pt-1" id="submenuCollapse">
+    <div class="row ml-auto my-auto">
+      <ul id="submenuCarto" class="navbar-nav d-none">
+        <li class="nav-item active mr-5">
+          <a class="nav-link" href="index.html"> Carte des récits <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item mr-5">
+          <a class="nav-link" href="cartedessois.html">Cartes sois</a>
+        </li>
+      </ul>
+
+      <ul id="submenuProjects" class="navbar-nav d-none">
+        <li class="nav-item active mr-5">
+          <a class="nav-link" href="projets.html">En cours <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item mr-5">
+          <a class="nav-link" href="projets.html">Passés</a>
+        </li>
+      </ul>
+
+      <ul id="submenuCorpus" class="navbar-nav d-none">
+        <li class="nav-item active mr-5">
+          <a class="nav-link" href="corpora.html">Théoriques<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item mr-5">
+          <a class="nav-link" href="corpora.html">Littéraires</a>
+        </li>
+        <li class="nav-item mr-5">
+          <a class="nav-link" href="corpora.html">Médiatiques</a>
+        </li>
+      </ul>
+
+      <ul id="submenuLRSM" class="navbar-nav d-none">
+        <li class="nav-item active mr-5">
+          <a class="nav-link" href="apropos.html">À propos<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item mr-5">
+          <a class="nav-link" href="equipeLRSM.html">L'Équipe</a>
+        </li>
+        <li class="nav-item mr-5">
+          <a class="nav-link" href="auteurs.html">Auteurs</a>
+        </li>
+        <li class="nav-item mr-5">
+          <a class="nav-link" href="recits.html">Récits</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
-<div id="navbar" class="navbar navbar-expand-md navbar-dark fixed-top col-sm-10 pr-0 mt-0 mb-0 mr-0 ml-0 ml-auto">
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse col-12 mr-0 text-right" id="navbarsExampleDefault">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active mr-5  ">
-            <a id="menuCarto" class="nav-link" href="index.html">Cartographies
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item mr-5">
-            <a id="menuProjets" class="nav-link" href="projets.html">Ses projets</a>
-          </li>
-          <li class="nav-item mr-5">
-            <a id="menuCorpora" class="nav-link" href="corpora.html">Ses corpus</a>
-          </li>
-          <li class="nav-item mr-5">
-            <a id="menuLRSM" class="nav-link" href="apropos.html">Le LRSM</a>
-          </li>
-        </ul>
-      </div>
-    </div> <div id="submenu" class="navbar-expand-md col-sm-10">
-      <div class="collapse navbar-collapse col-sm-12 pt-1" id="submenuCollapse">
-        <div class="row ml-auto my-auto">
-          <ul id="submenuCarto" class="navbar-nav d-none">
-            <li class="nav-item active mr-5">
-              <a class="nav-link" href="index.html"> Cartographies des récits <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item mr-5">
-              <a class="nav-link" href="javascript:getFilterMarkersByAuthors()">Cartographies des sois</a>
-            </li>
-          </ul>
-
-          <ul id="submenuProjects" class="navbar-nav d-none">
-            <li class="nav-item active mr-5">
-              <a class="nav-link" href="projets.html">En cours <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item mr-5">
-              <a class="nav-link" href="projets.html">Passés</a>
-            </li>
-          </ul>
-
-          <ul id="submenuCorpus" class="navbar-nav d-none">
-            <li class="nav-item active mr-5">
-              <a class="nav-link" href="corpora.html">Théoriques<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item mr-5">
-              <a class="nav-link" href="corpora.html">Littéraires</a>
-            </li>
-            <li class="nav-item mr-5">
-              <a class="nav-link" href="corpora.html">Médiatiques</a>
-            </li>
-          </ul>
-
-          <ul id="submenuLRSM" class="navbar-nav d-none">
-            <li class="nav-item active mr-5">
-              <a class="nav-link" href="apropos.html">À propos<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item mr-5">
-              <a class="nav-link" href="equipeLRSM.html">L'Équipe</a>
-            </li>
-            <li class="nav-item mr-5">
-              <a class="nav-link" href="auteurs.html">Auteurs</a>
-            </li>
-            <li class="nav-item mr-5">
-              <a class="nav-link" href="recits.html">Récits</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
 </div>
 <!-- /. end top navbar -->
 <!--  legend -->
@@ -507,6 +510,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 <script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
+<script src="src/leaflet-icon-pulse-master/dist/L.Icon.Pulse.js" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.5/leaflet.markercluster-src.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.5/leaflet.markercluster.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
@@ -515,11 +519,13 @@
 <script src="src/wNumb.js"></script>
 <script src="js/dateSlider.js"></script>
 <!-- /. Date Range Slider -->
+
 <script src=js/fc3.js type="text/javascript"></script>
-<script type="text/javascript" src="js/filter.js"></script>
 <script src=js/authorsFC.js type="text/javascript"></script>
 <script src="js/authors.js"></script>
+
 <script type="text/javascript" src="js/filter.js"></script>
+<script src=js/fc3.js type="text/javascript"></script>
 <script src="js/main.js"></script>
 
 

@@ -2,324 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac66da2b-85f3-40d3-a07e-9b903eaebc30" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/indexTRON.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/mainTRON.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/.gitignore (1)" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/.gitmodules" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/.gitmodules (1)" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/.idea/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/LICENSE" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/Makefile" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/VERSION" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/VERSION (1)" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/INTRO.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/LICENSE.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/block.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/blocks.frag" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/blocks.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/color/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/color/conversion-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/color/conversion.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/color/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/color/palette-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/color/palette.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/color/tools-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/color/tools.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/elevation/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/elevation/contours-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/elevation/contours.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/elevation/dash-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/elevation/dash.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/elevation/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/elevation/normal-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/elevation/normal.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/elevation/rainbow-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/elevation/rainbow.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/elevation/ramp-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/elevation/ramp.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/elevation/stripes-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/elevation/stripes.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/grain-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/grain.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/grid-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/grid.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/hatch-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/hatch.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/height-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/height.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/imgs/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/imgs/hatch.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/imgs/lut-0000.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/imgs/lut-0001.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/imgs/lut-0002.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/imgs/lut-0003.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/imgs/lut-0004.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/imgs/lut-0005.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/imgs/lut-0006.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/imgs/lut-0007.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/imgs/lut-0008.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/imgs/lut-0009.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/imgs/lut-0010.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/imgs/lut-0011.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/imgs/lut-0012.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/imgs/lut-0013.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/lut-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/lut.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/tv-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/filter/tv.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/functions/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/functions/aastep-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/functions/aastep.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/functions/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/functions/easing-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/functions/easing.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/functions/map-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/functions/map.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/functions/pulse-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/functions/pulse.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/functions/zoom-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/functions/zoom.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/fx/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/fx/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/fx/imgs/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/fx/imgs/sem-sky-0001.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/fx/imgs/sem-sky-0002.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/fx/imgs/sem-sky-0003.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/fx/water-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/fx/water.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/generative/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/generative/caustics-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/generative/caustics.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/generative/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/generative/fbm-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/generative/fbm.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/generative/noise-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/generative/noise.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/generative/random-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/generative/random.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/generative/voronoi-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/generative/voronoi.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/geometry/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/geometry/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/geometry/dynamic-height-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/geometry/dynamic-height.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/geometry/dynamic-width-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/geometry/dynamic-width.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/geometry/matrices-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/geometry/matrices.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/geometry/normal-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/geometry/normal.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/geometry/projections-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/geometry/projections.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/geometry/rotation-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/geometry/rotation.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/geometry/tilt-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/geometry/tilt.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/global.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/chevron-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/chevron.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/dash-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/dash.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/datastream-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/datastream.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/dots-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/dots-glow-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/dots-glow.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/dots.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/glow-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/glow.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/outline-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/outline.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/rainbow-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/rainbow.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/stripes-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/lines/stripes.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/make.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/patterns/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/patterns/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/patterns/dots-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/patterns/dots.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/patterns/grid-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/patterns/grid.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/patterns/stripes-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/patterns/stripes.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/patterns/waves-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/patterns/waves.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/patterns/zigzag-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/patterns/zigzag.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/points/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/points/cross-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/points/cross.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/points/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/points/glow-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/points/glow.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/points/shape-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/points/shape.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/diagonal-dash-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/diagonal-dash.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/diagonal-grid-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/diagonal-grid.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/diagonal-stripes-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/diagonal-stripes.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/dots-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/dots.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/glass-walls-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/glass-walls.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/pixelate-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/pixelate.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/shimmering-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/shimmering.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/stripes-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/stripes.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/windows-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/polygons/windows.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/shapes/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/shapes/circle-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/shapes/circle.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/shapes/cross-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/shapes/cross.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/shapes/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/shapes/digits-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/shapes/digits.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/shapes/polygons-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/shapes/polygons.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/shapes/rect-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/shapes/rect.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/shapes/simplex-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/shapes/simplex.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/shapes/type-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/shapes/type.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/source-elevation.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/source-terrain.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/space/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/space/constant-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/space/constant.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/space/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/space/screen-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/space/screen.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/space/tex-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/space/tex.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/space/tile-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/space/tile.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/space/uz-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/space/uz.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/terrain/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/terrain/base-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/terrain/base.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/terrain/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/terrain/geometry-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/terrain/geometry.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/terrain/lines-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/terrain/lines.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/terrain/polygons-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/terrain/polygons.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/terrain/terrain-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/terrain/terrain.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/texture/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/texture/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/texture/non-repetitive-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/texture/non-repetitive.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/texture/zoom-fade-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/texture/zoom-fade.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/tiling/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/tiling/brick-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/tiling/brick.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/tiling/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/tiling/simplex-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/tiling/simplex.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/tiling/tile-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/tiling/tile.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/tiling/truchet-full.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/tiling/truchet.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/blocks/toc.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/fonts.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/fonts/8XtYtNKEyyZh481XVWfVOrO3LdcAZYWl9Si6vvxL-qU.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/fonts/94ug0rEgQO_WuI_xKJMFc3YhjbSpvc47ee6xR_80Hnw.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/fonts/IkErdnKw9ItVkLeeur9GHfesZW2xOQ-xsNqO47m55DA.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/fonts/Montserrat-Bold.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/fonts/VWXaIPGrUapL_Y2vGs0lKALUuEpTyoUstqEm5AMlJo4.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/fonts/ZA_4ooaF_Dfdn26t_IoQOaCWcynf_cDxXwCLxiixG1c.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/fonts/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/globals.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/images/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/images/museum-sdf.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/images/museum.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/images/sdf.sh" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/images/star-sdf.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/images/star.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/images/station-sdf.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/images/station.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/images/subway-sdf.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/images/subway.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/images/terrain.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/images/terrain2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/images/tron-terrain.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/images/zoo-sdf.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/images/zoo.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/lrsm.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/indexTRON.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/boundaries-labels.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/boundaries.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/buildings-labels.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/buildings.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/earth-labels.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/earth.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/landuse-labels.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/landuse.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/places.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/pois.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/roads-labels.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/roads.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/transit-overlay.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/transit.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/ux-sdk-overlay.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/water-labels.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/water.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/lib/FileSaver.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/lib/dat.gui.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/lib/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/lib/keymaster.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/styles/common.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/styles/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/styles/lines.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/styles/polygons.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/images/desktop.ini" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/images/tron@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-0.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-1.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-10.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-11.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-2.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-3.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-4.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-5.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-6.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-7.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-8.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-9.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/tron-icons.yaml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/tron-style.yaml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
+      <change beforePath="$PROJECT_DIR$/indexTRON.html" afterPath="$PROJECT_DIR$/indexTRON.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -342,7 +25,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="513">
@@ -359,6 +42,16 @@
                 <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indexTRON.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/indexTRON.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="712">
+              <caret line="533" column="24" lean-forward="false" selection-start-line="533" selection-start-column="24" selection-end-line="533" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -429,8 +122,8 @@
       <find>getGenreMarkers</find>
       <find>hasla</find>
       <find>genremarkers</find>
-      <find>nouveauté</find>
       <find>btn</find>
+      <find>nouveauté</find>
     </findStrings>
     <replaceStrings>
       <replace>col-4</replace>
@@ -493,10 +186,10 @@
         <option value="$PROJECT_DIR$/src/L.Icon.Pulse.css" />
         <option value="$PROJECT_DIR$/js/subMenu.js" />
         <option value="$PROJECT_DIR$/js/filter.js" />
-        <option value="$PROJECT_DIR$/indexTRON.html" />
         <option value="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/indexTRON.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/indexTRON.html" />
       </list>
     </option>
   </component>
@@ -671,12 +364,12 @@
       <updated>1511965192348</updated>
       <workItem from="1511965198047" duration="50095000" />
       <workItem from="1512104774871" duration="95250000" />
-      <workItem from="1512481213311" duration="171100000" />
+      <workItem from="1512481213311" duration="171223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="316445000" />
+    <option name="totallyTimeSpent" value="316568000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1346,14 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/indexTRON.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="513" column="25" lean-forward="true" selection-start-line="513" selection-start-column="25" selection-end-line="513" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/mainTRON.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1389,6 +1074,14 @@
             <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indexTRON.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="712">
+          <caret line="533" column="24" lean-forward="false" selection-start-line="533" selection-start-column="24" selection-end-line="533" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>

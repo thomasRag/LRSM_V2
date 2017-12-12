@@ -1,22 +1,12 @@
 (function(window) {
 
-  function getRandomColor () {
-    var letters = '0123456789ABCDEF'.split('')
-    var color = '#'
-    for (var i = 0; i < 6; i++) {
-      color += letters[Math.round(Math.random() * 15.66)]
-    }
-    return color
-  }
-
-
     L.Icon.Pulse = L.DivIcon.extend({
 
         options: {
             className: 'pulse-icon',
             iconSize: [10,10],
-            fillColor: getRandomColor (),
-            opacity: 0.8,
+            fillColor: 'blue',
+            fillOpacity: 0.5,
             color: 'yellow',
             animate: true,
             heartbeat: 1,

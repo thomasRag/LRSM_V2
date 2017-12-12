@@ -23,6 +23,7 @@ var mobilityData = []
 var projectData = []
 
 
+
 function getGenre (i) {
 
   for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.category) }
@@ -569,6 +570,7 @@ function genreArray(e){
     genreArrays.push(fired_button)
     $('#genreFilterIcon').removeClass("d-none")
     $('#genreFilterIcon').addClass("d-inline")
+
   }
   else{
     //remove the existing occurence of the value in the master array
@@ -578,9 +580,9 @@ function genreArray(e){
     }
     genreArrays.length = j;
     updateJSON(genreArrays,'genre')
-    getGenreMarkers()
+
   }
-  console.log(jsonFilter)
+
 }
 
 /**

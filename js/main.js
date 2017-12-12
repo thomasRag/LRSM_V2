@@ -41,27 +41,6 @@ function getRandomColor () {
   return color
 }
 
-function setGenreStyle() {
-    for (var j = 0; j < group.length; j++) {
-        (function (layer) {
-            if (layer.feature.properties.story.media_links.media_type === 'pdf') {
-                layer.feature.setStyle({fillColor: 'yellow'})
-            }
-            else if (layer.feature.properties.story.media_links.media_type === 'video') {
-                layer.feature.setStyle({fillColor: 'red'})
-            }
-            else if (layer.feature.properties.story.media_links.media_type === 'audio') {
-                layer.feature.setStyle({fillColor: 'teal'})
-            }
-            else if (layer.feature.properties.story.media_links.media_type === 'photo') {
-                layer.feature.setStyle({fillColor: 'purple'})
-            }
-            else if (layer.feature.properties.story.media_links.media_type === 'multimedia') {
-                layer.feature.setStyle({fillColor: 'green'})
-            }
-        });
-    }
-}
 
 
 /** ******** END MAP FUNCTIONS ***********/
@@ -84,9 +63,12 @@ $(function(){
 $('.btn-rounded').click(function () {
   if ($(this).hasClass('btn-active')) {
     $(this).removeClass('btn-active')
-  } else {
+
+   } else {
     $(this).addClass('btn-active')
+
   }
+  getGenreMarkers()
 })
 
 
@@ -234,80 +216,31 @@ function getFilterMarkersById (myFilterLayer) {
   filteredGroup.addLayer(filterMarkers).addTo(map) // add the filteredMarkers to the filteredGroup
   map.fitBounds(filterMarkers.getBounds(),{maxZoom:14})//.pad(Math.sqrt(2) / 2)) // fit bounds of the filtered specifici markers
 }
-/*
-function style(feature){
-  for(var i = 0; i < 5; i++) {
-      var media_type = feature.properties.story.media_links[0]['media_type']['label']
-      console.log(media_type)
-      if (media_type == undefined)
-          {
-              return {
-              radius: 8,
-              fillColor: 'rgba(255,255,255,0)',
-              color: '#ffffff',
-              weight: 1,
-              opacity: 1,
-              fillOpacity: 0.5
-          }
-      }
-
-      else if (media_type === 0) {
-          {
-              return {
-                  radius: 8,
-                  fillColor: 'rgba(255,255,255,0)',
-                  color: '#ffffff',
-                  weight: 1,
-                  opacity: 1,
-                  fillOpacity: 0.5
-              }}
-          }
-
-      else if (media_type === 'pdf') {
-          return {
-              radius: 8,
-              fillColor: 'green',
-              color: '#ffffff',
-              weight: 1,
-              opacity: 1,
-              fillOpacity: 0.5
-          }
-      }
-      else if (media_type === 'video') {
-          return {
-              radius: 8,
-              fillColor: 'red',
-              color: '#ffffff',
-              weight: 1,
-              opacity: 1,
-              fillOpacity: 0.5
-          }
-      }
-      else if (media_type === 'audio') {
-          return {
-              radius: 8,
-              fillColor: 'teal',
-              color: '#ffffff',
-              weight: 1,
-              opacity: 1,
-              fillOpacity: 0.5
-          }
-      }
-      else if (media_type === 'photo') {
-          return {
-              radius: 8,
-              fillColor: 'purple',
-              color: '#ffffff',
-              weight: 1,
-              opacity: 1,
-              fillOpacity: 0.5
-          }
-      }
-    }
-}
-*/
 
 
+function setCatStyle(feature) {
+      if (feature.properties.story.category === 'dessin') {
+        return 'orange'
+      }
+      else if (feature.properties.story.category === 'video') {
+        return 'red'
+      }
+      else if (feature.properties.story.category === 'audio') {
+        return 'turquoise'
+      }
+      else if (feature.properties.story.category === 'photo') {
+        return  'purple'
+      }
+      else if (feature.properties.story.category === 'multimédia') {
+        return 'yellow'
+      }
+      else if (feature.properties.story.category === 'écrit') {
+       return 'lawngreen'
+      }
+      else {
+        return 'white'
+      }
+  }
 
 /**
 * function that display the main markers
@@ -327,10 +260,12 @@ function getMainMarkers () {
 // Display main markers as CircleMarkers
     pointToLayer: function (feature, latlng) {
 
-     var icon = new  L.icon.pulse({iconSize:[12,12],color : 'lightgrey' ,heartbeat:Math.floor(Math.random() * 6) + 1});
-
-
-
+     var icon = new  L.icon.pulse({
+       iconSize:[12,12],
+       color: setCatStyle(feature),
+       fillColor : setCatStyle(feature) ,
+       fillOpacity: 0.5,
+       heartbeat:Math.floor(Math.random() * 6) + 1});
 
       //var label = String(feature.properties.story.id)
       return L.marker(latlng, {icon: icon})
@@ -345,28 +280,6 @@ function getMainMarkers () {
 
 $(getMainMarkers ())
 
-mainMarkers.on('add', function(){
-  var myIcon = document.querySelector('.my-icon')
-  setTimeout(function(){
-    myIcon.style.width = '50px'
-    myIcon.style.height = '50px'
-    myIcon.style.marginLeft = '-25px'
-    myIcon.style.marginTop = '-25px'
-  }, 1000)
-
-  setTimeout(function(){
-    myIcon.style.borderRadius = '10%'
-    myIcon.style.backgroundColor = 'skyblue'
-  }, 2000)
-
-  setTimeout(function(){
-    myIcon.style.width = '30px'
-    myIcon.style.height = '30px'
-    myIcon.style.borderRadius = '50%'
-    myIcon.style.marginLeft = '-15px'
-    myIcon.style.marginTop = '-15px'
-  })
-})
 /**
  * Functions that read the different arrays in the jsonFilter and return earch of the keys for the specific object.
  * @returns {string}
@@ -376,7 +289,7 @@ function titleSearch(){
     if (jsonFilter.title[0].length === undefined){
         return false
     }
-    for (var j = 0; j < jsonFilter.title[0].length; i++) {
+    for (var j = 0; j < jsonFilter.title[0].length; j++) {
         if (jsonFilter.title[0][j] === undefined){
             return false
         }
@@ -390,7 +303,7 @@ function authorsSearch(){
     if (jsonFilter.authors[0].length === undefined){
         return false
     }
-    for (var j = 0; j < jsonFilter.authors[0].length; i++) {
+    for (var j = 0; j < jsonFilter.authors[0].length; j++) {
       if (jsonFilter.authors[0][j] === undefined){
            return false
       }
@@ -401,24 +314,17 @@ function authorsSearch(){
 }
 
 function genreSearch(){
-  if (jsonFilter.genre.length === undefined){
-    return false
-  }
-  for (var j = 0; j < jsonFilter.mobility.length; i++) {
-    if (jsonFilter.genre[j] === undefined){
-      return false
-    }
-    else {
+    for (var j = 0; j < jsonFilter.genre.length; j++) {
       console.log(jsonFilter)
       return jsonFilter.genre[j]
-    }}
+    }
 }
 
 function mobilitySearch(){
     if (jsonFilter.mobility.length === undefined){
         return false
     }
-    for (var j = 0; j < jsonFilter.mobility.length; i++) {
+    for (var j = 0; j < jsonFilter.mobility.length; j++) {
         if (jsonFilter.mobility[j] === undefined){
             return false
         }
@@ -483,27 +389,35 @@ function getAuthorsMarkers () {
 
 function getGenreMarkers () {
 
+  if (map.hasLayer(mainMarkers)){
+       group.clearLayers()
+  }
+
      genreMarkers = L.geoJSON(featuresCollection, {
 
         filter: function (feature) {
 
             for (var i = 0; i < featuresCollection.features.length; i++) {
-                //A finir author = boucle sur le nombre des authors dans le récit (authors pluriel)
-                if (feature.properties.main === true
-                    && feature.properties.story.category === genreSearch()
-                )
+                console.log(genreSearch())
+                if (feature.properties.main === true && feature.properties.story.category === genreSearch() )
                 {
-                    return true
-                }}
+                  return true
+                }
+                else {
+
+                  return
+                }
+             }
         },
         pointToLayer: function (feature, latlng) {
             var label = String(feature.properties.story.category)
             return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
-        },
-        onEachFeature: modalPopulate
-    })
-    group.clearLayers()
-    genreGroup.addLayer(genreMarkers).addTo(map)
+        }
+
+    }).addTo(map)
+
+
+     //genreGroup.addLayer(genreMarkers).addTo(map)
 }
 
 
@@ -732,9 +646,6 @@ function modalPopulate (feature, layer) {
    // return tagsList.join(', ').split(',')
   }
 
-  var videoFrame = '<iframe class="mx-auto mt-4 col-sm-12 col-md-10" src="'+feature.properties.story.media_links[0].link+'" width="440" height="248" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
-  var photoFrame = '<a class="mx-auto" data-flickr-embed="true" data-header="true" data-footer="true"  href="https://www.flickr.com/photos/janlupus/albums/72157625141133435" title="Bikes"><img class="mx-auto" src="'+feature.properties.story.media_links[0].link+'" width="500" height="280" alt="Bikes"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>'
-  var audioFrame = '<iframe class="mx-auto" id="modalframe" width="500" height="280" frameborder="0" src="'+feature.properties.story.media_links[0].link+'"&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>'
 
   var mediaFrameModal = function (){
     /*for(var i  ; i < feature.properties.story.media_links.length; i++){

@@ -21,8 +21,6 @@ var locationGroup = L.layerGroup()
 var genreGroup = L.layerGroup()
 var allGroups = L.layerGroup()
 
-
-
 var setColor = {
   radius: 8,
   fillColor: getRandomColor(),

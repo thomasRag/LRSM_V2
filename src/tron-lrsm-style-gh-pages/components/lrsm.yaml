@@ -1,0 +1,10 @@
+global:
+    lrsm:
+        red: [1.0, 0.0, 0.0, 0.8] # For debug
+        earth_later_color: [0.3333333333, 0.3333333333, 0.3490196078, 0.8]
+        road_color: [0.9098039216, 0.9098039216, 0.9098039216, 0.5]
+        road_outline_color: [0.02745098039, 0.02745098039, 0.02745098039]
+        water_color: [0.5529411765, 0.5529411765, 0.5568627451, 0.8]
+        water_boundaries_animated_color: [0.5529411765, 0.5529411765, 0.5568627451, 0.8]
+        water_other_area_later_color: [0.5529411765, 0.5529411765, 0.5568627451, 0.8]
+        water_later_SHIMMERING_BACKGROUND_COLOR: vec3(0.3,0.3,0.3) # Fixme bad color

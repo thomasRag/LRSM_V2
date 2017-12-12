@@ -517,9 +517,7 @@ function mobilityArray(e){
         mobilityArrays.push(firedValue)
         $('#mobilityFilterIcon').removeClass("d-none")
         $('#mobilityFilterIcon').addClass("d-inline")
-        //arrayTest(mobilityArrays)
-      console.log(jsonFilter)
-    }
+       }
     else{
         //remove the existing occurence of the value in the master array
         for (var i = 0, j = 0; i < mobilityArrays.length; i++) {
@@ -528,7 +526,7 @@ function mobilityArray(e){
         }
         mobilityArrays.length = j;
         updateJSON(mobilityArrays,'mobility')
-        //getMobiltyMarkers ()
+        getMobiltyMarkers ()
     }
 }
 
@@ -579,6 +577,8 @@ function genreArray(e){
         genreArrays[j++] = genreArrays[i];
     }
     genreArrays.length = j;
+    updateJSON(genreArrays,'genre')
+    getGenreMarkers()
   }
   console.log(jsonFilter)
 }

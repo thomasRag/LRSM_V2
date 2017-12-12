@@ -1,14 +1,26 @@
 (function(window) {
 
+  function getRandomColor () {
+    var letters = '0123456789ABCDEF'.split('')
+    var color = '#'
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.round(Math.random() * 15.66)]
+    }
+    return color
+  }
+
+
     L.Icon.Pulse = L.DivIcon.extend({
 
         options: {
-            className: '',
-            iconSize: [12,12],
-            fillColor: 'red',
-            color: 'red',
+            className: 'pulse-icon',
+            iconSize: [10,10],
+            fillColor: getRandomColor (),
+            opacity: 0.8,
+            color: 'yellow',
             animate: true,
             heartbeat: 1,
+
         },
 
         initialize: function (options) {
@@ -21,7 +33,7 @@
             var before = ['background-color: '+this.options.fillColor];
             var after = [
 
-                'box-shadow: 0 0 6px 2px '+this.options.color,
+                'box-shadow: 0 0 10px 1px '+this.options.color,
 
                 'animation: pulsate ' + this.options.heartbeat + 's ease-out',
                 'animation-iteration-count: infinite',

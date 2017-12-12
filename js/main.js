@@ -401,10 +401,17 @@ function authorsSearch(){
 }
 
 function genreSearch(){
-    for (var j = 0; j < jsonFilter.genre.length; i++) {
-      console.log(jsonFilter.genre)
-      return jsonFilter.genre[j]
+  if (jsonFilter.genre.length === undefined){
+    return false
   }
+  for (var j = 0; j < jsonFilter.mobility.length; i++) {
+    if (jsonFilter.genre[j] === undefined){
+      return false
+    }
+    else {
+      console.log(jsonFilter)
+      return jsonFilter.genre[j]
+    }}
 }
 
 function mobilitySearch(){

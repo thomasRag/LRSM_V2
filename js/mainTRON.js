@@ -2,7 +2,7 @@
 const $ = window.$
 
 var map = L.map('map',
-  {"keyboardZoomOffset" : .05, maxZoom: 20, "scrollWheelZoom": false }
+  {"keyboardZoomOffset" : .05, maxZoom: 20, "scrollWheelZoom": true }
 );
 var tg_baseScene = '../tron-lrsm-style/tron-style.yaml';
 var dev_or_prod = 'prod';

@@ -41,17 +41,6 @@ window.addEventListener('load', function () {
   layer.addTo(map);
 });
 
-
-const $ = window.$
-
-/** ******** MAP FUNCTIONS ***********/
-var L
-var map = L.map('map', { zoomControl: false }).setView([45.5314, -73.6750], 8)
-new L.Control.Zoom({ position: 'topright' }).addTo(map)
-L.tileLayer('https://api.mapbox.com/styles/v1/clementg123/cjb338httt3cz2spo5i4hcrvh/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xlbWVudGcxMjMiLCJhIjoiY2o2M3ZhODh3MWxwNDJxbnJnaGZxcWNoMiJ9.YroDniTcealGFJgHtQ2hDg', {
-  maxZoom: 22
-}).addTo(map)
-
 var group = L.layerGroup()
 var filteredGroup = L.layerGroup()
 var authorsGroup = L.layerGroup()

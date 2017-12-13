@@ -91,7 +91,7 @@ function getMobility (i) {
   for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.mobility) }
 }
 getMobility(mobilityData)
-
+/*
 function getProject(i){
 
   for (var j = 0; j < featuresCollection.features.length; j++){
@@ -116,7 +116,7 @@ function getProject(i){
   }
 }
 getProject(projectData)
-
+*/
 /* function that retrive unique objects from an array */
 Array.prototype.unique = function () {
   return this.filter(function (value, index, self) {

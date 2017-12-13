@@ -665,16 +665,22 @@ a {
 
 
 #articlesPrimary {
-    height: 86vh;
-    max-height: 86vh;
+    position: relative;
+    height: 30vh;
+    max-height: 30vh;
+
 }
 
 
 
 #articles{
-    max-height: 200%;
-    height: 200%;
-    overflow-y:scroll;
+    overflow-y:scroll !important;
+    overflow-x: hidden !important;
+    position: inherit ;
+    height: 55vh;
+    max-height: 55vh;
+    bottom:0 !important;
+
 }
 
 .modalActive{
@@ -704,6 +710,8 @@ width: 800px !important;
 /*****************************************************************************/
 
 /********************* SCROLL DOWN BY CHAPTER ************************/
+
+
 #chapter {
     position: absolute;
     z-index: 999;

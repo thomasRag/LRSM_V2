@@ -92,7 +92,7 @@ function openModal () {
     $("#map").width('55%')}
   else{
 
-  $("#recitInfoPanel").animate({left: "-800px"},0)
+  $("#recitInfoPanel").animate({left: "-1000px"},0)
   $("#recitInfoPanel").addClass('modalActive')
   $("#map").width('85%')}
   map.closePopup()
@@ -102,9 +102,11 @@ function openModal () {
  */
 function closeModal(){
   $('#panelCloseButton').click(function(){
-    $('#articles').empty()
-    $("#recitInfoPanel").animate({left: "-800px"})
+    group.clearLayers()
+    $("#sections").empty()
+    $("#recitInfoPanel").animate({left: "-1000px"})
     $("#recitInfoPanel").addClass('modalActive')
+
     getMainMarkers()
     $("#map").width('85%')}
   )
@@ -200,9 +202,19 @@ function getFilterMarkersById (myFilterLayer) {
       }
     },
 
+// Display main markers as CircleMarkers
     pointToLayer: function (feature, latlng) {
-      //var label = String(feature.properties.order)
-      return L.circleMarker(latlng)//.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
+
+      var icon = new  L.icon.pulse({
+        iconSize:[12,12],
+        color: setCatStyle(feature),
+        fillColor : setCatStyle(feature) ,
+        fillOpacity: 0.5,
+        heartbeat:Math.floor(Math.random() * 6) + 1});
+
+      //var label = String(feature.properties.story.id)
+      return L.marker(latlng, {icon: icon})
+      //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
     },
 
 // on each feature call the modal and populate it with the specific related information gathered in the geojson
@@ -708,9 +720,9 @@ function modalPopulate (feature, layer) {
   }
 
   var collaboratorsModal = function(){
-    var collaboratorList =[]
-    if(feature.properties.story.collaborators[0].label === []){
-      return collaboratorList = []
+
+    if(feature.properties.story.collaborators === []){
+       return false
     }
     var collaboratorList =[]
     for(var i =0 ; i < feature.properties.story.collaborators.length; i++){
@@ -838,7 +850,7 @@ try {
     var articleDate=$('<h6> '+dateModal()+'</h6>')
   }
   catch(e) {
-    "--"
+    console.log(e)
   }
 finally {
   articleDate
@@ -846,7 +858,7 @@ finally {
 
 try {
   var kwPills = $('<div></div>')
-  var articleKeyWord = $('<script>$(".badgeRdColor").css("background-color", "rgb(35,195,237)")</script><span id="tag" class="badge badge-pill badgeRdColor">'+keyWordsModal()+'</span>')
+  var articleKeyWord = $('<script>$(".badgeRdColor").css("background-color", "rgb(35,195,237)")</script><span id="tag" class="badge badge-pill badgeRdColor d-flex flex-wrap">'+keyWordsModal()+'</span>')
     }
 
   catch(e) {
@@ -883,33 +895,39 @@ finally {
 try {
 //  var sections = $('<div></div>')
   //for(var i =0 ; i < filterMarkers.getLayers().length; i++) {
-    var articleSection = $('<section id="' + feature.properties.order +'" class="col-md-10 col-lg-10 mx-auto">' +
-      '          <div class="col-md-10 col-lg-10 mx-auto">' +
-      '            <span id="elementNumber"> <h4>' + feature.properties['title'] + '</h4> </span>' +
-      '          </div>' +
-      '          <div class="col-md-10 col-lg-10 mx-auto">' +
-      '            <span> <h5>' + feature.properties['date'] + ' | ' + feature.properties['date'] + ' </h5>  </span>' +
-      '          </div>' +
-      '        <div class="row">' +
-      '<div class="col-md-9 col-lg-9 mx-auto">'+
-      mediaFrameModal() +
-      '       <span class="text-justify text-center">  ' + feature.properties['description'] + ' </span>' +
-      '        </div><hr></section>')
-   // sections.append(articleSection)
+
+
+      if(feature.properties.order === 0){
+      return false
+      }
+      else{
+
+        var articleSection = $('<section id="'+ feature.properties.order +'" class="col-md-10 col-lg-10 mx-auto">' +
+          '          <div class="col-md-10 col-lg-10 mx-auto">' +
+          '            <span id="elementNumber"> <h4>' + feature.properties.title + '</h4> </span>' +
+          '          </div>' +
+          '          <div class="col-md-10 col-lg-10 mx-auto">' +
+          '            <span><h5>'+ feature.properties.date +'</h5></span>' +
+          '          </div>' +
+          '        <div class="row">' +
+          '<div class="col-md-9 col-lg-9 mx-auto">'+
+          mediaFrameModal() +
+          '       <span class="text-justify text-center">  ' + feature.properties.description + ' </span>' +
+          '        </div><hr></section>')
+        // sections.append(articleSection)
+      }
+
   }
 //}
 catch(e) {
   console.log(e)
 }
-finally{
-  articleSection
-}
 
-  $('#articles').append(articleSection)
 
+
+  $('#sections').append(articleSection)
   $('#mainDescription').empty().html(mainDescription)
   $('#mainImg').empty().html(mainImg)
-
   $('#articleKeyWord').empty().html(kwPills)
   $('#articleDate').empty().html(articleDate)
   $('#articleProject').empty().html(articleProject)
@@ -974,5 +992,17 @@ narrative.onscroll = function (e) {
 }
 
 
-
+function articleReset (){
+  $('#articles').empty()
+  $('#mainDescription').empty()
+  $('#mainImg').empty()
+  $('#articleKeyWord').empty()
+  $('#articleDate').empty()
+  $('#articleProject').empty()
+  $('#articleLocation').empty()
+  $('#articleMobility').empty()
+  $('#articleCollaborator').empty()
+  $('#articleAuthor').empty()
+  $('#articleTitle').empty()
+}
 

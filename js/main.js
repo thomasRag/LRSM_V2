@@ -693,7 +693,7 @@ function modalPopulate (feature, layer) {
   var authorsModal = function(){
     var authorsList =[]
     for(var i =0 ; i < feature.properties.story.authors.length; i++){
-      //console.log(feature.properties.story.authors.length)
+
       if (feature.properties.story.authors.length > 1){
         authorsList.push(feature.properties.story.authors[i].label)
         //console.log(authorsList)
@@ -708,20 +708,20 @@ function modalPopulate (feature, layer) {
   }
 
   var collaboratorsModal = function(){
-    var collaboratorsList =[]
+    var collaboratorList =[]
+    if(feature.properties.story.collaborators[0].label === []){
+      return collaboratorList = []
+    }
+    var collaboratorList =[]
     for(var i =0 ; i < feature.properties.story.collaborators.length; i++){
-      //console.log(feature.properties.story.authors.length)
       if (feature.properties.story.collaborators.length > 1){
-        collaboratorsList.push(feature.properties.story.collaborators[i].label)
-
+        collaboratorList.push(feature.properties.story.collaborators[i].label)
       }
       else {
         return feature.properties.story.collaborators[0].label
       }
-      return collaboratorsList.join(', <br>')
     }
-    // console.log(authorsList.join(', '))
-
+    return collaboratorList.join(' <br>')
   }
 
   var keyWordsModal = function(i){
@@ -741,6 +741,9 @@ function modalPopulate (feature, layer) {
    // return tagsList.join(', ').split(',')
   }
 
+  var projectModal = function(){
+        return feature.properties.story.project.label
+     }
 
   var mediaFrameModal = function (){
     /*for(var i  ; i < feature.properties.story.media_links.length; i++){
@@ -758,7 +761,23 @@ function modalPopulate (feature, layer) {
     return feature.properties.media
   }
 
-
+  var dateModal = function(){
+    var dateList = []
+    if (feature.properties.story.date_type === "range"){
+      dateList.push(feature.properties.story.date_min + ' - ' + feature.properties.story.date_max )
+      return dateList
+    }
+    else if (feature.properties.story.date_type === "multi"){
+      for(var i=0; i < feature.properties.story.multi_dates.length;i++){
+         dateList.push(feature.properties.story.multi_dates[i].multi_date)
+        dateList.join(' <br>')
+        return dateList
+      }
+    }
+    else if (feature.properties.story.date_type === "single"){
+      return feature.properties.story.date
+    }
+  }
 
 try {
       var articleTitle = $('<h2 class="pt-0" id="articleTitle">' + feature.properties.story.title + '</h2>')
@@ -772,7 +791,8 @@ finally {
 
 try {
     var articleAuthors = $('<h5>'+ authorsModal()+ '</h5>')
-  }     catch(e) {
+  }
+  catch(e) {
   console.log(e)
   }
 finally {
@@ -780,7 +800,7 @@ finally {
 }
 
 try {
-    var articleCollaborators = $('<h5>'+collaboratorsModal()+'</h5>')
+    var articleCollaborators = $('<h6> Coll. '+collaboratorsModal()+'</h6>')
   }
   catch(e) {
     console.log(e)
@@ -789,7 +809,7 @@ try {
   articleCollaborators
 }
 try {
-    var articleMobility =$('<h6 id ="modalMobility" class="text-center"> '+feature.properties.story.mobility+' </h6>')
+    var articleMobility = $('<h6 id ="modalMobility" class="text-center"> '+feature.properties.story.mobility+' </h6>')
   }     catch(e) {
   console.log(e)
   }
@@ -797,7 +817,7 @@ finally {
   articleMobility
 }
 try {
-    var articleLocation =$('<h6 id ="modalLocation" class="text-center"> '+feature.properties.story.main_location['label']+' </h6>')
+    var articleLocation = $('<h6 id ="modalLocation" class="text-center"> '+feature.properties.story.main_location['label']+' </h6>')
   }     catch(e) {
   console.log(e)
   }
@@ -805,7 +825,7 @@ finally {
   articleLocation
 }
 try {
-    var articleProject=$('<h6> '+feature.properties.story.project['label']+'</h6>')
+    var articleProject= $('<h6> '+projectModal()+'</h6>')
   }
   catch(e) {
     console.log(e)
@@ -815,10 +835,10 @@ finally {
 }
 
 try {
-    var articleDate=$('<h6> '+feature.properties.story.date+'</h6>')
+    var articleDate=$('<h6> '+dateModal()+'</h6>')
   }
   catch(e) {
-    console.log(e)
+    "--"
   }
 finally {
   articleDate
@@ -863,7 +883,7 @@ finally {
 try {
 //  var sections = $('<div></div>')
   //for(var i =0 ; i < filterMarkers.getLayers().length; i++) {
-    var articleSection = $('<section id=' + feature.properties.order + 'class="col-md-10 col-lg-10 mx-auto">' +
+    var articleSection = $('<section id="' + feature.properties.order +'" class="col-md-10 col-lg-10 mx-auto">' +
       '          <div class="col-md-10 col-lg-10 mx-auto">' +
       '            <span id="elementNumber"> <h4>' + feature.properties['title'] + '</h4> </span>' +
       '          </div>' +

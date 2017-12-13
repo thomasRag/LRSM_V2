@@ -1,19 +1,10 @@
 
 const $ = window.$
 
-/** ******** MAP FUNCTIONS ***********/
-/*var L
-var map = L.map('map', { zoomControl: false }).setView([45.5314, -73.6750], 8)
-new L.Control.Zoom({ position: 'topright' }).addTo(map)
-L.tileLayer('https://api.mapbox.com/styles/v1/clementg123/cjb338httt3cz2spo5i4hcrvh/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xlbWVudGcxMjMiLCJhIjoiY2o2M3ZhODh3MWxwNDJxbnJnaGZxcWNoMiJ9.YroDniTcealGFJgHtQ2hDg', {
-  maxZoom: 22
- }).addTo(map)
-*/
-
 var map = L.map('map',
   {"keyboardZoomOffset" : .05, maxZoom: 20, "scrollWheelZoom": false }
 );
-var tg_baseScene = 'src/tron-lrsm-style-gh-pages/tron-style.yaml';
+var tg_baseScene = '../tron-lrsm-style/tron-style.yaml';
 var dev_or_prod = 'prod';
 // prod
 var mapzen_api_key = 'mapzen-uSQVeoe';
@@ -51,6 +42,15 @@ window.addEventListener('load', function () {
 });
 
 
+const $ = window.$
+
+/** ******** MAP FUNCTIONS ***********/
+var L
+var map = L.map('map', { zoomControl: false }).setView([45.5314, -73.6750], 8)
+new L.Control.Zoom({ position: 'topright' }).addTo(map)
+L.tileLayer('https://api.mapbox.com/styles/v1/clementg123/cjb338httt3cz2spo5i4hcrvh/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xlbWVudGcxMjMiLCJhIjoiY2o2M3ZhODh3MWxwNDJxbnJnaGZxcWNoMiJ9.YroDniTcealGFJgHtQ2hDg', {
+  maxZoom: 22
+}).addTo(map)
 
 var group = L.layerGroup()
 var filteredGroup = L.layerGroup()
@@ -66,15 +66,6 @@ var allGroups = L.layerGroup()
 
 
 
-var setColor = {
-  radius: 8,
-  fillColor: getRandomColor(),
-  color: '#ffffff',
-  weight: 1,
-  opacity: 1,
-  fillOpacity: 0.5
-}
-
 function getRandomColor () {
   var letters = '0123456789ABCDEF'.split('')
   var color = '#'
@@ -84,13 +75,28 @@ function getRandomColor () {
   return color
 }
 
+/**
+ * sort a ul li list by id
+ *
+ */
+function myTest(){
+  var list = $("#arraySelectors");
+  var desc= false;
+  list.append(list.children().get().sort(function(a, b) {
+    var aProp = $(a).find("span").text()
+    var bProp = $(b).find("span").text();
+    return (aProp > bProp ? 1 : aProp < bProp ? -1 : 0) * (desc ? -1 : 1);
+  }));
+}
 
 
-/** ******** END MAP FUNCTIONS ***********/
 
 /** **************Buttons filter functions*******************/
 
-
+/**
+ * listen to the button to toggle the modal time slider
+ *
+ */
 
 $(function(){
 
@@ -100,27 +106,27 @@ $(function(){
 })
 
 /**
- * function that listen to the Mobility buttons and push values to its specific array
+ * function that listen to the Mobility / Categories buttons and push values to its specific array
  * @type {Array}
  */
 $('.btn-rounded').click(function () {
   if ($(this).hasClass('btn-active')) {
     $(this).removeClass('btn-active')
 
-   } else {
+  } else {
     $(this).addClass('btn-active')
 
   }
-  getGenreMarkers()
 })
+
 
 
 
 /**********************************************/
 
 /**
-* function that show the panel and close the popup
-*/
+ * function that show the panel and close the popup
+ */
 function openModal () {
   if ($("#recitInfoPanel").hasClass('modalInactive')){
 
@@ -129,9 +135,9 @@ function openModal () {
     $("#map").width('55%')}
   else{
 
-  $("#recitInfoPanel").animate({left: "-800px"},0)
-  $("#recitInfoPanel").addClass('modalActive')
-  $("#map").width('85%')}
+    $("#recitInfoPanel").animate({left: "-800px"},0)
+    $("#recitInfoPanel").addClass('modalActive')
+    $("#map").width('85%')}
   map.closePopup()
 }
 /**
@@ -146,26 +152,20 @@ function closeModal(){
     $("#map").width('85%')}
   )
 }
-/**
-* function that revert back to the mainMarkers layer
-*/
-//document.getElementById('modalClose').onclick = function () {
- // getMainMarkers()
-//}
 
 /**
-* pan the popup to the center of the screen
-*/
+ * pan the popup to the center of the screen
+ */
 
 map.on('popupopen', function (e) {
-/** *** !! Auto Pan to the center of the popup ToolTip !! *****/
+  /** *** !! Auto Pan to the center of the popup ToolTip !! *****/
   var px = map.project(e.popup._latlng) // find the pixel location on the map where the popup anchor is
   px.y -= e.popup._container.clientHeight / 2 // find the height of the popup container, divide by 2, subtract from the Y axis of marker location
   map.panTo(map.unproject(px), {animate: true}) // pan to new center
 
 })
 
- /**
+/**
  * Generate list of values filtered on the map extent
  */
 
@@ -176,24 +176,27 @@ map.on('moveend ', function () {
 
   var bounds = map.getBounds() // Get the map bounds - the top-left and bottom-right locations.
 
-    if (map.hasLayer(mainMarkers)){
-        // For each marker, consider whether it is currently visible by comparing  with the current map bounds.
-        mainMarkers.eachLayer(function (marker) {
-            if (bounds.contains(marker.getLatLng())) {
-                inBounds.push(marker.feature.properties.story.title)
-            }
-        })
-    }
-    else if (map.hasLayer(markerCluster)){
-      /* function that retrive unique objects from an array */
+  if (map.hasLayer(mainMarkers)){
+    // For each marker, consider whether it is currently visible by comparing  with the current map bounds.
+    mainMarkers.eachLayer(function (marker) {
+      if (bounds.contains(marker.getLatLng())) {
+        inBounds.push(marker.feature.properties.story.title)
 
-      markerCluster.eachLayer(function (marker) {
-        if (bounds.contains(marker.getLatLng())) {
-                inBounds.push(marker.feature.properties.author.name)
+      }
+    })
+    myTest()
+  }
+  else if (map.hasLayer(markerCluster)){
+    /* function that retrive unique objects from an array */
 
-            }
-        })
-    }
+    markerCluster.eachLayer(function (marker) {
+      if (bounds.contains(marker.getLatLng())) {
+        inBounds.push(marker.feature.properties.author.name)
+
+      }
+    })
+    myTest()
+  }
 
   /**
    *
@@ -220,12 +223,9 @@ map.on('moveend ', function () {
   }
 })
 
-
-
-
 /**
-* function that filter the mainMarkers layer on click
-*/
+ * function that filter the mainMarkers layer on click
+ */
 var myFilterLayer
 
 function getFilterMarkersById (myFilterLayer) {
@@ -245,7 +245,7 @@ function getFilterMarkersById (myFilterLayer) {
 
     pointToLayer: function (feature, latlng) {
       //var label = String(feature.properties.order)
-      return L.circleMarker(latlng, setColor)//.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
+      return L.circleMarker(latlng)//.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
     },
 
 // on each feature call the modal and populate it with the specific related information gathered in the geojson
@@ -261,33 +261,9 @@ function getFilterMarkersById (myFilterLayer) {
 }
 
 
-function setCatStyle(feature) {
-      if (feature.properties.story.category === 'dessin') {
-        return 'orange'
-      }
-      else if (feature.properties.story.category === 'video') {
-        return 'red'
-      }
-      else if (feature.properties.story.category === 'audio') {
-        return 'turquoise'
-      }
-      else if (feature.properties.story.category === 'photo') {
-        return  'purple'
-      }
-      else if (feature.properties.story.category === 'multimédia') {
-        return 'yellow'
-      }
-      else if (feature.properties.story.category === 'écrit') {
-       return 'lawngreen'
-      }
-      else {
-        return 'white'
-      }
-  }
-
 /**
-* function that display the main markers
-*/
+ * function that display the main markers
+ */
 var mainmarkers
 function getMainMarkers () {
 
@@ -303,12 +279,12 @@ function getMainMarkers () {
 // Display main markers as CircleMarkers
     pointToLayer: function (feature, latlng) {
 
-     var icon = new  L.icon.pulse({
-       iconSize:[12,12],
-       color: setCatStyle(feature),
-       fillColor : setCatStyle(feature) ,
-       fillOpacity: 0.5,
-       heartbeat:Math.floor(Math.random() * 6) + 1});
+      var icon = new  L.icon.pulse({
+        iconSize:[12,12],
+        color: setCatStyle(feature),
+        fillColor : setCatStyle(feature) ,
+        fillOpacity: 0.5,
+        heartbeat:Math.floor(Math.random() * 6) + 1});
 
       //var label = String(feature.properties.story.id)
       return L.marker(latlng, {icon: icon})
@@ -319,6 +295,7 @@ function getMainMarkers () {
 
   group.addLayer(mainMarkers).addTo(map)
   map.fitBounds(mainMarkers.getBounds())
+  console.log(mainMarkers.getLayers().length)
 }
 
 $(getMainMarkers ())
@@ -329,188 +306,297 @@ $(getMainMarkers ())
  */
 
 function titleSearch(){
-    if (jsonFilter.title[0].length === undefined){
-        return false
+  if (jsonFilter.title[0].length === undefined){
+    return false
+  }
+  for (var j = 0; j < jsonFilter.title[0].length; j++) {
+    if (jsonFilter.title[0][j] === undefined){
+      return false
     }
-    for (var j = 0; j < jsonFilter.title[0].length; j++) {
-        if (jsonFilter.title[0][j] === undefined){
-            return false
-        }
-        else {
+    else {
 
-            return jsonFilter.title[0][j]
-        }}
+      return jsonFilter.title[0][j]
+    }}
 }
 
 function authorsSearch(){
-    if (jsonFilter.authors[0].length === undefined){
-        return false
+  if (jsonFilter.authors[0].length === undefined){
+    return false
+  }
+  for (var j = 0; j < jsonFilter.authors[0].length; j++) {
+    if (jsonFilter.authors[0][j] === undefined){
+      return false
     }
-    for (var j = 0; j < jsonFilter.authors[0].length; j++) {
-      if (jsonFilter.authors[0][j] === undefined){
-           return false
-      }
-      else {
+    else {
 
-        return jsonFilter.authors[0][j]
+      return jsonFilter.authors[0][j]
+    }}
+}
+
+function locationSearch(){
+  if (jsonFilter.location[0].length === undefined){
+    return false
+  }
+  for (var j = 0; j < jsonFilter.location[0].length; j++) {
+    if (jsonFilter.location[0][j] === undefined){
+      return false
+    }
+    else {
+
+      return jsonFilter.location[0][j]
     }}
 }
 
 function genreSearch(){
-    for (var j = 0; j < jsonFilter.genre.length; j++) {
-      console.log(jsonFilter)
-      return jsonFilter.genre[j]
-    }
+  for (var j = 0; j < jsonFilter.genre.length; j++) {
+    console.log(jsonFilter)
+    return jsonFilter.genre[j]
+  }
 }
 
 function mobilitySearch(){
-    if (jsonFilter.mobility.length === undefined){
-        return false
-    }
-    for (var j = 0; j < jsonFilter.mobility.length; j++) {
-        if (jsonFilter.mobility[j] === undefined){
-            return false
-        }
-        else {
-
-            return jsonFilter.mobility[j]
-        }}
-}
-
-
-function getTitleMarkers () {
-
-     titleMarkers = L.geoJSON(featuresCollection, {
-
-        filter: function (feature) {
-
-            for (var i = 0; i < featuresCollection.features.length; i++) {
-                //A finir author = boucle sur le nombre des title dans le récit (title pluriel)
-                if (feature.properties.main === true
-                    && feature.properties.story.title === titleSearch()
-                )
-                {
-                    return true
-                }}
-        },
-        pointToLayer: function (feature, latlng) {
-            var label = String(feature.properties.story.title)
-            return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
-        },
-        onEachFeature: modalPopulate
-    })
-    group.clearLayers()
-    titleGroup.addLayer(titleMarkers).addTo(map)
-    //allGroups.addLayer(titleMarkers).addTo(map)
-}
-
-function getAuthorsMarkers () {
-
-     authorsMarkers = L.geoJSON(featuresCollection, {
-
-        filter: function (feature) {
-
-            for (var i = 0; i < featuresCollection.features.length; i++) {
-                //A finir author = boucle sur le nombre des authors dans le récit (authors pluriel)
-                if (feature.properties.main === true
-                    && feature.properties.story.authors[0].label === authorsSearch()
-                  )
-                {
-                    return true
-                }}
-            },
-        pointToLayer: function (feature, latlng) {
-            var label = String(feature.properties.story.authors[0].label)
-            return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
-        },
-        onEachFeature: modalPopulate
-    })
-    group.clearLayers()
-    authorsGroup.addLayer(authorsMarkers).addTo(map)
-    //allGroups.addLayer(authorsMarkers).addTo(map)
-}
-
-function getGenreMarkers () {
-
-  if (map.hasLayer(mainMarkers)){
-       group.clearLayers()
+  for (var j = 0; j < jsonFilter.mobility.length; j++) {
+    console.log(jsonFilter)
+    return jsonFilter.mobility[j]
   }
-
-     genreMarkers = L.geoJSON(featuresCollection, {
-
-        filter: function (feature) {
-
-            for (var i = 0; i < featuresCollection.features.length; i++) {
-                console.log(genreSearch())
-                if (feature.properties.main === true && feature.properties.story.category === genreSearch() )
-                {
-                  return true
-                }
-                else {
-
-                  return
-                }
-             }
-        },
-        pointToLayer: function (feature, latlng) {
-            var label = String(feature.properties.story.category)
-            return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
-        }
-
-    }).addTo(map)
-
-
-     //genreGroup.addLayer(genreMarkers).addTo(map)
 }
-
-
-
-function getMobiltyMarkers () {
-
-     mobiltyMarkers = L.geoJSON(featuresCollection, {
-
-        filter: function (feature) {
-
-            for (var i = 0; i < featuresCollection.features.length; i++) {
-                //A finir author = boucle sur le nombre des authors dans le récit (authors pluriel)
-                if (feature.properties.main === true
-                    && feature.properties.story.mobility === mobilitySearch()
-                )
-                {
-                    return true
-                }}
-        },
-
-        pointToLayer: function (feature, latlng) {
-            var label = String(feature.properties.story.mobility)
-            return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
-        },
-        onEachFeature: modalPopulate
-    })
-    group.clearLayers()
-    mobiltyGroup.addLayer(mobiltyMarkers).addTo(map)
-}
-
-/*&& feature.properties.story.genres[0].label === genreParsing()
-&& feature.properties.story.main_location.label === authorsParsing()
-&& feature.properties.story.title === authorsParsing()
-&& feature.properties.story.projects[0].label ===  authorsParsing()
-&& feature.properties.mobitily === authorsParsing()*/
-/*
-                    && feature.properties.story.genres[0].label === 'Rosie Lanoue Deslandes')
-                    && feature.properties.story.main_tag.label === 'Rosie Lanoue Deslandes')
-                    && feature.properties.story.main_location.label === 'Rosie Lanoue Deslandes')
-                    && feature.properties.story.title === 'Rosie Lanoue Deslandes')
-                    && feature.properties.story.projects[0].label === 'Rosie Lanoue Deslandes')
-                    && feature.properties.mobitily === 'Rosie Lanoue Deslandes')*/
 
 
 /**
-* function that tell what to do on onEachFeature of the markers
-*/
+ * returns the hardcoded color for the categories in the legend
+ *
+ * @param feature
+ * @returns {string}
+ */
 
+function setCatStyle(feature) {
+  if (feature.properties.story.category === 'dessin') {
+    return 'orange'
+  }
+  else if (feature.properties.story.category === 'video') {
+    return 'red'
+  }
+  else if (feature.properties.story.category === 'audio') {
+    return 'turquoise'
+  }
+  else if (feature.properties.story.category === 'photo') {
+    return  'purple'
+  }
+  else if (feature.properties.story.category === 'multimédia') {
+    return 'yellow'
+  }
+  else if (feature.properties.story.category === 'écrit') {
+    return 'lawngreen'
+  }
+  else {
+    return 'white'
+  }
+}
+
+function getTitleMarkers () {
+
+  titleMarkers = L.geoJSON(featuresCollection, {
+
+    filter: function (feature) {
+
+      for (var i = 0; i < featuresCollection.features.length; i++) {
+        //A finir author = boucle sur le nombre des title dans le récit (title pluriel)
+        if (feature.properties.main === true
+          && feature.properties.story.title === titleSearch()
+        )
+        {
+          return true
+        }}
+    },
+// Display main markers as CircleMarkers
+    pointToLayer: function (feature, latlng) {
+
+      var icon = new  L.icon.pulse({
+        iconSize:[12,12],
+        color: setCatStyle(feature),
+        fillColor : setCatStyle(feature) ,
+        fillOpacity: 0.5,
+        heartbeat:Math.floor(Math.random() * 6) + 1});
+
+      //var label = String(feature.properties.story.id)
+      return L.marker(latlng, {icon: icon})
+      //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
+    },
+    onEachFeature: onEachFeature
+  })
+  group.clearLayers()
+  titleGroup.addLayer(titleMarkers).addTo(map)
+  //allGroups.addLayer(titleMarkers).addTo(map)
+}
+/**
+ * create a new L.Layergroup everytime we filter by authors
+ */
+function getAuthorsMarkers () {
+
+  authorsMarkers = L.geoJSON(featuresCollection, {
+
+    filter: function (feature) {
+
+      if(feature.properties.main === true){
+        for (var i = 0; i < feature.properties.story.authors.length; i++) {
+          if (feature.properties.story.authors[i].label === authorsSearch()){
+            return true
+          }
+        }
+      }
+    },
+// Display main markers as CircleMarkers
+    pointToLayer: function (feature, latlng) {
+
+      var icon = new  L.icon.pulse({
+        iconSize:[12,12],
+        color: setCatStyle(feature),
+        fillColor : setCatStyle(feature) ,
+        fillOpacity: 0.5,
+        heartbeat:Math.floor(Math.random() * 6) + 1});
+
+      //var label = String(feature.properties.story.id)
+      return L.marker(latlng, {icon: icon})
+      //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
+    },
+    onEachFeature: onEachFeature
+  })
+  group.clearLayers()
+  authorsGroup.addLayer(authorsMarkers).addTo(map)
+  //allGroups.addLayer(authorsMarkers).addTo(map)
+}
+/**
+ * create a new L.Layergroup everytime we filter by categories
+ */
+function getGenreMarkers () {
+
+  if (map.hasLayer(mainMarkers)){
+    group.clearLayers()
+  }
+
+  genreMarkers = L.geoJSON(featuresCollection, {
+
+    filter: function (feature) {
+
+      for (var i = 0; i < featuresCollection.features.length; i++) {
+        console.log(genreSearch())
+        if (feature.properties.main === true && feature.properties.story.category === genreSearch() )
+        {
+          return true
+        }
+        else {
+
+          return
+        }
+      }
+    },
+// Display main markers as CircleMarkers
+    pointToLayer: function (feature, latlng) {
+
+      var icon = new  L.icon.pulse({
+        iconSize:[12,12],
+        color: setCatStyle(feature),
+        fillColor : setCatStyle(feature) ,
+        fillOpacity: 0.5,
+        heartbeat:Math.floor(Math.random() * 6) + 1});
+
+      //var label = String(feature.properties.story.id)
+      return L.marker(latlng, {icon: icon})
+      //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
+    },
+    onEachFeature: onEachFeature
+  })
+
+  genreGroup.addLayer(genreMarkers).addTo(map)
+}
+/**
+ * create a new L.Layergroup everytime we filter by mobility
+ */
+function getMobiltyMarkers () {
+
+  if (map.hasLayer(mainMarkers)){
+    group.clearLayers()
+  }
+
+  mobilityMarkers = L.geoJSON(featuresCollection, {
+
+    filter: function (feature) {
+
+      for (var i = 0; i < featuresCollection.features.length; i++) {
+        console.log(genreSearch())
+        if (feature.properties.main === true && feature.properties.story.mobility === mobilitySearch() )
+        {
+          return true
+        }
+        else {
+
+          return
+        }
+      }
+    },
+// Display main markers as CircleMarkers
+    pointToLayer: function (feature, latlng) {
+
+      var icon = new  L.icon.pulse({
+        iconSize:[12,12],
+        color: setCatStyle(feature),
+        fillColor : setCatStyle(feature) ,
+        fillOpacity: 0.5,
+        heartbeat:Math.floor(Math.random() * 6) + 1});
+
+      //var label = String(feature.properties.story.id)
+      return L.marker(latlng, {icon: icon})
+      //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
+    },
+    onEachFeature: onEachFeature
+  })
+
+  mobilityGroup.addLayer(mobilityMarkers).addTo(map)
+}
+
+/**
+ *create a new L.Layergroup everytime we filter by locations
+ */
+function getLocationMarkers () {
+
+  locationMarkers  = L.geoJSON(featuresCollection, {
+
+    filter: function (feature) {
+
+      if(feature.properties.main === true){
+        for (var i = 0; i < feature.properties.story.locations.length; i++) {
+          if (feature.properties.story.locations[i].label === locationSearch()){
+            return true
+          }
+        }
+      }
+    },
+// Display main markers as CircleMarkers
+    pointToLayer: function (feature, latlng) {
+
+      var icon = new  L.icon.pulse({
+        iconSize:[12,12],
+        color: setCatStyle(feature),
+        fillColor : setCatStyle(feature) ,
+        fillOpacity: 0.5,
+        heartbeat:Math.floor(Math.random() * 6) + 1});
+
+      //var label = String(feature.properties.story.id)
+      return L.marker(latlng, {icon: icon})
+      //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
+    },
+    onEachFeature: onEachFeature
+  })
+  group.clearLayers()
+  locationGroup.addLayer(locationMarkers).addTo(map)
+  //allGroups.addLayer(authorsMarkers).addTo(map)
+}
+
+/**
+ * function that tell what to do on onEachFeature of the markers
+ */
 function onEachFeature (feature, layer) {
-      // Create HTML POP UP //
+  // Create HTML POP UP //
 
   /**
    * function that check if authors are multiple and returns a list if true
@@ -529,72 +615,82 @@ function onEachFeature (feature, layer) {
         return feature.properties.story.authors[0].label
       }
     }
-   // console.log(authorsList.join(', '))
+    // console.log(authorsList.join(', '))
     return authorsList.join(', <br>')
   }
 
+  /**
+   *function that set dynamically the text in the popup header
+   * @returns {string}
+   */
   var dynamicIcon =  function(){
-try {
-    if (feature.properties.story.media_links.length === undefined ){
-      return 'Autre'
-    }
+    try {
+      if (feature.properties.story.category === undefined ){
+        return 'Autre'
+      }
 
-    else if (feature.properties.story.media_links.length > 1){
-      return 'Multimédia'
-    }
-    else if (feature.properties.story.media_links[0].media_type === 'photo'){
-      return 'Photo'
-    }
-    else if (feature.properties.story.media_links[0].media_type === 'vidéo') {
-      return 'Video'
-    }
+      else if (feature.properties.story.category === 'photo'){
+        return 'Photo'
+      }
+      else if (feature.properties.story.category === 'video') {
+        return 'Video'
+      }
 
-    else if (feature.properties.story.media_links[0].media_type === 'pdf') {
+      else if (feature.properties.story.category === 'écrit') {
         return 'Écrit'
       }
 
-      else if (feature.properties.story.media_links[0].media_type === 'audio') {
+      else if (feature.properties.story.category === 'audio') {
         return 'Audio'
+      }
+      else if (feature.properties.story.category === 'dessin') {
+        return 'Dessin'
+      }
+      else if (feature.properties.story.category === 'multimédia') {
+        return 'multimédia'
       }
     }
 
-  catch(e) {
-    return
+    catch(e) {
+      return
+    }
+
   }
-
-}
-
+  /**
+   *function that set dynamically the color in the popup header
+   * @returns {string}
+   */
   var dynamicHeader = function(){
 
-  try {
-    if (feature.properties.story.media_links.length === undefined ){
-      return 'grey'
+    try {
+      if (feature.properties.story.category === 'photo'){
+        return 'purple'
+      }
+      else if (feature.properties.story.category === 'video') {
+        return 'red'
+      }
+
+      else if (feature.properties.story.category === 'dessin') {
+        return 'orange'
+      }
+
+      else if (feature.properties.story.category === 'audio') {
+        return 'turquoise'
+      }
+      else if (feature.properties.story.category === 'écrit') {
+        return 'lawngreen'
+      }
+      else if (feature.properties.story.category === 'multimédia') {
+        return 'yellow'
+      }
+
     }
 
-    else if (feature.properties.story.media_links.length > 1){
-      return 'yellow'
-    }
-    else if (feature.properties.story.media_links[0].media_type === 'photo'){
-      return 'purple'
-    }
-    else if (feature.properties.story.media_links[0].media_type === 'vidéo') {
-      return 'red'
+    catch(e) {
+      return
     }
 
-    else if (feature.properties.story.media_links[0].media_type === 'pdf') {
-      return 'green'
-    }
-
-    else if (feature.properties.story.media_links[0].media_type === 'audio') {
-      return 'teal'
-    }
   }
-
-  catch(e) {
-    return
-  }
-
-}
 
   var customPopup = '<div id="popUp" class="card mb-3" style="max-width: 20rem;">  '
   customPopup = customPopup + '<div id="mediaHeader" class="card-header" style="background-color: '+dynamicHeader()+'!important;">'
@@ -610,33 +706,32 @@ try {
   customPopup = customPopup + '</div></a>'
   customPopup = customPopup + '</div></div>'
 
-      // specify popup class
+  // specify popup class
   var customOptions =
-          {'className': 'custom'}
-      // bind html code and class options to the popup
+    {'className': 'custom'}
+  // bind html code and class options to the popup
   layer.bindPopup(customPopup, customOptions)// .on('click', function () {
-    // console.log('test onclick')
-    /**
-     * On hover over the point show legend
-     */
+  // console.log('test onclick')
+  /**
+   * On hover over the point show legend
+   */
 
-    layer.on('mouseover', function(){
-        $('#legend').css("display","inline")
-    });
-    layer.on('mouseout', function () {
-        $('#legend').css("display","none")
-    });
+  layer.on('mouseover', function(){
+    $('#legend').css("display","inline")
+  });
+  layer.on('mouseout', function () {
+    $('#legend').css("display","none")
+  });
 };
 
 /**
-* function that tell what to do on onEachFeature of the filterMarkers and populate the modal
-* @param {Object} feature
-* @param {Object} layer
-*/
-
+ * function that tells what to do on onEachFeature of the filterMarkers and populate the modal
+ * @param {Object} feature
+ * @param {Object} layer
+ */
 function modalPopulate (feature, layer) {
-    // CREATE DYNAMICALLY THE HTML CODE TO POPULATE THE MODAL SCROLL BY CHAPTER SECTION OF THE STORIES
-    // / /////////////////////////////////////////////////////////////
+  // CREATE DYNAMICALLY THE HTML CODE TO POPULATE THE MODAL SCROLL BY CHAPTER SECTION OF THE STORIES
+  // / /////////////////////////////////////////////////////////////
 
   var authorsModal = function(){
     var authorsList =[]
@@ -674,7 +769,7 @@ function modalPopulate (feature, layer) {
 
   var keyWordsModal = function(i){
     var tagsList =[]
-    for(var i  ; i < feature.properties.story.tags.length; i++){
+    for(i ; i < feature.properties.story.tags.length; i++){
       //console.log(feature.properties.story.authors.length)
       if (feature.properties.story.tags.length > 1){
         tagsList.push(feature.properties.story.tags[i].label)
@@ -686,7 +781,7 @@ function modalPopulate (feature, layer) {
       }
     }
     // console.log(authorsList.join(', '))
-   // return tagsList.join(', ').split(',')
+    // return tagsList.join(', ').split(',')
   }
 
 
@@ -708,92 +803,92 @@ function modalPopulate (feature, layer) {
 
 
 
-try {
-      var articleTitle = $('<h2 class="pt-0" id="articleTitle">' + feature.properties.story.title + '</h2>')
-    }
-    catch(e) {
-      console.log(e)
-    }
-finally {
-  articleTitle
-}
+  try {
+    var articleTitle = $('<h2 class="pt-0" id="articleTitle">' + feature.properties.story.title + '</h2>')
+  }
+  catch(e) {
+    console.log(e)
+  }
+  finally {
+    articleTitle
+  }
 
-try {
+  try {
     var articleAuthors = $('<h5>'+ authorsModal()+ '</h5>')
   }     catch(e) {
-  console.log(e)
+    console.log(e)
   }
-finally {
-  articleAuthors
-}
+  finally {
+    articleAuthors
+  }
 
-try {
+  try {
     var articleCollaborators = $('<h5>'+collaboratorsModal()+'</h5>')
   }
   catch(e) {
     console.log(e)
   }
   finally {
-  articleCollaborators
-}
-try {
+    articleCollaborators
+  }
+  try {
     var articleMobility =$('<h6 id ="modalMobility" class="text-center"> '+feature.properties.story.mobility+' </h6>')
   }     catch(e) {
-  console.log(e)
+    console.log(e)
   }
-finally {
-  articleMobility
-}
-try {
+  finally {
+    articleMobility
+  }
+  try {
     var articleLocation =$('<h6 id ="modalLocation" class="text-center"> '+feature.properties.story.main_location['label']+' </h6>')
   }     catch(e) {
-  console.log(e)
+    console.log(e)
   }
-finally {
-  articleLocation
-}
-try {
+  finally {
+    articleLocation
+  }
+  try {
     var articleProject=$('<h6> '+feature.properties.story.project['label']+'</h6>')
   }
   catch(e) {
     console.log(e)
   }
-finally {
-  articleProject
-}
+  finally {
+    articleProject
+  }
 
-try {
+  try {
     var articleDate=$('<h6> '+feature.properties.story.date+'</h6>')
   }
   catch(e) {
     console.log(e)
   }
-finally {
-  articleDate
-}
+  finally {
+    articleDate
+  }
 
-try {
-  var kwPills = $('<div></div>')
-  var articleKeyWord = $('<script>$(".badgeRdColor").css("background-color", "rgb(35,195,237)")</script><span id="tag" class="badge badge-pill badgeRdColor">'+keyWordsModal()+'</span>')
-    }
+  try {
+    var kwPills = $('<div></div>')
+    var articleKeyWord = $('<script>$(".badgeRdColor").css("background-color", "rgb(35,195,237)")</script><span id="tag" class="badge badge-pill badgeRdColor">'+keyWordsModal()+'</span>')
+  }
 
   catch(e) {
     console.log(e)
   }
   finally {
-  for(var i =0 ; i < feature.properties.story.tags.length; i++){
+    for(var i =0 ; i < feature.properties.story.tags.length; i++){
 
-    kwPills.append($('<script>$(".badgeRdColor").css("background-color", "rgb(35,195,237)")</script><span id="tag'+i+'" class="badge badge-pill badgeRdColor">'+keyWordsModal(i)+'</span>'))
+      kwPills.append($('<script>$(".badgeRdColor").css("background-color", "rgb(35,195,237)")</script><span id="tag'+i+'" class="badge badge-pill badgeRdColor">'+keyWordsModal(i)+'</span>'))
+    }
   }
-}
 
-try{
-  var mainImg =$('<img class="img-fluid d-block align-item-center mr-auto ml-auto" src="'+feature.properties.story.thumbnail+'">')
-}
-catch(e){
+  try{
+    var mainImg =$('<img class="img-fluid d-block align-item-center mr-auto ml-auto" src="'+feature.properties.story.thumbnail+'">')
+  }
+  catch(e){
     console.log(e)
-}
-finally {
+  }
+  finally {
     mainImg
   }
 
@@ -808,9 +903,9 @@ finally {
   }
 
 
-try {
+  try {
 //  var sections = $('<div></div>')
-  //for(var i =0 ; i < filterMarkers.getLayers().length; i++) {
+    //for(var i =0 ; i < filterMarkers.getLayers().length; i++) {
     var articleSection = $('<section id=' + feature.properties.order + 'class="col-md-10 col-lg-10 mx-auto">' +
       '          <div class="col-md-10 col-lg-10 mx-auto">' +
       '            <span id="elementNumber"> <h4>' + feature.properties['title'] + '</h4> </span>' +
@@ -823,15 +918,15 @@ try {
       mediaFrameModal() +
       '       <span class="text-justify text-center">  ' + feature.properties['description'] + ' </span>' +
       '        </div><hr></section>')
-   // sections.append(articleSection)
+    // sections.append(articleSection)
   }
 //}
-catch(e) {
-  console.log(e)
-}
-finally{
-  articleSection
-}
+  catch(e) {
+    console.log(e)
+  }
+  finally{
+    articleSection
+  }
 
   $('#articles').append(articleSection)
 
@@ -850,20 +945,20 @@ finally{
 
 
 }
-  /**
-    * function that check for the container id and zoom to the parent feature
-    * @param {numeric} newId
-    */
+/**
+ * function that check for the container id and zoom to the parent feature
+ * @param {numeric} newId
+ */
 
 var narrative = document.getElementById('articles')
 var sections = narrative.getElementsByTagName('section')
 var currentId = ''
 
 function setId (newId) {
-          // If the ID hasn't actually changed, don't do anything
+  // If the ID hasn't actually changed, don't do anything
   if (newId === currentId) return
-          // Otherwise, iterate through layers, setting the current
-          // marker to a different color and zooming to it.
+  // Otherwise, iterate through layers, setting the current
+  // marker to a different color and zooming to it.
   filterMarkers.eachLayer(function (layer) {
     if(String(layer.feature.properties['order'])=== undefined){
       console.log('article undefined')
@@ -873,26 +968,26 @@ function setId (newId) {
       map.flyTo([layer.feature.geometry.coordinates[1], layer.feature.geometry.coordinates[0]], 15)
     }
   })
-          // highlight the current section
+  // highlight the current section
   for (var i = 0; i < sections.length; i++) {
     sections[i].className = sections[i].id === newId ? 'active' : ''
   }
-          // And then set the new id as the current one,
-          // so that we know to do nothing at the beginning
-          // of this function if it hasn't changed between calls
+  // And then set the new id as the current one,
+  // so that we know to do nothing at the beginning
+  // of this function if it hasn't changed between calls
   currentId = newId
-        //  console.log(currentId)
+  //  console.log(currentId)
 }
-      // If you were to do this for real, you would want to use
-      // something like underscore's _.debounce function to prevent this
-      // call from firing constantly.
+// If you were to do this for real, you would want to use
+// something like underscore's _.debounce function to prevent this
+// call from firing constantly.
 narrative.onscroll = function (e) {
   var narrativeHeight = narrative.offsetHeight
   var newId = currentId
-          // Find the section that's currently scrolled-to.
-          // We iterate backwards here so that we find the topmost one.
+  // Find the section that's currently scrolled-to.
+  // We iterate backwards here so that we find the topmost one.
   for (var i = sections.length - 1; i >= 0; i--) {
-            // console.log(sections.length)
+    // console.log(sections.length)
     var rect = sections[i].getBoundingClientRect()
     if (rect.top >= 0 && rect.top <= narrativeHeight) {
       newId = sections[i].id
@@ -900,6 +995,7 @@ narrative.onscroll = function (e) {
   };
   setId(newId)
 }
+
 
 
 

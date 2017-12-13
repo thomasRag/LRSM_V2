@@ -125,7 +125,7 @@ function openModal () {
     $("#map").width('55%')}
   else{
 
-    $("#recitInfoPanel").animate({left: "-800px"},0)
+    $("#recitInfoPanel").animate({left: "-1000px"},0)
     $("#recitInfoPanel").addClass('modalActive')
     $("#map").width('85%')}
   map.closePopup()
@@ -135,9 +135,11 @@ function openModal () {
  */
 function closeModal(){
   $('#panelCloseButton').click(function(){
-    $('#articles').empty()
-    $("#recitInfoPanel").animate({left: "-800px"})
-    $("#recitInfoPanel").addClass('modalActive')
+    group.clearLayers()
+    $("#sections").empty()
+    $("#recitInfoPanel").animate({left: "-1000px"})
+    $("#recitInfoPanel").addClass('modalInactive')
+
     getMainMarkers()
     $("#map").width('85%')}
   )
@@ -233,9 +235,19 @@ function getFilterMarkersById (myFilterLayer) {
       }
     },
 
+// Display main markers as CircleMarkers
     pointToLayer: function (feature, latlng) {
-      //var label = String(feature.properties.order)
-      return L.circleMarker(latlng)//.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
+
+      var icon = new  L.icon.pulse({
+        iconSize:[12,12],
+        color: setCatStyle(feature),
+        fillColor : setCatStyle(feature) ,
+        fillOpacity: 0.5,
+        heartbeat:Math.floor(Math.random() * 6) + 1});
+
+      //var label = String(feature.properties.story.id)
+      return L.marker(latlng, {icon: icon})
+      //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
     },
 
 // on each feature call the modal and populate it with the specific related information gathered in the geojson
@@ -726,7 +738,7 @@ function modalPopulate (feature, layer) {
   var authorsModal = function(){
     var authorsList =[]
     for(var i =0 ; i < feature.properties.story.authors.length; i++){
-      //console.log(feature.properties.story.authors.length)
+
       if (feature.properties.story.authors.length > 1){
         authorsList.push(feature.properties.story.authors[i].label)
         //console.log(authorsList)
@@ -741,20 +753,20 @@ function modalPopulate (feature, layer) {
   }
 
   var collaboratorsModal = function(){
-    var collaboratorsList =[]
-    for(var i =0 ; i < feature.properties.story.collaborators.length; i++){
-      //console.log(feature.properties.story.authors.length)
-      if (feature.properties.story.collaborators.length > 1){
-        collaboratorsList.push(feature.properties.story.collaborators[i].label)
 
+    if(feature.properties.story.collaborators === []){
+      return false
+    }
+    var collaboratorList =[]
+    for(var i =0 ; i < feature.properties.story.collaborators.length; i++){
+      if (feature.properties.story.collaborators.length > 1){
+        collaboratorList.push(feature.properties.story.collaborators[i].label)
       }
       else {
         return feature.properties.story.collaborators[0].label
       }
-      return collaboratorsList.join(', <br>')
     }
-    // console.log(authorsList.join(', '))
-
+    return collaboratorList.join(' <br>')
   }
 
   var keyWordsModal = function(i){
@@ -774,6 +786,9 @@ function modalPopulate (feature, layer) {
     // return tagsList.join(', ').split(',')
   }
 
+  var projectModal = function(){
+    return feature.properties.story.project.label
+  }
 
   var mediaFrameModal = function (){
     /*for(var i  ; i < feature.properties.story.media_links.length; i++){
@@ -791,7 +806,23 @@ function modalPopulate (feature, layer) {
     return feature.properties.media
   }
 
-
+  var dateModal = function(){
+    var dateList = []
+    if (feature.properties.story.date_type === "range"){
+      dateList.push(feature.properties.story.date_min + ' - ' + feature.properties.story.date_max )
+      return dateList
+    }
+    else if (feature.properties.story.date_type === "multi"){
+      for(var i=0; i < feature.properties.story.multi_dates.length;i++){
+        dateList.push(feature.properties.story.multi_dates[i].multi_date)
+        dateList.join(' <br>')
+        return dateList
+      }
+    }
+    else if (feature.properties.story.date_type === "single"){
+      return feature.properties.story.date
+    }
+  }
 
   try {
     var articleTitle = $('<h2 class="pt-0" id="articleTitle">' + feature.properties.story.title + '</h2>')
@@ -805,7 +836,8 @@ function modalPopulate (feature, layer) {
 
   try {
     var articleAuthors = $('<h5>'+ authorsModal()+ '</h5>')
-  }     catch(e) {
+  }
+  catch(e) {
     console.log(e)
   }
   finally {
@@ -813,7 +845,7 @@ function modalPopulate (feature, layer) {
   }
 
   try {
-    var articleCollaborators = $('<h5>'+collaboratorsModal()+'</h5>')
+    var articleCollaborators = $('<h6> Coll. '+collaboratorsModal()+'</h6>')
   }
   catch(e) {
     console.log(e)
@@ -822,7 +854,7 @@ function modalPopulate (feature, layer) {
     articleCollaborators
   }
   try {
-    var articleMobility =$('<h6 id ="modalMobility" class="text-center"> '+feature.properties.story.mobility+' </h6>')
+    var articleMobility = $('<h6 id ="modalMobility" class="text-center"> '+feature.properties.story.mobility+' </h6>')
   }     catch(e) {
     console.log(e)
   }
@@ -830,7 +862,7 @@ function modalPopulate (feature, layer) {
     articleMobility
   }
   try {
-    var articleLocation =$('<h6 id ="modalLocation" class="text-center"> '+feature.properties.story.main_location['label']+' </h6>')
+    var articleLocation = $('<h6 id ="modalLocation" class="text-center"> '+feature.properties.story.main_location['label']+' </h6>')
   }     catch(e) {
     console.log(e)
   }
@@ -838,7 +870,7 @@ function modalPopulate (feature, layer) {
     articleLocation
   }
   try {
-    var articleProject=$('<h6> '+feature.properties.story.project['label']+'</h6>')
+    var articleProject= $('<h6> '+projectModal()+'</h6>')
   }
   catch(e) {
     console.log(e)
@@ -848,7 +880,7 @@ function modalPopulate (feature, layer) {
   }
 
   try {
-    var articleDate=$('<h6> '+feature.properties.story.date+'</h6>')
+    var articleDate=$('<h6> '+dateModal()+'</h6>')
   }
   catch(e) {
     console.log(e)
@@ -859,7 +891,7 @@ function modalPopulate (feature, layer) {
 
   try {
     var kwPills = $('<div></div>')
-    var articleKeyWord = $('<script>$(".badgeRdColor").css("background-color", "rgb(35,195,237)")</script><span id="tag" class="badge badge-pill badgeRdColor">'+keyWordsModal()+'</span>')
+    var articleKeyWord = $('<script>$(".badgeRdColor").css("background-color", "rgb(35,195,237)")</script><span id="tag" class="badge badge-pill badgeRdColor d-flex flex-wrap">'+keyWordsModal()+'</span>')
   }
 
   catch(e) {
@@ -896,33 +928,50 @@ function modalPopulate (feature, layer) {
   try {
 //  var sections = $('<div></div>')
     //for(var i =0 ; i < filterMarkers.getLayers().length; i++) {
-    var articleSection = $('<section id=' + feature.properties.order + 'class="col-md-10 col-lg-10 mx-auto">' +
-      '          <div class="col-md-10 col-lg-10 mx-auto">' +
-      '            <span id="elementNumber"> <h4>' + feature.properties['title'] + '</h4> </span>' +
-      '          </div>' +
-      '          <div class="col-md-10 col-lg-10 mx-auto">' +
-      '            <span> <h5>' + feature.properties['date'] + ' | ' + feature.properties['date'] + ' </h5>  </span>' +
-      '          </div>' +
-      '        <div class="row">' +
-      '<div class="col-md-9 col-lg-9 mx-auto">'+
-      mediaFrameModal() +
-      '       <span class="text-justify text-center">  ' + feature.properties['description'] + ' </span>' +
-      '        </div><hr></section>')
-    // sections.append(articleSection)
+
+
+    if(feature.properties.order === 0){
+      var articleSection = $('<section id="0" class="col-md-10 col-lg-10 mx-auto">' +
+        '          <div class="col-md-10 col-lg-10 mx-auto">' +
+        '            <span id="elementNumber"> <h4></h4> </span>' +
+        '          </div>' +
+        '          <div class="col-md-10 col-lg-10 mx-auto">' +
+        '            <span><h5></h5></span>' +
+        '          </div>' +
+        '        <div class="row">' +
+        '<div class="col-md-9 col-lg-9 mx-auto">'+
+        '       <span class="text-justify text-center"></span>' +
+        '        </div><hr></section>')
+      // sections.append(articleSection)
+    }
+    else{
+
+      var articleSection = $('<section id="'+ feature.properties.order +'" class="col-md-10 col-lg-10 mx-auto">' +
+        '          <div class="col-md-10 col-lg-10 mx-auto">' +
+        '            <span id="elementNumber"> <h4>' + feature.properties.title + '</h4> </span>' +
+        '          </div>' +
+        '          <div class="col-md-10 col-lg-10 mx-auto">' +
+        '            <span><h5>'+ feature.properties.date +'</h5></span>' +
+        '          </div>' +
+        '        <div class="row">' +
+        '<div class="col-md-9 col-lg-9 mx-auto">'+
+        mediaFrameModal() +
+        '       <span class="text-justify text-center">  ' + feature.properties.description + ' </span>' +
+        '        </div><hr></section>')
+      // sections.append(articleSection)
+    }
+
   }
 //}
   catch(e) {
     console.log(e)
   }
-  finally{
-    articleSection
-  }
 
-  $('#articles').append(articleSection)
 
+
+  $('#sections').append(articleSection)
   $('#mainDescription').empty().html(mainDescription)
   $('#mainImg').empty().html(mainImg)
-
   $('#articleKeyWord').empty().html(kwPills)
   $('#articleDate').empty().html(articleDate)
   $('#articleProject').empty().html(articleProject)
@@ -987,6 +1036,19 @@ narrative.onscroll = function (e) {
 }
 
 
+function articleReset (){
+  $('#articles').empty()
+  $('#mainDescription').empty()
+  $('#mainImg').empty()
+  $('#articleKeyWord').empty()
+  $('#articleDate').empty()
+  $('#articleProject').empty()
+  $('#articleLocation').empty()
+  $('#articleMobility').empty()
+  $('#articleCollaborator').empty()
+  $('#articleAuthor').empty()
+  $('#articleTitle').empty()
+}
 
 
 

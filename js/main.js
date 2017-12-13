@@ -105,7 +105,7 @@ function closeModal(){
     group.clearLayers()
     $("#sections").empty()
     $("#recitInfoPanel").animate({left: "-1000px"})
-    $("#recitInfoPanel").addClass('modalActive')
+    $("#recitInfoPanel").addClass('modalInactive')
 
     getMainMarkers()
     $("#map").width('85%')}
@@ -898,7 +898,18 @@ try {
 
 
       if(feature.properties.order === 0){
-      return false
+        var articleSection = $('<section id="0" class="col-md-10 col-lg-10 mx-auto">' +
+          '          <div class="col-md-10 col-lg-10 mx-auto">' +
+          '            <span id="elementNumber"> <h4></h4> </span>' +
+          '          </div>' +
+          '          <div class="col-md-10 col-lg-10 mx-auto">' +
+          '            <span><h5></h5></span>' +
+          '          </div>' +
+          '        <div class="row">' +
+          '<div class="col-md-9 col-lg-9 mx-auto">'+
+          '       <span class="text-justify text-center"></span>' +
+          '        </div><hr></section>')
+        // sections.append(articleSection)
       }
       else{
 

@@ -21,14 +21,7 @@ var locationGroup = L.layerGroup()
 var genreGroup = L.layerGroup()
 var allGroups = L.layerGroup()
 
-var setColor = {
-  radius: 8,
-  fillColor: getRandomColor(),
-  color: '#ffffff',
-  weight: 1,
-  opacity: 1,
-  fillOpacity: 0.5
-}
+
 
 function getRandomColor () {
   var letters = '0123456789ABCDEF'.split('')
@@ -39,13 +32,28 @@ function getRandomColor () {
   return color
 }
 
+/**
+ * sort a ul li list by id
+ *
+ */
+function myTest(){
+  var list = $("#arraySelectors");
+  var desc= false;
+  list.append(list.children().get().sort(function(a, b) {
+    var aProp = $(a).find("span").text()
+    var bProp = $(b).find("span").text();
+    return (aProp > bProp ? 1 : aProp < bProp ? -1 : 0) * (desc ? -1 : 1);
+  }));
+}
 
 
-/** ******** END MAP FUNCTIONS ***********/
 
 /** **************Buttons filter functions*******************/
 
-
+/**
+ * listen to the button to toggle the modal time slider
+ *
+ */
 
 $(function(){
 
@@ -55,7 +63,7 @@ $(function(){
 })
 
 /**
- * function that listen to the Mobility buttons and push values to its specific array
+ * function that listen to the Mobility / Categories buttons and push values to its specific array
  * @type {Array}
  */
 $('.btn-rounded').click(function () {
@@ -66,8 +74,8 @@ $('.btn-rounded').click(function () {
     $(this).addClass('btn-active')
 
   }
-  getGenreMarkers()
 })
+
 
 
 
@@ -101,12 +109,6 @@ function closeModal(){
     $("#map").width('85%')}
   )
 }
-/**
-* function that revert back to the mainMarkers layer
-*/
-//document.getElementById('modalClose').onclick = function () {
- // getMainMarkers()
-//}
 
 /**
 * pan the popup to the center of the screen
@@ -120,7 +122,7 @@ map.on('popupopen', function (e) {
 
 })
 
- /**
+/**
  * Generate list of values filtered on the map extent
  */
 
@@ -136,8 +138,10 @@ map.on('moveend ', function () {
         mainMarkers.eachLayer(function (marker) {
             if (bounds.contains(marker.getLatLng())) {
                 inBounds.push(marker.feature.properties.story.title)
+
             }
         })
+      myTest()
     }
     else if (map.hasLayer(markerCluster)){
       /* function that retrive unique objects from an array */
@@ -148,6 +152,7 @@ map.on('moveend ', function () {
 
             }
         })
+      myTest()
     }
 
   /**
@@ -175,9 +180,6 @@ map.on('moveend ', function () {
   }
 })
 
-
-
-
 /**
 * function that filter the mainMarkers layer on click
 */
@@ -200,7 +202,7 @@ function getFilterMarkersById (myFilterLayer) {
 
     pointToLayer: function (feature, latlng) {
       //var label = String(feature.properties.order)
-      return L.circleMarker(latlng, setColor)//.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
+      return L.circleMarker(latlng)//.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
     },
 
 // on each feature call the modal and populate it with the specific related information gathered in the geojson
@@ -215,30 +217,6 @@ function getFilterMarkersById (myFilterLayer) {
   map.fitBounds(filterMarkers.getBounds(),{maxZoom:14})//.pad(Math.sqrt(2) / 2)) // fit bounds of the filtered specifici markers
 }
 
-
-function setCatStyle(feature) {
-      if (feature.properties.story.category === 'dessin') {
-        return 'orange'
-      }
-      else if (feature.properties.story.category === 'video') {
-        return 'red'
-      }
-      else if (feature.properties.story.category === 'audio') {
-        return 'turquoise'
-      }
-      else if (feature.properties.story.category === 'photo') {
-        return  'purple'
-      }
-      else if (feature.properties.story.category === 'multimédia') {
-        return 'yellow'
-      }
-      else if (feature.properties.story.category === 'écrit') {
-       return 'lawngreen'
-      }
-      else {
-        return 'white'
-      }
-  }
 
 /**
 * function that display the main markers
@@ -274,6 +252,7 @@ function getMainMarkers () {
 
   group.addLayer(mainMarkers).addTo(map)
   map.fitBounds(mainMarkers.getBounds())
+  console.log(mainMarkers.getLayers().length)
 }
 
 $(getMainMarkers ())
@@ -311,6 +290,20 @@ function authorsSearch(){
     }}
 }
 
+function locationSearch(){
+  if (jsonFilter.location[0].length === undefined){
+    return false
+  }
+  for (var j = 0; j < jsonFilter.location[0].length; j++) {
+    if (jsonFilter.location[0][j] === undefined){
+      return false
+    }
+    else {
+
+      return jsonFilter.location[0][j]
+    }}
+}
+
 function genreSearch(){
     for (var j = 0; j < jsonFilter.genre.length; j++) {
       console.log(jsonFilter)
@@ -319,19 +312,43 @@ function genreSearch(){
 }
 
 function mobilitySearch(){
-    if (jsonFilter.mobility.length === undefined){
-        return false
-    }
-    for (var j = 0; j < jsonFilter.mobility.length; j++) {
-        if (jsonFilter.mobility[j] === undefined){
-            return false
-        }
-        else {
-
-            return jsonFilter.mobility[j]
-        }}
+  for (var j = 0; j < jsonFilter.mobility.length; j++) {
+    console.log(jsonFilter)
+    return jsonFilter.mobility[j]
+  }
 }
 
+
+/**
+ * returns the hardcoded color for the categories in the legend
+ *
+ * @param feature
+ * @returns {string}
+ */
+
+function setCatStyle(feature) {
+  if (feature.properties.story.category === 'dessin') {
+    return 'orange'
+  }
+  else if (feature.properties.story.category === 'video') {
+    return 'red'
+  }
+  else if (feature.properties.story.category === 'audio') {
+    return 'turquoise'
+  }
+  else if (feature.properties.story.category === 'photo') {
+    return  'purple'
+  }
+  else if (feature.properties.story.category === 'multimédia') {
+    return 'yellow'
+  }
+  else if (feature.properties.story.category === 'écrit') {
+    return 'lawngreen'
+  }
+  else {
+    return 'white'
+  }
+}
 
 function getTitleMarkers () {
 
@@ -348,43 +365,66 @@ function getTitleMarkers () {
                     return true
                 }}
         },
-        pointToLayer: function (feature, latlng) {
-            var label = String(feature.properties.story.title)
-            return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
-        },
-        onEachFeature: modalPopulate
-    })
+// Display main markers as CircleMarkers
+       pointToLayer: function (feature, latlng) {
+
+         var icon = new  L.icon.pulse({
+           iconSize:[12,12],
+           color: setCatStyle(feature),
+           fillColor : setCatStyle(feature) ,
+           fillOpacity: 0.5,
+           heartbeat:Math.floor(Math.random() * 6) + 1});
+
+         //var label = String(feature.properties.story.id)
+         return L.marker(latlng, {icon: icon})
+         //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
+       },
+       onEachFeature: onEachFeature
+     })
     group.clearLayers()
     titleGroup.addLayer(titleMarkers).addTo(map)
     //allGroups.addLayer(titleMarkers).addTo(map)
 }
-
+/**
+ * create a new L.Layergroup everytime we filter by authors
+ */
 function getAuthorsMarkers () {
 
      authorsMarkers = L.geoJSON(featuresCollection, {
 
         filter: function (feature) {
 
-            for (var i = 0; i < featuresCollection.features.length; i++) {
-                //A finir author = boucle sur le nombre des authors dans le récit (authors pluriel)
-                if (feature.properties.main === true
-                    && feature.properties.story.authors[0].label === authorsSearch()
-                  )
-                {
-                    return true
-                }}
-            },
-        pointToLayer: function (feature, latlng) {
-            var label = String(feature.properties.story.authors[0].label)
-            return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
-        },
-        onEachFeature: modalPopulate
-    })
+          if(feature.properties.main === true){
+            for (var i = 0; i < feature.properties.story.authors.length; i++) {
+              if (feature.properties.story.authors[i].label === authorsSearch()){
+                return true
+              }
+            }
+          }
+         },
+// Display main markers as CircleMarkers
+       pointToLayer: function (feature, latlng) {
+
+         var icon = new  L.icon.pulse({
+           iconSize:[12,12],
+           color: setCatStyle(feature),
+           fillColor : setCatStyle(feature) ,
+           fillOpacity: 0.5,
+           heartbeat:Math.floor(Math.random() * 6) + 1});
+
+         //var label = String(feature.properties.story.id)
+         return L.marker(latlng, {icon: icon})
+         //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
+       },
+       onEachFeature: onEachFeature
+     })
     group.clearLayers()
     authorsGroup.addLayer(authorsMarkers).addTo(map)
     //allGroups.addLayer(authorsMarkers).addTo(map)
 }
-
+/**
+ * create a new L.Layergroup everytime we filter by categories
+ */
 function getGenreMarkers () {
 
   if (map.hasLayer(mainMarkers)){
@@ -407,63 +447,111 @@ function getGenreMarkers () {
                 }
              }
         },
-        pointToLayer: function (feature, latlng) {
-            var label = String(feature.properties.story.category)
-            return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
-        }
+// Display main markers as CircleMarkers
+       pointToLayer: function (feature, latlng) {
 
-    }).addTo(map)
+         var icon = new  L.icon.pulse({
+           iconSize:[12,12],
+           color: setCatStyle(feature),
+           fillColor : setCatStyle(feature) ,
+           fillOpacity: 0.5,
+           heartbeat:Math.floor(Math.random() * 6) + 1});
 
+         //var label = String(feature.properties.story.id)
+         return L.marker(latlng, {icon: icon})
+         //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
+       },
+       onEachFeature: onEachFeature
+     })
 
-     //genreGroup.addLayer(genreMarkers).addTo(map)
+     genreGroup.addLayer(genreMarkers).addTo(map)
 }
-
-
-
+/**
+ * create a new L.Layergroup everytime we filter by mobility
+ */
 function getMobiltyMarkers () {
 
-     mobiltyMarkers = L.geoJSON(featuresCollection, {
-
-        filter: function (feature) {
-
-            for (var i = 0; i < featuresCollection.features.length; i++) {
-                //A finir author = boucle sur le nombre des authors dans le récit (authors pluriel)
-                if (feature.properties.main === true
-                    && feature.properties.story.mobility === mobilitySearch()
-                )
-                {
-                    return true
-                }}
-        },
-
-        pointToLayer: function (feature, latlng) {
-            var label = String(feature.properties.story.mobility)
-            return L.circleMarker(latlng, setColor).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip() //, style(feature)); //,styled(feature));
-        },
-        onEachFeature: modalPopulate
-    })
+  if (map.hasLayer(mainMarkers)){
     group.clearLayers()
-    mobiltyGroup.addLayer(mobiltyMarkers).addTo(map)
+  }
+
+  mobilityMarkers = L.geoJSON(featuresCollection, {
+
+    filter: function (feature) {
+
+      for (var i = 0; i < featuresCollection.features.length; i++) {
+        console.log(genreSearch())
+        if (feature.properties.main === true && feature.properties.story.mobility === mobilitySearch() )
+        {
+          return true
+        }
+        else {
+
+          return
+        }
+      }
+    },
+// Display main markers as CircleMarkers
+    pointToLayer: function (feature, latlng) {
+
+      var icon = new  L.icon.pulse({
+        iconSize:[12,12],
+        color: setCatStyle(feature),
+        fillColor : setCatStyle(feature) ,
+        fillOpacity: 0.5,
+        heartbeat:Math.floor(Math.random() * 6) + 1});
+
+      //var label = String(feature.properties.story.id)
+      return L.marker(latlng, {icon: icon})
+      //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
+    },
+    onEachFeature: onEachFeature
+  })
+
+  mobilityGroup.addLayer(mobilityMarkers).addTo(map)
 }
 
-/*&& feature.properties.story.genres[0].label === genreParsing()
-&& feature.properties.story.main_location.label === authorsParsing()
-&& feature.properties.story.title === authorsParsing()
-&& feature.properties.story.projects[0].label ===  authorsParsing()
-&& feature.properties.mobitily === authorsParsing()*/
-/*
-                    && feature.properties.story.genres[0].label === 'Rosie Lanoue Deslandes')
-                    && feature.properties.story.main_tag.label === 'Rosie Lanoue Deslandes')
-                    && feature.properties.story.main_location.label === 'Rosie Lanoue Deslandes')
-                    && feature.properties.story.title === 'Rosie Lanoue Deslandes')
-                    && feature.properties.story.projects[0].label === 'Rosie Lanoue Deslandes')
-                    && feature.properties.mobitily === 'Rosie Lanoue Deslandes')*/
+/**
+ *create a new L.Layergroup everytime we filter by locations
+ */
+function getLocationMarkers () {
 
+  locationMarkers  = L.geoJSON(featuresCollection, {
+
+    filter: function (feature) {
+
+      if(feature.properties.main === true){
+        for (var i = 0; i < feature.properties.story.locations.length; i++) {
+          if (feature.properties.story.locations[i].label === locationSearch()){
+            return true
+          }
+        }
+      }
+    },
+// Display main markers as CircleMarkers
+    pointToLayer: function (feature, latlng) {
+
+      var icon = new  L.icon.pulse({
+        iconSize:[12,12],
+        color: setCatStyle(feature),
+        fillColor : setCatStyle(feature) ,
+        fillOpacity: 0.5,
+        heartbeat:Math.floor(Math.random() * 6) + 1});
+
+      //var label = String(feature.properties.story.id)
+      return L.marker(latlng, {icon: icon})
+      //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
+    },
+    onEachFeature: onEachFeature
+  })
+  group.clearLayers()
+  locationGroup.addLayer(locationMarkers).addTo(map)
+  //allGroups.addLayer(authorsMarkers).addTo(map)
+}
 
 /**
 * function that tell what to do on onEachFeature of the markers
 */
-
 function onEachFeature (feature, layer) {
       // Create HTML POP UP //
 
@@ -488,29 +576,36 @@ function onEachFeature (feature, layer) {
     return authorsList.join(', <br>')
   }
 
+  /**
+   *function that set dynamically the text in the popup header
+   * @returns {string}
+   */
   var dynamicIcon =  function(){
 try {
-    if (feature.properties.story.media_links.length === undefined ){
+    if (feature.properties.story.category === undefined ){
       return 'Autre'
     }
 
-    else if (feature.properties.story.media_links.length > 1){
-      return 'Multimédia'
-    }
-    else if (feature.properties.story.media_links[0].media_type === 'photo'){
+    else if (feature.properties.story.category === 'photo'){
       return 'Photo'
     }
-    else if (feature.properties.story.media_links[0].media_type === 'vidéo') {
+    else if (feature.properties.story.category === 'video') {
       return 'Video'
     }
 
-    else if (feature.properties.story.media_links[0].media_type === 'pdf') {
+    else if (feature.properties.story.category === 'écrit') {
         return 'Écrit'
       }
 
-      else if (feature.properties.story.media_links[0].media_type === 'audio') {
+      else if (feature.properties.story.category === 'audio') {
         return 'Audio'
       }
+    else if (feature.properties.story.category === 'dessin') {
+      return 'Dessin'
+    }
+    else if (feature.properties.story.category === 'multimédia') {
+      return 'multimédia'
+    }
     }
 
   catch(e) {
@@ -518,31 +613,34 @@ try {
   }
 
 }
-
+  /**
+   *function that set dynamically the color in the popup header
+   * @returns {string}
+   */
   var dynamicHeader = function(){
 
   try {
-    if (feature.properties.story.media_links.length === undefined ){
-      return 'grey'
-    }
-
-    else if (feature.properties.story.media_links.length > 1){
-      return 'yellow'
-    }
-    else if (feature.properties.story.media_links[0].media_type === 'photo'){
+   if (feature.properties.story.category === 'photo'){
       return 'purple'
     }
-    else if (feature.properties.story.media_links[0].media_type === 'vidéo') {
+    else if (feature.properties.story.category === 'video') {
       return 'red'
     }
 
-    else if (feature.properties.story.media_links[0].media_type === 'pdf') {
-      return 'green'
+    else if (feature.properties.story.category === 'dessin') {
+      return 'orange'
     }
 
-    else if (feature.properties.story.media_links[0].media_type === 'audio') {
-      return 'teal'
+    else if (feature.properties.story.category === 'audio') {
+      return 'turquoise'
     }
+    else if (feature.properties.story.category === 'écrit') {
+      return 'lawngreen'
+    }
+    else if (feature.properties.story.category === 'multimédia') {
+      return 'yellow'
+    }
+
   }
 
   catch(e) {
@@ -584,11 +682,10 @@ try {
 };
 
 /**
-* function that tell what to do on onEachFeature of the filterMarkers and populate the modal
+* function that tells what to do on onEachFeature of the filterMarkers and populate the modal
 * @param {Object} feature
 * @param {Object} layer
 */
-
 function modalPopulate (feature, layer) {
     // CREATE DYNAMICALLY THE HTML CODE TO POPULATE THE MODAL SCROLL BY CHAPTER SECTION OF THE STORIES
     // / /////////////////////////////////////////////////////////////
@@ -629,7 +726,7 @@ function modalPopulate (feature, layer) {
 
   var keyWordsModal = function(i){
     var tagsList =[]
-    for(var i  ; i < feature.properties.story.tags.length; i++){
+    for(i ; i < feature.properties.story.tags.length; i++){
       //console.log(feature.properties.story.authors.length)
       if (feature.properties.story.tags.length > 1){
         tagsList.push(feature.properties.story.tags[i].label)

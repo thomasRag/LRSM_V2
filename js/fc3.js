@@ -3033,7 +3033,7 @@ var featuresCollection = {
         }],
         "collaborators": [],
         "text": "<p>Par l\u2019exploration du site Outremont qui doit accueillir un \u00ab\u2009campus urbain int\u00e9gr\u00e9\u2009\u00bb d\u00e8s 2019, cette proposition de communication audiovisuelle interrogera le potentiel de refondation de l\u2019Universit\u00e9 de Montr\u00e9al \u00e0 travers ce chantier majeur, ainsi que ses effets symboliques pour la communaut\u00e9 environnante (quatre arrondissements jouxtent en effet le site du futur campus). Ce dernier devant voir le jour \u00e0 l\u2019emplacement d\u2019une ancienne gare de triage, le statut des \u00ab\u2009ruines\u2009\u00bb sera \u00e9galement remis en question, qu\u2019il s\u2019agisse de la d\u00e9signation d\u2019un lieu industriel ruin\u00e9, d\u00e9saffect\u00e9, en voie d\u2019effacement, sans valeur patrimoniale explicite ou encore des entreprises de revalorisation du site (activit\u00e9s \u00e9ph\u00e9m\u00e8res, laboratoires d\u2019innovation sociale). Cette r\u00e9flexion sera d\u00e9velopp\u00e9e par le biais d\u2019un dialogue entre les deux auteurs de la pr\u00e9sentation, soit \u2014 pour reprendre les propos de Readings \u2014 \u00e0 travers l\u2019action de penser ensemble, dans l\u2019aller-retour d\u2019une question pos\u00e9e in situ qui appelle une r\u00e9ponse pour mieux cheminer. \u00c0 partir de vid\u00e9os glan\u00e9es et capt\u00e9es dans les \u00ab\u2009ruines\u2009\u00bb du site Outremont, cet \u00e9change fera ensuite l\u2019objet d\u2019une mise en images d\u2019inspiration ph\u00e9nom\u00e9nologique, ce qui traduira les zones de tension exprim\u00e9es \u00e0 m\u00eame le site. Dans les tableaux visuels ainsi cr\u00e9\u00e9s, les images s\u2019insinueront dans un dialogue qui recourt aux propos des protagonistes et\u00a0aux expressions imaginaires d\u2019un campus toujours immat\u00e9riel, \u00e0 venir.<\/p>\n<p>&nbsp;<\/p>\n<p>Remerciements\u00a0: Erwan Geffroy (LRSM), Madeleine Rh\u00e9aume (Relations avec la communaut\u00e9, site Outremont), Jean-Philippe Drouin (Stantec), Sylvain Lamothe (Stantec).<\/p>\n",
-        "mobility": null,
+        "mobility": "en auto",
         "category": "dessin",
         "project": null,
         "media_links": [{
@@ -3566,7 +3566,7 @@ var featuresCollection = {
         }],
         "collaborators": [],
         "text": "<p>Capsule audiovisuelle int\u00e9gr\u00e9e \u00e0 une installation de vid\u00e9oprojection <em>in situ<\/em> utilisant un mur de la place St-Henri, Montr\u00e9al.<\/p>\n<p>R\u00e9alis\u00e9e \u00e0 partir d\u2019une prise de vues et de sons de St-Henri et d\u2019un enregistrement sonores d\u2019Oscar Peterson et d\u2019un enregistrement d\u2019une de ses compositions\u00a0: <em>Place St-Henri<\/em>.<\/p>\n<p>Projet r\u00e9alis\u00e9 dans le cadre d\u2019un partenariat entre le LRSM et MTL ville en mouvement pour le projet d\u2019Incabuteur urbain.<\/p>\n<p>&nbsp;<\/p>\n<p>Liens vers les vid\u00e9os en lignes dont sont extraits les bandes sonores\u00a0:<\/p>\n<p><a href=\"https:\/\/www.youtube.com\/watch?v=z-EpLRuta58\">https:\/\/www.youtube.com\/watch?v=z-EpLRuta58<\/a><\/p>\n<p><a href=\"https:\/\/www.youtube.com\/watch?v=8e8CoY7aKf0\">https:\/\/www.youtube.com\/watch?v=8e8CoY7aKf0<\/a><\/p>\n",
-        "mobility": null,
+        "mobility": "autres",
         "category": "video",
         "project": null,
         "media_links": [{

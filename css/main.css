@@ -299,10 +299,11 @@ a .nav-link{
 .custom .leaflet-popup-content-wrapper {
     width: 200px;
     height: 200px;
-    background-color: none;
+    background-color: rgba(255,255,255,1);
     color: none;
     background: none;
     border-radius: 0;
+    box-shadow: 0 0 0 0 rgba(0,0,0,0);
 }
 
 #popUp{
@@ -331,7 +332,6 @@ a .nav-link{
   margin:0;
   padding: 0;
   background-color: white;
-    color:t
 }
 
 
@@ -345,6 +345,12 @@ a .nav-link{
 
 #popUpImg{
 background-color: rgba(255,255,255,1);
+}
+
+.leaflet-container a.leaflet-popup-close-button{
+    color :white !important;
+    font: 22px/20px Tahoma, Verdana, sans-serif !important;
+    font-weight: bolder !important;;
 }
 /******************************************************************************/
 

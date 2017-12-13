@@ -22,42 +22,99 @@ var titreData = []
 var mobilityData = []
 var projectData = []
 
+function getAuthor(i) {
 
+for (var j = 0; j < featuresCollection.features.length; j++){
+  //console.log(feature.properties.story.authors.length)
+  if (featuresCollection.features[j].properties.story.authors.length > 1){
+      for(var k = 0; k < featuresCollection.features[j].properties.story.authors.length; k++){
+        i.push(featuresCollection.features[j].properties.story.authors[k].label)
+      }
+  }
+  else {
+      i.push(featuresCollection.features[j].properties.story.authors[0].label)
+    }
+  }
+}
+getAuthor(authorData)
+
+function getLocation(i) {
+
+  for (var j = 0; j < featuresCollection.features.length; j++){
+
+    if (featuresCollection.features[j].properties.story.locations.length === undefined){
+      return
+    }
+    else if (featuresCollection.features[j].properties.story.locations.length === 0){
+      return
+    }
+    else if (featuresCollection.features[j].properties.story.locations.length > 1){
+      for(var k = 0; k < featuresCollection.features[j].properties.story.locations.length; k++){
+        i.push(featuresCollection.features[j].properties.story.locations[k].label)
+      }
+    }
+    else {
+      i.push(featuresCollection.features[j].properties.story.locations[0].label)
+    }
+  }
+}
+getLocation(locationData)
+
+function getKeyword(i) {
+
+  for (var j = 0; j < featuresCollection.features.length; j++){
+    //console.log(feature.properties.story.authors.length)
+    if (featuresCollection.features[j].properties.story.tags.length > 1){
+      for(var k = 0; k < featuresCollection.features[j].properties.story.tags.length; k++){
+        i.push(featuresCollection.features[j].properties.story.tags[k].label)
+      }
+    }
+    else {
+      i.push(featuresCollection.features[j].properties.story.tags[0].label)
+    }
+  }
+}
+getKeyword(keywordData)
 
 function getGenre (i) {
 
   for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.category) }
-};
+}
 getGenre(genreData)
 
-function getAuthor (i) {
-  for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.authors[0].label) }
-};
-getAuthor(authorData)
-
-function getKeyword (i) {
-  for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.main_tag.label) }
-};
-getKeyword(keywordData)
-/*
-function getLocation (i) {
-  for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.main_location.label) }
-};
-getLocation(locationData)
-*/
 function getTitre (i) {
   for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.title) }
-};
+}
 getTitre(titreData)
 
 function getMobility (i) {
   for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.mobility) }
-};
+}
 getMobility(mobilityData)
 
-function getProject (i) {
-  for (var j = 0; j < featuresCollection.features.length; j++) { i.push(featuresCollection.features[j].properties.story.projects) }
-};
+function getProject(i){
+
+  for (var j = 0; j < featuresCollection.features.length; j++){
+
+    if (featuresCollection.features[j].properties.story.project.length === undefined){
+      console.log('undefined'+featuresCollection.features[j].properties.story.id)
+    }
+    else if (featuresCollection.features[j].properties.story.project.length === 0){
+      console.log('0'+featuresCollection.features[j].properties.story.id)
+    }
+    else if (featuresCollection.features[j].properties.story.project.length === null){
+      console.log('null'+featuresCollection.features[j].properties.story.id)
+    }
+    else if (featuresCollection.features[j].properties.story.project.length > 1){
+      for(var k = 0; k < featuresCollection.features[j].properties.story.project.length; k++){
+        i.push(featuresCollection.features[j].properties.story.project[k].label)
+      }
+    }
+    else {
+      i.push(featuresCollection.features[j].properties.story.project[0].label)
+    }
+  }
+}
 getProject(projectData)
 
 /* function that retrive unique objects from an array */
@@ -215,7 +272,7 @@ function searchBoxProject () {
       placeholder: 'Filtrez par projets',
       multiple: true,
       allowClear: true,
-      data: projectData.unique()
+      data: projectData
     }
 
   )
@@ -223,56 +280,14 @@ function searchBoxProject () {
 
 searchBoxProject()
 
-/* POPULATE THE SELECT BOX WITH ALL THE VALUES
-  var projectOptions = $("#projectSearchBox option");
-  projectOptions.each(function() {
-      selectedItems.push( $(this).val() );
-  });
-
-  $("#projectSearchBox").val(selectedItems).trigger("change");*/
-
 /// //////////////////////////////////////////////////////////////////////
 
 /** * retrieve searchbox selected data(s) ***/
 /*******************************************/
 var arraySelectors = []
-/*
-$('#authorSearchBox').on('change', function (e) {
-  var selectValAuthorSearchBox = $(e.currentTarget).val()
-  arraySelectors.push(selectValAuthorSearchBox)
-  arrayTest(arraySelectors)
-  // console.log(selectValAuthorSearchBox)
-})
-
-$('#keywordSearchBox').on('select2:select', function (e) {
-  var selectValKeywordSearchBox = $(e.currentTarget).val()
-  arraySelectors.push(selectValKeywordSearchBox)
-  arrayTest(arraySelectors)
-  // console.log(selectValKeywordSearchBox)
-})
-$('#locationSearchBox').on('select2:select', function (e) {
-  var selectValLocationSearchBox = $(e.currentTarget).val()
-  arraySelectors.push(selectValLocationSearchBox)
-  arrayTest(arraySelectors)
-//   console.log(selectValLocationSearchBox)
-})
-$('#titreSearchBox').on('select2:select', function (e) {
-  var selectValTitreSearchBox = $(e.currentTarget).val()
-  arraySelectors.push(selectValTitreSearchBox)
-  arrayTest(arraySelectors)
-
-//   console.log(selectValLocationSearchBox)
-})
 
 
-//   console.log(selectValLocationSearchBox)
-})
-$('#projectSearchBox').on('select2:select', function (e) {
-  var selectValProjectSearchBox = $(e.currentTarget).val()
-      arraySelectors.push(selectValProjectSearchBox)
-      arrayTest(arraySelectors)
-})
-*/
+
  //$(".select2-multiple").on("select2:unselect", function (e) { console.log("select2:unselect", e); });
 
 /**
@@ -393,6 +408,8 @@ function arrayRemover(array, element) {
     }
 
 }
+
+
 /**
  *
  * TITLE
@@ -408,66 +425,46 @@ $('#titreSearchBox').on('select2:select', function (e) {
 $('#titreSearchBox').on('select2:unselecting', function (e) {
     var el = $(e.currentTarget).val()
 
-    if (el.length === undefined){
-        titleGroup.clearLayers()
-    }
-    else if (el.length === 0){
-        titleGroup.clearLayers()
-    }
-    else{
-        titleGroup.clearLayers()
-        arrayRemover(authorsArrays,el)
-        updateJSON(authorsArrays,'authors')
+  if( $('#titreSearchBox').val().length === 0 ) {
+    titleGroup.clearLayers()
+    titleArrays= []
+    updateJSON(titleArrays,'title')
+    getMainMarkers()
+  }
+  else{
+    titleGroup.clearLayers()
+        arrayRemover(titleArrays,el)
+        updateJSON(titleArrays,'title')
         getTitleMarkers()
     }
-
-    })
+})
 
 $('#titreSearchBox').on('select2:unselect', function (e) {
-    var el = $(e.currentTarget).val()
 
-    if (el.length === undefined){
-        titleGroup.clearLayers()
-    }
-    else if (el.length === 0){
-        titleGroup.clearLayers()
-    }
+  var el = $(e.currentTarget).val()
+
+  if( $('#titreSearchBox').val().length === 0 ) {
+
+    titleGroup.clearLayers()
+    titleArrays= []
+    updateJSON(titleArrays,'title')
+    getMainMarkers()
+  }
     else {
+
         titleGroup.clearLayers()
-        arrayRemover(authorsArrays, el)
-        updateJSON(authorsArrays, 'authors')
+        arrayRemover(titleArrays, el)
+        updateJSON(titleArrays, 'title')
         getTitleMarkers()
     }
     })
-
-/**
- *
- * PROJECT
- *
- */
-
-$('#projectSearchBox').on('change', function (e) {
-    projetArrays= []
-    projetArrays.push($(e.currentTarget).val())
-    updateJSON(projetArrays,'project')
-})
-$('#locationSearchBox').on('change', function (e) {
-    locationArrays= []
-    locationArrays.push($(e.currentTarget).val())
-    updateJSON(locationArrays,'location')
-})
-$('#keywordSearchBox').on('change', function (e) {
-    keyWordArrays= []
-    keyWordArrays.push($(e.currentTarget).val())
-    updateJSON(keyWordArrays,'keyword')
-})
-
 
 /**
  *
  * AUTHORS
  *
  */
+
 $('#authorSearchBox').on('select2:select', function (e) {
         authorsArrays.length = 0
         authorsArrays.push($(e.currentTarget).val())
@@ -477,13 +474,12 @@ $('#authorSearchBox').on('select2:select', function (e) {
 $('#authorSearchBox').on('select2:unselecting', function (e) {
     var el = $(e.currentTarget).val()
 
-
-    if (el.length === undefined){
-        authorsGroup.clearLayers()
-    }
-    else if (el.length === 0){
-        authorsGroup.clearLayers()
-    }
+    if( $('#authorSearchBox').val().length === 0 ) {
+      authorsGroup.clearLayers()
+      authorsArrays= []
+        updateJSON(authorsArrays,'authors')
+        getMainMarkers()
+      }
     else{
     //authorsGroup.clearLayers()
     arrayRemover(authorsArrays,el)
@@ -493,15 +489,13 @@ $('#authorSearchBox').on('select2:unselecting', function (e) {
 })
 
 $('#authorSearchBox').on('select2:unselect', function (e) {
-
-    var el = $(e.currentTarget).val()
-
-    if (el.length === undefined){
-        authorsGroup.clearLayers()
-    }
-    else if (el.length === 0){
-        authorsGroup.clearLayers()
-    }
+  var el = $(e.currentTarget).val()
+  if( $('#authorSearchBox').val().length === 0 ) {
+    authorsGroup.clearLayers()
+    authorsArrays= []
+    updateJSON(authorsArrays,'authors')
+    getMainMarkers()
+  }
     else{
         authorsGroup.clearLayers()
         arrayRemover(authorsArrays,el)
@@ -511,63 +505,174 @@ $('#authorSearchBox').on('select2:unselect', function (e) {
 })
 
 
+/**
+ *
+ * PROJECT SEARCH BOX EVENTS
+ *
+ */
 
+
+$('#projectSearchBox').on('select2:select', function (e) {
+  projetArrays.length = 0
+  projetArrays.push($(e.currentTarget).val())
+  updateJSON(projetArrays,'project')
+  getProjectMarkers()
+})
+$('#projectSearchBox').on('select2:unselecting', function (e) {
+  var el = $(e.currentTarget).val()
+
+  if( $('#projectSearchBox').val().length === 0 ) {
+    projectsGroup.clearLayers()
+    projetArrays= []
+    updateJSON(projetArrays,'project')
+    getMainMarkers()
+  }
+  else{
+    //authorsGroup.clearLayers()
+    arrayRemover(projetArrays,el)
+    updateJSON(projetArrays,'project')
+    getProjectMarkers()
+  }
+})
+
+$('#projectSearchBox').on('select2:unselect', function (e) {
+  var el = $(e.currentTarget).val()
+  if( $('#projectSearchBox').val().length === 0 ) {
+    projectsGroup.clearLayers()
+    projetArrays= []
+    updateJSON(projetArrays,'project')
+    getMainMarkers()
+  }
+  else{
+    projectsGroup.clearLayers()
+    arrayRemover(projetArrays,el)
+    updateJSON(projetArrays,'project')
+    getProjectMarkers()
+  }
+})
+
+/**
+ *
+ * LOCATION SEARCH BOX EVENTS
+ *
+ */
+
+$('#locationSearchBox').on('select2:select', function (e) {
+  locationArrays.length = 0
+  locationArrays.push($(e.currentTarget).val())
+  updateJSON(locationArrays,'location')
+  getLocationMarkers()
+})
+$('#locationSearchBox').on('select2:unselecting', function (e) {
+  var el = $(e.currentTarget).val()
+
+  if( $('#locationSearchBox').val().length === 0 ) {
+    locationGroup.clearLayers()
+    locationArrays= []
+    updateJSON(locationArrays,'location')
+    getMainMarkers()
+  }
+  else{
+    //authorsGroup.clearLayers()
+    arrayRemover(locationArrays,el)
+    updateJSON(locationArrays,'location')
+    getLocationMarkers()
+  }
+})
+
+$('#locationSearchBox').on('select2:unselect', function (e) {
+  var el = $(e.currentTarget).val()
+  if( $('#locationSearchBox').val().length === 0 ) {
+    locationGroup.clearLayers()
+    locationArrays= []
+    updateJSON(locationArrays,'location')
+    getMainMarkers()
+  }
+  else{
+    locationGroup.clearLayers()
+    arrayRemover(locationArrays,el)
+    updateJSON(locationArrays,'location')
+    getLocationMarkers()
+  }
+})
+/**
+ *
+ * KEYWORDS SEARCH BOX EVENTS
+ *
+ */
+
+
+$('#keywordSearchBox').on('select2:select', function (e) {
+  keyWordArrays.length = 0
+  keyWordArrays.push($(e.currentTarget).val())
+  updateJSON(keyWordArrays,'keyword')
+  getkeywordMarkers()
+})
+$('#keywordSearchBox').on('select2:unselecting', function (e) {
+  var el = $(e.currentTarget).val()
+
+  if( $('#keywordSearchBox').val().length === 0 ) {
+    keywordsGroup.clearLayers()
+    keywordArrays= []
+    updateJSON(keyWordArrays,'keyword')
+    getMainMarkers()
+  }
+  else{
+    //authorsGroup.clearLayers()
+    arrayRemover(keyWordArrays,el)
+    updateJSON(keyWordArrays,'keyword')
+    getkeywordMarkers()
+  }
+})
+
+$('#keywordSearchBox').on('select2:unselect', function (e) {
+  var el = $(e.currentTarget).val()
+  if( $('#keywordSearchBox').val().length === 0 ) {
+    keywordsGroup.clearLayers()
+    keyWordArrays= []
+    updateJSON(keyWordArrays,'keyword')
+    getMainMarkers()
+  }
+  else{
+    keywordsGroup.clearLayers()
+    arrayRemover(keyWordArrays,el)
+    updateJSON(keyWordArrays,'keyword')
+    getkeywordMarkers()
+  }
+})
+
+/**
+ * function that listen to the mobility buttons and push values to its specific array
+ * @param {Array}
+ */
 function mobilityArray(e){
-    var firedValue = e.val();
-    if(e.hasClass('btn-active')){
-        mobilityArrays.push(firedValue)
-        $('#mobilityFilterIcon').removeClass("d-none")
-        $('#mobilityFilterIcon').addClass("d-inline")
-       }
-    else{
-        //remove the existing occurence of the value in the master array
-        for (var i = 0, j = 0; i < mobilityArrays.length; i++) {
-            if (mobilityArrays[i] != firedValue)
-                mobilityArrays[j++] = mobilityArrays[i];
-        }
-        mobilityArrays.length = j;
-        updateJSON(mobilityArrays,'mobility')
-        getMobiltyMarkers ()
+  var firedValue = e.val();
+  if(e.hasClass('btn-active')){
+    mobilityArrays.push(firedValue)
+    $('#mobilityFilterIcon').removeClass("d-none")
+    $('#mobilityFilterIcon').addClass("d-inline")
+
+  }
+  else{
+    //remove the existing occurence of the value in the master array
+    for (var i = 0, j = 0; i < genreArrays.length; i++) {
+      if (mobilityArrays[i] != firedValue)
+        mobilityArrays[j++] = mobilityArrays[i];
     }
+    mobilityArrays.length = j;
+    updateJSON(mobilityArrays,'mobility')
+
+  }
 }
-
-/**
- * genreButtons
- * function that turn on off the filter icon if there are 0 btn-active
- */
-
-$('#genreButtons > .btn-filter > .btn-rounded').click(function() {
-    var $items = $('#genreButtons > .btn-filter > .btn-active');
-    if($items.length === 0)
-    {
-        $('#genreFilterIcon').removeClass("d-inline")
-        $('#genreFilterIcon').addClass("d-none")
-     }
-   }
-);
-/**
- * mobilityButtons
- * function that turn on off the filter icon if there are 0 btn-active
- */
-$('#mobilityButtons > .btn-filter > .btn-rounded').click(function() {
-        var $items = $('#mobilityButtons > .btn-filter > .btn-active');
-        if($items.length === 0)
-        {
-            $('#mobilityFilterIcon').removeClass("d-inline")
-            $('#mobilityFilterIcon').addClass("d-none")
-        }
-    }
-);
-
 
 /**
  * function that listen to the genre buttons and push values to its specific array
  * @type {Array}
  */
 function genreArray(e){
-  var fired_button = e.val();
+  var firedValue = e.val();
   if(e.hasClass('btn-active')){
-    genreArrays.push(fired_button)
+    genreArrays.push(firedValue)
     $('#genreFilterIcon').removeClass("d-none")
     $('#genreFilterIcon').addClass("d-inline")
 
@@ -575,7 +680,7 @@ function genreArray(e){
   else{
     //remove the existing occurence of the value in the master array
     for (var i = 0, j = 0; i < genreArrays.length; i++) {
-      if (genreArrays[i] != fired_button)
+      if (genreArrays[i] != firedValue)
         genreArrays[j++] = genreArrays[i];
     }
     genreArrays.length = j;
@@ -584,6 +689,37 @@ function genreArray(e){
   }
 
 }
+
+/**
+ * genreButtons
+ * function that turn on off the filter icon if there are 0 btn-active
+ */
+
+$('#genreButtons > .btn-filter').click(function() {
+    var $items = $('#genreButtons > .btn-filter > .btn-active');
+
+    if($items.length === 0)
+    {
+      $('#genreFilterIcon').removeClass("d-inline")
+      $('#genreFilterIcon').addClass("d-none")
+    }
+    genreGroup.clearLayers()
+    getGenreMarkers()
+  })
+/**
+ * mobilityButtons
+ * function that turn on off the filter icon if there are 0 btn-active
+ */
+$('#mobilityButtons > .btn-filter').click(function() {
+    var $items = $('#mobilityButtons > .btn-filter > .btn-active');
+    if($items.length === 0)
+    {
+      $('#mobilityFilterIcon').removeClass("d-inline")
+      $('#mobilityFilterIcon').addClass("d-none")
+    }
+  mobilityGroup.clearLayers()
+  getMobiltyMarkers()
+  })
 
 /**
  * function that listen to each button, create the array with the selected values and update the json

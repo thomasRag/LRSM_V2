@@ -33,6 +33,7 @@ function updateKey(value) {
 
 window.addEventListener('load', function () {
   // Scene initialized
+  var animated = true
   layer.scene.subscribe({
     load: function (data) {
       data.config.global.sdk_animated = animated;

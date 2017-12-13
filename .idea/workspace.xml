@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac66da2b-85f3-40d3-a07e-9b903eaebc30" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/indexTRON.html" afterPath="$PROJECT_DIR$/indexTRON.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/js/mainTRON.js" afterPath="$PROJECT_DIR$/js/mainTRON.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -81,14 +82,14 @@
           <file leaf-file-name="mainTRON.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/mainTRON.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="710">
-                  <caret line="990" column="0" lean-forward="true" selection-start-line="990" selection-start-column="0" selection-end-line="990" selection-end-column="0" />
+                <state relative-caret-position="102">
+                  <caret line="6" column="56" lean-forward="true" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
                   <folding>
-                    <element signature="e#2209#2302#0" expanded="false" />
-                    <element signature="e#2465#2598#0" expanded="false" />
+                    <element signature="e#2231#2324#0" expanded="false" />
+                    <element signature="e#2487#2620#0" expanded="false" />
                     <element signature="n#!!block;n#openModal#0" expanded="false" />
                     <element signature="n#!!block;n#closeModal#0" expanded="false" />
-                    <element signature="e#3493#3883#0" expanded="false" />
+                    <element signature="e#3515#3905#0" expanded="false" />
                     <element signature="n#!!block;n#getFilterMarkersById#0" expanded="false" />
                     <element signature="n#!!block;n#getMainMarkers#0" expanded="false" />
                     <element signature="n#!!block;n#titleSearch#0" expanded="false" />
@@ -99,17 +100,17 @@
                     <element signature="n#!!block;n#getTitleMarkers#0" expanded="false" />
                     <element signature="n#!!block;n#getAuthorsMarkers#0" expanded="false" />
                     <element signature="n#!!block;n#getGenreMarkers#0" expanded="false" />
-                    <element signature="e#12477#12784#0" expanded="false" />
-                    <element signature="e#12872#13280#0" expanded="false" />
+                    <element signature="e#12499#12806#0" expanded="false" />
+                    <element signature="e#12894#13302#0" expanded="false" />
                     <element signature="n#!!block;n#getMobiltyMarkers#0" expanded="false" />
-                    <element signature="e#16548#17281#0" expanded="false" />
-                    <element signature="e#17413#18053#0" expanded="false" />
+                    <element signature="e#16570#17303#0" expanded="false" />
+                    <element signature="e#17435#18075#0" expanded="false" />
                     <element signature="n#!!block;n#modalPopulate#0" expanded="false" />
                     <element signature="n#!!block;n#setId#0" expanded="false" />
-                    <element signature="e#27821#28260#0" expanded="false" />
-                    <marker date="1513171770986" expanded="true" signature="638:644" ph="©" />
-                    <marker date="1513171770986" expanded="true" signature="18117:18134" ph="..." />
-                    <marker date="1513171770986" expanded="true" signature="18220:18268" ph="..." />
+                    <element signature="e#27843#28282#0" expanded="false" />
+                    <marker date="1513172826813" expanded="true" signature="638:644" ph="©" />
+                    <marker date="1513172826813" expanded="true" signature="18139:18156" ph="..." />
+                    <marker date="1513172826813" expanded="true" signature="18242:18290" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -118,8 +119,8 @@
           <file leaf-file-name="indexTRON.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/indexTRON.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="591">
-                  <caret line="529" column="18" lean-forward="false" selection-start-line="529" selection-start-column="18" selection-end-line="529" selection-end-column="18" />
+                <state relative-caret-position="724">
+                  <caret line="536" column="7" lean-forward="true" selection-start-line="536" selection-start-column="7" selection-end-line="536" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
@@ -355,8 +356,8 @@
       <find>projectSearchBox</find>
       <find>projectData</find>
       <find>project</find>
-      <find>const</find>
       <find>fc3</find>
+      <find>const</find>
     </findStrings>
     <replaceStrings>
       <replace>col-4</replace>
@@ -422,9 +423,9 @@
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/fc4.js" />
-        <option value="$PROJECT_DIR$/js/mainTRON.js" />
         <option value="$PROJECT_DIR$/js/filter.js" />
         <option value="$PROJECT_DIR$/indexTRON.html" />
+        <option value="$PROJECT_DIR$/js/mainTRON.js" />
       </list>
     </option>
   </component>
@@ -600,12 +601,12 @@
       <workItem from="1511965198047" duration="50095000" />
       <workItem from="1512104774871" duration="95250000" />
       <workItem from="1512481213311" duration="194940000" />
-      <workItem from="1513171052304" duration="819000" />
+      <workItem from="1513171052304" duration="1498000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="341104000" />
+    <option name="totallyTimeSpent" value="341783000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -1209,14 +1210,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/mainTRON.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="710">
-          <caret line="990" column="0" lean-forward="true" selection-start-line="990" selection-start-column="0" selection-end-line="990" selection-end-column="0" />
+        <state relative-caret-position="102">
+          <caret line="6" column="56" lean-forward="true" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
           <folding>
-            <element signature="e#2209#2302#0" expanded="false" />
-            <element signature="e#2465#2598#0" expanded="false" />
+            <element signature="e#2231#2324#0" expanded="false" />
+            <element signature="e#2487#2620#0" expanded="false" />
             <element signature="n#!!block;n#openModal#0" expanded="false" />
             <element signature="n#!!block;n#closeModal#0" expanded="false" />
-            <element signature="e#3493#3883#0" expanded="false" />
+            <element signature="e#3515#3905#0" expanded="false" />
             <element signature="n#!!block;n#getFilterMarkersById#0" expanded="false" />
             <element signature="n#!!block;n#getMainMarkers#0" expanded="false" />
             <element signature="n#!!block;n#titleSearch#0" expanded="false" />
@@ -1227,25 +1228,25 @@
             <element signature="n#!!block;n#getTitleMarkers#0" expanded="false" />
             <element signature="n#!!block;n#getAuthorsMarkers#0" expanded="false" />
             <element signature="n#!!block;n#getGenreMarkers#0" expanded="false" />
-            <element signature="e#12477#12784#0" expanded="false" />
-            <element signature="e#12872#13280#0" expanded="false" />
+            <element signature="e#12499#12806#0" expanded="false" />
+            <element signature="e#12894#13302#0" expanded="false" />
             <element signature="n#!!block;n#getMobiltyMarkers#0" expanded="false" />
-            <element signature="e#16548#17281#0" expanded="false" />
-            <element signature="e#17413#18053#0" expanded="false" />
+            <element signature="e#16570#17303#0" expanded="false" />
+            <element signature="e#17435#18075#0" expanded="false" />
             <element signature="n#!!block;n#modalPopulate#0" expanded="false" />
             <element signature="n#!!block;n#setId#0" expanded="false" />
-            <element signature="e#27821#28260#0" expanded="false" />
-            <marker date="1513171770986" expanded="true" signature="638:644" ph="©" />
-            <marker date="1513171770986" expanded="true" signature="18117:18134" ph="..." />
-            <marker date="1513171770986" expanded="true" signature="18220:18268" ph="..." />
+            <element signature="e#27843#28282#0" expanded="false" />
+            <marker date="1513172826813" expanded="true" signature="638:644" ph="©" />
+            <marker date="1513172826813" expanded="true" signature="18139:18156" ph="..." />
+            <marker date="1513172826813" expanded="true" signature="18242:18290" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/indexTRON.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="529" column="18" lean-forward="false" selection-start-line="529" selection-start-column="18" selection-end-line="529" selection-end-column="18" />
+        <state relative-caret-position="724">
+          <caret line="536" column="7" lean-forward="true" selection-start-line="536" selection-start-column="7" selection-end-line="536" selection-end-column="7" />
           <folding />
         </state>
       </provider>

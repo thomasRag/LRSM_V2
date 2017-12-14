@@ -12,14 +12,14 @@ layers:
                 visible: false
                 order: global.order
                 # order: 6580
-                color: [0.212,0.302,0.431]
+                color: global.lrsm.building_color
             lines:
                 style: lines
                 order: global.order_add_1
                 # order: 6600
                 visible: false
                 # color: [0.412,0.686,0.859]
-                color: [0.004,0.165,0.933]
+                color: global.lrsm.building_outline_color
                 width: 1px
         footprints:
             filter:
@@ -36,10 +36,10 @@ layers:
                     - { $zoom: { min: 16 }, area: true }
             draw:
                 polygons:
-                    color: [0.212,0.302,0.431]
+                    color:  global.lrsm.building_color
                     visible: true
                 lines:
-                    color: [0.392,0.627,0.651]
+                    color:  global.lrsm.building_outline_color
                     width: [[14,0.55px],[16,0.5px]]
                     visible: true
             # before zoom 15, we want buidings to be below roads...

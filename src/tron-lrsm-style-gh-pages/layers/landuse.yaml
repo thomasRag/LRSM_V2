@@ -19,7 +19,7 @@ layers:
                 draw:
                     polygons:
                         style: landuse
-                        color: [0.402,0.568,0.818]
+                        color: global.lrsm.parks
                         visible: true
                 us_national_park:
                     # yosemite national park, death valley national park, grand canyon national park
@@ -29,7 +29,7 @@ layers:
                             - protect_class: ['2','3','5']
                     draw:
                         polygons:
-                            color: [0.340,0.703,1.000]
+                            color: global.lrsm.parks
                             visible: true
 #        tier2:
             conservation:
@@ -41,7 +41,7 @@ layers:
                 draw:
                     polygons:
                         style: landuse
-                        color: [0.090,0.409,1.000]
+                        color: global.lrsm.parks
                         visible: true
 
             national_forest_level_6:
@@ -54,7 +54,7 @@ layers:
                 draw:
                     polygons:
                         style: landuse
-                        color: [0.149,0.353,0.714]
+                        color: global.lrsm.parks
                         visible: true
 
             farm:
@@ -64,14 +64,14 @@ layers:
                 draw:
                     polygons:
                         style: landuse
-                        color: [0.024,0.189,0.238]
+                        color: global.lrsm.parks
                         visible: true
             forest:
                 filter: { kind: [forest, natural_forest, wood, natural_wood, natural_park], $zoom: { min: 10 }, not: { operator: "United States Forest Service" } }
                 draw:
                     polygons:
                         style: landuse
-                        color: [0.238,0.529,0.820]
+                        color: global.lrsm.parks
                         visible: true
 
             parks_and_national_forests_not_national_park:
@@ -87,7 +87,7 @@ layers:
                 draw:
                     polygons:
                         style: landuse
-                        color: [0.280,0.762,1.000]
+                        color: global.lrsm.parks
                         visible: true
 
                 national_park:
@@ -98,7 +98,7 @@ layers:
                     draw:
                         polygons:
                             style: landuse
-                            color: [0.238,0.529,0.820]
+                            color: global.lrsm.parks
                             visible: true
 #        tier3:
             university:
@@ -107,7 +107,7 @@ layers:
                 draw:
                     polygons:
                         style: landuse-tier3-university
-                        color: [0.212,0.302,0.427]
+                        color: global.lrsm.landuse_universities
                         visible: true
 #        tier4:
             golf_course:
@@ -136,7 +136,7 @@ layers:
                 draw:
                     polygons:
                         style: landuse-tier4-hospital
-                        color: [0.212,0.302,0.427]
+                        color: global.lrsm.landuse_hospital
                         visible: true
             power:
                 filter:
@@ -145,7 +145,7 @@ layers:
                     polygons:
                         style: landuse-tier4-power
                         color: [0.231,0.263,0.478]
-                        visible: true
+                        visible: false
             man-made:
                 filter: { kind: [pier,wastewater_plant,works,bridge,tower,breakwater,water_works,groyne,dike,cutline] }
                 draw:
@@ -158,7 +158,7 @@ layers:
                     draw:
                         polygons:
                             color: [[13,[0.212,0.302,0.427]],[16,[0.204,0.292,0.730]]]
-                            visible: true
+                            visible: false
 #        tier6:
             parking:
                 filter:
@@ -167,14 +167,14 @@ layers:
                     polygons:
                         style: landuse-tier6-parking
                         color: [0.251,0.310,0.427]
-                        visible: true
+                        visible: false
             pedestrian:
                 filter:
                     kind: [pedestrian,common,footway]
                 draw:
                     polygons:
                         style: landuse-tier6-pedestrian
-                        color: [0.167,0.242,0.450]
+                        color: global.lrsm.landuse_pedestrian
                         visible: true
 
 #        landuse-not-filtered:
@@ -242,9 +242,9 @@ styles:
         shaders:
             defines:
                 DOTS_COLOR: vec3(0.224,0.192,0.702)
-                DOTS_SCALE: 10.
-                DOTS_SIZE: 0.41
-                DOTS_STROKE: 0.15
+                DOTS_SCALE: 0.
+                DOTS_SIZE: 0.0
+                DOTS_STROKE: 0.0
                 DOTS_TYPE: stroke
                 DOTS_TILE_STYLE: tile
     landuse-tier6-pedestrian:
@@ -257,9 +257,9 @@ styles:
                 ZOOM_IN: .0
                 ZOOM_OUT: 1.
 
-                GRID_SCALE: 15.
+                GRID_SCALE: 0.
                 GRID_WIDTH: zoom()*.7
-                GRID_BACKGROUND_COLOR: vec3(0.251,0.267,0.486)
+                GRID_BACKGROUND_COLOR: global.lrsm.landuse_pedestrian
     landuse-tier4-power:
         mix: [polygons-dots]
         shaders:
@@ -287,11 +287,11 @@ styles:
         shaders:
             defines:
                 NORMAL_TEXTURE_INDEX: 0
-                DOTS_DIR: vec3(-0.600,-0.420,0.600)
+                DOTS_DIR: vec3(0.0,0.0,0.0)
 
-                DOTS_COLOR: vec3(0.345,0.224,0.392)
+                DOTS_COLOR: vec3(0.345,0.224,0.392,0)
                 DOTS_SCALE: 30.
-                DOTS_SIZE: shade*2.
+                DOTS_SIZE: shade*0.
             blocks:
                 normal: |
                     float shade = dot((sampleRaster(int(NORMAL_TEXTURE_INDEX)).rgb-.5)*2., DOTS_DIR);

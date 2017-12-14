@@ -435,7 +435,7 @@ layers:
                         visible: global.text_visible_landuse_green
                         text_source: global.ux_language_text_source_iata
                         font:
-                            family: Orbitron
+                            family: CircularBlack
                             size: [[9,14px],[14,16px]]
             early:
                 filter: { $zoom: { min: 9, max: 15 } }
@@ -621,7 +621,7 @@ layers:
                 filter: { kind: [park, national_park, protected_area, nature_reserve, forest, grass] }
                 not-national-park:
                     filter: function() { return feature.name && !((feature.name.indexOf("National Park") > -1) || feature.name.indexOf("National Monument") > -1); }
-                    draw: { mapzen_icon_library: { text: { font: { fill: [0.356,0.990,0.789] } } } }
+                    draw: { mapzen_icon_library: { text: { font: { fill: global.lrsm.park_font_color } } } }
             restaurant:
                 filter: { kind: [restaurant,cafe,fast_food,bakery,pub,bar,ice_cream,wine,biergarten,brewery] }
                 draw: { mapzen_icon_library: { text: { font: { fill: [0.212,1.000,0.882] } } } }

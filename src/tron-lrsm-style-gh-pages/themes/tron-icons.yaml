@@ -38,7 +38,7 @@ styles:
 
 textures:
     mapzen_icon_library:
-        url: images/tron@2x.png
+        url: images/lrsm@2x.png
         filtering: mipmap
         sprites:
             # define sprites: [x origin, y origin, width, height]

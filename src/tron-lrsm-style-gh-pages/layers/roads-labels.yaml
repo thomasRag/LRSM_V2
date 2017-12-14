@@ -6,7 +6,7 @@ layers:
                 text_source: global.ux_language_text_source
                 visible: false
                 font:
-                    family: Cairo
+                    family: CircularBlack
 
         highway:
             labels-highway-z14:
@@ -17,10 +17,10 @@ layers:
                         text_source: global.ux_language_text_source
                         visible: global.text_visible_highway
                         font:
-                            family: Aldrich
+                            family: CircularBlack
                             size: [[15,12px],[20,14px]]
-                            fill: [0.082,0.133,0.259]
-                            stroke: { color: [0.000,0.533,1.000], width: 6px }
+                            fill: global.lrsm.road_fonts_color
+                            stroke: { color: [0.1,0.1,0.1,0.5], width: 2px }
 
         major_road:
             trunk_primary:
@@ -34,7 +34,8 @@ layers:
                             visible: global.text_visible_trunk_primary
                             font:
                                 size: 10px
-                                fill: white
+                                fill: global.lrsm.road_fonts_color
+                                stroke: global.lrsm.road_fonts_stroke_color
 
                 labels-trunk-primary-z16:
                     filter: { $zoom: { min: 15 } }
@@ -45,7 +46,8 @@ layers:
                             visible: global.text_visible_trunk_primary
                             font:
                                 size: [[15,13px],[18,14px]]
-                                fill: white
+                                fill: global.lrsm.road_fonts_color
+                                stroke: global.lrsm.road_fonts_stroke_color
 
 
             secondary:
@@ -58,7 +60,8 @@ layers:
                             font:
                                 size: [[15,13px],[18,14px]]
                                 # fill: [[15,[0.750,0.888,1.000]],[18,[1.00,1.00,1.00]]]
-                                fill: [0.750,0.888,1.000]
+                                fill: global.lrsm.road_fonts_color
+                                stroke: global.lrsm.road_fonts_stroke_color
                     early-dont-draw:
                         filter: { $zoom: { min: 11 }, $zoom: { max: 15 } }
                         draw:
@@ -74,7 +77,8 @@ layers:
                                 visible: global.text_visible_secondary
                                 font:
                                     size: [[13,10px],[15,13px],[18,14px]]
-                                    fill: white
+                                    fill: global.lrsm.road_fonts_color
+                                    stroke: global.lrsm.road_fonts_stroke_color
 
             tertiary:
                 labels-tertiary:
@@ -85,7 +89,8 @@ layers:
                             text_source: global.ux_language_text_source_road_ref_and_name_short
                             font:
                                 size: [[15,10px],[18,14px]]
-                                fill: [0.581,0.718,0.830]
+                                fill: global.lrsm.road_fonts_color
+                                stroke: global.lrsm.road_fonts_stroke_color
                     early-dont-draw:
                         filter: { $zoom: { min: 11 }, $zoom: { max: 15 } }
                         draw:
@@ -102,7 +107,8 @@ layers:
                         text_source: name
                         font:
                             size: [[15,10px],[18,14px]]
-                            fill: [0.581,0.718,0.830]
+                            fill: global.lrsm.road_fonts_color
+                            stroke: global.lrsm.road_fonts_stroke_color
 
         service_road:
             labels-service_road:
@@ -114,7 +120,8 @@ layers:
                         text_source: name
                         font:
                             size: [[15,10px], [18,14px]]
-                            fill: [0.581,0.718,0.830]
+                            fill: global.lrsm.road_fonts_color
+                            stroke: global.lrsm.road_fonts_stroke_color
 
 
         shields:
@@ -177,8 +184,8 @@ layers:
                                 }
                             }
                         font:
-                            family: Aldrich
-                            fill: [0.413,0.933,0.960]
+                            family: CircularBlack
+                            fill: global.lrsm.shield_font_color
                             size: [[7,7px],[12,8px],[16,9px]]
                             stroke: { width: 0px }
 

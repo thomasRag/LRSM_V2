@@ -249,7 +249,7 @@ function getMainMarkers () {
     pointToLayer: function (feature, latlng) {
 
      var icon = new  L.icon.pulse({
-       iconSize:[12,12],
+       iconSize:[16,16],
        color: setCatStyle(feature),
        fillColor : setCatStyle(feature) ,
        fillOpacity: 0.5,
@@ -340,22 +340,22 @@ function mobilitySearch(){
 
 function setCatStyle(feature) {
   if (feature.properties.story.category === 'dessin') {
-    return 'orange'
+    return 'rgb(255, 195, 15);'
   }
   else if (feature.properties.story.category === 'video') {
     return 'red'
   }
   else if (feature.properties.story.category === 'audio') {
-    return 'turquoise'
+    return 'rgb(50, 255, 241);'
   }
   else if (feature.properties.story.category === 'photo') {
-    return  'purple'
+    return  'rgb(192, 35, 238);'
   }
   else if (feature.properties.story.category === 'multimédia') {
     return 'yellow'
   }
   else if (feature.properties.story.category === 'écrit') {
-    return 'lawngreen'
+    return 'rgb(71, 255, 95);'
   }
   else {
     return 'white'

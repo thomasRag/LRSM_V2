@@ -32,7 +32,17 @@ function getFilterMarkersByAuthors () {
     },
 
     pointToLayer: function (feature, latlng) {
-      return L.circleMarker(latlng)
+
+      var icon = new  L.icon.pulse({
+        iconSize:[13,13],
+        color: 'white',
+        fillColor : getRandomColor() ,
+        fillOpacity: 0.5,
+        heartbeat:Math.floor(Math.random() * 6) + 1});
+
+      //var label = String(feature.properties.story.id)
+      return L.marker(latlng, {icon: icon})
+      //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
     },
 
     onEachFeature : function(feature,layer){

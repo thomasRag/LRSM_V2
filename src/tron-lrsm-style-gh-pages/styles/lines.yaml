@@ -35,10 +35,11 @@ styles:
             defines:
                 ZOOM_START: 11.
                 ZOOM_END: 18.
-                DATASTREAM_SPEED: 50.
+                DATASTREAM_SPEED: global.lrsm.highway_traffic_stream
                 DATASTREAM_ROADS: 5.0 
                 DATASTREAM_MARGIN: z*.3
                 DATASTREAM_COLOR: palette( fract(floor(v_texcoord.x*DATASTREAM_ROADS)/DATASTREAM_ROADS+u_time*.1)*z )
+                # DATASTREAM_COLOR: traffic_palette(z);
                 DATASTREAM_AMOUNT: .8
                 DATASTREAM_ANIMATED: global.sdk_animated
             blocks:

@@ -33,7 +33,7 @@ layers:
                     visible: global.text_visible_admin
                     text_source: global.ux_language_text_source
                     font:
-                        family: Orbitron
+                        family: CircularBlack
                         fill: [0.594,0.990,0.944]
             country-z2-3:
                 filter:
@@ -139,7 +139,7 @@ layers:
                     visible: false
                     text_source: global.ux_language_text_source_short
                     font:
-                        family: Orbitron
+                        family: CircularBlack
                         fill: [0.570,0.632,0.740]
             region-z5:
                 filter:
@@ -639,7 +639,7 @@ layers:
                     text_wrap: 10
                     max_lines: 2
                     font:
-                        family: Audiowide
+                        family: CircularBlack
                         # fill: [1.00,1.00,1.00]
                         transform: uppercase
                         fill: [0.896,0.912,0.935]

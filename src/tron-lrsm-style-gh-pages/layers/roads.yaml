@@ -71,7 +71,7 @@ layers:
                         style: roads-glow
                         # color: [0.463,0.800,0.824]
                         # color: [0.000,0.535,0.630]
-                        color: [0.000,0.312,0.367]
+                        color: global.lrsm.highway_color
                         width: [[8,4px],[11,9px]]
 
             highway-z11:
@@ -81,22 +81,22 @@ layers:
                     lines:
                         style: lines-traffic-animation
                         order: global.order
-                        color: [0.086,0.135,0.260]
+                        color: global.lrsm.highway_color
                         width: [[8,0px],[9,0.25px],[10,1px],[12,1px],[13,2px],[14,3px],[15,5px],[16,5px],[17,9px],[18,16px],[19,12px]]
                         outline:
                             # color: [0.541,0.969,0.949]
-                            color: [0.689,0.970,0.956]
+                            color: global.lrsm.highway_outline_color
                             width: [[8,0.5px],[9,1px],[12,1.25px],[15,1.5px],[16,1.5px],[17,0px]]
                     highway-dashed:
                         order: global.order_sub_1
                         # color: [0.557,0.909,0.887]
                         # color: [0.306,0.361,0.949]
-                        color: [0.035,0.976,1.000]
+                        color: global.lrsm.highway_outline_color
                         width: [[8,0px],[16,8px],[17,13px],[18,20px],[19,20px]]
                     highway-glow:
                         order: global.order_sub_6
                         # color: [0.800,1.000,0.987]
-                        color: [0.000,0.535,0.630]
+                        color: global.lrsm.highway_glow
                         width: [[11,8px],[13,12px],[16,30px],[17,40px],[18,50px],[19,80px]]
                     highway-casing:
                         order: global.order
@@ -108,7 +108,7 @@ layers:
                             order: global.order_add_1
                             width: [[8,0px],[9,0px],[11,0.25px],[12,0.25px],[13,1px],[14,1.5px],[15,2px],[17,3px],[18,9px],[19,12px],[20,20px]]
                             outline:
-                                color: [[8,[0.481,0.842,0.890]],[16,[0.481,0.842,0.890]],[18,[0.035,0.976,1.000]]]
+                                color:  global.lrsm.highway_outline_color
                                 width: [[8,0px],[9,0.5px],[15,1px],[18,1.5px]]
                         highway-dashed:
                             visible: false
@@ -134,18 +134,18 @@ layers:
                     filter: { is_tunnel: true, $zoom: { min: 13 } }
                     draw:
                         lines:
-                            color: [0.201,0.286,0.409]
+                            color:  global.lrsm.highway_color
                             outline:
                                 # color: [0.373,0.673,0.657]
-                                color: [[13,[0.276,0.568,0.950]],[18,[0.073,0.435,0.908]]]
+                                color: global.lrsm.highway_outline_color
                         highway-dashed:
                             visible: true
-                            color: [0.073,0.435,0.908]
+                            color: global.lrsm.highway_color
                         highway-glow:
                             visible: true
-                            color: [0.059,0.000,0.953]
+                            color: global.lrsm.highway_color
                         highway-casing:
-                            color: [0.073,0.435,0.908]
+                            color: global.lrsm.highway_color
                             visible: true
                     highway-tunnel-link:
                         filter:
@@ -166,7 +166,7 @@ layers:
                     highway-casing:
                         visible: true
                         order: global.order_sub_2
-                        color: [0.541,0.969,0.949]
+                        color: global.lrsm.highway_outline_color
                         width: [[8,0px],[16,10px],[17,18px],[18,34px],[19,45px]]
 
         major_road:
@@ -200,10 +200,10 @@ layers:
                 filter: { kind_detail: [trunk, primary] }
                 draw:
                     lines:
-                        color: [[8,[0.418,0.754,0.736]],[12,[0.278,0.651,0.749]],[13,[0.086,0.135,0.260]]]
+                        color: global.lrsm.road_color
                         width: [[8,0.25px],[9,0.3px],[11,0.3px],[12,0.75px],[13,0.1px],[14,3px],[15,5px],[16,6px],[17,12px],[18,22px],[19,38px],[20,65px]]
                         outline:
-                            color: [[13,[0.196,0.494,0.647]],[14,[0.000,0.466,0.650]]]
+                            color: global.lrsm.road_outline_color
                             width: [[8,0px],[12,0px],[13,0.6px],[14,0.6px],[15,1px],[17,2px],[18,2px],[19,2px]]
                 trunk-primary-z17:
                     filter:
@@ -212,17 +212,17 @@ layers:
                         center-line:
                             style: center-glow
                             order: global.order_add_1
-                            color: [0.034,0.105,0.569]
+                            color: global.lrsm.road_color
                             width: 6px
                 routes:
                     filter: { ref: true }
                     draw:
                         lines:
-                            color: [[8,[0.337,0.788,0.878]],[11,[0.301,0.704,0.785]],[12,[0.086,0.135,0.260]],[13,[0.086,0.135,0.260]]]
+                            color: global.lrsm.road_color
                             width: [[8,0.15px],[11,0.4px],[12,0.1px],[13,0.1px],[14,2px],[15,5px],[16,7px],[17,12px],[18,22px],[19,38px],[20,65px]]
                             outline:
                                 # color: [[8,[0.329,0.588,0.784]],[11,[0.418,0.754,0.736]],[14,[0.510,0.920,0.897]]]
-                                color: [0.301,0.704,0.785]
+                                color: global.lrsm.road_outline_color
                                 width: [[8,0px],[11,0px],[12,0.30px],[13,0.5px],[15,1.5px]]
                     primary-routes-z17:
                         filter:
@@ -231,39 +231,39 @@ layers:
                             center-line:
                                 style: center-glow
                                 order: global.order_add_1
-                                color: [0.034,0.105,0.569]
+                                color: global.lrsm.road_color
                                 width: 6px
                     tunnel:
                         filter: { is_tunnel: true, $zoom: { min: 13 } }
                         draw:
                             lines:
-                                color: [0.201,0.286,0.409]
+                                color: global.lrsm.road_color
                                 outline:
-                                    color: [0.276,0.568,0.950]
+                                    color: global.lrsm.road_outline_color
             link:
                 filter: { is_link: true }
                 draw:
                     lines:
-                        color: [0.086,0.135,0.260]
+                        color: global.lrsm.road_color
                         width: [[8,0px],[12,0.0px],[13,0.25px],[14,1.5px],[15,2px],[17,3px],[18,9px],[19,12px],[20,20px]]
                         outline:
-                            color: [0.039,0.980,1.000]
+                            color: global.lrsm.road_outline_color
                             width: [[10,0px],[13,0.3px],[16,1px],[17,1.5px]]
             tunnel:
                 filter: { is_tunnel: true, $zoom: { min: 13 } }
                 draw:
                     lines:
-                        color: [0.201,0.286,0.409]
+                        color: global.lrsm.road_color
                         outline:
-                            color: [0.276,0.568,0.950]
+                            color: global.lrsm.road_outline_color
             secondary:
                 filter: { kind_detail: secondary }
                 draw:
                     lines:
-                        color: [[8,[0.418,0.754,0.736]],[12,[0.278,0.651,0.725]],[13,[0.086,0.135,0.260]]]
+                        color: global.lrsm.road_color
                         width: [[8,0.25px],[9,0.3px],[11,0.5px],[12,0.75px],[13,0.1px],[14,2.25px],[15,5px],[16,6px],[17,9px],[18,14px],[19,32px],[20,60px]]
                         outline:
-                            color: [[13,[0.196,0.494,0.647]],[14,[0.000,0.466,0.650]]]
+                            color: global.lrsm.road_outline_color
                             width: [[8,0px],[12,0px],[13,0.5px],[14,0.5px],[15,1px],[17,2px],[18,2px]]
                 secondary-z17:
                     filter:
@@ -278,18 +278,18 @@ layers:
                     filter: { ref: true, $zoom: { min: 12 } }
                     draw:
                         lines:
-                            color: [[12,[0.278,0.651,0.725]],[13,[0.086,0.135,0.260]]]
+                            color: global.lrsm.road_color
                             width: [[12,0.75px],[13,0.1px],[14,1.5px],[15,5px],[16,6px],[17,9px],[18,14px],[19,30px],[20,60px]]
                             outline:
-                                color: [[13,[0.196,0.494,0.647]],[14,[0.000,0.466,0.650]]]
+                                color: global.lrsm.road_outline_color
                                 width: [[12,0px],[13,0.5px],[14,0.75px],[15,1px],[17,1.25px],[18,1.5px]]
                     tunnel:
                         filter: { is_tunnel: true, $zoom: { min: 13 } }
                         draw:
                             lines:
-                                color: [0.201,0.286,0.409]
+                                color: global.lrsm.road_color
                                 outline:
-                                    color: [0.276,0.568,0.950]
+                                    color: global.lrsm.road_outline_color
 
             tertiary:
                 filter: { kind_detail: [tertiary, tertiary_link] }
@@ -326,7 +326,7 @@ layers:
                     filter: { landuse_kind: hospital }
                     draw:
                         lines:
-                            color: [0.208,0.106,0.271]
+                            color: global.lrsm.road_color
 
         minor_road:
             filter:
@@ -390,7 +390,7 @@ layers:
                 filter: { landuse_kind: hospital }
                 draw:
                     lines:
-                        color: [0.208,0.106,0.271]
+                        color: global.lrsm.road_color
                         outline:
                             width: 0px
 
@@ -532,13 +532,13 @@ layers:
             draw:
                 lines:
                     order: global.order
-                    color: [0.000,0.902,0.839]
+                    color: global.lrsm.airport_lines_color
                     width: 2px
             taxiway:
                 filter: { kind_detail: taxiway }
                 draw:
                     lines:
-                        color: [[9,[0.215,1.000,1.000]],[11,[0.215,1.000,1.000]],[13,[0.078,0.129,0.259]]]
+                        color: global.lrsm.airport_lines_color
                         width: [[12,0px],[13,1px],[15,1.5px],[17,6px],[20,20px]]
                         outline:
                             width: 0px
@@ -546,17 +546,17 @@ layers:
                 filter: { kind_detail: runway }
                 draw:
                     lines:
-                        color: [[9,[0.215,1.000,1.000]],[11,[0.215,1.000,1.000]],[13,[0.078,0.129,0.259]]]
+                        color: global.lrsm.airport_lines_color
                         width: [[9,0px],[11,1px],[13,5px],[15,18px],[17,60px],[20,70m]]
                         outline:
                             style: runway-glow
-                            color: [[9,[0.215,1.000,1.000]],[15,[0.078,0.129,0.259]]]
+                            color: global.lrsm.highway_glow
                             width: [[9,2px],[11,3px],[12,2px],[20,12px]]
                 runway-detail:
                     filter: { $zoom: { min: 12 } }
                     draw:
                         runway-dots:
-                            color: [0.215,1.000,1.000]
+                            color: global.lrsm.road_color
                             width: [[12,2px],[15,5px],[20,25px]]
 
 styles:
@@ -565,13 +565,13 @@ styles:
         shaders:
             defines:
                 ZOOM_START: 13.
-                DATASTREAM_SPEED: 15.
+                DATASTREAM_SPEED: 2.
     fast-traffic-animation-twoways:
         mix: [lines-traffic-animation]
         shaders:
             defines:
                 ZOOM_START: 13.
-                DATASTREAM_SPEED: 15.
+                DATASTREAM_SPEED: 2.
                 DATASTREAM_TWOWAYS: true
     slow-traffic-animation:
         mix: [lines-traffic-animation]
@@ -579,14 +579,14 @@ styles:
             defines:
                 ZOOM_START: 18.
                 ZOOM_END: 20.
-                DATASTREAM_SPEED: 7.
+                DATASTREAM_SPEED: 2.
     slow-traffic-animation-twoways:
         mix: [lines-traffic-animation]
         shaders:
             defines:
                 ZOOM_START: 17.
                 ZOOM_END: 20.
-                DATASTREAM_SPEED: 7.
+                DATASTREAM_SPEED: 2.
                 DATASTREAM_TWOWAYS: true
 
 
@@ -624,7 +624,7 @@ styles:
                 CAST_A_WIDTH: 0.03
                 CAST_A_DIST: mix(0.47,0.34,zoom())
                 # CAST_B_COLOR: vec3(0.800,1.000,0.987)
-                CAST_B_COLOR: v_color.rgb+vec3(0.259,0.031,0.038)
+                CAST_B_COLOR: v_color.rgb+vec3(0.031,0.031,0.038)
                 CAST_B_WIDTH: 0.07
                 CAST_B_DIST: 0.47
             blocks:

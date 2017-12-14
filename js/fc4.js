@@ -1,6 +1,621 @@
-var featuresCollection =  {
+var featuresCollection = {
   "type": "FeatureCollection",
   "features": [{
+    "type": "Feature",
+    "properties": {
+      "main": true,
+      "order": 0,
+      "story": {
+        "id": 853,
+        "title": "Purification par le feu",
+        "thumbnail": "http:\/\/staging-lrsm.anagraph.io\/app\/uploads\/2017\/12\/Capture-d\u2019e\u0301cran-2017-12-13-a\u0300-16.34.57-150x150.png",
+        "authors": [{
+          "id": 653,
+          "label": "Daniel Milazzo"
+        }],
+        "collaborators": [],
+        "text": "<p>Sous la pleine lune qui grimpait l\u2019horizon, une centaine de personnes ont particip\u00e9 \u00e0\u00a0la c\u00e9r\u00e9monie tenue en hommage aux femmes autochtones disparues et assassin\u00e9es. Tous r\u00e9unis autour de la m\u00e9moire de celles qui ont succomb\u00e9 \u00e0 la violence, dans une r\u00e9affirmation du deuil collectif qui insiste \u00e0 se faire n\u00e9cessaire.<\/p>\n<p>Les gens se sont plac\u00e9s en cercle. Au centre, une \u0153uvre tot\u00e9mique sculpt\u00e9e en bois de l\u2019artiste atikamekw Jacques Newashish repr\u00e9sentait le corps d\u2019une femme. De toutes les femmes victimes. Malheureuse ironie du sort, le totem a \u00e9t\u00e9 produit \u00e0 la derni\u00e8re minute pour remplacer une \u0153uvre disparue. <em>La femme de la nuit hibou<\/em>, un totem plus grand, avait \u00e9t\u00e9 cr\u00e9\u00e9 par Monsieur Newashish sp\u00e9cialement pour l\u2019occasion. L\u2019\u0153uvre \u00e9tait pr\u00e9sent\u00e9e \u00e0 la Place des Festivals pour la 27<sup>e<\/sup> \u00e9dition de\u00a0\u00ab\u00a0Pr\u00e9sence autochtone\u00a0\u00bb, mais elle a disparu dans des circonstances obscures.<\/p>\n<p>En d\u00e9pit de la d\u00e9plorable nouvelle, cela n\u2019a pas affaibli la charge \u00e9motive et symbolique de la c\u00e9r\u00e9monie, qui a eu lieu comme pr\u00e9vu. D\u2019embl\u00e9e, les femmes pr\u00e9sentes sur place (autochtones et allochtones) ont \u00e9t\u00e9 purifi\u00e9es par la fum\u00e9e de la sauge. Monsieur Newashish s\u2019est charg\u00e9 d\u2019allumer le feu qui allait br\u00fbler le totem, tandis que des chants \u00e9taient entonn\u00e9s par des femmes atikamekw, dont Nicole Awashish.<\/p>\n<p>\u00ab\u00a0Le feu, c\u2019est pour montrer la lumi\u00e8re et lib\u00e9rer la souffrance\u00a0\u00bb, explique Madame Awashish, qui vient de la communaut\u00e9 Wemotaci. Elle est la s\u0153ur de Monsieur Nawashish et a aid\u00e9 \u00e0 organiser la c\u00e9r\u00e9monie. \u00ab\u00a0On veut que le monde voie qu\u2019on a de la souffrance et qu\u2019on veut s\u2019en sortir. L\u2019alcool, la drogue, les suicides de jeunes\u2026 je veux que \u00e7a s\u2019arr\u00eate chez nous\u00a0\u00bb, r\u00e9clame-t-elle.<\/p>\n<p>L\u2019hommage avan\u00e7ait selon les mouvements circulaires du rituel autour du feu. Sur un morceau de tronc point\u00e9 vers l\u2019Est \u2013 l\u00e0 o\u00f9 le soleil se l\u00e8ve, o\u00f9 la vie commence et recommence chaque jour \u2013 les gens versaient un peu d\u2019eau au sol et prenaient dans leurs mains du tabac pour ensuite, dans l\u2019extr\u00e9mit\u00e9 ouest du cercle, le jeter dans le feu en envoyant de bonnes pens\u00e9es aux femmes victimes, d\u00e9c\u00e9d\u00e9es ou vivantes. \u00c0 toutes les femmes.<\/p>\n<p>La c\u00e9r\u00e9monie a aussi \u00e9t\u00e9 l\u2019occasion de faire communion, de rassembler les gens autour de ce qui touche \u00e0 la vie et est la source de chagrin chez les peuples autochtones. Une occasion de se souvenir, de prendre parole, de dire enfin que lorsqu\u2019une personne souffre, c\u2019est toute la soci\u00e9t\u00e9 qui est concern\u00e9e. \u00ab\u00a0On fait cela pas seulement pour les victimes autochtones, mais pour tout le monde\u00a0\u00bb, souligne Madame Awashish.<\/p>\n<p>Les flammes se sont \u00e9lev\u00e9es dans le ciel avant de finalement s\u2019apaiser. Vers la fin, quand la lune s\u2019\u00e9tait d\u00e9j\u00e0 r\u00e9fugi\u00e9e derri\u00e8re les nuages, les personnes s\u2019\u00e9changeaient des embrassades sinc\u00e8res et de chaleureux <em>mikwetc <\/em>(\u00ab\u00a0merci\u00a0\u00bb en langue atikamekw).<\/p>\n<p>Une fois la c\u00e9l\u00e9bration termin\u00e9e, le constat que l\u2019\u0153uvre tot\u00e9mique, cette femme debout, est rest\u00e9e in\u00e9branlable sur les braises. Sans s\u2019\u00e9mietter ni alimenter davantage le feu. Un feu qui a laiss\u00e9 son empreinte, qui a grav\u00e9 des rides imm\u00e9moriales sur le corps en bois. Sur un visage absent repr\u00e9sentant des milliers de visages en silence.<\/p>\n<p>Apr\u00e8s la dispersion des gens, le totem continuait l\u00e0. Au milieu de la nuit, il continuait l\u00e0. Au petit matin, toujours l\u00e0.<\/p>\n<p>\u00c0 nous regarder, \u00e0 r\u00e9sister.<\/p>\n<p>\u00c0 d\u00e9fier l\u2019oubli.<\/p>\n",
+        "mobility": "\u00e0 pied",
+        "category": "video",
+        "project": {
+          "id": 728,
+          "label": "Catalyseur d'imaginaires urbains"
+        },
+        "media_links": [{
+          "link": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/EpDcoYkffqE?rel=0&amp;controls=0&amp;showinfo=0\" frameborder=\"0\" gesture=\"media\" allow=\"encrypted-media\" allowfullscreen><\/iframe>",
+          "media_type": "vid\u00e9o"
+        }],
+        "date_type": "single",
+        "date": "09\/08\/2017",
+        "time": "",
+        "main_tag": {
+          "id": 89,
+          "label": "catalyseur d'imaginaires urbains"
+        },
+        "main_location": {
+          "id": 238,
+          "label": "Catalyseur d'imaginaires urbains"
+        },
+        "main_language": {
+          "id": 76,
+          "label": "Fran\u00e7ais"
+        },
+        "languages": [{
+          "id": 361,
+          "label": "Atikamekw"
+        }, {
+          "id": 76,
+          "label": "Fran\u00e7ais"
+        }],
+        "genres": [{
+          "id": 359,
+          "label": "journal"
+        }, {
+          "id": 239,
+          "label": "photo"
+        }, {
+          "id": 152,
+          "label": "video"
+        }],
+        "tags": [{
+          "id": 356,
+          "label": "artiste atikamekw"
+        }, {
+          "id": 357,
+          "label": "c\u00e9r\u00e9monie"
+        }, {
+          "id": 358,
+          "label": "femmes autochtones disparues"
+        }, {
+          "id": 355,
+          "label": "Jacques Newashish"
+        }, {
+          "id": 354,
+          "label": "pr\u00e9sence autochtone"
+        }],
+        "locations": [{
+          "id": 124,
+          "label": "campus MIL"
+        }, {
+          "id": 238,
+          "label": "Catalyseur d'imaginaires urbains"
+        }, {
+          "id": 360,
+          "label": "Mont R\u00e9el"
+        }, {
+          "id": 127,
+          "label": "Montr\u00e9al"
+        }]
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-73.61659821869581, 45.52589114346727]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "id": "1",
+      "title": "Leclerc de Lune",
+      "media": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/25120985248\/in\/album-72157667335126229\/\" title=\"16\"><img src=\"https:\/\/farm5.staticflickr.com\/4519\/25120985248_5b9a607b8c.jpg\" width=\"500\" height=\"333\" alt=\"16\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+      "date": "03\/08\/2017",
+      "time": "15:00",
+      "description": "<p>Elie, d\u2019origine libanaise, habite \u00e0 Montr\u00e9al depuis 25 ans. Nous l'avons rencontr\u00e9 lors d'une pause collation au d\u00e9panneur Leclerc de Lune, rue Saint-Zotique, pr\u00e8s du parc de la Petite-Italie.<br> Un peu timide, Elie a refus\u00e9 de multiples fois de se laisser photographier, insistant qu\u2019il n\u2019\u00e9tait pas photog\u00e9nique. Son sourire g\u00e9n\u00e9reux nous dit pourtant le contraire.<\/p>",
+      "media_type": "photo",
+      "story": {
+        "id": 779,
+        "title": "Fen\u00eatres sur notre Montr\u00e9al",
+        "thumbnail": "http:\/\/staging-lrsm.anagraph.io\/app\/uploads\/2017\/12\/20448920_1481223898590247_2972869702142387489_o-150x150.jpg",
+        "authors": [{
+          "id": 493,
+          "label": "Laurence Sylvain"
+        }, {
+          "id": 492,
+          "label": "Marie-Eve Bradette"
+        }, {
+          "id": 496,
+          "label": "Rosie Lanoue Deslandes"
+        }],
+        "collaborators": [],
+        "text": "<p><strong>Le projet<\/strong><\/p>\n<p>En mai 2016 se tenait le colloque <em>La figure du r\u00e9fugi\u00e9, repr\u00e9sentations litt\u00e9raires, artistiques et m\u00e9diatiques<\/em>, dans le cadre du 84<sup>e<\/sup> congr\u00e8s de l\u2019ACFAS. C\u2019est durant celui-ci que la rencontre avec Youssef Shoufan a eu lieu, alors qu\u2019il \u00e9tait venu y pr\u00e9senter son projet Syrian Eyes of the World. Suite \u00e0 des discussions a vu le jour l\u2019id\u00e9e de cr\u00e9er, de mani\u00e8re collaborative, des ateliers photos ouverts \u00e0 des jeunes d\u2019origines syriennes et des jeunes qu\u00e9b\u00e9cois.<\/p>\n<p>L\u2019id\u00e9e \u00e9tait au fond tr\u00e8s simple\u00a0: cr\u00e9er, \u00e0 partir de l\u2019expertise de Youssef, une s\u00e9rie d\u2019ateliers photographiques qui se tiendraient au cours des mois de juillet et ao\u00fbt 2017 sur le site du Catalyseur d\u2019Imaginaires Urbains et qui seraient offerts \u00e0 un groupe de 8 \u00e0 12 jeunes, entre 13 et 17 ans. Cr\u00e9er des ateliers qui permettraient aux jeunes, non seulement, de se rencontrer, mais de pouvoir partager ensemble, et \u00e0 d\u2019autres, leur vision de la ville de Montr\u00e9al, \u00e0 partir de la photographie. Leur donner l\u2019opportunit\u00e9 d\u2019apprendre des techniques photographiques et de monter leur propre exposition.<\/p>\n<p>C\u2019est en combinant ensemble \u00e0 la fois les int\u00e9r\u00eats de recherches et les sp\u00e9cialisations des membres de R\u00e9fugi\u00e9(e)s et D\u00e9plac\u00e9(e)s\u00a0: Droit, Litt\u00e9rature et Migration, de La Maison de la Syrie et du Laboratoire sur les r\u00e9cits mobiles qu\u2019a pu se concr\u00e9tiser le projet. Et c\u2019est aussi via l\u2019espace de pens\u00e9e offert par le Catalyseur d\u2019imaginaires urbains et ses infrastructures que les ateliers ont pu voir le jour.<\/p>\n<p>Men\u00e9s principalement par Youssef Shoufan, Marie-Eve Bradette, Rosie Lanoue Deslandes et Laurence Sylvain, les ateliers qui ont d\u00e9but\u00e9 \u00e0 la fin juillet 2017 ont donn\u00e9 lieu \u00e0 l\u2019exposition\u00a0Fen\u00eatres sur notre Montr\u00e9al.<\/p>\n<p>&nbsp;<\/p>\n<p><strong>L&rsquo;exposition<\/strong><\/p>\n<p style=\"font-weight: 400;\">Ce projet nous regroupe toutes et tous, jeunes montr\u00e9alais.e.s (d&rsquo;origine syrienne ou non), autour de ce quelque chose que nous avons en commun : la cr\u00e9ativit\u00e9 et la simple motivation de faire de nouvelles exp\u00e9riences.<\/p>\n<p style=\"font-weight: 400;\">Ce n\u2019est pas n\u2019importe quel projet et nous ne travaillons pas avec n\u2019importe qui\u00a0! Nous sommes libres de choisir ce que nous voulons pr\u00e9senter. Nous prenons des photographies de\u00a0notre\u00a0ville photog\u00e9nique\u00a0:\u00a0Montr\u00e9al.<\/p>\n<p style=\"font-weight: 400;\">Notre\u00a0exposition t\u00e9moigne de la diversit\u00e9 des cultures et des histoires \u00e0\u00a0Montr\u00e9al. Chaque partie de la ville d\u00e9voile sa propre personnalit\u00e9, et chacune d&rsquo;elles forme un ensemble que nous vous pr\u00e9sentons.\u00a0Nous souhaitons vous faire saisir notre mani\u00e8re de percevoir Montr\u00e9al, comment nous pensons qu\u2019elle est unique et sp\u00e9ciale \u00e0 sa fa\u00e7on.<\/p>\n<p style=\"font-weight: 400;\">\u00a0<span style=\"font-weight: 400;\">Ely R. &#8211; Layal A. &#8211; Nibal A. &#8211; Elias H. &#8211; Maggie J. \u00a0&#8211; Megane L.-C. &#8211; Houssam A. &#8211; Mouhannad A.<\/span><\/p>\n<p>&nbsp;<\/p>\n<p>&nbsp;<\/p>\n",
+        "mobility": "\u00e0 pied",
+        "category": "photo",
+        "project": {
+          "id": 728,
+          "label": "Catalyseur d'imaginaires urbains"
+        },
+        "media_links": [{
+          "link": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/albums\/72157667335126229\" title=\"\u00ab Fen\u00eatres sur notre Montr\u00e9al \u00bb\"><img src=\"https:\/\/farm5.staticflickr.com\/4536\/25120976498_380634004c.jpg\" width=\"333\" height=\"500\" alt=\"\u00ab Fen\u00eatres sur notre Montr\u00e9al \u00bb\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+          "media_type": "photo"
+        }],
+        "date_type": "single",
+        "date": "",
+        "time": "",
+        "main_tag": {
+          "id": 89,
+          "label": "catalyseur d'imaginaires urbains"
+        },
+        "main_location": {
+          "id": 238,
+          "label": "Catalyseur d'imaginaires urbains"
+        },
+        "main_language": {
+          "id": 76,
+          "label": "Fran\u00e7ais"
+        },
+        "languages": [{
+          "id": 76,
+          "label": "Fran\u00e7ais"
+        }],
+        "genres": [{
+          "id": 191,
+          "label": "\u00e9crit"
+        }, {
+          "id": 239,
+          "label": "photo"
+        }],
+        "tags": [{
+          "id": 362,
+          "label": "ateliers photo"
+        }, {
+          "id": 89,
+          "label": "catalyseur d'imaginaires urbains"
+        }, {
+          "id": 363,
+          "label": "maison de la syrie"
+        }],
+        "locations": [{
+          "id": 238,
+          "label": "Catalyseur d'imaginaires urbains"
+        }, {
+          "id": 241,
+          "label": "Petite-Italie"
+        }, {
+          "id": 240,
+          "label": "Vieux-Montr\u00e9al"
+        }]
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-73.61284607652125, 45.53138116454852]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "id": "2",
+      "title": "Un soleil br\u00fblant",
+      "media": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/25120983978\/in\/album-72157667335126229\/\" title=\"14\"><img src=\"https:\/\/farm5.staticflickr.com\/4558\/25120983978_86fd8782e3.jpg\" width=\"500\" height=\"333\" alt=\"14\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+      "date": "03\/08\/2017",
+      "time": "15:00",
+      "description": "<p>D\u2019origine fran\u00e7aise et espagnole, Lorraine travaille chez Jarre. Malgr\u00e9 la chaleur accablante de la journ\u00e9e, elle a gentiment accept\u00e9 d'\u00eatre photographi\u00e9e pendant qu'elle travaillait. Au moment de la prise de photo, elle peaufinait des couvercles de beurriers en c\u00e9ramique.<\/p>",
+      "media_type": "photo",
+      "story": {
+        "id": 779,
+        "title": "Fen\u00eatres sur notre Montr\u00e9al",
+        "thumbnail": "http:\/\/staging-lrsm.anagraph.io\/app\/uploads\/2017\/12\/20448920_1481223898590247_2972869702142387489_o-150x150.jpg",
+        "authors": [{
+          "id": 493,
+          "label": "Laurence Sylvain"
+        }, {
+          "id": 492,
+          "label": "Marie-Eve Bradette"
+        }, {
+          "id": 496,
+          "label": "Rosie Lanoue Deslandes"
+        }],
+        "collaborators": [],
+        "text": "<p><strong>Le projet<\/strong><\/p>\n<p>En mai 2016 se tenait le colloque <em>La figure du r\u00e9fugi\u00e9, repr\u00e9sentations litt\u00e9raires, artistiques et m\u00e9diatiques<\/em>, dans le cadre du 84<sup>e<\/sup> congr\u00e8s de l\u2019ACFAS. C\u2019est durant celui-ci que la rencontre avec Youssef Shoufan a eu lieu, alors qu\u2019il \u00e9tait venu y pr\u00e9senter son projet Syrian Eyes of the World. Suite \u00e0 des discussions a vu le jour l\u2019id\u00e9e de cr\u00e9er, de mani\u00e8re collaborative, des ateliers photos ouverts \u00e0 des jeunes d\u2019origines syriennes et des jeunes qu\u00e9b\u00e9cois.<\/p>\n<p>L\u2019id\u00e9e \u00e9tait au fond tr\u00e8s simple\u00a0: cr\u00e9er, \u00e0 partir de l\u2019expertise de Youssef, une s\u00e9rie d\u2019ateliers photographiques qui se tiendraient au cours des mois de juillet et ao\u00fbt 2017 sur le site du Catalyseur d\u2019Imaginaires Urbains et qui seraient offerts \u00e0 un groupe de 8 \u00e0 12 jeunes, entre 13 et 17 ans. Cr\u00e9er des ateliers qui permettraient aux jeunes, non seulement, de se rencontrer, mais de pouvoir partager ensemble, et \u00e0 d\u2019autres, leur vision de la ville de Montr\u00e9al, \u00e0 partir de la photographie. Leur donner l\u2019opportunit\u00e9 d\u2019apprendre des techniques photographiques et de monter leur propre exposition.<\/p>\n<p>C\u2019est en combinant ensemble \u00e0 la fois les int\u00e9r\u00eats de recherches et les sp\u00e9cialisations des membres de R\u00e9fugi\u00e9(e)s et D\u00e9plac\u00e9(e)s\u00a0: Droit, Litt\u00e9rature et Migration, de La Maison de la Syrie et du Laboratoire sur les r\u00e9cits mobiles qu\u2019a pu se concr\u00e9tiser le projet. Et c\u2019est aussi via l\u2019espace de pens\u00e9e offert par le Catalyseur d\u2019imaginaires urbains et ses infrastructures que les ateliers ont pu voir le jour.<\/p>\n<p>Men\u00e9s principalement par Youssef Shoufan, Marie-Eve Bradette, Rosie Lanoue Deslandes et Laurence Sylvain, les ateliers qui ont d\u00e9but\u00e9 \u00e0 la fin juillet 2017 ont donn\u00e9 lieu \u00e0 l\u2019exposition\u00a0Fen\u00eatres sur notre Montr\u00e9al.<\/p>\n<p>&nbsp;<\/p>\n<p><strong>L&rsquo;exposition<\/strong><\/p>\n<p style=\"font-weight: 400;\">Ce projet nous regroupe toutes et tous, jeunes montr\u00e9alais.e.s (d&rsquo;origine syrienne ou non), autour de ce quelque chose que nous avons en commun : la cr\u00e9ativit\u00e9 et la simple motivation de faire de nouvelles exp\u00e9riences.<\/p>\n<p style=\"font-weight: 400;\">Ce n\u2019est pas n\u2019importe quel projet et nous ne travaillons pas avec n\u2019importe qui\u00a0! Nous sommes libres de choisir ce que nous voulons pr\u00e9senter. Nous prenons des photographies de\u00a0notre\u00a0ville photog\u00e9nique\u00a0:\u00a0Montr\u00e9al.<\/p>\n<p style=\"font-weight: 400;\">Notre\u00a0exposition t\u00e9moigne de la diversit\u00e9 des cultures et des histoires \u00e0\u00a0Montr\u00e9al. Chaque partie de la ville d\u00e9voile sa propre personnalit\u00e9, et chacune d&rsquo;elles forme un ensemble que nous vous pr\u00e9sentons.\u00a0Nous souhaitons vous faire saisir notre mani\u00e8re de percevoir Montr\u00e9al, comment nous pensons qu\u2019elle est unique et sp\u00e9ciale \u00e0 sa fa\u00e7on.<\/p>\n<p style=\"font-weight: 400;\">\u00a0<span style=\"font-weight: 400;\">Ely R. &#8211; Layal A. &#8211; Nibal A. &#8211; Elias H. &#8211; Maggie J. \u00a0&#8211; Megane L.-C. &#8211; Houssam A. &#8211; Mouhannad A.<\/span><\/p>\n<p>&nbsp;<\/p>\n<p>&nbsp;<\/p>\n",
+        "mobility": "\u00e0 pied",
+        "category": "photo",
+        "project": {
+          "id": 728,
+          "label": "Catalyseur d'imaginaires urbains"
+        },
+        "media_links": [{
+          "link": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/albums\/72157667335126229\" title=\"\u00ab Fen\u00eatres sur notre Montr\u00e9al \u00bb\"><img src=\"https:\/\/farm5.staticflickr.com\/4536\/25120976498_380634004c.jpg\" width=\"333\" height=\"500\" alt=\"\u00ab Fen\u00eatres sur notre Montr\u00e9al \u00bb\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+          "media_type": "photo"
+        }],
+        "date_type": "single",
+        "date": "",
+        "time": "",
+        "main_tag": {
+          "id": 89,
+          "label": "catalyseur d'imaginaires urbains"
+        },
+        "main_location": {
+          "id": 238,
+          "label": "Catalyseur d'imaginaires urbains"
+        },
+        "main_language": {
+          "id": 76,
+          "label": "Fran\u00e7ais"
+        },
+        "languages": [{
+          "id": 76,
+          "label": "Fran\u00e7ais"
+        }],
+        "genres": [{
+          "id": 191,
+          "label": "\u00e9crit"
+        }, {
+          "id": 239,
+          "label": "photo"
+        }],
+        "tags": [{
+          "id": 362,
+          "label": "ateliers photo"
+        }, {
+          "id": 89,
+          "label": "catalyseur d'imaginaires urbains"
+        }, {
+          "id": 363,
+          "label": "maison de la syrie"
+        }],
+        "locations": [{
+          "id": 238,
+          "label": "Catalyseur d'imaginaires urbains"
+        }, {
+          "id": 241,
+          "label": "Petite-Italie"
+        }, {
+          "id": 240,
+          "label": "Vieux-Montr\u00e9al"
+        }]
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-73.61568921807702, 45.531139908237485]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "id": "3",
+      "title": "\u00c0 grande vitesse !",
+      "media": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/25120983548\/in\/album-72157667335126229\/\" title=\"13\"><img src=\"https:\/\/farm5.staticflickr.com\/4557\/25120983548_45f43f74b3.jpg\" width=\"500\" height=\"333\" alt=\"13\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+      "date": "",
+      "time": "",
+      "description": "<p>M\u00eames les couleurs ne peuvent pas cacher les visages des spectateurs tr\u00e8s concentr\u00e9s. En arrivant dans le Vieux-Montr\u00e9al, nous ne savions pas ce qui se passait lorsque nous avons vu les cyclistes. Quand nous les avons aper\u00e7us la premi\u00e8re fois, nous avons eu l\u2019id\u00e9e que Montr\u00e9al permet aux gens de pratiquer les sports.<\/p>",
+      "media_type": "photo",
+      "story": {
+        "id": 779,
+        "title": "Fen\u00eatres sur notre Montr\u00e9al",
+        "thumbnail": "http:\/\/staging-lrsm.anagraph.io\/app\/uploads\/2017\/12\/20448920_1481223898590247_2972869702142387489_o-150x150.jpg",
+        "authors": [{
+          "id": 493,
+          "label": "Laurence Sylvain"
+        }, {
+          "id": 492,
+          "label": "Marie-Eve Bradette"
+        }, {
+          "id": 496,
+          "label": "Rosie Lanoue Deslandes"
+        }],
+        "collaborators": [],
+        "text": "<p><strong>Le projet<\/strong><\/p>\n<p>En mai 2016 se tenait le colloque <em>La figure du r\u00e9fugi\u00e9, repr\u00e9sentations litt\u00e9raires, artistiques et m\u00e9diatiques<\/em>, dans le cadre du 84<sup>e<\/sup> congr\u00e8s de l\u2019ACFAS. C\u2019est durant celui-ci que la rencontre avec Youssef Shoufan a eu lieu, alors qu\u2019il \u00e9tait venu y pr\u00e9senter son projet Syrian Eyes of the World. Suite \u00e0 des discussions a vu le jour l\u2019id\u00e9e de cr\u00e9er, de mani\u00e8re collaborative, des ateliers photos ouverts \u00e0 des jeunes d\u2019origines syriennes et des jeunes qu\u00e9b\u00e9cois.<\/p>\n<p>L\u2019id\u00e9e \u00e9tait au fond tr\u00e8s simple\u00a0: cr\u00e9er, \u00e0 partir de l\u2019expertise de Youssef, une s\u00e9rie d\u2019ateliers photographiques qui se tiendraient au cours des mois de juillet et ao\u00fbt 2017 sur le site du Catalyseur d\u2019Imaginaires Urbains et qui seraient offerts \u00e0 un groupe de 8 \u00e0 12 jeunes, entre 13 et 17 ans. Cr\u00e9er des ateliers qui permettraient aux jeunes, non seulement, de se rencontrer, mais de pouvoir partager ensemble, et \u00e0 d\u2019autres, leur vision de la ville de Montr\u00e9al, \u00e0 partir de la photographie. Leur donner l\u2019opportunit\u00e9 d\u2019apprendre des techniques photographiques et de monter leur propre exposition.<\/p>\n<p>C\u2019est en combinant ensemble \u00e0 la fois les int\u00e9r\u00eats de recherches et les sp\u00e9cialisations des membres de R\u00e9fugi\u00e9(e)s et D\u00e9plac\u00e9(e)s\u00a0: Droit, Litt\u00e9rature et Migration, de La Maison de la Syrie et du Laboratoire sur les r\u00e9cits mobiles qu\u2019a pu se concr\u00e9tiser le projet. Et c\u2019est aussi via l\u2019espace de pens\u00e9e offert par le Catalyseur d\u2019imaginaires urbains et ses infrastructures que les ateliers ont pu voir le jour.<\/p>\n<p>Men\u00e9s principalement par Youssef Shoufan, Marie-Eve Bradette, Rosie Lanoue Deslandes et Laurence Sylvain, les ateliers qui ont d\u00e9but\u00e9 \u00e0 la fin juillet 2017 ont donn\u00e9 lieu \u00e0 l\u2019exposition\u00a0Fen\u00eatres sur notre Montr\u00e9al.<\/p>\n<p>&nbsp;<\/p>\n<p><strong>L&rsquo;exposition<\/strong><\/p>\n<p style=\"font-weight: 400;\">Ce projet nous regroupe toutes et tous, jeunes montr\u00e9alais.e.s (d&rsquo;origine syrienne ou non), autour de ce quelque chose que nous avons en commun : la cr\u00e9ativit\u00e9 et la simple motivation de faire de nouvelles exp\u00e9riences.<\/p>\n<p style=\"font-weight: 400;\">Ce n\u2019est pas n\u2019importe quel projet et nous ne travaillons pas avec n\u2019importe qui\u00a0! Nous sommes libres de choisir ce que nous voulons pr\u00e9senter. Nous prenons des photographies de\u00a0notre\u00a0ville photog\u00e9nique\u00a0:\u00a0Montr\u00e9al.<\/p>\n<p style=\"font-weight: 400;\">Notre\u00a0exposition t\u00e9moigne de la diversit\u00e9 des cultures et des histoires \u00e0\u00a0Montr\u00e9al. Chaque partie de la ville d\u00e9voile sa propre personnalit\u00e9, et chacune d&rsquo;elles forme un ensemble que nous vous pr\u00e9sentons.\u00a0Nous souhaitons vous faire saisir notre mani\u00e8re de percevoir Montr\u00e9al, comment nous pensons qu\u2019elle est unique et sp\u00e9ciale \u00e0 sa fa\u00e7on.<\/p>\n<p style=\"font-weight: 400;\">\u00a0<span style=\"font-weight: 400;\">Ely R. &#8211; Layal A. &#8211; Nibal A. &#8211; Elias H. &#8211; Maggie J. \u00a0&#8211; Megane L.-C. &#8211; Houssam A. &#8211; Mouhannad A.<\/span><\/p>\n<p>&nbsp;<\/p>\n<p>&nbsp;<\/p>\n",
+        "mobility": "\u00e0 pied",
+        "category": "photo",
+        "project": {
+          "id": 728,
+          "label": "Catalyseur d'imaginaires urbains"
+        },
+        "media_links": [{
+          "link": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/albums\/72157667335126229\" title=\"\u00ab Fen\u00eatres sur notre Montr\u00e9al \u00bb\"><img src=\"https:\/\/farm5.staticflickr.com\/4536\/25120976498_380634004c.jpg\" width=\"333\" height=\"500\" alt=\"\u00ab Fen\u00eatres sur notre Montr\u00e9al \u00bb\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+          "media_type": "photo"
+        }],
+        "date_type": "single",
+        "date": "",
+        "time": "",
+        "main_tag": {
+          "id": 89,
+          "label": "catalyseur d'imaginaires urbains"
+        },
+        "main_location": {
+          "id": 238,
+          "label": "Catalyseur d'imaginaires urbains"
+        },
+        "main_language": {
+          "id": 76,
+          "label": "Fran\u00e7ais"
+        },
+        "languages": [{
+          "id": 76,
+          "label": "Fran\u00e7ais"
+        }],
+        "genres": [{
+          "id": 191,
+          "label": "\u00e9crit"
+        }, {
+          "id": 239,
+          "label": "photo"
+        }],
+        "tags": [{
+          "id": 362,
+          "label": "ateliers photo"
+        }, {
+          "id": 89,
+          "label": "catalyseur d'imaginaires urbains"
+        }, {
+          "id": 363,
+          "label": "maison de la syrie"
+        }],
+        "locations": [{
+          "id": 238,
+          "label": "Catalyseur d'imaginaires urbains"
+        }, {
+          "id": 241,
+          "label": "Petite-Italie"
+        }, {
+          "id": 240,
+          "label": "Vieux-Montr\u00e9al"
+        }]
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-73.5574484, 45.5033677]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "id": "4",
+      "title": "Le caricaturiste",
+      "media": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/25120982958\/in\/album-72157667335126229\/\" title=\"12\"><img src=\"https:\/\/farm5.staticflickr.com\/4682\/25120982958_7ce6d1e955.jpg\" width=\"500\" height=\"333\" alt=\"12\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+      "date": "",
+      "time": "",
+      "description": "<p>Yves Demers, un montr\u00e9alais, fait des portraits et des caricatures de personnes. Il a toujours aim\u00e9 faire \u00e7a, depuis qu\u2019il est tout jeune. Depuis quarante ans, il trace au crayon les visages.<\/p><p><br><\/p><p>Il dit : \u00ab Quand on dessine, on devient bon et les gens demandent qu\u2019on fasse des dessins d\u2019eux. \u00bb<\/p><p>Nous l'avons rencontr\u00e9 sur la Place Jacques-Cartier. Il \u00e9tait amical et g\u00e9n\u00e9reux.<\/p>",
+      "media_type": "photo",
+      "story": {
+        "id": 779,
+        "title": "Fen\u00eatres sur notre Montr\u00e9al",
+        "thumbnail": "http:\/\/staging-lrsm.anagraph.io\/app\/uploads\/2017\/12\/20448920_1481223898590247_2972869702142387489_o-150x150.jpg",
+        "authors": [{
+          "id": 493,
+          "label": "Laurence Sylvain"
+        }, {
+          "id": 492,
+          "label": "Marie-Eve Bradette"
+        }, {
+          "id": 496,
+          "label": "Rosie Lanoue Deslandes"
+        }],
+        "collaborators": [],
+        "text": "<p><strong>Le projet<\/strong><\/p>\n<p>En mai 2016 se tenait le colloque <em>La figure du r\u00e9fugi\u00e9, repr\u00e9sentations litt\u00e9raires, artistiques et m\u00e9diatiques<\/em>, dans le cadre du 84<sup>e<\/sup> congr\u00e8s de l\u2019ACFAS. C\u2019est durant celui-ci que la rencontre avec Youssef Shoufan a eu lieu, alors qu\u2019il \u00e9tait venu y pr\u00e9senter son projet Syrian Eyes of the World. Suite \u00e0 des discussions a vu le jour l\u2019id\u00e9e de cr\u00e9er, de mani\u00e8re collaborative, des ateliers photos ouverts \u00e0 des jeunes d\u2019origines syriennes et des jeunes qu\u00e9b\u00e9cois.<\/p>\n<p>L\u2019id\u00e9e \u00e9tait au fond tr\u00e8s simple\u00a0: cr\u00e9er, \u00e0 partir de l\u2019expertise de Youssef, une s\u00e9rie d\u2019ateliers photographiques qui se tiendraient au cours des mois de juillet et ao\u00fbt 2017 sur le site du Catalyseur d\u2019Imaginaires Urbains et qui seraient offerts \u00e0 un groupe de 8 \u00e0 12 jeunes, entre 13 et 17 ans. Cr\u00e9er des ateliers qui permettraient aux jeunes, non seulement, de se rencontrer, mais de pouvoir partager ensemble, et \u00e0 d\u2019autres, leur vision de la ville de Montr\u00e9al, \u00e0 partir de la photographie. Leur donner l\u2019opportunit\u00e9 d\u2019apprendre des techniques photographiques et de monter leur propre exposition.<\/p>\n<p>C\u2019est en combinant ensemble \u00e0 la fois les int\u00e9r\u00eats de recherches et les sp\u00e9cialisations des membres de R\u00e9fugi\u00e9(e)s et D\u00e9plac\u00e9(e)s\u00a0: Droit, Litt\u00e9rature et Migration, de La Maison de la Syrie et du Laboratoire sur les r\u00e9cits mobiles qu\u2019a pu se concr\u00e9tiser le projet. Et c\u2019est aussi via l\u2019espace de pens\u00e9e offert par le Catalyseur d\u2019imaginaires urbains et ses infrastructures que les ateliers ont pu voir le jour.<\/p>\n<p>Men\u00e9s principalement par Youssef Shoufan, Marie-Eve Bradette, Rosie Lanoue Deslandes et Laurence Sylvain, les ateliers qui ont d\u00e9but\u00e9 \u00e0 la fin juillet 2017 ont donn\u00e9 lieu \u00e0 l\u2019exposition\u00a0Fen\u00eatres sur notre Montr\u00e9al.<\/p>\n<p>&nbsp;<\/p>\n<p><strong>L&rsquo;exposition<\/strong><\/p>\n<p style=\"font-weight: 400;\">Ce projet nous regroupe toutes et tous, jeunes montr\u00e9alais.e.s (d&rsquo;origine syrienne ou non), autour de ce quelque chose que nous avons en commun : la cr\u00e9ativit\u00e9 et la simple motivation de faire de nouvelles exp\u00e9riences.<\/p>\n<p style=\"font-weight: 400;\">Ce n\u2019est pas n\u2019importe quel projet et nous ne travaillons pas avec n\u2019importe qui\u00a0! Nous sommes libres de choisir ce que nous voulons pr\u00e9senter. Nous prenons des photographies de\u00a0notre\u00a0ville photog\u00e9nique\u00a0:\u00a0Montr\u00e9al.<\/p>\n<p style=\"font-weight: 400;\">Notre\u00a0exposition t\u00e9moigne de la diversit\u00e9 des cultures et des histoires \u00e0\u00a0Montr\u00e9al. Chaque partie de la ville d\u00e9voile sa propre personnalit\u00e9, et chacune d&rsquo;elles forme un ensemble que nous vous pr\u00e9sentons.\u00a0Nous souhaitons vous faire saisir notre mani\u00e8re de percevoir Montr\u00e9al, comment nous pensons qu\u2019elle est unique et sp\u00e9ciale \u00e0 sa fa\u00e7on.<\/p>\n<p style=\"font-weight: 400;\">\u00a0<span style=\"font-weight: 400;\">Ely R. &#8211; Layal A. &#8211; Nibal A. &#8211; Elias H. &#8211; Maggie J. \u00a0&#8211; Megane L.-C. &#8211; Houssam A. &#8211; Mouhannad A.<\/span><\/p>\n<p>&nbsp;<\/p>\n<p>&nbsp;<\/p>\n",
+        "mobility": "\u00e0 pied",
+        "category": "photo",
+        "project": {
+          "id": 728,
+          "label": "Catalyseur d'imaginaires urbains"
+        },
+        "media_links": [{
+          "link": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/albums\/72157667335126229\" title=\"\u00ab Fen\u00eatres sur notre Montr\u00e9al \u00bb\"><img src=\"https:\/\/farm5.staticflickr.com\/4536\/25120976498_380634004c.jpg\" width=\"333\" height=\"500\" alt=\"\u00ab Fen\u00eatres sur notre Montr\u00e9al \u00bb\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+          "media_type": "photo"
+        }],
+        "date_type": "single",
+        "date": "",
+        "time": "",
+        "main_tag": {
+          "id": 89,
+          "label": "catalyseur d'imaginaires urbains"
+        },
+        "main_location": {
+          "id": 238,
+          "label": "Catalyseur d'imaginaires urbains"
+        },
+        "main_language": {
+          "id": 76,
+          "label": "Fran\u00e7ais"
+        },
+        "languages": [{
+          "id": 76,
+          "label": "Fran\u00e7ais"
+        }],
+        "genres": [{
+          "id": 191,
+          "label": "\u00e9crit"
+        }, {
+          "id": 239,
+          "label": "photo"
+        }],
+        "tags": [{
+          "id": 362,
+          "label": "ateliers photo"
+        }, {
+          "id": 89,
+          "label": "catalyseur d'imaginaires urbains"
+        }, {
+          "id": 363,
+          "label": "maison de la syrie"
+        }],
+        "locations": [{
+          "id": 238,
+          "label": "Catalyseur d'imaginaires urbains"
+        }, {
+          "id": 241,
+          "label": "Petite-Italie"
+        }, {
+          "id": 240,
+          "label": "Vieux-Montr\u00e9al"
+        }]
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-73.55781492592543, 45.50297097774076]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "id": "5",
+      "title": "Ils jouent \u00e0 un jeu traditionnel",
+      "media": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/25120982338\/in\/album-72157667335126229\/\" title=\"11\"><img src=\"https:\/\/farm5.staticflickr.com\/4552\/25120982338_4b11dd91e8.jpg\" width=\"500\" height=\"333\" alt=\"11\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+      "date": "",
+      "time": "",
+      "description": "<p>Nous ne connaissons pas les r\u00e8gles du jeu.<br> Cet homme ne semble pas avoir gagn\u00e9.<\/p><p class=\"normal\"><span style=\"font-size: 30.0pt; line-height: 115%;\" data-mce-style=\"font-size: 30.0pt; line-height: 115%;\" lang=\"UZ-CYR\"><br><\/span><\/p>",
+      "media_type": "photo",
+      "story": {
+        "id": 779,
+        "title": "Fen\u00eatres sur notre Montr\u00e9al",
+        "thumbnail": "http:\/\/staging-lrsm.anagraph.io\/app\/uploads\/2017\/12\/20448920_1481223898590247_2972869702142387489_o-150x150.jpg",
+        "authors": [{
+          "id": 493,
+          "label": "Laurence Sylvain"
+        }, {
+          "id": 492,
+          "label": "Marie-Eve Bradette"
+        }, {
+          "id": 496,
+          "label": "Rosie Lanoue Deslandes"
+        }],
+        "collaborators": [],
+        "text": "<p><strong>Le projet<\/strong><\/p>\n<p>En mai 2016 se tenait le colloque <em>La figure du r\u00e9fugi\u00e9, repr\u00e9sentations litt\u00e9raires, artistiques et m\u00e9diatiques<\/em>, dans le cadre du 84<sup>e<\/sup> congr\u00e8s de l\u2019ACFAS. C\u2019est durant celui-ci que la rencontre avec Youssef Shoufan a eu lieu, alors qu\u2019il \u00e9tait venu y pr\u00e9senter son projet Syrian Eyes of the World. Suite \u00e0 des discussions a vu le jour l\u2019id\u00e9e de cr\u00e9er, de mani\u00e8re collaborative, des ateliers photos ouverts \u00e0 des jeunes d\u2019origines syriennes et des jeunes qu\u00e9b\u00e9cois.<\/p>\n<p>L\u2019id\u00e9e \u00e9tait au fond tr\u00e8s simple\u00a0: cr\u00e9er, \u00e0 partir de l\u2019expertise de Youssef, une s\u00e9rie d\u2019ateliers photographiques qui se tiendraient au cours des mois de juillet et ao\u00fbt 2017 sur le site du Catalyseur d\u2019Imaginaires Urbains et qui seraient offerts \u00e0 un groupe de 8 \u00e0 12 jeunes, entre 13 et 17 ans. Cr\u00e9er des ateliers qui permettraient aux jeunes, non seulement, de se rencontrer, mais de pouvoir partager ensemble, et \u00e0 d\u2019autres, leur vision de la ville de Montr\u00e9al, \u00e0 partir de la photographie. Leur donner l\u2019opportunit\u00e9 d\u2019apprendre des techniques photographiques et de monter leur propre exposition.<\/p>\n<p>C\u2019est en combinant ensemble \u00e0 la fois les int\u00e9r\u00eats de recherches et les sp\u00e9cialisations des membres de R\u00e9fugi\u00e9(e)s et D\u00e9plac\u00e9(e)s\u00a0: Droit, Litt\u00e9rature et Migration, de La Maison de la Syrie et du Laboratoire sur les r\u00e9cits mobiles qu\u2019a pu se concr\u00e9tiser le projet. Et c\u2019est aussi via l\u2019espace de pens\u00e9e offert par le Catalyseur d\u2019imaginaires urbains et ses infrastructures que les ateliers ont pu voir le jour.<\/p>\n<p>Men\u00e9s principalement par Youssef Shoufan, Marie-Eve Bradette, Rosie Lanoue Deslandes et Laurence Sylvain, les ateliers qui ont d\u00e9but\u00e9 \u00e0 la fin juillet 2017 ont donn\u00e9 lieu \u00e0 l\u2019exposition\u00a0Fen\u00eatres sur notre Montr\u00e9al.<\/p>\n<p>&nbsp;<\/p>\n<p><strong>L&rsquo;exposition<\/strong><\/p>\n<p style=\"font-weight: 400;\">Ce projet nous regroupe toutes et tous, jeunes montr\u00e9alais.e.s (d&rsquo;origine syrienne ou non), autour de ce quelque chose que nous avons en commun : la cr\u00e9ativit\u00e9 et la simple motivation de faire de nouvelles exp\u00e9riences.<\/p>\n<p style=\"font-weight: 400;\">Ce n\u2019est pas n\u2019importe quel projet et nous ne travaillons pas avec n\u2019importe qui\u00a0! Nous sommes libres de choisir ce que nous voulons pr\u00e9senter. Nous prenons des photographies de\u00a0notre\u00a0ville photog\u00e9nique\u00a0:\u00a0Montr\u00e9al.<\/p>\n<p style=\"font-weight: 400;\">Notre\u00a0exposition t\u00e9moigne de la diversit\u00e9 des cultures et des histoires \u00e0\u00a0Montr\u00e9al. Chaque partie de la ville d\u00e9voile sa propre personnalit\u00e9, et chacune d&rsquo;elles forme un ensemble que nous vous pr\u00e9sentons.\u00a0Nous souhaitons vous faire saisir notre mani\u00e8re de percevoir Montr\u00e9al, comment nous pensons qu\u2019elle est unique et sp\u00e9ciale \u00e0 sa fa\u00e7on.<\/p>\n<p style=\"font-weight: 400;\">\u00a0<span style=\"font-weight: 400;\">Ely R. &#8211; Layal A. &#8211; Nibal A. &#8211; Elias H. &#8211; Maggie J. \u00a0&#8211; Megane L.-C. &#8211; Houssam A. &#8211; Mouhannad A.<\/span><\/p>\n<p>&nbsp;<\/p>\n<p>&nbsp;<\/p>\n",
+        "mobility": "\u00e0 pied",
+        "category": "photo",
+        "project": {
+          "id": 728,
+          "label": "Catalyseur d'imaginaires urbains"
+        },
+        "media_links": [{
+          "link": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/albums\/72157667335126229\" title=\"\u00ab Fen\u00eatres sur notre Montr\u00e9al \u00bb\"><img src=\"https:\/\/farm5.staticflickr.com\/4536\/25120976498_380634004c.jpg\" width=\"333\" height=\"500\" alt=\"\u00ab Fen\u00eatres sur notre Montr\u00e9al \u00bb\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+          "media_type": "photo"
+        }],
+        "date_type": "single",
+        "date": "",
+        "time": "",
+        "main_tag": {
+          "id": 89,
+          "label": "catalyseur d'imaginaires urbains"
+        },
+        "main_location": {
+          "id": 238,
+          "label": "Catalyseur d'imaginaires urbains"
+        },
+        "main_language": {
+          "id": 76,
+          "label": "Fran\u00e7ais"
+        },
+        "languages": [{
+          "id": 76,
+          "label": "Fran\u00e7ais"
+        }],
+        "genres": [{
+          "id": 191,
+          "label": "\u00e9crit"
+        }, {
+          "id": 239,
+          "label": "photo"
+        }],
+        "tags": [{
+          "id": 362,
+          "label": "ateliers photo"
+        }, {
+          "id": 89,
+          "label": "catalyseur d'imaginaires urbains"
+        }, {
+          "id": 363,
+          "label": "maison de la syrie"
+        }],
+        "locations": [{
+          "id": 238,
+          "label": "Catalyseur d'imaginaires urbains"
+        }, {
+          "id": 241,
+          "label": "Petite-Italie"
+        }, {
+          "id": 240,
+          "label": "Vieux-Montr\u00e9al"
+        }]
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-73.55714786059254, 45.5031446787505]
+    }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "main": true,
+      "order": 0,
+      "story": {
+        "id": 779,
+        "title": "Fen\u00eatres sur notre Montr\u00e9al",
+        "thumbnail": "http:\/\/staging-lrsm.anagraph.io\/app\/uploads\/2017\/12\/20448920_1481223898590247_2972869702142387489_o-150x150.jpg",
+        "authors": [{
+          "id": 493,
+          "label": "Laurence Sylvain"
+        }, {
+          "id": 492,
+          "label": "Marie-Eve Bradette"
+        }, {
+          "id": 496,
+          "label": "Rosie Lanoue Deslandes"
+        }],
+        "collaborators": [],
+        "text": "<p><strong>Le projet<\/strong><\/p>\n<p>En mai 2016 se tenait le colloque <em>La figure du r\u00e9fugi\u00e9, repr\u00e9sentations litt\u00e9raires, artistiques et m\u00e9diatiques<\/em>, dans le cadre du 84<sup>e<\/sup> congr\u00e8s de l\u2019ACFAS. C\u2019est durant celui-ci que la rencontre avec Youssef Shoufan a eu lieu, alors qu\u2019il \u00e9tait venu y pr\u00e9senter son projet Syrian Eyes of the World. Suite \u00e0 des discussions a vu le jour l\u2019id\u00e9e de cr\u00e9er, de mani\u00e8re collaborative, des ateliers photos ouverts \u00e0 des jeunes d\u2019origines syriennes et des jeunes qu\u00e9b\u00e9cois.<\/p>\n<p>L\u2019id\u00e9e \u00e9tait au fond tr\u00e8s simple\u00a0: cr\u00e9er, \u00e0 partir de l\u2019expertise de Youssef, une s\u00e9rie d\u2019ateliers photographiques qui se tiendraient au cours des mois de juillet et ao\u00fbt 2017 sur le site du Catalyseur d\u2019Imaginaires Urbains et qui seraient offerts \u00e0 un groupe de 8 \u00e0 12 jeunes, entre 13 et 17 ans. Cr\u00e9er des ateliers qui permettraient aux jeunes, non seulement, de se rencontrer, mais de pouvoir partager ensemble, et \u00e0 d\u2019autres, leur vision de la ville de Montr\u00e9al, \u00e0 partir de la photographie. Leur donner l\u2019opportunit\u00e9 d\u2019apprendre des techniques photographiques et de monter leur propre exposition.<\/p>\n<p>C\u2019est en combinant ensemble \u00e0 la fois les int\u00e9r\u00eats de recherches et les sp\u00e9cialisations des membres de R\u00e9fugi\u00e9(e)s et D\u00e9plac\u00e9(e)s\u00a0: Droit, Litt\u00e9rature et Migration, de La Maison de la Syrie et du Laboratoire sur les r\u00e9cits mobiles qu\u2019a pu se concr\u00e9tiser le projet. Et c\u2019est aussi via l\u2019espace de pens\u00e9e offert par le Catalyseur d\u2019imaginaires urbains et ses infrastructures que les ateliers ont pu voir le jour.<\/p>\n<p>Men\u00e9s principalement par Youssef Shoufan, Marie-Eve Bradette, Rosie Lanoue Deslandes et Laurence Sylvain, les ateliers qui ont d\u00e9but\u00e9 \u00e0 la fin juillet 2017 ont donn\u00e9 lieu \u00e0 l\u2019exposition\u00a0Fen\u00eatres sur notre Montr\u00e9al.<\/p>\n<p>&nbsp;<\/p>\n<p><strong>L&rsquo;exposition<\/strong><\/p>\n<p style=\"font-weight: 400;\">Ce projet nous regroupe toutes et tous, jeunes montr\u00e9alais.e.s (d&rsquo;origine syrienne ou non), autour de ce quelque chose que nous avons en commun : la cr\u00e9ativit\u00e9 et la simple motivation de faire de nouvelles exp\u00e9riences.<\/p>\n<p style=\"font-weight: 400;\">Ce n\u2019est pas n\u2019importe quel projet et nous ne travaillons pas avec n\u2019importe qui\u00a0! Nous sommes libres de choisir ce que nous voulons pr\u00e9senter. Nous prenons des photographies de\u00a0notre\u00a0ville photog\u00e9nique\u00a0:\u00a0Montr\u00e9al.<\/p>\n<p style=\"font-weight: 400;\">Notre\u00a0exposition t\u00e9moigne de la diversit\u00e9 des cultures et des histoires \u00e0\u00a0Montr\u00e9al. Chaque partie de la ville d\u00e9voile sa propre personnalit\u00e9, et chacune d&rsquo;elles forme un ensemble que nous vous pr\u00e9sentons.\u00a0Nous souhaitons vous faire saisir notre mani\u00e8re de percevoir Montr\u00e9al, comment nous pensons qu\u2019elle est unique et sp\u00e9ciale \u00e0 sa fa\u00e7on.<\/p>\n<p style=\"font-weight: 400;\">\u00a0<span style=\"font-weight: 400;\">Ely R. &#8211; Layal A. &#8211; Nibal A. &#8211; Elias H. &#8211; Maggie J. \u00a0&#8211; Megane L.-C. &#8211; Houssam A. &#8211; Mouhannad A.<\/span><\/p>\n<p>&nbsp;<\/p>\n<p>&nbsp;<\/p>\n",
+        "mobility": "\u00e0 pied",
+        "category": "photo",
+        "project": {
+          "id": 728,
+          "label": "Catalyseur d'imaginaires urbains"
+        },
+        "media_links": [{
+          "link": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/albums\/72157667335126229\" title=\"\u00ab Fen\u00eatres sur notre Montr\u00e9al \u00bb\"><img src=\"https:\/\/farm5.staticflickr.com\/4536\/25120976498_380634004c.jpg\" width=\"333\" height=\"500\" alt=\"\u00ab Fen\u00eatres sur notre Montr\u00e9al \u00bb\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+          "media_type": "photo"
+        }],
+        "date_type": "single",
+        "date": "",
+        "time": "",
+        "main_tag": {
+          "id": 89,
+          "label": "catalyseur d'imaginaires urbains"
+        },
+        "main_location": {
+          "id": 238,
+          "label": "Catalyseur d'imaginaires urbains"
+        },
+        "main_language": {
+          "id": 76,
+          "label": "Fran\u00e7ais"
+        },
+        "languages": [{
+          "id": 76,
+          "label": "Fran\u00e7ais"
+        }],
+        "genres": [{
+          "id": 191,
+          "label": "\u00e9crit"
+        }, {
+          "id": 239,
+          "label": "photo"
+        }],
+        "tags": [{
+          "id": 362,
+          "label": "ateliers photo"
+        }, {
+          "id": 89,
+          "label": "catalyseur d'imaginaires urbains"
+        }, {
+          "id": 363,
+          "label": "maison de la syrie"
+        }],
+        "locations": [{
+          "id": 238,
+          "label": "Catalyseur d'imaginaires urbains"
+        }, {
+          "id": 241,
+          "label": "Petite-Italie"
+        }, {
+          "id": 240,
+          "label": "Vieux-Montr\u00e9al"
+        }]
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-73.61702871348827, 45.526137682521934]
+    }
+  }, {
     "type": "Feature",
     "properties": {
       "main": true,
@@ -120,7 +735,7 @@ var featuresCollection =  {
     },
     "geometry": {
       "type": "Point",
-      "coordinates": [-73.62555384635927, 45.5274983635232]
+      "coordinates": [-73.63116502761842, 45.529163661796524]
     }
   }, {
     "type": "Feature",
@@ -574,10 +1189,7 @@ var featuresCollection =  {
           "id": 501,
           "label": "Marianne Gendron-Troestler"
         }],
-        "collaborators": [{
-          "id": 487,
-          "label": "Mathieu Li-Goyette"
-        }],
+        "collaborators": [],
         "text": "<p>Documentaire photographique r\u00e9alis\u00e9 au m\u00e9tro St-Laurent et ses alentours, dans le cadre du s\u00e9minaire de Simon Harel \u00e0 la session d&rsquo;hiver 2015.<\/p>\n<p>Remerciements \u00e0 Mathieu Li-Goyette.<\/p>\n",
         "mobility": "\u00e0 pied",
         "category": "photo",
@@ -622,10 +1234,7 @@ var featuresCollection =  {
           "id": 352,
           "label": "r\u00e9sistance"
         }],
-        "locations": [{
-          "id": 352,
-          "label": "r\u00e9sistance"
-        }]
+        "locations": []
       }
     },
     "geometry": {
@@ -654,7 +1263,7 @@ var featuresCollection =  {
           "label": "S\u00e9minaire sur le Quartier des Spectacles (hiver 2015)"
         },
         "media_links": [{
-          "link": "https:\/\/vimeo.com\/231563680",
+          "link": "<iframe src=\"https:\/\/player.vimeo.com\/video\/231563680\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen><\/iframe>",
           "media_type": "vid\u00e9o"
         }],
         "date_type": "single",
@@ -722,7 +1331,7 @@ var featuresCollection =  {
           "label": "S\u00e9minaire sur le Quartier des Spectacles (hiver 2015)"
         },
         "media_links": [{
-          "link": "https:\/\/vimeo.com\/231562583",
+          "link": "<iframe src=\"https:\/\/player.vimeo.com\/video\/231562583\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen><\/iframe>",
           "media_type": "vid\u00e9o"
         }],
         "date_type": "single",
@@ -805,7 +1414,7 @@ var featuresCollection =  {
           "label": "S\u00e9minaire sur le Quartier des Spectacles (hiver 2015)"
         },
         "media_links": [{
-          "link": "https:\/\/vimeo.com\/231562342",
+          "link": "<iframe src=\"https:\/\/player.vimeo.com\/video\/231562342\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen><\/iframe>",
           "media_type": "vid\u00e9o"
         }],
         "date_type": "single",
@@ -968,7 +1577,7 @@ var featuresCollection =  {
           "label": "R\u00e9sidences d'artistes \"Le soi mobile\""
         },
         "media_links": [{
-          "link": "https:\/\/vimeo.com\/246122506",
+          "link": "<iframe src=\"https:\/\/player.vimeo.com\/video\/246122506\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen><\/iframe>",
           "media_type": "vid\u00e9o"
         }],
         "date_type": "range",
@@ -1074,7 +1683,7 @@ var featuresCollection =  {
           "label": "R\u00e9sidences d'artistes \"Le soi mobile\""
         },
         "media_links": [{
-          "link": "https:\/\/vimeo.com\/246122506",
+          "link": "<iframe src=\"https:\/\/player.vimeo.com\/video\/246122506\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen><\/iframe>",
           "media_type": "vid\u00e9o"
         }],
         "date_type": "range",
@@ -1181,7 +1790,7 @@ var featuresCollection =  {
           "label": "S\u00e9minaire sur le Quartier des Spectacles (automne 2015)"
         },
         "media_links": [{
-          "link": "https:\/\/vimeo.com\/232572665",
+          "link": "<iframe src=\"https:\/\/player.vimeo.com\/video\/232572665\" width=\"500\" height=\"367\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen><\/iframe>",
           "media_type": "vid\u00e9o"
         }],
         "date_type": "single",
@@ -1723,7 +2332,7 @@ var featuresCollection =  {
           "label": "S\u00e9minaire sur le Quartier des Spectacles (automne 2015)"
         },
         "media_links": [{
-          "link": "https:\/\/vimeo.com\/231564386",
+          "link": "<iframe src=\"https:\/\/player.vimeo.com\/video\/231564386\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen><\/iframe>",
           "media_type": "vid\u00e9o"
         }],
         "date_type": "single",
@@ -1821,7 +2430,7 @@ var featuresCollection =  {
           "label": "S\u00e9minaire sur le Quartier des Spectacles (automne 2015)"
         },
         "media_links": [{
-          "link": "https:\/\/vimeo.com\/231564386",
+          "link": "<iframe src=\"https:\/\/player.vimeo.com\/video\/231564386\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen><\/iframe>",
           "media_type": "vid\u00e9o"
         }],
         "date_type": "single",
@@ -1916,7 +2525,7 @@ var featuresCollection =  {
           "label": "R\u00e9sidence d'artistes mobiles (RAM)"
         },
         "media_links": [{
-          "link": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/24169000427\/in\/dateposted-public\/\" title=\"Carte-Ex\"><img src=\"https:\/\/farm5.staticflickr.com\/4730\/24169000427_1b2ebbf920_o.jpg\" width=\"7214\" height=\"4526\" alt=\"Carte-Ex\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+          "link": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/24169000427\/in\/album-72157690714705165\/\" title=\"Carte-Ex\"><img src=\"https:\/\/farm5.staticflickr.com\/4730\/24169000427_4e1a087bc9.jpg\" width=\"500\" height=\"313\" alt=\"Carte-Ex\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
           "media_type": "photo"
         }],
         "date_type": "range",
@@ -2071,11 +2680,11 @@ var featuresCollection =  {
     "properties": {
       "id": "2",
       "title": "Parc-Ex",
-      "media": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/27257088589\/in\/dateposted-public\/\" title=\"Carte-Ex d\u00e9tail\"><img src=\"https:\/\/farm5.staticflickr.com\/4529\/27257088589_4c288bacbb_o.jpg\" width=\"373\" height=\"500\" alt=\"Carte-Ex d\u00e9tail\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
-      "date": "01\/09\/2016",
+      "media": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/27257088589\/in\/album-72157690714705165\/\" title=\"Carte-Ex d\u00e9tail\"><img src=\"https:\/\/farm5.staticflickr.com\/4529\/27257088589_71583ae857.jpg\" width=\"500\" height=\"333\" alt=\"Carte-Ex d\u00e9tail\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+      "date": "",
       "description": "<p>L'artiste a arpent\u00e9 chacune des 23 rues du quartier Parc-Extension, cahier de notes et de dessins en main&nbsp;.<\/p><p>D\u00e9tail de Cartographie de l'essence odonymique de Parc-Extension.&nbsp;<\/p><p>Cr\u00e9dits photo : \u00c9liane Excoffier<br><\/p><p><\/p>",
       "media_type": "photo",
-      "time": "05:00",
+      "time": "",
       "order": 1,
       "story": {
         "id": 697,
@@ -2094,7 +2703,7 @@ var featuresCollection =  {
           "label": "R\u00e9sidence d'artistes mobiles (RAM)"
         },
         "media_links": [{
-          "link": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/24169000427\/in\/dateposted-public\/\" title=\"Carte-Ex\"><img src=\"https:\/\/farm5.staticflickr.com\/4730\/24169000427_1b2ebbf920_o.jpg\" width=\"7214\" height=\"4526\" alt=\"Carte-Ex\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+          "link": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/24169000427\/in\/album-72157690714705165\/\" title=\"Carte-Ex\"><img src=\"https:\/\/farm5.staticflickr.com\/4730\/24169000427_4e1a087bc9.jpg\" width=\"500\" height=\"313\" alt=\"Carte-Ex\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
           "media_type": "photo"
         }],
         "date_type": "range",
@@ -2262,9 +2871,9 @@ var featuresCollection =  {
     "properties": {
       "id": "7",
       "title": "Rue Hutchison",
-      "media": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/25162793698\/in\/dateposted-public\/\" title=\"Rue Hutchison\"><img src=\"https:\/\/farm5.staticflickr.com\/4579\/25162793698_8e64d7c995_o.jpg\" width=\"7896\" height=\"10580\" alt=\"Rue Hutchison\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+      "media": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/25162793698\/in\/album-72157690714705165\/\" title=\"Rue Hutchison\"><img src=\"https:\/\/farm5.staticflickr.com\/4579\/25162793698_65329fe119.jpg\" width=\"373\" height=\"500\" alt=\"Rue Hutchison\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
       "date": "",
-      "description": "<p style=\"text-align: center;\" data-mce-style=\"text-align: center;\"><strong>RUE HUTCHISON<\/strong><br><\/p><p><br data-mce-bogus=\"1\"><\/p><p>Alexander Cowper Hutchison \u00e9tait fils de tailleur de pierre, m\u00e9tier qu\u2019il exer\u00e7ait lui-m\u00eame et qu\u2019il mit grandement \u00e0 profit durant sa carri\u00e8re d\u2019architecte. Il enseignait au Mechanical Institute de Montr\u00e9al et l\u2019on consid\u00e8re qu\u2019une de ses plus importantes r\u00e9alisations fut la construction de la Cath\u00e9drale Christ Church, dont le nom croustille comme une couche de neige verglac\u00e9e.<\/p><p>Mais de toutes ses r\u00e9alisations honorables, sans contredit, nulle ne pouvait surpasser celle des prestigieux palais de glace du carnaval d\u2019hiver de Montr\u00e9al. Au carnaval d\u2019hiver de Montr\u00e9al, de 1883 \u00e0 1889, on s\u2019\u00e9chauffait en s\u2019adonnant \u00e0 divers amusements tels que les courses de traine sauvage ou les indescriptibles mascarades en patins, o\u00f9 zigzaguaient ces dames costum\u00e9es en compagnie de petits chiens. On y organisa le premier tournoi de hockey de l\u2019histoire, mais le clou des festivit\u00e9s \u00e9tait sans nul doute l\u2019attaque du palais de glace par des raquetteurs, assaut qui se donnait sous une p\u00e9tarade de feux d\u2019artifice, au son de cris gaillards.<\/p><p>La repr\u00e9sentation la plus connue du c\u00e9l\u00e8bre palais de glace de 1885, con\u00e7u par Hutchison, montre une agglutination de traineaux, de chiens et de gens en tenue hivernale, face \u00e0 l\u2019\u00e9ph\u00e9m\u00e8re ch\u00e2teau glac\u00e9; estampe qui rappelle quoique tardivement la populaire tradition des \u00ab paysages d\u2019hiver \u00bb hollandais telle qu\u2019inaugur\u00e9e par Pieter Brueghel l\u2019ancien, dont la c\u00e9l\u00e8bre toile Paysage d\u2019hiver avec patineurs et trappe aux oiseaux d\u00e9peint de proto-joueurs de hockey sur glace.<\/p><p>On ne connait pas les raisons pour lesquelles Alexander Cowper Hutchison mit de c\u00f4t\u00e9 les constructions de pierre pour cristalliser des fantasmes de glace. Une des hypoth\u00e8ses les plus probables attribue cette bifurcation \u00e0 un caract\u00e8re nostalgique, mis en activit\u00e9 par le traumatisme climatique de 1860, qui vit la fin brutale de la p\u00e9riode dite du \u00ab&nbsp;petit \u00e2ge glaciaire&nbsp;\u00bb, au moment o\u00f9 le jeune Alexander tentait d\u2019acqu\u00e9rir, pour se tailler une place dans le grand monde, la ma\u00eetrise de sa personnalit\u00e9 glissante.<\/p><p>Ce n\u2019est qu\u2019\u00e0 la lumi\u00e8re de ces faits qu\u2019on parviendra \u00e0 comprendre l\u2019importance de l\u2019incident du 21 janvier 2016 ayant eu lieu au coin de la rue Hutchison, lors duquel Bianca Castellucci, quittant son travail \u00e0 la Cristallerie Holland \u00e0 bord de sa voiture givr\u00e9e et roulant en direction de la Maison du costume Johnny Brown afin de rendre un kit de f\u00e9e des neiges, perdit la ma\u00eetrise de son v\u00e9hicule et d\u00e9rapa jusqu\u2019\u00e0 percuter la vitrine du McDonald\u2019s qui vola en \u00e9clats dans une p\u00e9tarade d\u2019\u00e9tincelles, au son de cris hagards.<\/p>",
+      "description": "<p style=\"text-align: left;\" data-mce-style=\"text-align: left;\">Cr\u00e9dits photo : \u00c9liane Excoffier<\/p><p style=\"text-align: center;\" data-mce-style=\"text-align: center;\"><strong>RUE HUTCHISON<\/strong><br><\/p><p><br data-mce-bogus=\"1\"><\/p><p>Alexander Cowper Hutchison \u00e9tait fils de tailleur de pierre, m\u00e9tier qu\u2019il exer\u00e7ait lui-m\u00eame et qu\u2019il mit grandement \u00e0 profit durant sa carri\u00e8re d\u2019architecte. Il enseignait au Mechanical Institute de Montr\u00e9al et l\u2019on consid\u00e8re qu\u2019une de ses plus importantes r\u00e9alisations fut la construction de la Cath\u00e9drale Christ Church, dont le nom croustille comme une couche de neige verglac\u00e9e.<\/p><p>Mais de toutes ses r\u00e9alisations honorables, sans contredit, nulle ne pouvait surpasser celle des prestigieux palais de glace du carnaval d\u2019hiver de Montr\u00e9al. Au carnaval d\u2019hiver de Montr\u00e9al, de 1883 \u00e0 1889, on s\u2019\u00e9chauffait en s\u2019adonnant \u00e0 divers amusements tels que les courses de traine sauvage ou les indescriptibles mascarades en patins, o\u00f9 zigzaguaient ces dames costum\u00e9es en compagnie de petits chiens. On y organisa le premier tournoi de hockey de l\u2019histoire, mais le clou des festivit\u00e9s \u00e9tait sans nul doute l\u2019attaque du palais de glace par des raquetteurs, assaut qui se donnait sous une p\u00e9tarade de feux d\u2019artifice, au son de cris gaillards.<\/p><p>La repr\u00e9sentation la plus connue du c\u00e9l\u00e8bre palais de glace de 1885, con\u00e7u par Hutchison, montre une agglutination de traineaux, de chiens et de gens en tenue hivernale, face \u00e0 l\u2019\u00e9ph\u00e9m\u00e8re ch\u00e2teau glac\u00e9; estampe qui rappelle quoique tardivement la populaire tradition des \u00ab paysages d\u2019hiver \u00bb hollandais telle qu\u2019inaugur\u00e9e par Pieter Brueghel l\u2019ancien, dont la c\u00e9l\u00e8bre toile Paysage d\u2019hiver avec patineurs et trappe aux oiseaux d\u00e9peint de proto-joueurs de hockey sur glace.<\/p><p>On ne connait pas les raisons pour lesquelles Alexander Cowper Hutchison mit de c\u00f4t\u00e9 les constructions de pierre pour cristalliser des fantasmes de glace. Une des hypoth\u00e8ses les plus probables attribue cette bifurcation \u00e0 un caract\u00e8re nostalgique, mis en activit\u00e9 par le traumatisme climatique de 1860, qui vit la fin brutale de la p\u00e9riode dite du \u00ab&nbsp;petit \u00e2ge glaciaire&nbsp;\u00bb, au moment o\u00f9 le jeune Alexander tentait d\u2019acqu\u00e9rir, pour se tailler une place dans le grand monde, la ma\u00eetrise de sa personnalit\u00e9 glissante.<\/p><p>Ce n\u2019est qu\u2019\u00e0 la lumi\u00e8re de ces faits qu\u2019on parviendra \u00e0 comprendre l\u2019importance de l\u2019incident du 21 janvier 2016 ayant eu lieu au coin de la rue Hutchison, lors duquel Bianca Castellucci, quittant son travail \u00e0 la Cristallerie Holland \u00e0 bord de sa voiture givr\u00e9e et roulant en direction de la Maison du costume Johnny Brown afin de rendre un kit de f\u00e9e des neiges, perdit la ma\u00eetrise de son v\u00e9hicule et d\u00e9rapa jusqu\u2019\u00e0 percuter la vitrine du McDonald\u2019s qui vola en \u00e9clats dans une p\u00e9tarade d\u2019\u00e9tincelles, au son de cris hagards.<\/p>",
       "media_type": "photo",
       "time": "",
       "order": 2,
@@ -2285,7 +2894,7 @@ var featuresCollection =  {
           "label": "R\u00e9sidence d'artistes mobiles (RAM)"
         },
         "media_links": [{
-          "link": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/24169000427\/in\/dateposted-public\/\" title=\"Carte-Ex\"><img src=\"https:\/\/farm5.staticflickr.com\/4730\/24169000427_1b2ebbf920_o.jpg\" width=\"7214\" height=\"4526\" alt=\"Carte-Ex\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+          "link": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/24169000427\/in\/album-72157690714705165\/\" title=\"Carte-Ex\"><img src=\"https:\/\/farm5.staticflickr.com\/4730\/24169000427_4e1a087bc9.jpg\" width=\"500\" height=\"313\" alt=\"Carte-Ex\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
           "media_type": "photo"
         }],
         "date_type": "range",
@@ -2446,9 +3055,9 @@ var featuresCollection =  {
     "properties": {
       "id": "4",
       "title": "Rue Saint-Roch",
-      "media": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/38147898445\/in\/dateposted-public\/\" title=\"Rue Saint-Roch\"><img src=\"https:\/\/farm5.staticflickr.com\/4556\/38147898445_9e7d590309_o.jpg\" width=\"3456\" height=\"5184\" alt=\"Rue Saint-Roch\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+      "media": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/38147898445\/in\/album-72157690714705165\/\" title=\"Rue Saint-Roch\"><img src=\"https:\/\/farm5.staticflickr.com\/4556\/38147898445_9e15c9eb16.jpg\" width=\"333\" height=\"500\" alt=\"Rue Saint-Roch\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
       "date": "",
-      "description": "<p style=\"text-align: center;\" data-mce-style=\"text-align: center;\"><strong>RUE SAINT-ROCH<\/strong><\/p><p style=\"text-align: right;\" data-mce-style=\"text-align: right;\">(Lecture sur fond musical&nbsp;de \u00ab&nbsp;Everything\u2019s gone wrong&nbsp;\u00bb, des Rockatones)<\/p><p style=\"text-align: left;\" data-mce-style=\"text-align: left;\">Roch \u00e9tait un saint. Il allait par les chemins, pieds nus, de Montpellier \u00e0 Rome et gu\u00e9rissait les pestif\u00e9r\u00e9s en ouvrant des bubons. Or, un jour qu\u2019il \u00e9tait en la ville de Plaisance, il eut la d\u00e9plaisante surprise, se t\u00e2tant l\u2019entrejambe, de se d\u00e9couvrir un bubon \u00e0 l\u2019aine. Il \u00e9tait saint&nbsp;: il prit donc le parti de s\u2019isoler afin de ne pas accro\u00eetre par contagion les souffrances par ailleurs infinies des hommes.<br><br>Saint Roch est repr\u00e9sent\u00e9, dans l\u2019iconographie catholique, muni d\u2019un b\u00e2ton de p\u00e8lerin, d\u2019une barbe, d\u2019un bubon \u00e0 la jambe et d\u2019un chien. J\u2019ai lu quelque part qu\u2019on dit de gens ins\u00e9parables qu\u2019ils sont comme \u00ab&nbsp;Saint Roch et son chien&nbsp;\u00bb. Ceci s\u2019explique par le fait que selon la l\u00e9gende, Roch, lorsque retir\u00e9 dans la for\u00eat, se fit entretenir par un chien du voisinage, vaillant pourvoyeur, qui d\u00e9robait pour lui du pain.<br><br>Saint Roch, dit-on, fut finalement gu\u00e9ri de la peste. Mais lorsqu\u2019il revint chez lui, ext\u00e9nu\u00e9, d\u00e9figur\u00e9 par les \u00e9preuves et barbu, nul ne le reconnut. Il fut pris pour un espion et jet\u00e9 en un cachot o\u00f9 il mourut finalement de faim, sans pain, et sans chien.<br><br>Sur la rue Saint-Roch, je m\u2019assois \u00e0 la terrasse du Caf\u00e9 Neo en m\u00e9ditant cette histoire rocambolesque. Un petit chien roux s\u2019assoit \u00e0 mes c\u00f4t\u00e9s avec sa ma\u00eetresse. Lorsque je le questionne, il para\u00eet sinc\u00e8rement \u00e9tonn\u00e9 de l\u2019histoire du saint homme, mais se refuse \u00e0 tout commentaire. La dame qui l\u2019accompagne, presque aussi peu loquace, m\u2019apprend qu\u2019il se nomme Leo, mais \u00e9vite nerveusement mes questions \u00e0 propos de pain en me pointant la p\u00e2tisserie \u00e0 deux pas.<br>Je m\u2019y rends.<br><br>Chez Afroditi, la boulang\u00e8re, \u00e0 peine plus volubile, m\u2019assure que s\u2019il existe une sorte de pain apte \u00e0 revigorer les pestif\u00e9r\u00e9s, il doit s\u2019agir de pain grec, et elle me tend un Koulouri, emb\u00eat\u00e9e, afin de clore la conversation.<br><br>La rue Saint Roch est franchement belle dans la lumi\u00e8re d\u2019ao\u00fbt, me dis-je tandis que je d\u00e9ambule en mastiquant mon koulouri divin. Je pense que le chien de Roch aurait aussi d\u00fb \u00eatre sanctifi\u00e9 et qu\u2019une statue en son honneur ne d\u00e9m\u00e9riterait pas de cette lumi\u00e8re de fin d\u2019\u00e9t\u00e9. Je l\u2019imagine immense, aussi haute que l\u2019\u00e9trange clocher de m\u00e9tal bleu de l\u2019\u00e9glise Evangelismo Tis Theotokou qui se dresse devant moi, portes ouvertes, et dans laquelle j\u2019entre.<br><br>Des cierges br\u00fblent. Pour les morts, les vivants et les hommes \u00e0 venir, me dit on. Nul ne connait Saint Roch ici. L\u2019\u00e9glise autrefois catholique est depuis longtemps orthodoxe. On me demande si je d\u00e9sire allumer un cierge. Je m\u2019ex\u00e9cute. Pour la statue \u00e0 na\u00eetre, pensai-je. On me renvoie poliment dehors lorsque je commence \u00e0 parler de chiens.<br><br>Assur\u00e9ment, la communaut\u00e9 orthodoxe grecque, pas plus que la catholique, ne soutiendrait mon projet de statue. J\u2019en suis attrist\u00e9e un moment car il me semble, au fil de ma d\u00e9ambulation, de plus en plus impossible de me d\u00e9faire d\u2019une telle id\u00e9e. J\u2019invente bient\u00f4t une version du chien de Saint Roch \u00e0 trois t\u00eates, pensant dans un moment d\u2019enthousiasme d\u00e9routant qu\u2019une hybridation avec le mythe du Cerb\u00e8re me vaudrait l\u2019appui d\u2019une partie de la communaut\u00e9 grecque. Un chien \u00e0 trois gueules, qui crache du feu et peut donc cuire lui-m\u00eame son pain, me semble beaucoup plus apte \u00e0 devenir l\u2019embl\u00e8me du garde-manger des afflig\u00e9s.<br><br>De l\u2019autre c\u00f4t\u00e9 de la rue, un jeune homme sikh, barbu, \u00e0 l\u2019apparence soign\u00e9e, se rend quelque part \u00e0 grands pas. Je m\u2019avise qu\u2019il y a diff\u00e9rents types de barbes, et diff\u00e9rentes raisons d\u2019en porter et que, puisqu\u2019effectuer des miracles par les chemins rocheux lui prenait tout son temps, Saint Roch n\u00e9gligeait fort probablement son apparence. Ainsi le voit-on repr\u00e9sent\u00e9, le visage obscurci d\u2019une barbe fournie, ce qui n\u2019\u00e9tait pas \u00e0 la mode chez les catholiques de l\u2019\u00e9poque.<br><br>C\u2019est avec cette id\u00e9e en t\u00eate que j\u2019entre au Salon de coiffure pour hommes St Roch, esp\u00e9rant pouvoir en discuter. J\u2019y trouve un joyeux barbier qui ne connait rien \u00e0 la pilosit\u00e9 des saints, mais s\u2019exclame que, pourtant, il s\u2019y connait en barbes depuis 46 ans, tout en brandissant bien haut sa lame dans un geste mesur\u00e9, soucieux de n\u2019en pas blesser son client qui, allong\u00e9 sur la chaise, immobile, a l\u2019oeil inquiet.<br>D\u00e9cid\u00e9ment, nul ne veut converser.<br><br>Ce n\u2019est qu\u2019une fois \u00e0 l\u2019ext\u00e9rieur que je me rem\u00e9more que les barbiers d\u2019autrefois faisaient aussi office de chirurgiens. Que le savoir du rasoir suffisait pour donner le droit d\u2019ouvrir un corps souffrant. Saint Roch, ouvrant les bubons des pestif\u00e9r\u00e9s, n\u2019\u00e9tait donc sans doute qu\u2019un barbier mal ras\u00e9.<br><br>Je rentre chez moi en m\u00e2chouillant mes pens\u00e9es, et d\u00e9cide \u00e0 regrets de remiser l\u2019id\u00e9e de ce projet monumental, qui manifestement n\u2019obtiendrait l\u2019appui d\u2019aucun groupe: celui de l\u2019immense statue d\u2019un chien \u00e0 trois t\u00eates dont les gueules ouvertes en forme de fourneaux produisent des koulouris, imm\u00e9diatement tranch\u00e9s \u00e0 la lame de rasoir par un boulanger-barbier barbu nomm\u00e9 Roch.<\/p>",
+      "description": "<p style=\"text-align: left;\" data-mce-style=\"text-align: left;\">Cr\u00e9dits photo : Alexis Bellavance<\/p><p style=\"text-align: center;\" data-mce-style=\"text-align: center;\"><strong>RUE SAINT-ROCH<\/strong><\/p><p style=\"text-align: right;\" data-mce-style=\"text-align: right;\">(Lecture sur fond musical&nbsp;de \u00ab&nbsp;Everything\u2019s gone wrong&nbsp;\u00bb, des Rockatones)<\/p><p style=\"text-align: left;\" data-mce-style=\"text-align: left;\">Roch \u00e9tait un saint. Il allait par les chemins, pieds nus, de Montpellier \u00e0 Rome et gu\u00e9rissait les pestif\u00e9r\u00e9s en ouvrant des bubons. Or, un jour qu\u2019il \u00e9tait en la ville de Plaisance, il eut la d\u00e9plaisante surprise, se t\u00e2tant l\u2019entrejambe, de se d\u00e9couvrir un bubon \u00e0 l\u2019aine. Il \u00e9tait saint&nbsp;: il prit donc le parti de s\u2019isoler afin de ne pas accro\u00eetre par contagion les souffrances par ailleurs infinies des hommes.<br><br>Saint Roch est repr\u00e9sent\u00e9, dans l\u2019iconographie catholique, muni d\u2019un b\u00e2ton de p\u00e8lerin, d\u2019une barbe, d\u2019un bubon \u00e0 la jambe et d\u2019un chien. J\u2019ai lu quelque part qu\u2019on dit de gens ins\u00e9parables qu\u2019ils sont comme \u00ab&nbsp;Saint Roch et son chien&nbsp;\u00bb. Ceci s\u2019explique par le fait que selon la l\u00e9gende, Roch, lorsque retir\u00e9 dans la for\u00eat, se fit entretenir par un chien du voisinage, vaillant pourvoyeur, qui d\u00e9robait pour lui du pain.<br><br>Saint Roch, dit-on, fut finalement gu\u00e9ri de la peste. Mais lorsqu\u2019il revint chez lui, ext\u00e9nu\u00e9, d\u00e9figur\u00e9 par les \u00e9preuves et barbu, nul ne le reconnut. Il fut pris pour un espion et jet\u00e9 en un cachot o\u00f9 il mourut finalement de faim, sans pain, et sans chien.<br><br>Sur la rue Saint-Roch, je m\u2019assois \u00e0 la terrasse du Caf\u00e9 Neo en m\u00e9ditant cette histoire rocambolesque. Un petit chien roux s\u2019assoit \u00e0 mes c\u00f4t\u00e9s avec sa ma\u00eetresse. Lorsque je le questionne, il para\u00eet sinc\u00e8rement \u00e9tonn\u00e9 de l\u2019histoire du saint homme, mais se refuse \u00e0 tout commentaire. La dame qui l\u2019accompagne, presque aussi peu loquace, m\u2019apprend qu\u2019il se nomme Leo, mais \u00e9vite nerveusement mes questions \u00e0 propos de pain en me pointant la p\u00e2tisserie \u00e0 deux pas.<br>Je m\u2019y rends.<br><br>Chez Afroditi, la boulang\u00e8re, \u00e0 peine plus volubile, m\u2019assure que s\u2019il existe une sorte de pain apte \u00e0 revigorer les pestif\u00e9r\u00e9s, il doit s\u2019agir de pain grec, et elle me tend un Koulouri, emb\u00eat\u00e9e, afin de clore la conversation.<br><br>La rue Saint Roch est franchement belle dans la lumi\u00e8re d\u2019ao\u00fbt, me dis-je tandis que je d\u00e9ambule en mastiquant mon koulouri divin. Je pense que le chien de Roch aurait aussi d\u00fb \u00eatre sanctifi\u00e9 et qu\u2019une statue en son honneur ne d\u00e9m\u00e9riterait pas de cette lumi\u00e8re de fin d\u2019\u00e9t\u00e9. Je l\u2019imagine immense, aussi haute que l\u2019\u00e9trange clocher de m\u00e9tal bleu de l\u2019\u00e9glise Evangelismo Tis Theotokou qui se dresse devant moi, portes ouvertes, et dans laquelle j\u2019entre.<br><br>Des cierges br\u00fblent. Pour les morts, les vivants et les hommes \u00e0 venir, me dit on. Nul ne connait Saint Roch ici. L\u2019\u00e9glise autrefois catholique est depuis longtemps orthodoxe. On me demande si je d\u00e9sire allumer un cierge. Je m\u2019ex\u00e9cute. Pour la statue \u00e0 na\u00eetre, pensai-je. On me renvoie poliment dehors lorsque je commence \u00e0 parler de chiens.<br><br>Assur\u00e9ment, la communaut\u00e9 orthodoxe grecque, pas plus que la catholique, ne soutiendrait mon projet de statue. J\u2019en suis attrist\u00e9e un moment car il me semble, au fil de ma d\u00e9ambulation, de plus en plus impossible de me d\u00e9faire d\u2019une telle id\u00e9e. J\u2019invente bient\u00f4t une version du chien de Saint Roch \u00e0 trois t\u00eates, pensant dans un moment d\u2019enthousiasme d\u00e9routant qu\u2019une hybridation avec le mythe du Cerb\u00e8re me vaudrait l\u2019appui d\u2019une partie de la communaut\u00e9 grecque. Un chien \u00e0 trois gueules, qui crache du feu et peut donc cuire lui-m\u00eame son pain, me semble beaucoup plus apte \u00e0 devenir l\u2019embl\u00e8me du garde-manger des afflig\u00e9s.<br><br>De l\u2019autre c\u00f4t\u00e9 de la rue, un jeune homme sikh, barbu, \u00e0 l\u2019apparence soign\u00e9e, se rend quelque part \u00e0 grands pas. Je m\u2019avise qu\u2019il y a diff\u00e9rents types de barbes, et diff\u00e9rentes raisons d\u2019en porter et que, puisqu\u2019effectuer des miracles par les chemins rocheux lui prenait tout son temps, Saint Roch n\u00e9gligeait fort probablement son apparence. Ainsi le voit-on repr\u00e9sent\u00e9, le visage obscurci d\u2019une barbe fournie, ce qui n\u2019\u00e9tait pas \u00e0 la mode chez les catholiques de l\u2019\u00e9poque.<br><br>C\u2019est avec cette id\u00e9e en t\u00eate que j\u2019entre au Salon de coiffure pour hommes St Roch, esp\u00e9rant pouvoir en discuter. J\u2019y trouve un joyeux barbier qui ne connait rien \u00e0 la pilosit\u00e9 des saints, mais s\u2019exclame que, pourtant, il s\u2019y connait en barbes depuis 46 ans, tout en brandissant bien haut sa lame dans un geste mesur\u00e9, soucieux de n\u2019en pas blesser son client qui, allong\u00e9 sur la chaise, immobile, a l\u2019oeil inquiet.<br>D\u00e9cid\u00e9ment, nul ne veut converser.<br><br>Ce n\u2019est qu\u2019une fois \u00e0 l\u2019ext\u00e9rieur que je me rem\u00e9more que les barbiers d\u2019autrefois faisaient aussi office de chirurgiens. Que le savoir du rasoir suffisait pour donner le droit d\u2019ouvrir un corps souffrant. Saint Roch, ouvrant les bubons des pestif\u00e9r\u00e9s, n\u2019\u00e9tait donc sans doute qu\u2019un barbier mal ras\u00e9.<br><br>Je rentre chez moi en m\u00e2chouillant mes pens\u00e9es, et d\u00e9cide \u00e0 regrets de remiser l\u2019id\u00e9e de ce projet monumental, qui manifestement n\u2019obtiendrait l\u2019appui d\u2019aucun groupe: celui de l\u2019immense statue d\u2019un chien \u00e0 trois t\u00eates dont les gueules ouvertes en forme de fourneaux produisent des koulouris, imm\u00e9diatement tranch\u00e9s \u00e0 la lame de rasoir par un boulanger-barbier barbu nomm\u00e9 Roch.<\/p>",
       "order": 3,
       "media_type": "photo",
       "time": "",
@@ -2469,7 +3078,7 @@ var featuresCollection =  {
           "label": "R\u00e9sidence d'artistes mobiles (RAM)"
         },
         "media_links": [{
-          "link": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/24169000427\/in\/dateposted-public\/\" title=\"Carte-Ex\"><img src=\"https:\/\/farm5.staticflickr.com\/4730\/24169000427_1b2ebbf920_o.jpg\" width=\"7214\" height=\"4526\" alt=\"Carte-Ex\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+          "link": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/24169000427\/in\/album-72157690714705165\/\" title=\"Carte-Ex\"><img src=\"https:\/\/farm5.staticflickr.com\/4730\/24169000427_4e1a087bc9.jpg\" width=\"500\" height=\"313\" alt=\"Carte-Ex\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
           "media_type": "photo"
         }],
         "date_type": "range",
@@ -2627,9 +3236,9 @@ var featuresCollection =  {
     "properties": {
       "id": "6",
       "title": "Rue Jarry",
-      "media": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/38317714144\/in\/dateposted-public\/\" title=\"Rue Jarry\"><img src=\"https:\/\/farm5.staticflickr.com\/4545\/38317714144_dfcb9a2499_o.jpg\" width=\"4912\" height=\"6534\" alt=\"Rue Jarry\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+      "media": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/38317714144\/in\/album-72157690714705165\/\" title=\"Rue Jarry\"><img src=\"https:\/\/farm5.staticflickr.com\/4545\/38317714144_98cbd114a4.jpg\" width=\"376\" height=\"500\" alt=\"Rue Jarry\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
       "date": "",
-      "description": "<p data-mce-style=\"text-align: center;\" style=\"text-align: center;\"><strong>RUE JARRY<\/strong><\/p><p data-mce-style=\"text-align: right;\" style=\"text-align: right;\">\u00ab Quand \u00e0 l\u2019action qui va commencer, elle se passe en Pologne, c\u2019est-\u00e0-dire nulle part. \u00bb<br> \u00ab Nulle part est partout, et le pays o\u00f9 l\u2019on se trouve, d\u2019abord. \u00bb<br> Alfred Jarry<\/p><p>On pr\u00e9tend qu\u2019il ne faut pas confondre l\u2019origine du nom du parc Jarry avec celui de la rue Jarry. Selon la version officielle, le parc Jarry aurait \u00e9t\u00e9 nomm\u00e9 en l\u2019honneur de Raoul Jarry, simple conseiller municipal, alors que la rue aurait plut\u00f4t \u00e9t\u00e9 nomm\u00e9e en l\u2019honneur de Bernard Bleignier dit Jarry, dont le descendant, Stanislas, poss\u00e9dait les terres sur lesquelles furent trac\u00e9es cette voie.<\/p><p>Nous croyons que ces emberlificotements habiles servent en fait \u00e0 escamoter, pour des raisons d\u2019ordre public, l\u2019origine pataphysique du toponyme. Nous soutenons que le nom du parc, comme de la rue, se rapportent plut\u00f4t \u00e0 Alfred Jarry (1873-1907), fondateur de la pataphysique et p\u00e8re du P\u00e8re Ubu.<\/p><p>Comme l\u2019a d\u00e9montr\u00e9 la psychanalyse, dont le d\u00e9veloppement est par ailleurs contemporain de la cr\u00e9ation des lieux sus-mentionn\u00e9s, certains refoulements malhabiles laissent \u00e9merger des signes qui pointent en direction d\u2019une v\u00e9rit\u00e9 dissimul\u00e9e. Ainsi en va-t-il de cette construction farfelue d\u2019une origine toponymique duelle, qui laisse apercevoir son v\u00e9ritable fondement, comme un roi au cul nu.<\/p><p>La pataphysique repose sur divers principes, dont l\u2019un, et non le moindre, est celui des \u00ab contradictions identiques \u00bb qui d\u00e9signe, comme son nom l\u2019indique, l\u2019id\u00e9e bien connue selon laquelle ce qui est le m\u00eame est quand m\u00eame l\u2019oppos\u00e9 de son contraire lequel peut bien \u00eatre identique \u00e0 lui-m\u00eame, contredisant l\u2019id\u00e9e d\u2019une identit\u00e9 dont la m\u00eamet\u00e9, m\u00eame identique, ne soit pas contraire \u00e0 quelque chose qui de m\u00eame nie. Deux origines qui s\u2019opposent, mais dont le nom s\u2019\u00e9crit \u00e0 l\u2019identique, en un lieu identique, est la manifestation ind\u00e9niable de ce principe. En tentant de faire diversion, les fonctionnaires municipaux ont donc, \u00e0 leur insu, r\u00e9v\u00e9l\u00e9 les racines ubuesques qu\u2019ils tentaient de dissimuler, tel lors d\u2019un lapsus.<\/p><p>Mais l\u00e0 n\u2019est pas le moindre indice de l\u2019origine pataphysique du nom de la rue, \u00e0 tout le moins dans Parc-Extension. On entend parfois murmurer, lors de conversations \u00e9touff\u00e9es, que depuis 1927 - date \u00e0 laquelle fut nomm\u00e9 ce tron\u00e7on - au moins une habitation est maintenue \u00e0 l\u2019\u00e9tat de ruines en souvenir de la vocation pataphysique du lieu. Mais quel peut-\u00eatre le sens d\u2019une telle comm\u00e9moration?<\/p><p>Souvenons-nous que dans le r\u00e9cit toponymique officiel, un certain Stanislas aurait l\u00e9gu\u00e9 ses terres afin que soit trac\u00e9e la rue. Or, dans la pi\u00e8ce de Jarry, le personnage de Stanislas Leczinski, pauvre paysan, voit sa maison d\u00e9truite en repr\u00e9sailles de non-paiement. De nos jours, le 891 rue Jarry, maintenu \u00e0 l\u2019\u00e9tat de ruines, servirait selon les rumeurs de monument comm\u00e9moratif de cette destruction sauvage.<\/p><p>Rappelons ici \u00e0 des fins d\u00e9monstratives que l\u2019intrigue de la pi\u00e8ce de th\u00e9\u00e2tre Ubu Roi, oeuvre s\u00e9minale d\u2019Alfred Jarry, se d\u00e9roule en Pologne. Le P\u00e8re Ubu, bien que satisfait de sa situation, se laisse convaincre par son \u00e9pouse pernicieuse d\u2019effectuer une violente ascension sociale en commettant un r\u00e9gicide. Une fois couronn\u00e9 roi de Pologne, celui-ci instaure une s\u00e9rie de lois grotesques, ce qui provoquera finalement sa perte, des tensions conjugales, et sa fuite en France.<\/p><p>L\u2019immigration polonaise a jou\u00e9 un r\u00f4le important dans le d\u00e9veloppement de Parc-Extension. Joseph Bobinski, originaire de Pologne, \u00e9tait laitier dans Parc-Extension jusqu\u2019aux ann\u00e9es 1940, et livrait quotidiennement le lait sur la rue Jarry. Dans une entrevue accord\u00e9e au Casoar Club en 1926, il mentionne que l\u2019importante communaut\u00e9 polonaise de Parc-Extension faisait alors activement pression aupr\u00e8s des autorit\u00e9s municipales afin que la rue - nomm\u00e9e jusqu\u2019alors Blair \u2013 soit rebaptis\u00e9e Jarry. Il s\u2019agissait de souligner l\u2019importance des liens pataphysiques entre la francophonie et la Pologne, ce motif demeurant cependant cach\u00e9 aux yeux du reste de la population, pour des raisons de suret\u00e9 publique.<\/p><p>Cette origine explique l\u2019affection immod\u00e9r\u00e9e, en apparence absurde, de la communaut\u00e9 polonaise pour la rue et le parc Jarry. On pourrait croire que cette affection se f\u00fbt volatilis\u00e9e avec le d\u00e9clin de la population polonaise de Parc-Extension, cependant il n\u2019en est rien. La mobilit\u00e9 de la population polonaise a plut\u00f4t eu pour effet de diffuser ce curieux attachement hors fronti\u00e8res.<\/p><p>L\u2019actrice am\u00e9ricaine Leelee Sobieski, qui se r\u00e9clame de la lign\u00e9e de Jean III Sobieski, roi de Pologne, ne fut pas des moindres figures \u00e0 s\u2019attabler au restaurant Malhi Sweets afin de c\u00e9l\u00e9brer la nature pataphysique de la rue Jarry. Catherine Deneuve, qui apr\u00e8s avoir tourn\u00e9 avec Polanski, se d\u00e9couvrit une fascination pour la Pologne, effectua le m\u00eame p\u00e8lerinage.<br>Mais bien plus consid\u00e9rable encore est la visite de Karol J\u00f3zef Wojty\u0142a, alias Jean-Paul II, qui baisa le sol du parc Jarry en 1984.<\/p><p>Il est de notori\u00e9t\u00e9 publique que le pape avait \u00e9t\u00e9 acteur en Pologne avant d\u2019abandonner les arts de la repr\u00e9sentation terrestre pour devenir repr\u00e9sentant c\u00e9leste. Il est cependant m\u00e9connu qu\u2019il ait \u00e9t\u00e9 fascin\u00e9 par Ubu Roi, au point de consid\u00e9rer l\u2019occupation nazie de la Pologne comme une grotesque accaparation de pouvoir par un nouvel Ubu, qu\u2019il prit le parti de combattre par le th\u00e9\u00e2tre.<\/p><p>Karol J\u00f3zef Wojty\u0142a publia en outre en 1960 la pi\u00e8ce de th\u00e9\u00e2tre La boutique de l\u2019orf\u00e8vre, au sous-titre r\u00e9v\u00e9lateur: \u00ab M\u00e9ditation sur le sacrement du mariage qui, de temps en temps, se transforme en drame. \u00bb Cette pi\u00e8ce de th\u00e9atre constitue, il va sans dire, une allusion directe aux apprentissages qu\u2019il sut tirer des d\u00e9boires conjugaux du P\u00e8re Ubu.<\/p><p>Du reste, le discours qu\u2019il fit \u00e0 l\u2019occasion de sa visite, face aux milliers de disciples rassembl\u00e9s au parc Jarry ne laisse aucun doute quant \u00e0 la nature cach\u00e9e de sa visite. Tous se souviendront qu\u2019il pronon\u00e7a gravement, le regard charg\u00e9 de d\u00e9fi, l\u2019index sacr\u00e9 pointant en direction de la rue Jarry: \u00ab La question du nom est la question fondamentale. \u00bb<\/p>",
+      "description": "<p style=\"text-align: left;\" data-mce-style=\"text-align: left;\">Cr\u00e9dits photo : \u00c9liane Excoffier&nbsp;<\/p><p data-mce-style=\"text-align: center;\" style=\"text-align: center;\"><strong>RUE JARRY<\/strong><\/p><p data-mce-style=\"text-align: right;\" style=\"text-align: right;\">\u00ab Quand \u00e0 l\u2019action qui va commencer, elle se passe en Pologne, c\u2019est-\u00e0-dire nulle part. \u00bb<br> \u00ab Nulle part est partout, et le pays o\u00f9 l\u2019on se trouve, d\u2019abord. \u00bb<br> Alfred Jarry<\/p><p>On pr\u00e9tend qu\u2019il ne faut pas confondre l\u2019origine du nom du parc Jarry avec celui de la rue Jarry. Selon la version officielle, le parc Jarry aurait \u00e9t\u00e9 nomm\u00e9 en l\u2019honneur de Raoul Jarry, simple conseiller municipal, alors que la rue aurait plut\u00f4t \u00e9t\u00e9 nomm\u00e9e en l\u2019honneur de Bernard Bleignier dit Jarry, dont le descendant, Stanislas, poss\u00e9dait les terres sur lesquelles furent trac\u00e9es cette voie.<\/p><p>Nous croyons que ces emberlificotements habiles servent en fait \u00e0 escamoter, pour des raisons d\u2019ordre public, l\u2019origine pataphysique du toponyme. Nous soutenons que le nom du parc, comme de la rue, se rapportent plut\u00f4t \u00e0 Alfred Jarry (1873-1907), fondateur de la pataphysique et p\u00e8re du P\u00e8re Ubu.<\/p><p>Comme l\u2019a d\u00e9montr\u00e9 la psychanalyse, dont le d\u00e9veloppement est par ailleurs contemporain de la cr\u00e9ation des lieux sus-mentionn\u00e9s, certains refoulements malhabiles laissent \u00e9merger des signes qui pointent en direction d\u2019une v\u00e9rit\u00e9 dissimul\u00e9e. Ainsi en va-t-il de cette construction farfelue d\u2019une origine toponymique duelle, qui laisse apercevoir son v\u00e9ritable fondement, comme un roi au cul nu.<\/p><p>La pataphysique repose sur divers principes, dont l\u2019un, et non le moindre, est celui des \u00ab contradictions identiques \u00bb qui d\u00e9signe, comme son nom l\u2019indique, l\u2019id\u00e9e bien connue selon laquelle ce qui est le m\u00eame est quand m\u00eame l\u2019oppos\u00e9 de son contraire lequel peut bien \u00eatre identique \u00e0 lui-m\u00eame, contredisant l\u2019id\u00e9e d\u2019une identit\u00e9 dont la m\u00eamet\u00e9, m\u00eame identique, ne soit pas contraire \u00e0 quelque chose qui de m\u00eame nie. Deux origines qui s\u2019opposent, mais dont le nom s\u2019\u00e9crit \u00e0 l\u2019identique, en un lieu identique, est la manifestation ind\u00e9niable de ce principe. En tentant de faire diversion, les fonctionnaires municipaux ont donc, \u00e0 leur insu, r\u00e9v\u00e9l\u00e9 les racines ubuesques qu\u2019ils tentaient de dissimuler, tel lors d\u2019un lapsus.<\/p><p>Mais l\u00e0 n\u2019est pas le moindre indice de l\u2019origine pataphysique du nom de la rue, \u00e0 tout le moins dans Parc-Extension. On entend parfois murmurer, lors de conversations \u00e9touff\u00e9es, que depuis 1927 - date \u00e0 laquelle fut nomm\u00e9 ce tron\u00e7on - au moins une habitation est maintenue \u00e0 l\u2019\u00e9tat de ruines en souvenir de la vocation pataphysique du lieu. Mais quel peut-\u00eatre le sens d\u2019une telle comm\u00e9moration?<\/p><p>Souvenons-nous que dans le r\u00e9cit toponymique officiel, un certain Stanislas aurait l\u00e9gu\u00e9 ses terres afin que soit trac\u00e9e la rue. Or, dans la pi\u00e8ce de Jarry, le personnage de Stanislas Leczinski, pauvre paysan, voit sa maison d\u00e9truite en repr\u00e9sailles de non-paiement. De nos jours, le 891 rue Jarry, maintenu \u00e0 l\u2019\u00e9tat de ruines, servirait selon les rumeurs de monument comm\u00e9moratif de cette destruction sauvage.<\/p><p>Rappelons ici \u00e0 des fins d\u00e9monstratives que l\u2019intrigue de la pi\u00e8ce de th\u00e9\u00e2tre Ubu Roi, oeuvre s\u00e9minale d\u2019Alfred Jarry, se d\u00e9roule en Pologne. Le P\u00e8re Ubu, bien que satisfait de sa situation, se laisse convaincre par son \u00e9pouse pernicieuse d\u2019effectuer une violente ascension sociale en commettant un r\u00e9gicide. Une fois couronn\u00e9 roi de Pologne, celui-ci instaure une s\u00e9rie de lois grotesques, ce qui provoquera finalement sa perte, des tensions conjugales, et sa fuite en France.<\/p><p>L\u2019immigration polonaise a jou\u00e9 un r\u00f4le important dans le d\u00e9veloppement de Parc-Extension. Joseph Bobinski, originaire de Pologne, \u00e9tait laitier dans Parc-Extension jusqu\u2019aux ann\u00e9es 1940, et livrait quotidiennement le lait sur la rue Jarry. Dans une entrevue accord\u00e9e au Casoar Club en 1926, il mentionne que l\u2019importante communaut\u00e9 polonaise de Parc-Extension faisait alors activement pression aupr\u00e8s des autorit\u00e9s municipales afin que la rue - nomm\u00e9e jusqu\u2019alors Blair \u2013 soit rebaptis\u00e9e Jarry. Il s\u2019agissait de souligner l\u2019importance des liens pataphysiques entre la francophonie et la Pologne, ce motif demeurant cependant cach\u00e9 aux yeux du reste de la population, pour des raisons de suret\u00e9 publique.<\/p><p>Cette origine explique l\u2019affection immod\u00e9r\u00e9e, en apparence absurde, de la communaut\u00e9 polonaise pour la rue et le parc Jarry. On pourrait croire que cette affection se f\u00fbt volatilis\u00e9e avec le d\u00e9clin de la population polonaise de Parc-Extension, cependant il n\u2019en est rien. La mobilit\u00e9 de la population polonaise a plut\u00f4t eu pour effet de diffuser ce curieux attachement hors fronti\u00e8res.<\/p><p>L\u2019actrice am\u00e9ricaine Leelee Sobieski, qui se r\u00e9clame de la lign\u00e9e de Jean III Sobieski, roi de Pologne, ne fut pas des moindres figures \u00e0 s\u2019attabler au restaurant Malhi Sweets afin de c\u00e9l\u00e9brer la nature pataphysique de la rue Jarry. Catherine Deneuve, qui apr\u00e8s avoir tourn\u00e9 avec Polanski, se d\u00e9couvrit une fascination pour la Pologne, effectua le m\u00eame p\u00e8lerinage.<br>Mais bien plus consid\u00e9rable encore est la visite de Karol J\u00f3zef Wojty\u0142a, alias Jean-Paul II, qui baisa le sol du parc Jarry en 1984.<\/p><p>Il est de notori\u00e9t\u00e9 publique que le pape avait \u00e9t\u00e9 acteur en Pologne avant d\u2019abandonner les arts de la repr\u00e9sentation terrestre pour devenir repr\u00e9sentant c\u00e9leste. Il est cependant m\u00e9connu qu\u2019il ait \u00e9t\u00e9 fascin\u00e9 par Ubu Roi, au point de consid\u00e9rer l\u2019occupation nazie de la Pologne comme une grotesque accaparation de pouvoir par un nouvel Ubu, qu\u2019il prit le parti de combattre par le th\u00e9\u00e2tre.<\/p><p>Karol J\u00f3zef Wojty\u0142a publia en outre en 1960 la pi\u00e8ce de th\u00e9\u00e2tre La boutique de l\u2019orf\u00e8vre, au sous-titre r\u00e9v\u00e9lateur: \u00ab M\u00e9ditation sur le sacrement du mariage qui, de temps en temps, se transforme en drame. \u00bb Cette pi\u00e8ce de th\u00e9atre constitue, il va sans dire, une allusion directe aux apprentissages qu\u2019il sut tirer des d\u00e9boires conjugaux du P\u00e8re Ubu.<\/p><p>Du reste, le discours qu\u2019il fit \u00e0 l\u2019occasion de sa visite, face aux milliers de disciples rassembl\u00e9s au parc Jarry ne laisse aucun doute quant \u00e0 la nature cach\u00e9e de sa visite. Tous se souviendront qu\u2019il pronon\u00e7a gravement, le regard charg\u00e9 de d\u00e9fi, l\u2019index sacr\u00e9 pointant en direction de la rue Jarry: \u00ab La question du nom est la question fondamentale. \u00bb<\/p>",
       "media_type": "photo",
       "time": "",
       "order": 4,
@@ -2650,7 +3259,7 @@ var featuresCollection =  {
           "label": "R\u00e9sidence d'artistes mobiles (RAM)"
         },
         "media_links": [{
-          "link": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/24169000427\/in\/dateposted-public\/\" title=\"Carte-Ex\"><img src=\"https:\/\/farm5.staticflickr.com\/4730\/24169000427_1b2ebbf920_o.jpg\" width=\"7214\" height=\"4526\" alt=\"Carte-Ex\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+          "link": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/24169000427\/in\/album-72157690714705165\/\" title=\"Carte-Ex\"><img src=\"https:\/\/farm5.staticflickr.com\/4730\/24169000427_4e1a087bc9.jpg\" width=\"500\" height=\"313\" alt=\"Carte-Ex\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
           "media_type": "photo"
         }],
         "date_type": "range",
@@ -2808,7 +3417,7 @@ var featuresCollection =  {
     "properties": {
       "id": "5",
       "title": "Rue de Li\u00e8ge",
-      "media": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/25162834528\/in\/dateposted-public\/\" title=\"Rue de Li\u00e8ge\"><img src=\"https:\/\/farm5.staticflickr.com\/4548\/25162834528_125f0ca7d2_o.jpg\" width=\"3456\" height=\"5184\" alt=\"Rue de Li\u00e8ge\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+      "media": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/25162834528\/in\/album-72157690714705165\/\" title=\"Rue de Li\u00e8ge\"><img src=\"https:\/\/farm5.staticflickr.com\/4548\/25162834528_0dea2fbf64.jpg\" width=\"333\" height=\"500\" alt=\"Rue de Li\u00e8ge\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
       "date": "",
       "description": "<p style=\"text-align: left;\" data-mce-style=\"text-align: left;\">Cr\u00e9dits photo : Alexis Bellavance<\/p><p style=\"text-align: center;\" data-mce-style=\"text-align: center;\"><strong>RUE DE LI\u00c8GE<\/strong><\/p><p><br data-mce-bogus=\"1\"><\/p><p>En 1914, Li\u00e9ge, ville belge, est assi\u00e9g\u00e9e par les allemands. Li\u00e9ge r\u00e9siste vaillamment quelques jours. Lorsqu\u2019elle capitule, pi\u00e9g\u00e9e, son accent aigu s\u2019aggrave, irr\u00e9m\u00e9diablement.<\/p><p><br data-mce-bogus=\"1\"><\/p><p>L\u2019accent aigu de la ville de Li\u00e9ge n\u2019est officiellement rebrouss\u00e9 qu\u2019en 1946, plus de 30 ans apr\u00e8s la guerre, sous un pr\u00e9texte linguistique n\u00e9buleux unaniment d\u00e9cri\u00e9. Depuis, cet accent grave de la d\u00e9faite n\u2019a cess\u00e9 d\u2019\u00eatre contest\u00e9 par certains li\u00e9geois, comme une marque d\u2019infamie plut\u00f4t que de deuil. Dans plusieurs cercles, on refuse encore de rabattre l\u2019accent, en signe de r\u00e9sistance.<\/p><p>C\u2019est en souvenir de cette lutte renversante que Montr\u00e9al nomma la rue de Li\u00e8ge le 23 mai 1922, nomination dont les effets ambigus peuvent se lire, aujourd\u2019hui encore, dans les us locales.<\/p><p><br data-mce-bogus=\"1\"><\/p><p>Comme l\u2019a r\u00e9cemment soutenu Nguy\u1ec5n Th\u1ecb T\u01b0\u1eddng V\u00e2n\u00b9, la population de la rue de Li\u00e8ge, contrairement \u00e0 une croyance r\u00e9pandue, y aurait \u00e9lu domicile, non pour des raisons de commodit\u00e9, telle que la proximit\u00e9 d\u2019une communaut\u00e9 sociolinguistique particuli\u00e8re ou les loyers abordables, mais bien plut\u00f4t en raison d\u2019une commune fascination pour les accents, ou accentophilie, se rapportant \u00e0 des objets linguistiques sonores ou scripturaires.<br><\/p><p>C\u2019est afin de mettre \u00e0 l\u2019\u00e9preuve cette th\u00e8se que nous avons m\u00e9ticuleusement arpent\u00e9 la rue de Li\u00e8ge.<\/p><p>Des 20 personnes auxquelles nous avons parl\u00e9 en ce 20 ao\u00fbt de l\u2019an 2016 et qui ont fait \u00e9tat de 13 langues maternelles diff\u00e9rentes (grec, ourdou, twi, espagnol, pendjabi, vietnamien, gujarati, tamil, arm\u00e9nien, cr\u00e9ole, bengali, italien, arabe), toutes affirmaient aimer les accents, et chacune d\u2019entre elles, manifestement, prenait un soin maniaque du sien propre.<\/p><p><br data-mce-bogus=\"1\"><\/p><p>\u00c0 ce sujet, Nguy\u1ec5n Th\u1ecb T\u01b0\u1eddng V\u00e2n fait remarquer\u00b2 que plusieurs habitants de la rue, et ceci dans une proportion inhabituelle, opinent lorsqu\u2019il est question d\u2019Isidore Isou. Comme on le sait, Isidore Isou a consacr\u00e9 sa vie \u00e0 la dilatation des voyelles, prenant parti pour un usage immod\u00e9r\u00e9 des accents, a contrario de l\u2019Allemand Keyserling qui pr\u00f4nait plut\u00f4t la dilatation des vocables, depuis une visite \u00e0 Li\u00e9ge en 1912. Isou aurait par ailleurs r\u00e9dig\u00e9 en 1946 un petit manifeste aujourd\u2019hui introuvable intitul\u00e9 \u00ab Se rendre \u00e0 Li\u00e9ge, rentrer de Li\u00e8ge \u00bb, dans lequel se trouveraient \u00e9nonc\u00e9es les normes d\u2019une communaut\u00e9 utopique concevant ses r\u00e9seaux de transport selon la direction des accents \u00e9crits et la hauteur des accents vocaliques.<\/p><p><br data-mce-bogus=\"1\"><\/p><p>Au cours de nos recherches, lors d\u2019une visite du garage de la rue de Li\u00e8ge, un employ\u00e9 nous a confi\u00e9 que les essuie-glaces rev\u00eatent localement un caract\u00e8re presque sacr\u00e9, puisqu\u2019ils permettent de faire alterner visuellement l\u2019accent grave et l\u2019accent aigu, et de r\u00e9p\u00e9ter la sc\u00e8ne primitive de l\u2019inversion belge ayant donn\u00e9 naissance au nom de la rue. Les habitants, affirme-t-il, auraient m\u00eame int\u00e9gr\u00e9, en l\u2019alt\u00e9rant, un vieux proverbe li\u00e9geois, \u00ab Fais comme \u00e0 Li\u00e8ge, laisse pleuvoir \u00bb, y adjoignant la suite \u00ab et va dans ton char \u00bb, afin de l\u2019adapter \u00e0 un nouveau rite qui exige que lors d\u2019averses l\u2019on s\u2019installe dans sa voiture pour assister au renversement des essuie-glaces sur le pare-brise. \u00c0 l\u2019appui de ce t\u00e9moignage, je mentionne qu\u2019il m\u2019a \u00e9t\u00e9 possible d\u2019apercevoir quatre personnes assises, immobiles, dans leurs voitures \u00e0 l\u2019arr\u00eat. Il appara\u00eet clairement qu\u2019elles attendaient f\u00e9briles l\u2019averse annonc\u00e9e plus tard en soir\u00e9e.<\/p><p><br data-mce-bogus=\"1\"><\/p><p>Nous avons pu constater, de plus - et il s\u2019agit l\u00e0 d\u2019un fait unique \u00e0 Montr\u00e9al - que la rue de Li\u00e8ge pr\u00e9sente aux passants un subtil jeu de graphies semble-t-il sciemment entretenu par les habitants, comme s\u2019il s\u2019agissait de maintenir \u00e0 vif le souvenir de la modification de l\u2019accent controvers\u00e9e.<\/p><p>On peut y lire 15 fois le nom Li\u00e8ge dot\u00e9 de son officieux accent grave; 5 fois la version ant\u00e9rieure brandissant fi\u00e8re son accent aigu; et 6 fois le nom Liege d\u00e9nu\u00e9 de tout accent, probablement pour des raisons de rectitude politique. Quatre panneaux indicateurs de la ville, situ\u00e9s aux coins des rues Parc, Outremont, Bloomfield et Wiseman, pr\u00e9sentent quant \u00e0 eux un accent aigu ou un accent grave redoubl\u00e9 de son contraire grossi\u00e8rement grav\u00e9 - presque une biffure - l\u2019\u0153uvre pr\u00e9sum\u00e9e de vandales accento-anarchistes. Cet \u00e9quilibre savant, qui oppose 15 manifestations de la graphie officielle \u00e0 15 autres non-orthodoxes, ne saurait \u00eatre, il va sans dire, le fruit du hasard.<\/p><p><br data-mce-bogus=\"1\"><\/p><p>Notes<br>1. Nguy\u1ec5n Th\u1ecb T\u01b0\u1eddng V\u00e2n, De Li\u00e9ge \u00e0 Li\u00e8ge : l\u2019accentophilie comme principe communautaire, Montr\u00e9al, \u00c9ditions \u00c9.\u00dc.\u00c8., 2014.<br>2. Nguy\u1ec5n Th\u1ecb T\u01b0\u1eddng V\u00e2n, Tous des illettristes? : le cas de Li\u00e9ge-Extension, Montr\u00e9al, \u00c9ditions circonflexes, 2015.<\/p>",
       "media_type": "photo",
@@ -2831,7 +3440,7 @@ var featuresCollection =  {
           "label": "R\u00e9sidence d'artistes mobiles (RAM)"
         },
         "media_links": [{
-          "link": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/24169000427\/in\/dateposted-public\/\" title=\"Carte-Ex\"><img src=\"https:\/\/farm5.staticflickr.com\/4730\/24169000427_1b2ebbf920_o.jpg\" width=\"7214\" height=\"4526\" alt=\"Carte-Ex\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
+          "link": "<a data-flickr-embed=\"true\"  href=\"https:\/\/www.flickr.com\/photos\/160182745@N05\/24169000427\/in\/album-72157690714705165\/\" title=\"Carte-Ex\"><img src=\"https:\/\/farm5.staticflickr.com\/4730\/24169000427_4e1a087bc9.jpg\" width=\"500\" height=\"313\" alt=\"Carte-Ex\"><\/a><script async src=\"\/\/embedr.flickr.com\/assets\/client-code.js\" charset=\"utf-8\"><\/script>",
           "media_type": "photo"
         }],
         "date_type": "range",
@@ -3006,7 +3615,7 @@ var featuresCollection =  {
         "category": "video",
         "project": null,
         "media_links": [{
-          "link": "https:\/\/vimeo.com\/231561016",
+          "link": "<iframe src=\"https:\/\/player.vimeo.com\/video\/231561016\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen><\/iframe>",
           "media_type": "vid\u00e9o"
         }],
         "date_type": "single",
@@ -3373,7 +3982,7 @@ var featuresCollection =  {
           "id": 486,
           "label": "Erwan Geffroy"
         }],
-        "text": "",
+        "text": "<p>Mon investigation sensible de l\u2019espace urbain du Quartier des Spectacles a pris acte d&rsquo;un imaginaire de la ville, nourri depuis plusieurs d\u00e9cennies, \u00e9tay\u00e9 par une analogie productive entre la ville et la matrice d\u2019ordinateur, entre l\u2019espace urbain et l\u2019espace cybern\u00e9tique. La ville se r\u00e9v\u00e8le alors, dans sa repr\u00e9sentation virtuelle, comme un r\u00e9seautage, un ensemble de connexions, de branchements, d\u2019enchev\u00eatrements. Or, ces connexions urbaines forment ce que Christine Boyer nomme des \u00ab\u00a0assemblages disjonctifs<a href=\"#_ftn1\" name=\"_ftnref1\">[1]<\/a>\u00a0\u00bb (<em>Cybercities<\/em>, 1996, 10).<\/p>\n<p>Cet essai propose d&rsquo;approcher l\u2019espace urbain comme la construction d\u2019un r\u00e9seautage reliant des r\u00e9alit\u00e9s, des manifestations disjointes, \u00e9parses, discontinues. Le Quartier des spectacles, con\u00e7u comme un lieu de r\u00e9seaux culturels, promoteur des technologies num\u00e9riques, remplit d\u2019une certaine mani\u00e8re le r\u00f4le de matrice technique. Malgr\u00e9 l\u2019ambition de ses cr\u00e9ateurs et organisateurs d\u2019en faire un \u00ab\u00a0quartier unifi\u00e9\u00a0\u00bb (tout en\u00a0se d\u00e9finissant par la diversit\u00e9), cette composition urbaine au c\u0153ur du centre-ville montr\u00e9alais se caract\u00e9rise par une certaine h\u00e9t\u00e9rog\u00e9n\u00e9it\u00e9\u00a0et constitue une zone socialement, culturellement, \u00e9conomiquement et politiquement conflictuelle.<\/p>\n<p>Par la d\u00e9synchronisation et la d\u00e9contextualisation du son et de l\u2019image, l\u2019essai souhaite interroger l\u2019unit\u00e9 apparente du r\u00e9seau. La ville est le lieu d&rsquo;exp\u00e9riences de rupture. Alors que la mati\u00e8re sonore est exploit\u00e9e pour ses qualit\u00e9s de texture, de variation, de mouvement, les plans fixes marquent quant \u00e0 eux des espaces en apparence immuables o\u00f9 peu survient.<\/p>\n<p>La superposition de sons hors contextes \u00e0 une juxtaposition de plans fixes permet au final de r\u00e9investir (symboliquement) ces espaces de bruits, sons, musiques et voix du quartier habit\u00e9 au quotidien. En ce sens, il s&rsquo;agit d&rsquo;engager une m\u00e9ditation quant au caract\u00e8re contextuel, situationnel des sens donn\u00e9s \u00e0 l\u2019espace urbain, quant aux fa\u00e7ons de l&rsquo;investir, de l&rsquo;habiter et d&rsquo;y cr\u00e9er une trame, une partition sonore et visuelle, en y posant la cadence de ses paroles et de ses pas.<\/p>\n<p>&nbsp;<\/p>\n<p>Captation sonore et visuelle, montage, colorim\u00e9trie, animation, rotoscopie, piano :\u00a0Rosie Lanoue Deslandes<\/p>\n<p>Mixage sonore\u00a0: Erwan Geffroy et Rosie Lanoue Deslandes<\/p>\n<p>Oeuvre\u00a0cit\u00e9e en exergue : <em>Rouge presque noire<\/em>, July Gigu\u00e8re.<\/p>\n<p>Pi\u00e8ce\u00a0au piano, extrait de \u00ab\u00a0Nous aurons\u00a0\u00bb, Richard Desjardins.<\/p>\n<p>&nbsp;<\/p>\n<p>Merci \u00e0 Fr\u00e9d\u00e9ric Dallaire, Mathieu Li-Goyette et Erwan Geffroy.<\/p>\n<p>&nbsp;<\/p>\n<p>BOYER, Christine M. <em>Cybercities\u00a0: Visual Perception in the Age of Electronic Communication<\/em>, New York (NY), Princeton Architectural Press, 1996.<\/p>\n<p><em>Programme particulier d\u2019urbanisme\u00a0: Quartier des spectacles<\/em>, Montr\u00e9al, 2007.<\/p>\n<p>&nbsp;<\/p>\n<p>&nbsp;<\/p>\n<p><a href=\"#_ftnref2\" name=\"_ftn2\"><\/a><\/p>\n",
         "mobility": "\u00e0 pied",
         "category": "video",
         "project": {
@@ -3381,7 +3990,7 @@ var featuresCollection =  {
           "label": "S\u00e9minaire sur le Quartier des Spectacles (hiver 2015)"
         },
         "media_links": [{
-          "link": "https:\/\/vimeo.com\/231565189",
+          "link": "<iframe src=\"https:\/\/player.vimeo.com\/video\/231565189\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen><\/iframe>",
           "media_type": "vid\u00e9o"
         }],
         "date_type": "range",
@@ -3390,8 +3999,8 @@ var featuresCollection =  {
         "time_min": "",
         "time_max": "",
         "main_tag": {
-          "id": 86,
-          "label": "s\u00e9minaire"
+          "id": 364,
+          "label": "Disjontion"
         },
         "main_location": {
           "id": 125,
@@ -3422,8 +4031,8 @@ var featuresCollection =  {
           "id": 264,
           "label": "Christine Boyer"
         }, {
-          "id": 263,
-          "label": "disjonction"
+          "id": 364,
+          "label": "Disjontion"
         }, {
           "id": 266,
           "label": "gr\u00e8ve \u00e9tudiante"
@@ -3508,7 +4117,7 @@ var featuresCollection =  {
           "label": "S\u00e9minaire sur le Quartier des Spectacles (automne 2015)"
         },
         "media_links": [{
-          "link": "https:\/\/vimeo.com\/231568403",
+          "link": "<iframe src=\"https:\/\/player.vimeo.com\/video\/231568403\" width=\"500\" height=\"366\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen><\/iframe>",
           "media_type": "vid\u00e9o"
         }],
         "date_type": "single",
@@ -3591,7 +4200,7 @@ var featuresCollection =  {
           "label": "S\u00e9minaire sur le Quartier des Spectacles (automne 2015)"
         },
         "media_links": [{
-          "link": "https:\/\/vimeo.com\/232576401",
+          "link": "<iframe src=\"https:\/\/player.vimeo.com\/video\/232576401\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen><\/iframe>",
           "media_type": "vid\u00e9o"
         }],
         "date_type": "single",
@@ -3673,7 +4282,7 @@ var featuresCollection =  {
         "category": "video",
         "project": null,
         "media_links": [{
-          "link": "https:\/\/vimeo.com\/231562710",
+          "link": "<iframe src=\"https:\/\/player.vimeo.com\/video\/231562710\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen><\/iframe>",
           "media_type": "vid\u00e9o"
         }],
         "date_type": "single",
@@ -3751,7 +4360,7 @@ var featuresCollection =  {
         "category": "video",
         "project": null,
         "media_links": [{
-          "link": "https:\/\/vimeo.com\/231562710",
+          "link": "<iframe src=\"https:\/\/player.vimeo.com\/video\/231562710\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen><\/iframe>",
           "media_type": "vid\u00e9o"
         }],
         "date_type": "single",
@@ -3828,7 +4437,7 @@ var featuresCollection =  {
         "category": "video",
         "project": null,
         "media_links": [{
-          "link": "https:\/\/vimeo.com\/231562864",
+          "link": "<iframe src=\"https:\/\/player.vimeo.com\/video\/231562864\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen><\/iframe>",
           "media_type": "vid\u00e9o"
         }],
         "date_type": "single",
@@ -3914,7 +4523,7 @@ var featuresCollection =  {
           "label": "S\u00e9minaire sur le Quartier des Spectacles (hiver 2015)"
         },
         "media_links": [{
-          "link": "https:\/\/vimeo.com\/231570178",
+          "link": "<iframe src=\"https:\/\/player.vimeo.com\/video\/231570178\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen><\/iframe>",
           "media_type": "vid\u00e9o"
         }],
         "date_type": "single",
@@ -3987,17 +4596,17 @@ var featuresCollection =  {
         "authors": [{
           "id": 486,
           "label": "Erwan Geffroy"
-        }],
-        "collaborators": [{
+        }, {
           "id": 487,
           "label": "Mathieu Li-Goyette"
         }],
+        "collaborators": [],
         "text": "<p>Capsule audiovisuelle int\u00e9gr\u00e9e \u00e0 une installation de vid\u00e9oprojection <em>in situ<\/em> utilisant un mur de la Caserne 23 de la place St-Henri, \u00e0 Montr\u00e9al.<\/p>\n<p>R\u00e9alis\u00e9e \u00e0 partir d\u2019une prise de vues et de sons de St-Henri et d\u2019une mise en lecture d\u2019extraits de <em>Bonheur d\u2019occasion<\/em> de Gabrielle Roy.<\/p>\n<p>Projet r\u00e9alis\u00e9 dans le cadre d\u2019un partenariat entre le LRSM et MTL ville en mouvement pour le projet d\u2019Incubateur urbain.<\/p>\n",
         "mobility": "laboratoire mobile",
         "category": "video",
         "project": null,
         "media_links": [{
-          "link": "https:\/\/vimeo.com\/231569075",
+          "link": "<iframe src=\"https:\/\/player.vimeo.com\/video\/231569075\" width=\"500\" height=\"281\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen><\/iframe>",
           "media_type": "vid\u00e9o"
         }],
         "date_type": "single",
@@ -4058,5 +4667,103 @@ var featuresCollection =  {
       "type": "Point",
       "coordinates": [-73.58419418334962, 45.47846434090343]
     }
+  }, {
+    "type": "Feature",
+    "properties": {
+      "main": true,
+      "order": 0,
+      "story": {
+        "id": 506,
+        "title": "Racines",
+        "thumbnail": "http:\/\/staging-lrsm.anagraph.io\/app\/uploads\/2017\/08\/Capture-d\u2019e\u0301cran-2017-12-13-a\u0300-15.57.59-150x150.png",
+        "authors": [{
+          "id": 485,
+          "label": "Cynthia Noury"
+        }, {
+          "id": 492,
+          "label": "Marie-Eve Bradette"
+        }, {
+          "id": 655,
+          "label": "Francis Sasseville"
+        }, {
+          "id": 652,
+          "label": "Charl\u00e8ne Gilbert"
+        }],
+        "collaborators": [],
+        "text": "<p>Sous vos pieds se trouvent \u00e0 la fois un site, un chantier, qui porter la m\u00e9moire d&rsquo;un pass\u00e9 ferroviaire, puis qui pr\u00e9figure une vocation universitaire, un lieu de savoir, un lieu de connaissances\u2026 Ces trois moments constituent la trame d&rsquo;un r\u00e9cit, le r\u00e9cit du lieu. Marchez le lieu, arpentez l&rsquo;espace et laissez-vous accompagner&#8230; &#8230; Le marcheur qui s\u2019aventure dans le quartier Outremont, dans ses rues pour se rendre devant le 400 avenue Atlantic trouvera, sous ses yeux, un terrain en chantier, un terrain en changement, mais un terrain qui, malgr\u00e9 tout, n\u2019est pas vacant. Des histoires y habitent, des histoires y circulent, des r\u00e9cits s\u2019y construisent. Comment est-ce que le marcheur qui s\u2019aventure sur ce chantier peut, en quelques minutes, arpenter le lieu, se laisser porter par l\u2019imaginaire de son histoire pass\u00e9e et pr\u00e9sente, voir et entendre ce qui s\u2019y trame, les r\u00e9cits qui s\u2019y racontent, saisir les changements qui s\u2019y op\u00e8rent\u2009? Pourquoi pas en faisant l\u2019exp\u00e9rience du d\u00e9ambulatoire-al\u00e9atoire Racines\u2009? Pendant une dizaine de minutes, le temps qu\u2019il faut pour traverser l\u2019espace, s\u2019y arr\u00eater un moment, le marcheur sera ainsi convi\u00e9 \u00e0 un paysage sonore et narratif dans lequel des r\u00e9cits lui seront racont\u00e9s, dans lequel l\u2019imaginaire du site Outremont, pass\u00e9 et futur, se fera entendre.<\/p>\n",
+        "mobility": "laboratoire mobile",
+        "category": "audio",
+        "project": {
+          "id": 728,
+          "label": "Catalyseur d'imaginaires urbains"
+        },
+        "media_links": [{
+          "link": "<iframe width=\"100%\" height=\"166\" scrolling=\"no\" frameborder=\"no\" src=\"https:\/\/w.soundcloud.com\/player\/?url=https%3A\/\/api.soundcloud.com\/tracks\/284934568&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\"><\/iframe>",
+          "media_type": "son"
+        }],
+        "date_type": "single",
+        "date": "28\/09\/2016",
+        "time": "",
+        "main_tag": {
+          "id": 90,
+          "label": "campus MIL"
+        },
+        "main_location": {
+          "id": 124,
+          "label": "campus MIL"
+        },
+        "main_language": {
+          "id": 76,
+          "label": "Fran\u00e7ais"
+        },
+        "languages": [{
+          "id": 76,
+          "label": "Fran\u00e7ais"
+        }],
+        "genres": [{
+          "id": 136,
+          "label": "fiction"
+        }],
+        "tags": [{
+          "id": 90,
+          "label": "campus MIL"
+        }, {
+          "id": 89,
+          "label": "catalyseur d'imaginaires urbains"
+        }, {
+          "id": 79,
+          "label": "espace"
+        }, {
+          "id": 94,
+          "label": "Gare de triage"
+        }, {
+          "id": 95,
+          "label": "Imaginaire"
+        }, {
+          "id": 83,
+          "label": "lieu"
+        }, {
+          "id": 99,
+          "label": "marche"
+        }, {
+          "id": 81,
+          "label": "r\u00e9cit"
+        }, {
+          "id": 8,
+          "label": "Universit\u00e9 de Montr\u00e9al"
+        }],
+        "locations": [{
+          "id": 124,
+          "label": "campus MIL"
+        }, {
+          "id": 238,
+          "label": "Catalyseur d'imaginaires urbains"
+        }]
+      }
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-73.61703622347706, 45.525402570026294]
+    }
   }]
-}
+};

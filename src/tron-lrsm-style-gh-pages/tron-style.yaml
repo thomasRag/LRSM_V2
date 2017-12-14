@@ -19,14 +19,12 @@ import:
     - layers/transit-overlay.yaml
     - layers/buildings.yaml
     - layers/buildings-labels.yaml
-    - layers/landuse.yaml
-    - layers/landuse-labels.yaml
     - layers/boundaries.yaml
     - layers/boundaries-labels.yaml
     - layers/places.yaml
     - layers/pois.yaml
     - layers/ux-sdk-overlay.yaml
-
+    - layers/landuse.yaml
     # Icons
     - themes/tron-icons.yaml
 

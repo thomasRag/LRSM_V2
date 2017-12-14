@@ -12,6 +12,9 @@ fonts:
         - weight: normal # Regular
           # url: https://fonts.gstatic.com/s/cairo/v1/ZA_4ooaF_Dfdn26t_IoQOaCWcynf_cDxXwCLxiixG1c.woff
           url: fonts/ZA_4ooaF_Dfdn26t_IoQOaCWcynf_cDxXwCLxiixG1c.woff
+    CircularBlack:
+        - weight: normal
+          url: fonts/CircularStd-Black.woff
     Orbitron:
         - weight: normal # Regular
           # url: https://fonts.gstatic.com/s/orbitron/v7/94ug0rEgQO_WuI_xKJMFc3YhjbSpvc47ee6xR_80Hnw.woff

@@ -18,19 +18,19 @@ layers:
                 draw:
                     lines:
                         style: transit-glow
-                        color: [1.00,0.000,0.250]
+                        color: global.lrsm.transit_color
                         width: [[9,0.5px],[13,2px],[16,5px],[18,9px],[20,12px]]
                 color-light_rail:
                     filter: { kind: [light_rail] }
                     draw:
                         lines:
-                            color: [0.817,0.000,1.000]
+                            color: global.lrsm.transit_color
                             width: [[9,0.5px],[13,1px],[16,3px],[18,7px],[20,10px]]
                 color-tram:
                     filter: { kind: [tram] }
                     draw:
                         lines:
-                            color: [0.817,0.000,1.000]
+                            color: global.lrsm.transit_color
                             width: [[9,0.5px],[13,0.75px],[16,2px],[18,6px],[20,9px]]
                 early-light_rail:
                     filter: { kind: [light_rail], $zoom: { max: 11 } }

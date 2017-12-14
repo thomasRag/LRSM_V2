@@ -1,10 +1,9 @@
-
 const $ = window.$
 
 var map = L.map('map',
   {"keyboardZoomOffset" : .05, maxZoom: 20, "scrollWheelZoom": true }
 );
-var tg_baseScene = '../tron-lrsm-style/tron-style.yaml';
+var tg_baseScene = 'src/tron-lrsm-style-gh-pages/tron-style.yaml';
 var dev_or_prod = 'prod';
 // prod
 var mapzen_api_key = 'mapzen-uSQVeoe';
@@ -41,7 +40,6 @@ window.addEventListener('load', function () {
   });
   layer.addTo(map);
 });
-
 var group = L.layerGroup()
 var filteredGroup = L.layerGroup()
 var authorsGroup = L.layerGroup()
@@ -282,10 +280,9 @@ function getMainMarkers () {
     pointToLayer: function (feature, latlng) {
 
       var icon = new  L.icon.pulse({
-        iconSize:[12,12],
+        iconSize:[16,16],
         color: setCatStyle(feature),
         fillColor : setCatStyle(feature) ,
-        fillOpacity: 0.5,
         heartbeat:Math.floor(Math.random() * 6) + 1});
 
       //var label = String(feature.properties.story.id)
@@ -930,7 +927,7 @@ function modalPopulate (feature, layer) {
     //for(var i =0 ; i < filterMarkers.getLayers().length; i++) {
 
 
-    if(feature.properties.order === 0){
+    if(feature.properties.order < 1){
       var articleSection = $('<section id="0" class="col-md-10 col-lg-10 mx-auto">' +
         '          <div class="col-md-10 col-lg-10 mx-auto">' +
         '            <span id="elementNumber"> <h4></h4> </span>' +
@@ -1049,6 +1046,3 @@ function articleReset (){
   $('#articleAuthor').empty()
   $('#articleTitle').empty()
 }
-
-
-

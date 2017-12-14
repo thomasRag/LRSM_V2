@@ -4,9 +4,9 @@
 
         options: {
             className: 'pulse-icon',
-            iconSize: [10,10],
+            iconSize: [28,28],
             fillColor: 'blue',
-            fillOpacity: 0.5,
+            fillOpacity: 1,
             color: 'yellow',
             animate: true,
             heartbeat: 1,

@@ -105,10 +105,12 @@ height: 80px !important;
   border-radius: 50% !important;
 }
 .btn-active {
-  background-color: rgb(35,195,237) !important;
+  /*background-color: rgb(35,195,237) !important;*/
+    background-color: rgb(192, 35, 238)!important;
 }
 .btn-active-first {
-  background-color: rgb(35,195,237) !important;
+  /*background-color: rgb(35,195,237) !important;*/
+    background-color: rgb(192, 35, 238)!important;
 }
 /*****************************************************************************/
 
@@ -189,7 +191,8 @@ height: 80px !important;
   top:8%;
   border-radius: 0px;
   height: 5%;
-  background-color: #343E41;
+  /*background-color: #343E41;*/
+    background-color: #3F3341;
 }
 
 a .nav-link{
@@ -270,16 +273,16 @@ a .nav-link{
 }
 
 #faAudio{
-    color:turquoise;
+    color:rgb(50, 255, 241);
 }
 #faDessin{
-    color:darkorange;
+    color:rgb(255, 195, 15);
 }
 #faEcrit{
-    color:lawngreen;
+    color:rgb(71, 255, 95);
 }
 #faMulti{
-    color:yellow;
+    color: yellow;
 }
 #faNew{
     color:white;
@@ -288,7 +291,7 @@ a .nav-link{
     color:red;
 }
 #faPhoto{
-    color:purple;
+    color:rgb(192, 35, 238);
 }
 /******************************************************************************/
 
@@ -404,7 +407,8 @@ background-color: #F7F7F7;
 }
 
 #submenu a:hover, #submenu a:focus, #submenu a:active {
-  color: rgb(66, 220, 244);
+  /*color: rgb(66, 220, 244);*/
+    color: rgb(192, 35, 238)!important;
   text-decoration: none;
 }
  #submenu a {
@@ -430,13 +434,15 @@ background-color: #F7F7F7;
     left: 0;
     height: 1px;
     width: 100%;
-    background-color: rgb(66, 220, 244);
+    /*background-color: rgb(66, 220, 244);*/
+     background-color: rgb(192, 35, 238)!important;
     transform-origin: right top;
     transform: scale(0, 1);
     transition: color 0.1s,transform 0.2s ease-out;
 }
 #submenu a:active::before {
-    background-color: rgb(66, 220, 244);
+   /* background-color: rgb(66, 220, 244);*/
+    background-color: rgb(192, 35, 238)!important;
 }
 #submenu a:hover::before, #submenu a:focus::before {
     transform-origin: left top;
@@ -461,7 +467,7 @@ background-color: #F7F7F7;
     padding: 16px 0;
     margin: 0 5px;
     letter-spacing: 1px;
-    font-size: 16px;
+    font-size: 19px;
     line-height: 16px;
     font-weight: 900;
     transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
@@ -571,7 +577,8 @@ background-color: #F7F7F7;
 #logotxt{
     height: 100%;
     left:0;
-    background-color: #343E41;
+    /*background-color: #343E41;*/
+    background-color: #3F3341;
 
     width: 100%;
 }
@@ -584,7 +591,8 @@ background-color: #F7F7F7;
     position: absolute;
     border-radius: 0px;
     height: 8%;
-    background-color: rgb(35,195,237);
+    /*background-color: rgb(35,195,237);*/
+    background-color:rgb(192, 35, 238)
 }
 
 #navbarBrands {
@@ -609,7 +617,8 @@ background-color: #F7F7F7;
     height: 100% !important;
     padding: 0;
     margin: 0;
-    background-color: #343E41;
+    background-color: #3F3341;
+    /*background-color: #343E41;*/
 }
 
 
@@ -762,7 +771,8 @@ h3 {
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     border-radius: 50%;
-    background-color: rgba(35,195,2370,0.5);
+    /*background-color: rgba(35,195,2370,0.5);*/
+    background-color: rgb(192, 35, 238)!important;
     border: 2px solid rgba(225,225,225,0.3);
     box-shadow: 0 0 0 2px rgba(15, 15, 15,0.5);
 }

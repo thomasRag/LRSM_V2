@@ -30,7 +30,7 @@ layers:
                     text:
                         text_source: global.ux_language_text_source
                         font:
-                            fill: [0.370,0.622,1.000]
+                            fill: global.lrsm.water_font_color
                             family: Aldrich
                             size: 12px
 

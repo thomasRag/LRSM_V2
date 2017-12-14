@@ -1,10 +1,29 @@
 global:
     lrsm:
         red: [1.0, 0.0, 0.0, 0.8] # For debug
-        earth_later_color: [0.3333333333, 0.3333333333, 0.3490196078, 0.8]
-        road_color: [0.9098039216, 0.9098039216, 0.9098039216, 0.5]
-        road_outline_color: [0.02745098039, 0.02745098039, 0.02745098039]
-        water_color: [0.5529411765, 0.5529411765, 0.5568627451, 0.8]
-        water_boundaries_animated_color: [0.5529411765, 0.5529411765, 0.5568627451, 0.8]
-        water_other_area_later_color: [0.5529411765, 0.5529411765, 0.5568627451, 0.8]
+        airport_lines_color: [0.2, 0.2, 0.2]
+        building_color: [0.2,	0.2,	0.2, 0.8]
+        building_outline_color: [0, 0, 0, 0]
+        earth_later_color: [0.1921568627, 0.1921568627, 0.1921568627, 1]
+        highway_color: [0.1490196078, 0.1490196078, 0.1490196078, 1] # same as road_color
+        highway_outline_color: [0.6862745098, 0.6862745098, 0.6862745098, 1] # same as road_outline_color
+        highway_glow: [0.4, 0.4, 0.4, 0.3]
+        highway_traffic_stream: 10.
+        island_font_color: [0.7, 0.7, 0.6]
+        park_font_color: [0.9, 0.9, 0.9]
+        road_color: [0.1490196078, 0.1490196078, 0.1490196078, 1]  # same as highway_color
+        road_outline_color: [0.3862745098, 0.3862745098, 0.3862745098, 1] # same as highway_outline_color
+        road_fonts_color: [0.7, 0.7, 0.7, 0.8]
+        road_fonts_stroke_color: { color: [0.1,0.1,0.1,0.5], width: 1px }
+        shield_font_color: [0.1, 0.1, 0.1]
+        transit_color: [1.0, 1.0, 1.0, 0.5]
+        water_font_color: [0.8, 0.8, 0.8]
+        water_color: [0.2470588235,	0.3725490196,	0.4666666667, 1]
+        water_outline_color: [0.0941176470588235, 0.4666666666666667, 0.7764705882352941, 1]
+        water_boundaries_animated_color: [0, 0.3803921569, 1, 0.8]
+        water_other_area_later_color: [0.2470588235,	0.3725490196,	0.4666666667, 1]
         water_later_SHIMMERING_BACKGROUND_COLOR: vec3(0.3,0.3,0.3) # Fixme bad color
+        landuse_universities: [0.2588235294, 0.2588235294, 0.2588235294, 1]
+        landuse_pedestrian: vec3(0.458823529411, 0.458823529411, 0.458823529411)
+        landuse_hospital: [0.758823529411, 0.758823529411, 0.758823529411, 0.8]
+        parks: [0.32588235294, 0.5588235294, 0.2588235294, 1]

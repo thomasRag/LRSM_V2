@@ -2,69 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac66da2b-85f3-40d3-a07e-9b903eaebc30" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/indexTRON.html" afterPath="$PROJECT_DIR$/indexTRON.html" />
-      <change beforePath="$PROJECT_DIR$/js/authors.js" afterPath="$PROJECT_DIR$/js/authors.js" />
-      <change beforePath="$PROJECT_DIR$/js/fc4.js" afterPath="$PROJECT_DIR$/js/fc4.js" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
       <change beforePath="$PROJECT_DIR$/js/mainTRON.js" afterPath="$PROJECT_DIR$/js/mainTRON.js" />
-      <change beforePath="$PROJECT_DIR$/src/L.Icon.Pulse.css" afterPath="$PROJECT_DIR$/src/L.Icon.Pulse.css" />
-      <change beforePath="$PROJECT_DIR$/src/L.Icon.Pulse.js" afterPath="$PROJECT_DIR$/src/L.Icon.Pulse.js" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/.gitignore" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/.gitignore (1)" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/.gitmodules" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/.gitmodules" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/.gitmodules (1)" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/.idea/vcs.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/LICENSE" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/LICENSE" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/Makefile" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/Makefile" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/README.md" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/README.md" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/VERSION" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/VERSION" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/VERSION (1)" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/fonts.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/fonts.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/globals.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/globals.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/images/sdf.sh" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/images/sdf.sh" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/lrsm.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/lrsm.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/index.html" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/index.html" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/indexTRON.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/boundaries-labels.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/boundaries-labels.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/boundaries.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/boundaries.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/buildings-labels.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/buildings-labels.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/buildings.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/buildings.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/earth-labels.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/earth-labels.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/earth.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/earth.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/landuse-labels.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/landuse-labels.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/landuse.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/landuse.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/places.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/places.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/pois.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/pois.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/roads-labels.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/roads-labels.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/roads.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/roads.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/transit-overlay.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/transit-overlay.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/transit.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/transit.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/ux-sdk-overlay.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/ux-sdk-overlay.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/water-labels.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/water-labels.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/water.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/layers/water.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/lib/FileSaver.js" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/lib/FileSaver.js" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/lib/dat.gui.min.js" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/lib/dat.gui.min.js" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/lib/keymaster.js" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/lib/keymaster.js" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/styles/common.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/styles/common.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/styles/lines.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/styles/lines.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/styles/polygons.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/styles/polygons.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-0.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-0.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-1.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-1.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-10.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-10.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-11.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-11.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-2.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-2.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-3.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-3.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-4.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-4.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-5.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-5.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-6.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-6.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-7.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-7.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-8.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-8.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-9.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/label-9.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/tron-icons.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/themes/tron-icons.yaml" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/tron-style.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/tron-style.yaml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -86,14 +24,14 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.39084274">
+    <splitter split-orientation="horizontal" split-proportion="0.7259456">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="mainTRON.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="mainTRON.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/mainTRON.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="230">
-                  <caret line="931" column="63" lean-forward="false" selection-start-line="931" selection-start-column="63" selection-end-line="931" selection-end-column="63" />
+                <state relative-caret-position="809">
+                  <caret line="1049" column="0" lean-forward="true" selection-start-line="1049" selection-start-column="0" selection-end-line="1049" selection-end-column="0" />
                   <folding>
                     <element signature="e#2238#2331#0" expanded="false" />
                     <element signature="e#2494#2627#0" expanded="false" />
@@ -103,27 +41,24 @@
                     <element signature="n#!!block;n#locationSearch#0" expanded="false" />
                     <element signature="n#!!block;n#genreSearch#0" expanded="false" />
                     <element signature="n#!!block;n#mobilitySearch#0" expanded="false" />
-                    <element signature="n#!!block;n#setCatStyle#0" expanded="false" />
                     <element signature="n#!!block;n#getTitleMarkers#0" expanded="false" />
                     <element signature="n#!!block;n#getAuthorsMarkers#0" expanded="false" />
                     <element signature="n#!!block;n#getGenreMarkers#0" expanded="false" />
-                    <element signature="e#12752#13059#0" expanded="false" />
-                    <element signature="e#13147#13555#0" expanded="false" />
+                    <element signature="e#12819#13126#0" expanded="false" />
+                    <element signature="e#13214#13622#0" expanded="false" />
                     <element signature="n#!!block;n#getMobiltyMarkers#0" expanded="false" />
-                    <element signature="e#16823#17556#0" expanded="false" />
-                    <element signature="e#17688#18328#0" expanded="false" />
-                    <element signature="e#20446#20878#0" expanded="false" />
-                    <element signature="e#21424#21944#0" expanded="false" />
-                    <element signature="e#21977#22032#0" expanded="false" />
-                    <element signature="e#22069#22972#0" expanded="false" />
-                    <element signature="e#23002#23604#0" expanded="false" />
-                    <element signature="e#23771#23793#0" expanded="false" />
-                    <element signature="e#24505#24530#0" expanded="false" />
+                    <element signature="e#16890#17623#0" expanded="false" />
+                    <element signature="e#17755#18395#0" expanded="false" />
+                    <element signature="e#20513#20945#0" expanded="false" />
+                    <element signature="e#21491#22011#0" expanded="false" />
+                    <element signature="e#22044#22099#0" expanded="false" />
+                    <element signature="e#22136#23039#0" expanded="false" />
+                    <element signature="e#23069#23671#0" expanded="false" />
+                    <element signature="e#23838#23860#0" expanded="false" />
+                    <element signature="e#24572#24597#0" expanded="false" />
                     <element signature="n#!!block;n#setId#0" expanded="false" />
-                    <element signature="e#29330#29769#0" expanded="false" />
-                    <marker date="1513220435284" expanded="true" signature="646:652" ph="©" />
-                    <marker date="1513220435284" expanded="true" signature="18392:18409" ph="..." />
-                    <marker date="1513220435284" expanded="true" signature="18495:18543" ph="..." />
+                    <element signature="e#29399#29838#0" expanded="false" />
+                    <marker date="1513222027156" expanded="true" signature="646:652" ph="©" />
                   </folding>
                 </state>
               </provider>
@@ -142,7 +77,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="fc4.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="fc4.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/fc4.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="838">
@@ -503,8 +438,8 @@
           <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="281">
-                  <caret line="251" column="22" lean-forward="false" selection-start-line="251" selection-start-column="22" selection-end-line="251" selection-end-column="22" />
+                <state relative-caret-position="710">
+                  <caret line="1018" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="1018" selection-end-column="0" />
                   <folding>
                     <element signature="e#1499#1592#0" expanded="false" />
                     <element signature="e#1755#1889#0" expanded="false" />
@@ -588,7 +523,7 @@
           <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/main.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="162">
+                <state relative-caret-position="2049">
                   <caret line="469" column="17" lean-forward="false" selection-start-line="469" selection-start-column="17" selection-end-line="469" selection-end-column="17" />
                   <folding />
                 </state>
@@ -724,10 +659,10 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/L.Icon.Pulse.js" />
         <option value="$PROJECT_DIR$/src/L.Icon.Pulse.css" />
-        <option value="$PROJECT_DIR$/js/mainTRON.js" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/js/fc4.js" />
         <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/js/mainTRON.js" />
       </list>
     </option>
   </component>
@@ -898,12 +833,12 @@
       <workItem from="1511965198047" duration="50095000" />
       <workItem from="1512104774871" duration="95250000" />
       <workItem from="1512481213311" duration="194940000" />
-      <workItem from="1513171052304" duration="26626000" />
+      <workItem from="1513171052304" duration="27126000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="366911000" />
+    <option name="totallyTimeSpent" value="367411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1543,80 +1478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/mainTRON.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="931" column="63" lean-forward="false" selection-start-line="931" selection-start-column="63" selection-end-line="931" selection-end-column="63" />
-          <folding>
-            <element signature="e#2238#2331#0" expanded="false" />
-            <element signature="e#2494#2627#0" expanded="false" />
-            <element signature="n#!!block;n#openModal#0" expanded="false" />
-            <element signature="e#3551#3941#0" expanded="false" />
-            <element signature="n#!!block;n#titleSearch#0" expanded="false" />
-            <element signature="n#!!block;n#locationSearch#0" expanded="false" />
-            <element signature="n#!!block;n#genreSearch#0" expanded="false" />
-            <element signature="n#!!block;n#mobilitySearch#0" expanded="false" />
-            <element signature="n#!!block;n#setCatStyle#0" expanded="false" />
-            <element signature="n#!!block;n#getTitleMarkers#0" expanded="false" />
-            <element signature="n#!!block;n#getAuthorsMarkers#0" expanded="false" />
-            <element signature="n#!!block;n#getGenreMarkers#0" expanded="false" />
-            <element signature="e#12752#13059#0" expanded="false" />
-            <element signature="e#13147#13555#0" expanded="false" />
-            <element signature="n#!!block;n#getMobiltyMarkers#0" expanded="false" />
-            <element signature="e#16823#17556#0" expanded="false" />
-            <element signature="e#17688#18328#0" expanded="false" />
-            <element signature="e#20446#20878#0" expanded="false" />
-            <element signature="e#21424#21944#0" expanded="false" />
-            <element signature="e#21977#22032#0" expanded="false" />
-            <element signature="e#22069#22972#0" expanded="false" />
-            <element signature="e#23002#23604#0" expanded="false" />
-            <element signature="e#23771#23793#0" expanded="false" />
-            <element signature="e#24505#24530#0" expanded="false" />
-            <element signature="n#!!block;n#setId#0" expanded="false" />
-            <element signature="e#29330#29769#0" expanded="false" />
-            <marker date="1513220435284" expanded="true" signature="646:652" ph="©" />
-            <marker date="1513220435284" expanded="true" signature="18392:18409" ph="..." />
-            <marker date="1513220435284" expanded="true" signature="18495:18543" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="251" column="22" lean-forward="false" selection-start-line="251" selection-start-column="22" selection-end-line="251" selection-end-column="22" />
-          <folding>
-            <element signature="e#1499#1592#0" expanded="false" />
-            <element signature="e#1755#1889#0" expanded="false" />
-            <element signature="n#!!block;n#openModal#0" expanded="false" />
-            <element signature="e#2803#3191#0" expanded="false" />
-            <element signature="n#!!block;n#titleSearch#0" expanded="false" />
-            <element signature="n#!!block;n#locationSearch#0" expanded="false" />
-            <element signature="n#!!block;n#genreSearch#0" expanded="false" />
-            <element signature="n#!!block;n#mobilitySearch#0" expanded="false" />
-            <element signature="n#!!block;n#getTitleMarkers#0" expanded="false" />
-            <element signature="n#!!block;n#getAuthorsMarkers#0" expanded="false" />
-            <element signature="n#!!block;n#getGenreMarkers#0" expanded="false" />
-            <element signature="e#12413#12801#0" expanded="false" />
-            <element signature="e#12892#13330#0" expanded="false" />
-            <element signature="n#!!block;n#getMobiltyMarkers#0" expanded="false" />
-            <element signature="e#16608#17297#0" expanded="false" />
-            <element signature="e#17429#18020#0" expanded="false" />
-            <element signature="e#20176#20608#0" expanded="false" />
-            <element signature="e#21155#21674#0" expanded="false" />
-            <element signature="e#21707#21769#0" expanded="false" />
-            <element signature="e#21806#22709#0" expanded="false" />
-            <element signature="e#22739#23342#0" expanded="false" />
-            <element signature="e#23515#23533#0" expanded="false" />
-            <element signature="e#24213#24234#0" expanded="false" />
-            <element signature="n#!!block;n#setId#0" expanded="false" />
-            <element signature="e#29135#29598#0" expanded="false" />
-            <marker date="1513221041877" expanded="true" signature="18084:18101" ph="..." />
-            <marker date="1513221041877" expanded="true" signature="18187:18235" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/fc4.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="838">
@@ -1975,9 +1836,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="2049">
           <caret line="469" column="17" lean-forward="false" selection-start-line="469" selection-start-column="17" selection-end-line="469" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="710">
+          <caret line="1018" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="1018" selection-end-column="0" />
+          <folding>
+            <element signature="e#1499#1592#0" expanded="false" />
+            <element signature="e#1755#1889#0" expanded="false" />
+            <element signature="n#!!block;n#openModal#0" expanded="false" />
+            <element signature="e#2803#3191#0" expanded="false" />
+            <element signature="n#!!block;n#titleSearch#0" expanded="false" />
+            <element signature="n#!!block;n#locationSearch#0" expanded="false" />
+            <element signature="n#!!block;n#genreSearch#0" expanded="false" />
+            <element signature="n#!!block;n#mobilitySearch#0" expanded="false" />
+            <element signature="n#!!block;n#getTitleMarkers#0" expanded="false" />
+            <element signature="n#!!block;n#getAuthorsMarkers#0" expanded="false" />
+            <element signature="n#!!block;n#getGenreMarkers#0" expanded="false" />
+            <element signature="e#12413#12801#0" expanded="false" />
+            <element signature="e#12892#13330#0" expanded="false" />
+            <element signature="n#!!block;n#getMobiltyMarkers#0" expanded="false" />
+            <element signature="e#16608#17297#0" expanded="false" />
+            <element signature="e#17429#18020#0" expanded="false" />
+            <element signature="e#20176#20608#0" expanded="false" />
+            <element signature="e#21155#21674#0" expanded="false" />
+            <element signature="e#21707#21769#0" expanded="false" />
+            <element signature="e#21806#22709#0" expanded="false" />
+            <element signature="e#22739#23342#0" expanded="false" />
+            <element signature="e#23515#23533#0" expanded="false" />
+            <element signature="e#24213#24234#0" expanded="false" />
+            <element signature="n#!!block;n#setId#0" expanded="false" />
+            <element signature="e#29135#29598#0" expanded="false" />
+            <marker date="1513221041877" expanded="true" signature="18084:18101" ph="..." />
+            <marker date="1513221041877" expanded="true" signature="18187:18235" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mainTRON.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="809">
+          <caret line="1049" column="0" lean-forward="true" selection-start-line="1049" selection-start-column="0" selection-end-line="1049" selection-end-column="0" />
+          <folding>
+            <element signature="e#2238#2331#0" expanded="false" />
+            <element signature="e#2494#2627#0" expanded="false" />
+            <element signature="n#!!block;n#openModal#0" expanded="false" />
+            <element signature="e#3551#3941#0" expanded="false" />
+            <element signature="n#!!block;n#titleSearch#0" expanded="false" />
+            <element signature="n#!!block;n#locationSearch#0" expanded="false" />
+            <element signature="n#!!block;n#genreSearch#0" expanded="false" />
+            <element signature="n#!!block;n#mobilitySearch#0" expanded="false" />
+            <element signature="n#!!block;n#getTitleMarkers#0" expanded="false" />
+            <element signature="n#!!block;n#getAuthorsMarkers#0" expanded="false" />
+            <element signature="n#!!block;n#getGenreMarkers#0" expanded="false" />
+            <element signature="e#12819#13126#0" expanded="false" />
+            <element signature="e#13214#13622#0" expanded="false" />
+            <element signature="n#!!block;n#getMobiltyMarkers#0" expanded="false" />
+            <element signature="e#16890#17623#0" expanded="false" />
+            <element signature="e#17755#18395#0" expanded="false" />
+            <element signature="e#20513#20945#0" expanded="false" />
+            <element signature="e#21491#22011#0" expanded="false" />
+            <element signature="e#22044#22099#0" expanded="false" />
+            <element signature="e#22136#23039#0" expanded="false" />
+            <element signature="e#23069#23671#0" expanded="false" />
+            <element signature="e#23838#23860#0" expanded="false" />
+            <element signature="e#24572#24597#0" expanded="false" />
+            <element signature="n#!!block;n#setId#0" expanded="false" />
+            <element signature="e#29399#29838#0" expanded="false" />
+            <marker date="1513222027156" expanded="true" signature="646:652" ph="©" />
+          </folding>
         </state>
       </provider>
     </entry>

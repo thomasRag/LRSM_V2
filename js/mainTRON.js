@@ -283,6 +283,7 @@ function getMainMarkers () {
         iconSize:[16,16],
         color: setCatStyle(feature),
         fillColor : setCatStyle(feature) ,
+        fillOpacity: 0.5,
         heartbeat:Math.floor(Math.random() * 6) + 1});
 
       //var label = String(feature.properties.story.id)
@@ -370,22 +371,22 @@ function mobilitySearch(){
 
 function setCatStyle(feature) {
   if (feature.properties.story.category === 'dessin') {
-    return 'orange'
+    return 'rgb(255, 195, 15);'
   }
   else if (feature.properties.story.category === 'video') {
     return 'red'
   }
   else if (feature.properties.story.category === 'audio') {
-    return 'turquoise'
+    return 'rgb(50, 255, 241);'
   }
   else if (feature.properties.story.category === 'photo') {
-    return  'purple'
+    return  'rgb(192, 35, 238);'
   }
   else if (feature.properties.story.category === 'multimédia') {
     return 'yellow'
   }
   else if (feature.properties.story.category === 'écrit') {
-    return 'lawngreen'
+    return 'rgb(71, 255, 95);'
   }
   else {
     return 'white'
@@ -927,7 +928,7 @@ function modalPopulate (feature, layer) {
     //for(var i =0 ; i < filterMarkers.getLayers().length; i++) {
 
 
-    if(feature.properties.order < 1){
+    if(feature.properties.order === 0){
       var articleSection = $('<section id="0" class="col-md-10 col-lg-10 mx-auto">' +
         '          <div class="col-md-10 col-lg-10 mx-auto">' +
         '            <span id="elementNumber"> <h4></h4> </span>' +

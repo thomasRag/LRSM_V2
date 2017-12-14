@@ -11,7 +11,7 @@ global:
         highway_traffic_stream: 10.
         island_font_color: [0.7, 0.7, 0.6]
         park_font_color: [0.9, 0.9, 0.9]
-        road_color: [0.1490196078, 0.1490196078, 0.1490196078, 1]  # same as highway_color
+        road_color: [0.4666666666666667, 0.4666666666666667, 0.4666666666666667, 1]  # same as highway_color
         road_outline_color: [0.3862745098, 0.3862745098, 0.3862745098, 1] # same as highway_outline_color
         road_fonts_color: [0.7, 0.7, 0.7, 0.8]
         road_fonts_stroke_color: { color: [0.1,0.1,0.1,0.5], width: 1px }

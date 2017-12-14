@@ -803,11 +803,9 @@ function modalPopulate (feature, layer) {
 
   var mediaFrameModal = function (){
     /*for(var i  ; i < feature.properties.story.media_links.length; i++){
-
       if (feature.properties.story.media_links.length > 1){
         console.log(feature.properties.story.media_links.length)
          return '<iframe class="mx-auto" id="modalframe" width="500" height="280" frameborder="0" src="'+feature.properties.story.media_links[i].link+'"&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>'
-
       }
       else {
         console.log(feature.properties.story.media_links.length)

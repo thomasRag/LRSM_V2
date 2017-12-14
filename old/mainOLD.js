@@ -1,4 +1,3 @@
-
 const $ = window.$
 
 /** ******** MAP FUNCTIONS ***********/
@@ -7,7 +6,7 @@ var map = L.map('map', { zoomControl: false }).setView([45.5314, -73.6750], 8)
 new L.Control.Zoom({ position: 'topright' }).addTo(map)
 L.tileLayer('https://api.mapbox.com/styles/v1/clementg123/cjb338httt3cz2spo5i4hcrvh/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2xlbWVudGcxMjMiLCJhIjoiY2o2M3ZhODh3MWxwNDJxbnJnaGZxcWNoMiJ9.YroDniTcealGFJgHtQ2hDg', {
   maxZoom: 22
- }).addTo(map)
+}).addTo(map)
 
 var group = L.layerGroup()
 var filteredGroup = L.layerGroup()
@@ -70,7 +69,7 @@ $('.btn-rounded').click(function () {
   if ($(this).hasClass('btn-active')) {
     $(this).removeClass('btn-active')
 
-   } else {
+  } else {
     $(this).addClass('btn-active')
 
   }
@@ -82,8 +81,8 @@ $('.btn-rounded').click(function () {
 /**********************************************/
 
 /**
-* function that show the panel and close the popup
-*/
+ * function that show the panel and close the popup
+ */
 function openModal () {
   if ($("#recitInfoPanel").hasClass('modalInactive')){
 
@@ -92,9 +91,9 @@ function openModal () {
     $("#map").width('55%')}
   else{
 
-  $("#recitInfoPanel").animate({left: "-1000px"},0)
-  $("#recitInfoPanel").addClass('modalActive')
-  $("#map").width('85%')}
+    $("#recitInfoPanel").animate({left: "-1000px"},0)
+    $("#recitInfoPanel").addClass('modalActive')
+    $("#map").width('85%')}
   map.closePopup()
 }
 /**
@@ -113,11 +112,11 @@ function closeModal(){
 }
 
 /**
-* pan the popup to the center of the screen
-*/
+ * pan the popup to the center of the screen
+ */
 
 map.on('popupopen', function (e) {
-/** *** !! Auto Pan to the center of the popup ToolTip !! *****/
+  /** *** !! Auto Pan to the center of the popup ToolTip !! *****/
   var px = map.project(e.popup._latlng) // find the pixel location on the map where the popup anchor is
   px.y -= e.popup._container.clientHeight / 2 // find the height of the popup container, divide by 2, subtract from the Y axis of marker location
   map.panTo(map.unproject(px), {animate: true}) // pan to new center
@@ -135,27 +134,27 @@ map.on('moveend ', function () {
 
   var bounds = map.getBounds() // Get the map bounds - the top-left and bottom-right locations.
 
-    if (map.hasLayer(mainMarkers)){
-        // For each marker, consider whether it is currently visible by comparing  with the current map bounds.
-        mainMarkers.eachLayer(function (marker) {
-            if (bounds.contains(marker.getLatLng())) {
-                inBounds.push(marker.feature.properties.story.title)
+  if (map.hasLayer(mainMarkers)){
+    // For each marker, consider whether it is currently visible by comparing  with the current map bounds.
+    mainMarkers.eachLayer(function (marker) {
+      if (bounds.contains(marker.getLatLng())) {
+        inBounds.push(marker.feature.properties.story.title)
 
-            }
-        })
-      myTest()
-    }
-    else if (map.hasLayer(markerCluster)){
-      /* function that retrive unique objects from an array */
+      }
+    })
+    myTest()
+  }
+  else if (map.hasLayer(markerCluster)){
+    /* function that retrive unique objects from an array */
 
-      markerCluster.eachLayer(function (marker) {
-        if (bounds.contains(marker.getLatLng())) {
-                inBounds.push(marker.feature.properties.author.name)
+    markerCluster.eachLayer(function (marker) {
+      if (bounds.contains(marker.getLatLng())) {
+        inBounds.push(marker.feature.properties.author.name)
 
-            }
-        })
-      myTest()
-    }
+      }
+    })
+    myTest()
+  }
 
   /**
    *
@@ -183,8 +182,8 @@ map.on('moveend ', function () {
 })
 
 /**
-* function that filter the mainMarkers layer on click
-*/
+ * function that filter the mainMarkers layer on click
+ */
 var myFilterLayer
 
 function getFilterMarkersById (myFilterLayer) {
@@ -231,8 +230,8 @@ function getFilterMarkersById (myFilterLayer) {
 
 
 /**
-* function that display the main markers
-*/
+ * function that display the main markers
+ */
 var mainmarkers
 function getMainMarkers () {
 
@@ -248,12 +247,12 @@ function getMainMarkers () {
 // Display main markers as CircleMarkers
     pointToLayer: function (feature, latlng) {
 
-     var icon = new  L.icon.pulse({
-       iconSize:[16,16],
-       color: setCatStyle(feature),
-       fillColor : setCatStyle(feature) ,
-       fillOpacity: 0.5,
-       heartbeat:Math.floor(Math.random() * 6) + 1});
+      var icon = new  L.icon.pulse({
+        iconSize:[16,16],
+        color: setCatStyle(feature),
+        fillColor : setCatStyle(feature) ,
+        fillOpacity: 0.5,
+        heartbeat:Math.floor(Math.random() * 6) + 1});
 
       //var label = String(feature.properties.story.id)
       return L.marker(latlng, {icon: icon})
@@ -275,30 +274,30 @@ $(getMainMarkers ())
  */
 
 function titleSearch(){
-    if (jsonFilter.title[0].length === undefined){
-        return false
+  if (jsonFilter.title[0].length === undefined){
+    return false
+  }
+  for (var j = 0; j < jsonFilter.title[0].length; j++) {
+    if (jsonFilter.title[0][j] === undefined){
+      return false
     }
-    for (var j = 0; j < jsonFilter.title[0].length; j++) {
-        if (jsonFilter.title[0][j] === undefined){
-            return false
-        }
-        else {
+    else {
 
-            return jsonFilter.title[0][j]
-        }}
+      return jsonFilter.title[0][j]
+    }}
 }
 
 function authorsSearch(){
-    if (jsonFilter.authors[0].length === undefined){
-        return false
+  if (jsonFilter.authors[0].length === undefined){
+    return false
+  }
+  for (var j = 0; j < jsonFilter.authors[0].length; j++) {
+    if (jsonFilter.authors[0][j] === undefined){
+      return false
     }
-    for (var j = 0; j < jsonFilter.authors[0].length; j++) {
-      if (jsonFilter.authors[0][j] === undefined){
-           return false
-      }
-      else {
+    else {
 
-        return jsonFilter.authors[0][j]
+      return jsonFilter.authors[0][j]
     }}
 }
 
@@ -317,10 +316,10 @@ function locationSearch(){
 }
 
 function genreSearch(){
-    for (var j = 0; j < jsonFilter.genre.length; j++) {
-      console.log(jsonFilter)
-      return jsonFilter.genre[j]
-    }
+  for (var j = 0; j < jsonFilter.genre.length; j++) {
+    console.log(jsonFilter)
+    return jsonFilter.genre[j]
+  }
 }
 
 function mobilitySearch(){
@@ -364,75 +363,75 @@ function setCatStyle(feature) {
 
 function getTitleMarkers () {
 
-     titleMarkers = L.geoJSON(featuresCollection, {
+  titleMarkers = L.geoJSON(featuresCollection, {
 
-        filter: function (feature) {
+    filter: function (feature) {
 
-            for (var i = 0; i < featuresCollection.features.length; i++) {
-                //A finir author = boucle sur le nombre des title dans le récit (title pluriel)
-                if (feature.properties.main === true
-                    && feature.properties.story.title === titleSearch()
-                )
-                {
-                    return true
-                }}
-        },
+      for (var i = 0; i < featuresCollection.features.length; i++) {
+        //A finir author = boucle sur le nombre des title dans le récit (title pluriel)
+        if (feature.properties.main === true
+          && feature.properties.story.title === titleSearch()
+        )
+        {
+          return true
+        }}
+    },
 // Display main markers as CircleMarkers
-       pointToLayer: function (feature, latlng) {
+    pointToLayer: function (feature, latlng) {
 
-         var icon = new  L.icon.pulse({
-           iconSize:[12,12],
-           color: setCatStyle(feature),
-           fillColor : setCatStyle(feature) ,
-           fillOpacity: 0.5,
-           heartbeat:Math.floor(Math.random() * 6) + 1});
+      var icon = new  L.icon.pulse({
+        iconSize:[12,12],
+        color: setCatStyle(feature),
+        fillColor : setCatStyle(feature) ,
+        fillOpacity: 0.5,
+        heartbeat:Math.floor(Math.random() * 6) + 1});
 
-         //var label = String(feature.properties.story.id)
-         return L.marker(latlng, {icon: icon})
-         //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
-       },
-       onEachFeature: onEachFeature
-     })
-    group.clearLayers()
-    titleGroup.addLayer(titleMarkers).addTo(map)
-    //allGroups.addLayer(titleMarkers).addTo(map)
+      //var label = String(feature.properties.story.id)
+      return L.marker(latlng, {icon: icon})
+      //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
+    },
+    onEachFeature: onEachFeature
+  })
+  group.clearLayers()
+  titleGroup.addLayer(titleMarkers).addTo(map)
+  //allGroups.addLayer(titleMarkers).addTo(map)
 }
 /**
  * create a new L.Layergroup everytime we filter by authors
  */
 function getAuthorsMarkers () {
 
-     authorsMarkers = L.geoJSON(featuresCollection, {
+  authorsMarkers = L.geoJSON(featuresCollection, {
 
-        filter: function (feature) {
+    filter: function (feature) {
 
-          if(feature.properties.main === true){
-            for (var i = 0; i < feature.properties.story.authors.length; i++) {
-              if (feature.properties.story.authors[i].label === authorsSearch()){
-                return true
-              }
-            }
+      if(feature.properties.main === true){
+        for (var i = 0; i < feature.properties.story.authors.length; i++) {
+          if (feature.properties.story.authors[i].label === authorsSearch()){
+            return true
           }
-         },
+        }
+      }
+    },
 // Display main markers as CircleMarkers
-       pointToLayer: function (feature, latlng) {
+    pointToLayer: function (feature, latlng) {
 
-         var icon = new  L.icon.pulse({
-           iconSize:[12,12],
-           color: setCatStyle(feature),
-           fillColor : setCatStyle(feature) ,
-           fillOpacity: 0.5,
-           heartbeat:Math.floor(Math.random() * 6) + 1});
+      var icon = new  L.icon.pulse({
+        iconSize:[12,12],
+        color: setCatStyle(feature),
+        fillColor : setCatStyle(feature) ,
+        fillOpacity: 0.5,
+        heartbeat:Math.floor(Math.random() * 6) + 1});
 
-         //var label = String(feature.properties.story.id)
-         return L.marker(latlng, {icon: icon})
-         //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
-       },
-       onEachFeature: onEachFeature
-     })
-    group.clearLayers()
-    authorsGroup.addLayer(authorsMarkers).addTo(map)
-    //allGroups.addLayer(authorsMarkers).addTo(map)
+      //var label = String(feature.properties.story.id)
+      return L.marker(latlng, {icon: icon})
+      //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
+    },
+    onEachFeature: onEachFeature
+  })
+  group.clearLayers()
+  authorsGroup.addLayer(authorsMarkers).addTo(map)
+  //allGroups.addLayer(authorsMarkers).addTo(map)
 }
 /**
  * create a new L.Layergroup everytime we filter by categories
@@ -440,43 +439,43 @@ function getAuthorsMarkers () {
 function getGenreMarkers () {
 
   if (map.hasLayer(mainMarkers)){
-       group.clearLayers()
+    group.clearLayers()
   }
 
-     genreMarkers = L.geoJSON(featuresCollection, {
+  genreMarkers = L.geoJSON(featuresCollection, {
 
-        filter: function (feature) {
+    filter: function (feature) {
 
-            for (var i = 0; i < featuresCollection.features.length; i++) {
-                console.log(genreSearch())
-                if (feature.properties.main === true && feature.properties.story.category === genreSearch() )
-                {
-                  return true
-                }
-                else {
+      for (var i = 0; i < featuresCollection.features.length; i++) {
+        console.log(genreSearch())
+        if (feature.properties.main === true && feature.properties.story.category === genreSearch() )
+        {
+          return true
+        }
+        else {
 
-                  return
-                }
-             }
-        },
+          return
+        }
+      }
+    },
 // Display main markers as CircleMarkers
-       pointToLayer: function (feature, latlng) {
+    pointToLayer: function (feature, latlng) {
 
-         var icon = new  L.icon.pulse({
-           iconSize:[12,12],
-           color: setCatStyle(feature),
-           fillColor : setCatStyle(feature) ,
-           fillOpacity: 0.5,
-           heartbeat:Math.floor(Math.random() * 6) + 1});
+      var icon = new  L.icon.pulse({
+        iconSize:[12,12],
+        color: setCatStyle(feature),
+        fillColor : setCatStyle(feature) ,
+        fillOpacity: 0.5,
+        heartbeat:Math.floor(Math.random() * 6) + 1});
 
-         //var label = String(feature.properties.story.id)
-         return L.marker(latlng, {icon: icon})
-         //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
-       },
-       onEachFeature: onEachFeature
-     })
+      //var label = String(feature.properties.story.id)
+      return L.marker(latlng, {icon: icon})
+      //.bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip()
+    },
+    onEachFeature: onEachFeature
+  })
 
-     genreGroup.addLayer(genreMarkers).addTo(map)
+  genreGroup.addLayer(genreMarkers).addTo(map)
 }
 /**
  * create a new L.Layergroup everytime we filter by mobility
@@ -562,10 +561,10 @@ function getLocationMarkers () {
 }
 
 /**
-* function that tell what to do on onEachFeature of the markers
-*/
+ * function that tell what to do on onEachFeature of the markers
+ */
 function onEachFeature (feature, layer) {
-      // Create HTML POP UP //
+  // Create HTML POP UP //
 
   /**
    * function that check if authors are multiple and returns a list if true
@@ -584,7 +583,7 @@ function onEachFeature (feature, layer) {
         return feature.properties.story.authors[0].label
       }
     }
-   // console.log(authorsList.join(', '))
+    // console.log(authorsList.join(', '))
     return authorsList.join(', <br>')
   }
 
@@ -593,73 +592,73 @@ function onEachFeature (feature, layer) {
    * @returns {string}
    */
   var dynamicIcon =  function(){
-try {
-    if (feature.properties.story.category === undefined ){
-      return 'Autre'
-    }
+    try {
+      if (feature.properties.story.category === undefined ){
+        return 'Autre'
+      }
 
-    else if (feature.properties.story.category === 'photo'){
-      return 'Photo'
-    }
-    else if (feature.properties.story.category === 'video') {
-      return 'Video'
-    }
+      else if (feature.properties.story.category === 'photo'){
+        return 'Photo'
+      }
+      else if (feature.properties.story.category === 'video') {
+        return 'Video'
+      }
 
-    else if (feature.properties.story.category === 'écrit') {
+      else if (feature.properties.story.category === 'écrit') {
         return 'Écrit'
       }
 
       else if (feature.properties.story.category === 'audio') {
         return 'Audio'
       }
-    else if (feature.properties.story.category === 'dessin') {
-      return 'Dessin'
-    }
-    else if (feature.properties.story.category === 'multimédia') {
-      return 'multimédia'
-    }
+      else if (feature.properties.story.category === 'dessin') {
+        return 'Dessin'
+      }
+      else if (feature.properties.story.category === 'multimédia') {
+        return 'multimédia'
+      }
     }
 
-  catch(e) {
-    return
+    catch(e) {
+      return
+    }
+
   }
-
-}
   /**
    *function that set dynamically the color in the popup header
    * @returns {string}
    */
   var dynamicHeader = function(){
 
-  try {
-   if (feature.properties.story.category === 'photo'){
-      return 'purple'
-    }
-    else if (feature.properties.story.category === 'video') {
-      return 'red'
+    try {
+      if (feature.properties.story.category === 'photo'){
+        return 'purple'
+      }
+      else if (feature.properties.story.category === 'video') {
+        return 'red'
+      }
+
+      else if (feature.properties.story.category === 'dessin') {
+        return 'orange'
+      }
+
+      else if (feature.properties.story.category === 'audio') {
+        return 'turquoise'
+      }
+      else if (feature.properties.story.category === 'écrit') {
+        return 'lawngreen'
+      }
+      else if (feature.properties.story.category === 'multimédia') {
+        return 'yellow'
+      }
+
     }
 
-    else if (feature.properties.story.category === 'dessin') {
-      return 'orange'
-    }
-
-    else if (feature.properties.story.category === 'audio') {
-      return 'turquoise'
-    }
-    else if (feature.properties.story.category === 'écrit') {
-      return 'lawngreen'
-    }
-    else if (feature.properties.story.category === 'multimédia') {
-      return 'yellow'
+    catch(e) {
+      return
     }
 
   }
-
-  catch(e) {
-    return
-  }
-
-}
 
   var customPopup = '<div id="popUp" class="card mb-3" style="max-width: 20rem;">  '
   customPopup = customPopup + '<div id="mediaHeader" class="card-header" style="background-color: '+dynamicHeader()+'!important;">'
@@ -675,32 +674,32 @@ try {
   customPopup = customPopup + '</div></a>'
   customPopup = customPopup + '</div></div>'
 
-      // specify popup class
+  // specify popup class
   var customOptions =
-          {'className': 'custom'}
-      // bind html code and class options to the popup
+    {'className': 'custom'}
+  // bind html code and class options to the popup
   layer.bindPopup(customPopup, customOptions)// .on('click', function () {
-    // console.log('test onclick')
-    /**
-     * On hover over the point show legend
-     */
+  // console.log('test onclick')
+  /**
+   * On hover over the point show legend
+   */
 
-    layer.on('mouseover', function(){
-        $('#legend').css("display","inline")
-    });
-    layer.on('mouseout', function () {
-        $('#legend').css("display","none")
-    });
+  layer.on('mouseover', function(){
+    $('#legend').css("display","inline")
+  });
+  layer.on('mouseout', function () {
+    $('#legend').css("display","none")
+  });
 };
 
 /**
-* function that tells what to do on onEachFeature of the filterMarkers and populate the modal
-* @param {Object} feature
-* @param {Object} layer
-*/
+ * function that tells what to do on onEachFeature of the filterMarkers and populate the modal
+ * @param {Object} feature
+ * @param {Object} layer
+ */
 function modalPopulate (feature, layer) {
-    // CREATE DYNAMICALLY THE HTML CODE TO POPULATE THE MODAL SCROLL BY CHAPTER SECTION OF THE STORIES
-    // / /////////////////////////////////////////////////////////////
+  // CREATE DYNAMICALLY THE HTML CODE TO POPULATE THE MODAL SCROLL BY CHAPTER SECTION OF THE STORIES
+  // / /////////////////////////////////////////////////////////////
 
   var authorsModal = function(){
     var authorsList =[]
@@ -722,7 +721,7 @@ function modalPopulate (feature, layer) {
   var collaboratorsModal = function(){
 
     if(feature.properties.story.collaborators === []){
-       return false
+      return false
     }
     var collaboratorList =[]
     for(var i =0 ; i < feature.properties.story.collaborators.length; i++){
@@ -750,20 +749,18 @@ function modalPopulate (feature, layer) {
       }
     }
     // console.log(authorsList.join(', '))
-   // return tagsList.join(', ').split(',')
+    // return tagsList.join(', ').split(',')
   }
 
   var projectModal = function(){
-        return feature.properties.story.project.label
-     }
+    return feature.properties.story.project.label
+  }
 
   var mediaFrameModal = function (){
     /*for(var i  ; i < feature.properties.story.media_links.length; i++){
-
       if (feature.properties.story.media_links.length > 1){
         console.log(feature.properties.story.media_links.length)
          return '<iframe class="mx-auto" id="modalframe" width="500" height="280" frameborder="0" src="'+feature.properties.story.media_links[i].link+'"&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>'
-
       }
       else {
         console.log(feature.properties.story.media_links.length)
@@ -781,7 +778,7 @@ function modalPopulate (feature, layer) {
     }
     else if (feature.properties.story.date_type === "multi"){
       for(var i=0; i < feature.properties.story.multi_dates.length;i++){
-         dateList.push(feature.properties.story.multi_dates[i].multi_date)
+        dateList.push(feature.properties.story.multi_dates[i].multi_date)
         dateList.join(' <br>')
         return dateList
       }
@@ -791,93 +788,93 @@ function modalPopulate (feature, layer) {
     }
   }
 
-try {
-      var articleTitle = $('<h2 class="pt-0" id="articleTitle">' + feature.properties.story.title + '</h2>')
-    }
-    catch(e) {
-      console.log(e)
-    }
-finally {
-  articleTitle
-}
+  try {
+    var articleTitle = $('<h2 class="pt-0" id="articleTitle">' + feature.properties.story.title + '</h2>')
+  }
+  catch(e) {
+    console.log(e)
+  }
+  finally {
+    articleTitle
+  }
 
-try {
+  try {
     var articleAuthors = $('<h5>'+ authorsModal()+ '</h5>')
   }
   catch(e) {
-  console.log(e)
+    console.log(e)
   }
-finally {
-  articleAuthors
-}
+  finally {
+    articleAuthors
+  }
 
-try {
+  try {
     var articleCollaborators = $('<h6> Coll. '+collaboratorsModal()+'</h6>')
   }
   catch(e) {
     console.log(e)
   }
   finally {
-  articleCollaborators
-}
-try {
+    articleCollaborators
+  }
+  try {
     var articleMobility = $('<h6 id ="modalMobility" class="text-center"> '+feature.properties.story.mobility+' </h6>')
   }     catch(e) {
-  console.log(e)
+    console.log(e)
   }
-finally {
-  articleMobility
-}
-try {
+  finally {
+    articleMobility
+  }
+  try {
     var articleLocation = $('<h6 id ="modalLocation" class="text-center"> '+feature.properties.story.main_location['label']+' </h6>')
   }     catch(e) {
-  console.log(e)
+    console.log(e)
   }
-finally {
-  articleLocation
-}
-try {
+  finally {
+    articleLocation
+  }
+  try {
     var articleProject= $('<h6> '+projectModal()+'</h6>')
   }
   catch(e) {
     console.log(e)
   }
-finally {
-  articleProject
-}
+  finally {
+    articleProject
+  }
 
-try {
+  try {
     var articleDate=$('<h6> '+dateModal()+'</h6>')
   }
   catch(e) {
     console.log(e)
   }
-finally {
-  articleDate
-}
+  finally {
+    articleDate
+  }
 
-try {
-  var kwPills = $('<div></div>')
-  var articleKeyWord = $('<script>$(".badgeRdColor").css("background-color", "rgb(35,195,237)")</script><span id="tag" class="badge badge-pill badgeRdColor d-flex flex-wrap">'+keyWordsModal()+'</span>')
-    }
+  try {
+    var kwPills = $('<div></div>')
+    var articleKeyWord = $('<script>$(".badgeRdColor").css("background-color", "rgb(35,195,237)")</script><span id="tag" class="badge badge-pill badgeRdColor d-flex flex-wrap">'+keyWordsModal()+'</span>')
+  }
 
   catch(e) {
     console.log(e)
   }
   finally {
-  for(var i =0 ; i < feature.properties.story.tags.length; i++){
+    for(var i =0 ; i < feature.properties.story.tags.length; i++){
 
-    kwPills.append($('<script>$(".badgeRdColor").css("background-color", "rgb(35,195,237)")</script><span id="tag'+i+'" class="badge badge-pill badgeRdColor">'+keyWordsModal(i)+'</span>'))
+      kwPills.append($('<script>$(".badgeRdColor").css("background-color", "rgb(35,195,237)")</script><span id="tag'+i+'" class="badge badge-pill badgeRdColor">'+keyWordsModal(i)+'</span>'))
+    }
   }
-}
 
-try{
-  var mainImg =$('<img class="img-fluid d-block align-item-center mr-auto ml-auto" src="'+feature.properties.story.thumbnail+'">')
-}
-catch(e){
+  try{
+    var mainImg =$('<img class="img-fluid d-block align-item-center mr-auto ml-auto" src="'+feature.properties.story.thumbnail+'">')
+  }
+  catch(e){
     console.log(e)
-}
-finally {
+  }
+  finally {
     mainImg
   }
 
@@ -892,47 +889,47 @@ finally {
   }
 
 
-try {
+  try {
 //  var sections = $('<div></div>')
-  //for(var i =0 ; i < filterMarkers.getLayers().length; i++) {
+    //for(var i =0 ; i < filterMarkers.getLayers().length; i++) {
 
 
-      if(feature.properties.order === 0){
-        var articleSection = $('<section id="0" class="col-md-10 col-lg-10 mx-auto">' +
-          '          <div class="col-md-10 col-lg-10 mx-auto">' +
-          '            <span id="elementNumber"> <h4></h4> </span>' +
-          '          </div>' +
-          '          <div class="col-md-10 col-lg-10 mx-auto">' +
-          '            <span><h5></h5></span>' +
-          '          </div>' +
-          '        <div class="row">' +
-          '<div class="col-md-9 col-lg-9 mx-auto">'+
-          '       <span class="text-justify text-center"></span>' +
-          '        </div><hr></section>')
-        // sections.append(articleSection)
-      }
-      else{
+    if(feature.properties.order === 0){
+      var articleSection = $('<section id="0" class="col-md-10 col-lg-10 mx-auto">' +
+        '          <div class="col-md-10 col-lg-10 mx-auto">' +
+        '            <span id="elementNumber"> <h4></h4> </span>' +
+        '          </div>' +
+        '          <div class="col-md-10 col-lg-10 mx-auto">' +
+        '            <span><h5></h5></span>' +
+        '          </div>' +
+        '        <div class="row">' +
+        '<div class="col-md-9 col-lg-9 mx-auto">'+
+        '       <span class="text-justify text-center"></span>' +
+        '        </div><hr></section>')
+      // sections.append(articleSection)
+    }
+    else{
 
-        var articleSection = $('<section id="'+ feature.properties.order +'" class="col-md-10 col-lg-10 mx-auto">' +
-          '          <div class="col-md-10 col-lg-10 mx-auto">' +
-          '            <span id="elementNumber"> <h4>' + feature.properties.title + '</h4> </span>' +
-          '          </div>' +
-          '          <div class="col-md-10 col-lg-10 mx-auto">' +
-          '            <span><h5>'+ feature.properties.date +'</h5></span>' +
-          '          </div>' +
-          '        <div class="row">' +
-          '<div class="col-md-9 col-lg-9 mx-auto">'+
-          mediaFrameModal() +
-          '       <span class="text-justify text-center">  ' + feature.properties.description + ' </span>' +
-          '        </div><hr></section>')
-        // sections.append(articleSection)
-      }
+      var articleSection = $('<section id="'+ feature.properties.order +'" class="col-md-10 col-lg-10 mx-auto">' +
+        '          <div class="col-md-10 col-lg-10 mx-auto">' +
+        '            <span id="elementNumber"> <h4>' + feature.properties.title + '</h4> </span>' +
+        '          </div>' +
+        '          <div class="col-md-10 col-lg-10 mx-auto">' +
+        '            <span><h5>'+ feature.properties.date +'</h5></span>' +
+        '          </div>' +
+        '        <div class="row">' +
+        '<div class="col-md-9 col-lg-9 mx-auto">'+
+        mediaFrameModal() +
+        '       <span class="text-justify text-center">  ' + feature.properties.description + ' </span>' +
+        '        </div><hr></section>')
+      // sections.append(articleSection)
+    }
 
   }
 //}
-catch(e) {
-  console.log(e)
-}
+  catch(e) {
+    console.log(e)
+  }
 
 
 
@@ -951,20 +948,20 @@ catch(e) {
 
 
 }
-  /**
-    * function that check for the container id and zoom to the parent feature
-    * @param {numeric} newId
-    */
+/**
+ * function that check for the container id and zoom to the parent feature
+ * @param {numeric} newId
+ */
 
 var narrative = document.getElementById('articles')
 var sections = narrative.getElementsByTagName('section')
 var currentId = ''
 
 function setId (newId) {
-          // If the ID hasn't actually changed, don't do anything
+  // If the ID hasn't actually changed, don't do anything
   if (newId === currentId) return
-          // Otherwise, iterate through layers, setting the current
-          // marker to a different color and zooming to it.
+  // Otherwise, iterate through layers, setting the current
+  // marker to a different color and zooming to it.
   filterMarkers.eachLayer(function (layer) {
     if(String(layer.feature.properties['order'])=== undefined){
       console.log('article undefined')
@@ -974,26 +971,26 @@ function setId (newId) {
       map.flyTo([layer.feature.geometry.coordinates[1], layer.feature.geometry.coordinates[0]], 15)
     }
   })
-          // highlight the current section
+  // highlight the current section
   for (var i = 0; i < sections.length; i++) {
     sections[i].className = sections[i].id === newId ? 'active' : ''
   }
-          // And then set the new id as the current one,
-          // so that we know to do nothing at the beginning
-          // of this function if it hasn't changed between calls
+  // And then set the new id as the current one,
+  // so that we know to do nothing at the beginning
+  // of this function if it hasn't changed between calls
   currentId = newId
-        //  console.log(currentId)
+  //  console.log(currentId)
 }
-      // If you were to do this for real, you would want to use
-      // something like underscore's _.debounce function to prevent this
-      // call from firing constantly.
+// If you were to do this for real, you would want to use
+// something like underscore's _.debounce function to prevent this
+// call from firing constantly.
 narrative.onscroll = function (e) {
   var narrativeHeight = narrative.offsetHeight
   var newId = currentId
-          // Find the section that's currently scrolled-to.
-          // We iterate backwards here so that we find the topmost one.
+  // Find the section that's currently scrolled-to.
+  // We iterate backwards here so that we find the topmost one.
   for (var i = sections.length - 1; i >= 0; i--) {
-            // console.log(sections.length)
+    // console.log(sections.length)
     var rect = sections[i].getBoundingClientRect()
     if (rect.top >= 0 && rect.top <= narrativeHeight) {
       newId = sections[i].id
@@ -1016,4 +1013,3 @@ function articleReset (){
   $('#articleAuthor').empty()
   $('#articleTitle').empty()
 }
-

@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac66da2b-85f3-40d3-a07e-9b903eaebc30" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/apropos.html" afterPath="$PROJECT_DIR$/apropos.html" />
-      <change beforePath="$PROJECT_DIR$/auteurs.html" afterPath="$PROJECT_DIR$/auteurs.html" />
-      <change beforePath="$PROJECT_DIR$/cartoSF.html" afterPath="$PROJECT_DIR$/cartoSF.html" />
-      <change beforePath="$PROJECT_DIR$/corpora.html" afterPath="$PROJECT_DIR$/corpora.html" />
-      <change beforePath="$PROJECT_DIR$/equipeLRSM.html" afterPath="$PROJECT_DIR$/equipeLRSM.html" />
       <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/indexTRON.html" afterPath="$PROJECT_DIR$/old/index.html" />
-      <change beforePath="$PROJECT_DIR$/index_modal_static.html" afterPath="$PROJECT_DIR$/old/index_modal_static.html" />
-      <change beforePath="$PROJECT_DIR$/js/fc3.js" afterPath="$PROJECT_DIR$/old/fc3.js" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/old/mainOLD.js" />
-      <change beforePath="$PROJECT_DIR$/js/mainTRON.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/modal.html" afterPath="$PROJECT_DIR$/modal.html" />
-      <change beforePath="$PROJECT_DIR$/nav_template.html" afterPath="$PROJECT_DIR$/nav_template.html" />
-      <change beforePath="$PROJECT_DIR$/projets.html" afterPath="$PROJECT_DIR$/projets.html" />
-      <change beforePath="$PROJECT_DIR$/recits.html" afterPath="$PROJECT_DIR$/recits.html" />
-      <change beforePath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/lrsm.yaml" afterPath="$PROJECT_DIR$/src/tron-lrsm-style-gh-pages/components/lrsm.yaml" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
+      <change beforePath="$PROJECT_DIR$/old/mainOLD.js" afterPath="$PROJECT_DIR$/old/mainOLD.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,40 +37,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/main.js">
+      <file leaf-file-name="mainOLD.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/old/mainOLD.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="481">
+              <caret line="993" column="50" lean-forward="true" selection-start-line="993" selection-start-column="50" selection-end-line="993" selection-end-column="50" />
               <folding>
-                <element signature="e#2732#2825#0" expanded="false" />
-                <element signature="e#2988#3121#0" expanded="false" />
-                <element signature="n#!!block;n#openModal#0" expanded="false" />
-                <element signature="e#4045#4435#0" expanded="false" />
-                <element signature="n#!!block;n#titleSearch#0" expanded="false" />
-                <element signature="n#!!block;n#locationSearch#0" expanded="false" />
-                <element signature="n#!!block;n#genreSearch#0" expanded="false" />
-                <element signature="n#!!block;n#mobilitySearch#0" expanded="false" />
-                <element signature="n#!!block;n#getTitleMarkers#0" expanded="false" />
-                <element signature="n#!!block;n#getAuthorsMarkers#0" expanded="false" />
-                <element signature="n#!!block;n#getGenreMarkers#0" expanded="false" />
-                <element signature="e#13313#13620#0" expanded="false" />
-                <element signature="e#13708#14116#0" expanded="false" />
-                <element signature="n#!!block;n#getMobiltyMarkers#0" expanded="false" />
-                <element signature="e#17384#18117#0" expanded="false" />
-                <element signature="e#18249#18889#0" expanded="false" />
-                <element signature="e#21007#21439#0" expanded="false" />
-                <element signature="e#21985#22505#0" expanded="false" />
-                <element signature="e#22538#22593#0" expanded="false" />
-                <element signature="e#22630#23533#0" expanded="false" />
-                <element signature="e#23563#24165#0" expanded="false" />
-                <element signature="e#24332#24354#0" expanded="false" />
-                <element signature="e#25066#25091#0" expanded="false" />
-                <element signature="n#!!block;n#setId#0" expanded="false" />
-                <element signature="e#29893#30332#0" expanded="false" />
-                <marker date="1513223146226" expanded="true" signature="646:652" ph="©" />
-                <marker date="1513223146226" expanded="true" signature="18953:18970" ph="..." />
-                <marker date="1513223146226" expanded="true" signature="19056:19104" ph="..." />
+                <marker date="1513224189804" expanded="true" signature="17718:17735" ph="..." />
+                <marker date="1513224189804" expanded="true" signature="17821:17869" ph="..." />
               </folding>
             </state>
           </provider>
@@ -93,8 +53,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="741">
-              <caret line="533" column="20" lean-forward="false" selection-start-line="533" selection-start-column="20" selection-end-line="533" selection-end-column="20" />
+            <state relative-caret-position="436">
+              <caret line="488" column="0" lean-forward="true" selection-start-line="488" selection-start-column="0" selection-end-line="488" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -102,6 +62,20 @@
                 <element signature="n#style#0;n#div#7;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding>
+                <marker date="1513224039898" expanded="true" signature="646:652" ph="©" />
+                <marker date="1513224039898" expanded="true" signature="18953:18970" ph="..." />
+                <marker date="1513224039898" expanded="true" signature="19056:19104" ph="..." />
               </folding>
             </state>
           </provider>
@@ -120,8 +94,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>surface</find>
-      <find>Ceci</find>
       <find>articleS</find>
       <find>Trajectoire</find>
       <find>close</find>
@@ -150,6 +122,8 @@
       <find>LRSM-</find>
       <find>../</find>
       <find>section</find>
+      <find>tangram</find>
+      <find>[12,12],</find>
     </findStrings>
     <replaceStrings>
       <replace>col-4</replace>
@@ -170,6 +144,7 @@
       <replace>.svg</replace>
       <replace>&quot;281</replace>
       <replace>&quot;category&quot;: &quot;video&quot;,</replace>
+      <replace>[15,15],</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -216,8 +191,9 @@
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/js/mainTRON.js" />
         <option value="$PROJECT_DIR$/indexTRON.html" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/old/index.html" />
+        <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/old/mainOLD.js" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -329,7 +305,7 @@
             <path>
               <item name="LRSM_V2" type="b2602c69:ProjectViewProjectNode" />
               <item name="LRSM_V2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="old" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -341,9 +317,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/old/main.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/old/index.html" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/old/main.js" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/old/index.html" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -394,17 +370,18 @@
       <workItem from="1511965198047" duration="50095000" />
       <workItem from="1512104774871" duration="95250000" />
       <workItem from="1512481213311" duration="194940000" />
-      <workItem from="1513171052304" duration="28784000" />
+      <workItem from="1513171052304" duration="29340000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="369069000" />
+    <option name="totallyTimeSpent" value="369625000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19669509" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19669509" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33804348" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -455,19 +432,19 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/old/mainOLD.js</url>
-          <line>835</line>
+          <line>832</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/old/mainOLD.js</url>
-          <line>851</line>
+          <line>848</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/old/mainOLD.js</url>
-          <line>889</line>
+          <line>886</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
@@ -1409,42 +1386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/old/mainOLD.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10268">
-          <caret line="944" column="39" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1019" selection-end-column="0" />
-          <folding>
-            <element signature="e#1499#1592#0" expanded="false" />
-            <element signature="e#1755#1889#0" expanded="false" />
-            <element signature="n#!!block;n#openModal#0" expanded="false" />
-            <element signature="e#2803#3191#0" expanded="false" />
-            <element signature="n#!!block;n#titleSearch#0" expanded="false" />
-            <element signature="n#!!block;n#locationSearch#0" expanded="false" />
-            <element signature="n#!!block;n#genreSearch#0" expanded="false" />
-            <element signature="n#!!block;n#mobilitySearch#0" expanded="false" />
-            <element signature="n#!!block;n#getTitleMarkers#0" expanded="false" />
-            <element signature="n#!!block;n#getAuthorsMarkers#0" expanded="false" />
-            <element signature="n#!!block;n#getGenreMarkers#0" expanded="false" />
-            <element signature="e#12413#12801#0" expanded="false" />
-            <element signature="e#12892#13330#0" expanded="false" />
-            <element signature="n#!!block;n#getMobiltyMarkers#0" expanded="false" />
-            <element signature="e#16608#17297#0" expanded="false" />
-            <element signature="e#17429#18020#0" expanded="false" />
-            <element signature="e#20176#20608#0" expanded="false" />
-            <element signature="e#21155#21674#0" expanded="false" />
-            <element signature="e#21707#21769#0" expanded="false" />
-            <element signature="e#21806#22709#0" expanded="false" />
-            <element signature="e#22739#23342#0" expanded="false" />
-            <element signature="e#23515#23533#0" expanded="false" />
-            <element signature="e#24213#24234#0" expanded="false" />
-            <element signature="n#!!block;n#setId#0" expanded="false" />
-            <element signature="e#29135#29598#0" expanded="false" />
-            <marker date="1513221041877" expanded="true" signature="18084:18101" ph="..." />
-            <marker date="1513221041877" expanded="true" signature="18187:18235" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JavaScript-modules-diagram/D:/Google Drive/LRSM/www/LRSM/LRSM_V2/js/main.js">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1472,45 +1413,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="128">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
-            <element signature="e#2732#2825#0" expanded="false" />
-            <element signature="e#2988#3121#0" expanded="false" />
-            <element signature="n#!!block;n#openModal#0" expanded="false" />
-            <element signature="e#4045#4435#0" expanded="false" />
-            <element signature="n#!!block;n#titleSearch#0" expanded="false" />
-            <element signature="n#!!block;n#locationSearch#0" expanded="false" />
-            <element signature="n#!!block;n#genreSearch#0" expanded="false" />
-            <element signature="n#!!block;n#mobilitySearch#0" expanded="false" />
-            <element signature="n#!!block;n#getTitleMarkers#0" expanded="false" />
-            <element signature="n#!!block;n#getAuthorsMarkers#0" expanded="false" />
-            <element signature="n#!!block;n#getGenreMarkers#0" expanded="false" />
-            <element signature="e#13313#13620#0" expanded="false" />
-            <element signature="e#13708#14116#0" expanded="false" />
-            <element signature="n#!!block;n#getMobiltyMarkers#0" expanded="false" />
-            <element signature="e#17384#18117#0" expanded="false" />
-            <element signature="e#18249#18889#0" expanded="false" />
-            <element signature="e#21007#21439#0" expanded="false" />
-            <element signature="e#21985#22505#0" expanded="false" />
-            <element signature="e#22538#22593#0" expanded="false" />
-            <element signature="e#22630#23533#0" expanded="false" />
-            <element signature="e#23563#24165#0" expanded="false" />
-            <element signature="e#24332#24354#0" expanded="false" />
-            <element signature="e#25066#25091#0" expanded="false" />
-            <element signature="n#!!block;n#setId#0" expanded="false" />
-            <element signature="e#29893#30332#0" expanded="false" />
-            <marker date="1513223146226" expanded="true" signature="646:652" ph="©" />
-            <marker date="1513223146226" expanded="true" signature="18953:18970" ph="..." />
-            <marker date="1513223146226" expanded="true" signature="19056:19104" ph="..." />
+            <marker date="1513224039898" expanded="true" signature="646:652" ph="©" />
+            <marker date="1513224039898" expanded="true" signature="18953:18970" ph="..." />
+            <marker date="1513224039898" expanded="true" signature="19056:19104" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/mainOLD.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="993" column="50" lean-forward="true" selection-start-line="993" selection-start-column="50" selection-end-line="993" selection-end-column="50" />
+          <folding>
+            <marker date="1513224189804" expanded="true" signature="17718:17735" ph="..." />
+            <marker date="1513224189804" expanded="true" signature="17821:17869" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="533" column="20" lean-forward="false" selection-start-line="533" selection-start-column="20" selection-end-line="533" selection-end-column="20" />
+        <state relative-caret-position="436">
+          <caret line="488" column="0" lean-forward="true" selection-start-line="488" selection-start-column="0" selection-end-line="488" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
